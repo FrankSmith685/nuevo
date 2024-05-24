@@ -29,7 +29,7 @@ export const AppRoutes = () => {
             {/* Agrega aquí más rutas para otras páginas */}
           </Routes>
         </Suspense>
-        {/* <Footer /> */}
+        <Footer />
 
       </div>
     </Router>

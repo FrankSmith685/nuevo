@@ -1,39 +1,41 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
-    const logo1 = "<F";
-    const logo2 = "r>";
-
     return (
-        <footer className="bg-gray-900 text-white py-6 ">
-            <div className="container mx-auto">
-                <div className="flex justify-between items-center px-14">
-                    <div className="flex flex-nowrap">
-                        <p className="pr-1">Diseñado y Desarrollado por:</p>
-                        <h2 className="font-medium text-white ">{logo1}</h2>
-                        <p className="font-medium text-orange-500 ">{logo2}</p>
+        <footer className="bg-gray-800 text-white py-8">
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div>
+                        <h2 className="text-lg font-semibold mb-4">Información</h2>
+                        <ul className="text-gray-300">
+                            <li className="mb-2"> <a href="#" className="hover:text-white">Aviso Legal</a> </li>
+                            <li className="mb-2"> <a href="#" className="hover:text-white">Política de Cookies</a> </li>
+                            <li className="mb-2"> <a href="#" className="hover:text-white">Política de Privacidad</a> </li>
+                        </ul>
                     </div>
 
-                    <div className="flex flex-nowrap">
-                        <p className="pr-1">&copy; 2024</p>
-                        <h2 className="font-medium text-white ">{logo1}</h2>
-                        <p className="font-medium text-orange-500 ">{logo2}</p>
-                        <p className="pl-1">Todos los derechos reservados</p>
+                    <div>
+                        <h2 className="text-lg font-semibold mb-4">Enlaces de interés</h2>
+                        <ul className="text-gray-300">
+                            <li className="mb-2"> <a href="#" className="hover:text-white">Selección de Directivos</a> </li>
+                            <li className="mb-2"> <a href="#" className="hover:text-white">Consultoría de Recursos Humanos</a> </li>
+                        </ul>
                     </div>
 
-                    <div className="flex flex-nowrap items-center">
-                        <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" className="text-white mr-4">
-                            <FaGithub />
-                        </a>
-                        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" className="text-white mr-4">
-                            <FaLinkedin />
-                        </a>
-                        <a href="tel:+1234567890" className="text-white flex items-center">
-                            <FaPhoneAlt className="mr-2" /> +51 926749330
-                        </a>
+                    <div>
+                        <h2 className="text-lg font-semibold mb-4">Contacto</h2>
+                        <p className="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget leo eu lorem eleifend consequat.</p>
                     </div>
+
                 </div>
+
+                <hr className="my-8 border-gray-700" />
+
+                <div className="text-center">
+                    <p className="text-gray-500">&copy; 2024 Todos los derechos reservados</p>
+                </div>
+
             </div>
         </footer>
     );

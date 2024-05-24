@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'lobster': ['Lobster', 'cursive'],
+      },
       height:{
         h_screen_80:"80vh"
       },
