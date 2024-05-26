@@ -19,10 +19,12 @@ import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import ContactForm from "../../components/home/contactForm/contactForm";
+import { useNavigate } from "react-router-dom";
 
 
 
 const HomePage = () => {
+
   const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
   const [ref3, inView3] = useInView();
@@ -32,6 +34,7 @@ const HomePage = () => {
   const [ref7, inView7] = useInView();
   const [ref8, inView8] = useInView();
 
+  const navigate = useNavigate();
 
 
   const sections = [
@@ -195,6 +198,9 @@ const HomePage = () => {
     console.log(formData);
   };
 
+  const handleClickSeleccionReclutamiento = () => {
+    navigate("/seleccion-y-headhunting/seleccion-personal-y-reclutamiento");
+};
 
   return (
     <>
@@ -236,7 +242,7 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className="text-white font-bold text-3xl"
             >
-              Selección de Personal y Onboarding
+              Selección de Personal y Reclutamiento
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -244,7 +250,10 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className=""
             >
-               <button className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+               <button 
+                className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                onClick={handleClickSeleccionReclutamiento}
+                >
                 Saber más
               </button>
             </motion.div>
@@ -563,7 +572,7 @@ const HomePage = () => {
                 onClick={() => handleToggle1(index)}
               >
                 <h3 className="text-xl font-bold text-white">{section.title}</h3>
-                {openIndex === index ? (
+                {openIndex1 === index ? (
                   <HiOutlineChevronUp className="text-white h-6 w-6" />
                 ) : (
                   <HiOutlineChevronDown className="text-white h-6 w-6" />
@@ -571,7 +580,7 @@ const HomePage = () => {
               </div>
               <div
                 className={`${
-                  openIndex === index ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                  openIndex1 === index ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
                 } overflow-hidden bg-white p-2 rounded-b-lg shadow-lg transition-all duration-500 ease-in-out`}
               >
                 <ul className="list-disc pl-6">

@@ -9,7 +9,8 @@ module.exports = {
         'lobster': ['Lobster', 'cursive'],
       },
       height:{
-        h_screen_80:"80vh"
+        h_screen_80:"80vh",
+        h_custom_1: "calc(100vh - 100px)",
       },
       backgroundColor:{
         bg_favorite_1:"rgba(0,0,0,0.4)"

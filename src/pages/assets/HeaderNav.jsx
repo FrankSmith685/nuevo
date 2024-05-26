@@ -12,10 +12,16 @@ const HeaderNav = () => {
         { path: "/presseraum", label: "PRESSERAUM" },
         { path: "/wir", label: "WIR" },
         { path: "/blog", label: "BLOG" },
-    ];  
+    ];
 
     const menu2 = [
-        { path: "/", label: "SELECCÍON Y HEADHUNTING" },
+        { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "SELECCIÓN Y HEADHUNTING", subItems: [
+            { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento", label: "SELECCIÓN PERSONAL Y RECLUTAMIENTO" },
+            { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "CONSULTORÍA HEADHUNTER" },
+            { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios/", label: "SELECCIÓN DE DIRECTIVOS" },
+            { path: "/seleccion-y-headhunting/interim-management", label: "INTERIM MANAGEMENT" },
+            { path: "/seleccion-y-headhunting/evaluaciones-de-personal", label: "EVALUACIONES DE PERSONAL" },
+        ]},
         { path: "/hr-business-partner", label: "HR BUSSINESS PARTNER" },
         { path: "/*", label: "BERATUNG UND PERSONALFLUKTUATION" },
         { path: "/partnerships", label: "PARTNERSHIPS" },
@@ -23,6 +29,7 @@ const HeaderNav = () => {
     ];
 
     const [isSticky, setIsSticky] = useState(false);
+    const [hoveredMenuItem, setHoveredMenuItem] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,6 +45,11 @@ const HeaderNav = () => {
 
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        setHoveredMenuItem(null);
+    };
+
+    const isSubmenuSelected = (subItems) => {
+        return subItems.some(subItem => subItem.path === currentPath);
     };
 
     return (
@@ -64,21 +76,50 @@ const HeaderNav = () => {
                 </ul>
             </div>
             <div className={`bg-white z-50 ${isSticky ? 'fixed top-0 left-0 w-full shadow-md' : 'relative'} transition-transform duration-300 ease-in-out`}>
-                <ul className="flex space-x-8 py-4 items-center justify-center bg-gray-200 border-b-2 border-gray-400">
-                    <li className="flex text-2xl items-center">
-                        <h2 className="font-lobster text-blue-700">{logo1}</h2>
+                <ul className="flex space-x-8 py-0 items-center justify-center bg-gray-200 border-b-2 border-gray-400">
+                    <li className="flex text-2xl items-center py-4">
+                        <Link to="/" onClick={handleLinkClick}>
+                            <h2 className="font-lobster text-blue-700 hover:cursor-pointer">{logo1}</h2>
+                        </Link>
                     </li>
                     {menu2.map((item, index) => (
-                        <li key={index} className="text-center">
+                        <li
+                            key={index}
+                            className="text-center relative py-4 px-0"
+                            onMouseEnter={() => setHoveredMenuItem(item.path)}
+                            onMouseLeave={() => setHoveredMenuItem(null)}
+                        >
                             <Link
                                 to={item.path}
-                                onClick={handleLinkClick}
-                                className={`text-gray-800 hover:text-blue-600 transition-colors duration-300 relative ${currentPath === item.path ? 'after:bg-blue-600 after:h-1 after:w-full after:block after:absolute after:bottom-0' : ''}`}
+                                onClick={(e) => {
+                                    if (item.subItems) {
+                                        e.preventDefault();
+                                        setHoveredMenuItem(item.path);
+                                    } else {
+                                        handleLinkClick();
+                                    }
+                                }}
+                                className={`text-gray-800 hover:text-blue-600 transition-colors duration-300 relative ${(currentPath === item.path || (item.subItems && isSubmenuSelected(item.subItems))) ? 'after:bg-blue-600 after:h-1 after:w-full after:block after:absolute after:bottom-0' : ''}`}
                             >
-                                <p className={`transition-transform duration-300 transform ${currentPath === item.path ? 'translate-y-[-3px]' : 'hover:translate-y-[-3px]'}`}>
+                                <p className={`transition-transform duration-300 transform ${(currentPath === item.path || (item.subItems && isSubmenuSelected(item.subItems))) ? 'translate-y-[-3px]' : 'hover:translate-y-[-3px]'}`}>
                                     {item.label}
                                 </p>
                             </Link>
+                            {item.subItems && hoveredMenuItem === item.path && (
+                                <ul className="absolute top-full left-0 bg-white shadow-lg py-2 mt-0 space-y-2">
+                                    {item.subItems.map((subItem, subIndex) => (
+                                        <li key={subIndex}>
+                                            <Link
+                                                to={subItem.path}
+                                                onClick={handleLinkClick}
+                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm"
+                                            >
+                                                {subItem.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
                 </ul>
