@@ -4,16 +4,16 @@ import { UserOutlined, MailOutlined, PhoneOutlined, EnvironmentOutlined } from '
 
 const { Option } = Select;
 
-const ContactForm = ({ handleSubmit }) => {
+const ContactForm = ({ handleSubmit, id }) => {
   const onFinish = (values) => {
     handleSubmit(values);
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="p-8 bg-white rounded-md shadow-md w-full max-w-4xl">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Contacta con nosotros</h2>
-        <p className="text-sm text-center mb-8 text-gray-800">
+    <div className="flex justify-center items-center h-auto py-16 px-10 bg-gray-100 w-full" id={id}>
+      <div className="bg-transparent mx-auto w-11/12">
+        <h2 className="text-lg font-bold text-start mb-4 text-gray-600">Contacta con nosotros</h2>
+        <p className="text-sm text-start mb-4 text-gray-800">
           Somos expertos en Consultoría y gestión del cambio, Selección y Headhunting y servicios de HR Business Partner. Creemos que cada empresa merece su oportunidad de crecer. ¿Te ayudamos?
         </p>
         <Form
@@ -101,7 +101,7 @@ const ContactForm = ({ handleSubmit }) => {
             </Form.Item>
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit" block>
+            <Button type="primary" htmlType="submit" className='w-1/12 mx-auto'>
               Enviar
             </Button>
           </Form.Item>

@@ -6,7 +6,8 @@ import { useInView } from "react-intersection-observer";
 import banner1 from "../../assets/imagenes/imagen.webp";
 import banner2 from "../../assets/imagenes/imagen2.webp";
 import banner3 from "../../assets/imagenes/imagen3.webp";
-import banner4 from "../../assets/imagenes/imagen5.webp";
+import banner4 from "../../assets/imagenes/imagen4.jpg";
+import banner5 from "../../assets/imagenes/imagen5.webp";
 import bannerPrincipal from "../../assets/video/banner.mp4";
 import { SearchIcon, PresentationChartBarIcon, ScaleIcon } from '@heroicons/react/outline';
 import { HiOutlineEye, HiOutlineUsers, HiOutlineThumbUp, HiOutlineChartBar,HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
@@ -18,7 +19,7 @@ import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
 import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-import ContactForm from "../../components/home/contactForm/contactForm";
+import ContactForm from "../../components/common/contactForm";
 import { useNavigate } from "react-router-dom";
 
 
@@ -199,8 +200,23 @@ const HomePage = () => {
   };
 
   const handleClickSeleccionReclutamiento = () => {
-    navigate("/seleccion-y-headhunting/seleccion-personal-y-reclutamiento");
-};
+    navigate("/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento");
+  };
+
+  const handleClickServicioHeadhunting=()=>{
+    navigate("/seleccion-y-headhunting/consultoria-headhunter");
+  }
+
+  const handleClickGestionCambio=()=>{
+    navigate("/consultoria");
+  }
+
+  const handleClickFormaciones=()=>{
+    navigate("/consultoria/formaciones-humanbits");
+  }
+  const handleClickHrBusinessPartner=()=>{
+    navigate("/hr-business-partner");
+  }
 
   return (
     <>
@@ -210,14 +226,14 @@ const HomePage = () => {
           Tu navegador no soporta el elemento de video.
         </video>
         <div className="flex flex-col justify-center items-center h-full z-20 relative space-y-4">
-          <h2 className="text-white font-bold text-5xl">Berater für Humanressourcen</h2>
+          <h2 className="text-white font-bold text-5xl font-bell">Berater für Humanressourcen</h2>
           <Link
-            to="scroll-target"
+            to="scroll-target-1"
             smooth={true}
             duration={500}
-            className="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 hover:bg-blue-600"
+            className="hover:cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 hover:bg-blue-600"
           >
-            <span className="inline-block mr-2 animate-bounce">🚀</span> Kontakt aufnehmen
+            <span className=" inline-block mr-2 animate-bounce">🚀</span> Kontakt aufnehmen
           </Link>
         </div>
       </div>
@@ -228,7 +244,9 @@ const HomePage = () => {
           transition={{ duration: 0.5 }}
           className="w-full h-full p-20 space-y-8"
         >
-          <h2 className="font-lobster text-blue-700 text-center text-6xl">Sandra Roggero Beratung</h2>
+          {/* <h2 className="font-lobster text-blue-700 text-center text-6xl">Sandra Roggero Beratung</h2> */}
+          <h2 className="font-bell text-blue-700 hover:cursor-pointer text-6xl">Sandra Roggero <span className='text-customColor1 text-5xl'>Beratung</span></h2>
+
           <p className="text-center">Stärken Sie Ihr Unternehmen, indem Sie die beste Personalstrategie mit Hilfe von Sandra Roggero Beratung, Ihrer Personalberatung in Barcelona, entwickeln. Wir sind Experten in der Personalverwaltung, von der Talentauswahl bis zur Bindung. Wir entwickeln und implementieren den Mitarbeiterpfad Ihrer Mitarbeiter, fördern ihre Entwicklung und reduzieren die Fluktuation. Unsere Spezialisten unterstützen Ihr Führungsteam und bilden Ihre zukünftigen Führungskräfte in innovativen Lösungen und effektiven Prozessen aus. Vertrauen Sie unseren Personalprofis, um das Engagement Ihres Teams zu steigern.</p>
         </motion.div>
       </div>
@@ -300,7 +318,10 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}    
               className=""
             >
-              <button className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+              <button 
+                className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                onClick={handleClickServicioHeadhunting}
+                >
                 Saber más
               </button>
             </motion.div>
@@ -325,7 +346,10 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className=""
             >
-               <button className="bg-transparent border-gray-700 border-2 px-6 py-3 font-medium text-gray-700 hover:bg-gray-700 hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-opacity-50">
+               <button 
+                className="bg-transparent border-gray-700 border-2 px-6 py-3 font-medium text-gray-700 hover:bg-gray-700 hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-opacity-50"
+                onClick={handleClickGestionCambio}
+                >
                 Saber más
               </button>
             </motion.div>
@@ -339,7 +363,7 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className="h-96"
             >
-               <img src={banner1} alt="" className="w-full h-full object-cover" />
+               <img src={banner3} alt="" className="w-full h-full object-cover" />
             </motion.div>
         </div>
       </div>
@@ -352,7 +376,7 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className="h-96"
             >
-               <img src={banner3} alt="" className="w-full h-full object-cover" />
+               <img src={banner4} alt="" className="w-full h-full object-cover" />
             </motion.div>
         </div>
         <div className="w-full h-full relative">
@@ -372,7 +396,10 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}    
               className=""
             >
-              <button className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+              <button 
+                className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                onClick={handleClickFormaciones}
+                >
                 Saber más
               </button>
             </motion.div>
@@ -397,7 +424,10 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className=""
             >
-               <button className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+              <button 
+                className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                onClick={handleClickHrBusinessPartner}
+                >
                 Saber más
               </button>
             </motion.div>
@@ -411,12 +441,12 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className="h-96"
             >
-               <img src={banner4} alt="" className="w-full h-full object-cover" />
+               <img src={banner5} alt="" className="w-full h-full object-cover" />
             </motion.div>
         </div>
       </div>
 
-      <div ref={ref7} className="bg-gray-800 w-full h-auto flex items-center justify-center py-16">
+      <div ref={ref7} className="bg-red-500 w-full h-auto flex items-center justify-center py-10">
           <div className={`w-full h-full flex justify-center items-center space-x-6`}>
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -550,9 +580,14 @@ const HomePage = () => {
               transition={{ duration: 0.5 }}
               className=""
             >
-              <button className="bg-transparent border-white border-2 px-6 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+              <Link
+                to="scroll-target"
+                smooth={true}
+                duration={500}
+                className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+              >
                 Contactar
-              </button>
+              </Link>
             </motion.div>
           </div>
       </div>
@@ -595,7 +630,7 @@ const HomePage = () => {
       </div>
 
       {/* Noticicias */}
-      <div className="p-8 text-center">
+      <div className="pt-8 px-10 text-center">
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Actualidad sobre RRHH</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {noticias.map((noticia, index) => (
@@ -611,20 +646,19 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-        <button className=" mt-8 bg-gradient-to-r from-red-600 to-blue-500 text-white py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 hover:bg-blue-600">
+        <button id="scroll-target-1" className=" my-8 bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50 hover:bg-blue-600">
 
             VISITA NUESTRO BLOG
           </button>
       </div>
-
-      <ContactForm
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-        formData={formData}
-      />
-      
-
-
+      <div className="h-1" id="scroll-target"></div>
+      {/* <div id=""> */}
+        <ContactForm
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          formData={formData}
+        />
+      {/* </div> */}
     </>
   );
 };

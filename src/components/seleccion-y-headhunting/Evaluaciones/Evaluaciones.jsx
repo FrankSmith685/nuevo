@@ -1,24 +1,21 @@
-import { FaBullseye, FaChartLine, FaChartPie, FaClock, FaEye, FaHandsHelping, FaPeopleArrows, FaSearch, FaUserCheck, FaUserTie } from "react-icons/fa";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
-import { BriefcaseIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from "@heroicons/react/outline";
 
 
 import { useState } from "react";
-import { HiOutlineAcademicCap, HiOutlineChartBar, HiOutlineChevronDown, HiOutlineChevronUp, HiOutlineClock, HiOutlineCog, HiOutlineEye, HiOutlineHeart, HiOutlineLightBulb, HiOutlineRefresh, HiOutlineThumbUp, HiOutlineTrendingUp, HiOutlineUsers } from "react-icons/hi";
-import ContactForm from "../home/contactForm/contactForm.jsx";
-import CardSeleccionPersonal from "./Cards/CardSeleccionHeadHunting.jsx";
+import ContactForm from "../../common/contactForm.jsx";
 
 //Imagen Principal
-import imagenPrincipal from "../../assets/imagenes/consultoria/imagen1.jpg";
+import imagenPrincipal from "../../../assets/imagenes/consultoria/imagen1.jpg";
 
 // Imagen Servicio
-import service1 from "../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
-import service2 from "../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
-import service3 from "../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
-import service4 from "../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
-import CardEvaluacion from "./Cards/CardEvaluacion.jsx";
+import service1 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
+import service2 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
+import service3 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
+import service4 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
+import CardEvaluaciones from "./Cards/CardEvaluaciones.jsx";
+import { Link } from "react-scroll";
+// import CardEvaluacion from "../Cards/CardEvaluacion.jsx";
 
 const Evaluaciones = () => {
     const cardData = {
@@ -29,53 +26,7 @@ const Evaluaciones = () => {
     };
 
     const [ref1, inView1] = useInView();
-    const [ref2, inView2] = useInView();
-    const [ref3, inView3] = useInView();
 
-    // Interiment
-    const Interiment = [
-        {
-          title: "Situación temporal",
-          description: "La incorporación del profesional externo a la empresa se realiza por un período de tiempo limitado, como por ejemplo ceses, dimisiones o lapsos de tiempo hasta la incorporación definitiva de los sustitutos.",
-          icon: HiOutlineClock,
-        },
-        {
-          title: "Expertos en cambios relevantes",
-          description: "Los profesionales de Interim Management están enfocados a lidiar con grandes cambios organizacionales, como por ejemplo reestructuraciones departamentales o sucesiones en empresas familiares.",
-          icon: HiOutlineRefresh,
-        },
-        {
-          title: "Expansiones empresariales",
-          description: "El crecimiento empresarial hacia nuevos mercados o negocios puede requerir de perfiles profesionales que ayuden a esta transición.",
-          icon: HiOutlineTrendingUp,
-        },
-        {
-          title: "Profesionalización de empresas emergentes",
-          description: "En ocasiones, el nacimiento de nuevas empresas requiere de ayuda profesional para afrontar procesos de maduración.",
-          icon: HiOutlineAcademicCap,
-        },
-      ];
-      
-
-    //
-    const D_section = [
-        {
-          title: "Más de 50 años seleccionando altos cargos",
-          icon: HiOutlineEye,
-        },
-        {
-          title: "Definición del perfil y análisis del mercado",
-          icon: HiOutlineUsers,
-        },
-        {
-          title: "Mirada apreciativa en la Selección ",
-          icon: HiOutlineThumbUp,
-        },
-        {
-          title: "Acompañamiento del directivo/a seleccionada en todo el proceso",
-          icon: HiOutlineChartBar,
-        },
-    ];
 
     // Servicios
     const services = [
@@ -93,26 +44,6 @@ const Evaluaciones = () => {
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
-
-    const sections4 = [
-        {
-          title: "¿Cómo se establecen los objetivos y el plan de trabajo para el Interim Manager?",
-          description: [
-            "Un Interim Manager se contrata para ejercer una tarea en un determinado tiempo. Esta figura estudia el estado actual de la compañía, las necesidades para las qué ha sido contratado, establece unos objetivos en un timing concreto, aportándole la empresa las herramientas necesarias para su ejecución. Normalmente, estos perfiles son contratados en situaciones como cambios estratégicos, procesos de gestión del cambio y procesos de transformación digital.",
-          ],
-        },
-        {
-          title: "¿Qué responsabilidades tiene el interim management en la empresa?",
-          description: [
-            "Su principal responsabilidad es la de aportar valor y conocimiento a la compañía mediante sus habilidades y experiencia para cumplir unos objetivos marcados. Suele responsabilizarse de un proyecto clave o área estratégica de la compañía, donde son fundamentales sus conocimientos técnicos y el valor añadido que aporta su perfil."],  
-        },
-    ];
-
-    const [openIndex1, setOpenIndex1] = useState(null);
-
-    const handleToggle1 = (index) => {
-        setOpenIndex1(openIndex1 === index ? null : index);
-    };
 
     const [formData, setFormData] = useState({
         name: '',
@@ -141,14 +72,14 @@ const Evaluaciones = () => {
 
     return (
         <div className="p-0"> 
-            <CardEvaluacion
+            <CardEvaluaciones
                 navegator1={cardData.navegator1} 
                 navegator2={cardData.navegator2}
                 title={cardData.title}
                 image={cardData.image}
             />
 
-            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-16">
+            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-10">
                 <div className={`w-full h-full flex justify-center items-center space-x-20`}>
                     <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -164,9 +95,14 @@ const Evaluaciones = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Quiero informarme
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -218,6 +154,7 @@ const Evaluaciones = () => {
                 </div>
             </div>
 
+            <div className="h-1 bg-gray-100" id="scroll-target"></div> 
             
             <div className="w-full ">
                 <ContactForm

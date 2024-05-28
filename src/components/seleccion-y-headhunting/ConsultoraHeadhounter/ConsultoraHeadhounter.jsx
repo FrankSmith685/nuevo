@@ -1,26 +1,25 @@
-import { FaBullseye, FaChartLine, FaChartPie, FaClock, FaEye, FaHandsHelping, FaPeopleArrows, FaSearch, FaUserCheck, FaUserTie } from "react-icons/fa";
-import imagen1 from "../../assets/imagenes/imagen.webp";
-import CardSeleccionHeadHunting from "./Cards/CardSeleccionHeadHunting";
+import { FaChartLine, FaSearch, FaUserCheck } from "react-icons/fa";
+// import imagen1 from "../../assets/imagenes/imagen.webp";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer"; 
-import { BriefcaseIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from "@heroicons/react/outline";
+import { useInView } from "react-intersection-observer";
 
-import service1 from "../../assets/imagenes/imagen2.webp";
-import service2 from "../../assets/imagenes/consultoria/imagen4.jpg";
-import service3 from "../../assets/imagenes/consultoria/imagen7.webp";
-import service4 from "../../assets/imagenes/imagen5.webp";
+import service1 from "../../../assets/imagenes/imagen2.webp";
+import service2 from "../../../assets/imagenes/consultoria/imagen4.jpg";
+import service3 from "../../../assets/imagenes/consultoria/imagen7.webp";
+import service4 from "../../../assets/imagenes/imagen5.webp";
 import React, { useState } from "react";
 import { HiOutlineChartBar, HiOutlineChevronDown, HiOutlineChevronUp, HiOutlineEye, HiOutlineThumbUp, HiOutlineUsers } from "react-icons/hi";
-import ContactForm from "../home/contactForm/contactForm";
-
 
 // IMAGENES DE PERFIL ESPECIALIZADOS
-import PE_imagen1 from "../../assets/imagenes/perfiles_especializados/ingenieria.jpg";
-import PE_imagen2 from "../../assets/imagenes/perfiles_especializados/tag_y_legal.jpg";
-import PE_imagen3 from "../../assets/imagenes/perfiles_especializados/marketing_digital_y_ventas.webp";
-import PE_imagen4 from "../../assets/imagenes/perfiles_especializados/it.jpg";
-import PE_imagen5 from "../../assets/imagenes/perfiles_especializados/Life_Sciences_&_Healthcare.jpg";
-import PE_imagen6 from "../../assets/imagenes/perfiles_especializados/banca_y_seguros.jpg";
+import PE_imagen1 from "../../../assets/imagenes/perfiles_especializados/ingenieria.jpg";
+import PE_imagen2 from "../../../assets/imagenes/perfiles_especializados/tag_y_legal.jpg";
+import PE_imagen3 from "../../../assets/imagenes/perfiles_especializados/marketing_digital_y_ventas.webp";
+import PE_imagen4 from "../../../assets/imagenes/perfiles_especializados/it.jpg";
+import PE_imagen5 from "../../../assets/imagenes/perfiles_especializados/Life_Sciences_&_Healthcare.jpg";
+import PE_imagen6 from "../../../assets/imagenes/perfiles_especializados/banca_y_seguros.jpg";
+import ContactForm from "../../common/contactForm";
+import CardConsultoraHeadhounter from "./Cards/CardConsultoraHeadhounter";
+import { Link } from "react-scroll";
 
 
 
@@ -31,11 +30,11 @@ const ConsultoraHeadhounter = () => {
         navegator2: "Headhunter",
         title:"Consultora de Headhunter",
         description: "El servicio de Headhunting que ofrece Montaner se basa en la identificación y selección de perfiles profesionales con alto nivel técnico y competencial. Estos perfiles se caracterizan por tratarse de profesionales muy complejos de atraer por fuentes de reclutamiento y redes convencionales.",
-        subTitle_1:"Executive Search: búsqueda y selección de directivos",
-        description_1: `
-        Nuestros consultores de headhunting conocen el mercado y son capaces de atraer los perfiles más difíciles. Realizamos una preselección de candidatos exhaustiva y entrevistas con un alto nivel de confidencialidad, tanto para las empresas como para los candidatos.
-        El servicio de Headhunting para empresas garantiza el nivel de confidencialidad de datos de los solicitantes, así como la atracción del mejor talento activo que aporte expertise, enfoque y éxito en la misión y proyecto empresarial.
-        `,
+        // subTitle_1:"Executive Search: búsqueda y selección de directivos",
+        // description_1: `
+        // Nuestros consultores de headhunting conocen el mercado y son capaces de atraer los perfiles más difíciles. Realizamos una preselección de candidatos exhaustiva y entrevistas con un alto nivel de confidencialidad, tanto para las empresas como para los candidatos.
+        // El servicio de Headhunting para empresas garantiza el nivel de confidencialidad de datos de los solicitantes, así como la atracción del mejor talento activo que aporte expertise, enfoque y éxito en la misión y proyecto empresarial.
+        // `,
         image: service1
     };
 
@@ -80,8 +79,6 @@ const ConsultoraHeadhounter = () => {
           icon: HiOutlineChartBar,
         },
     ];
-
-
 
     const services = [
         { name: "Consultoría de Selección de Personal y reclutamiento" },
@@ -176,17 +173,15 @@ const ConsultoraHeadhounter = () => {
 
     return (
         <div className="p-0">
-            <CardSeleccionHeadHunting
+            <CardConsultoraHeadhounter
                 navegator1={cardData.navegator1} 
                 navegator2={cardData.navegator2} 
                 title={cardData.title}
                 description={cardData.description}
-                subTitle_1 = {cardData.subTitle_1}
-                description_1 = {cardData.description_1}
                 image={cardData.image}
             />
 
-            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-16">
+            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-10">
                 <div className={`w-full h-full flex justify-center items-center space-x-20`}>
                     <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -202,14 +197,19 @@ const ConsultoraHeadhounter = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Quiero informarme
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
             
-            <div className="py-10 px-10">
+            <div className="py-10 px-10 mx-auto w-11/12">
                 <h2 className="text-3xl font-bold text-start mb-4 text-gray-700">Consultoría Headhunting: metodología</h2>
                 <p className="text-gray-700 text-start">Como consultora de headhunter, nuestro objetivo es enfocar la búsqueda de estos candidatos/as a un conjunto concreto de “candidatos/as diana” en las empresas recomendadas y prescritas por el cliente de manera conjunta con nuestro equipo de consultores/as especializados.</p>
                 <h3 className="text-base text-gray-700 font-bold my-2">La metodología aplicada por Montaner en la selección headhunting se basa en:</h3>
@@ -226,9 +226,9 @@ const ConsultoraHeadhounter = () => {
 
             
 
-            <div className="py-10">
-                <h2 className="text-3xl font-bold text-center mb-8 text-gray-700">Ventajas de confiar en una consultora de headhunter</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10">
+            <div className="px-10 mx-auto w-11/12">
+                <h2 className="text-3xl font-bold text-start mb-8 text-gray-700">Ventajas de confiar en una consultora de headhunter</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-0">
                 {ventajas.map((section, index) => (
                     <div key={index} className="bg-gradient-to-r from-blue-200 to-blue-100 border border-blue-300 p-6 rounded-lg flex items-center justify-center hover:shadow-lg transition duration-300 ease-in-out">
                     <section.icon className="h-40 w-40 text-blue-600 mr-4" />
@@ -241,13 +241,13 @@ const ConsultoraHeadhounter = () => {
                 </div>
             </div>
 
-            <div className="py-10 px-10">
-                <h2 className="text-3xl font-bold text-center mb-4 text-gray-700">¿Por qué elegir Montaner para búsqueda y selección de personal?</h2>
+            <div className="py-10 px-10 mx-auto w-11/12">
+                <h2 className="text-3xl font-bold text-start mb-4 text-gray-700">¿Por qué elegir Montaner para búsqueda y selección de personal?</h2>
                 <p className="text-gray-700 text-start">¿Por qué contratar una empresa de Headhunting? Gracias a la contratación de nuestra consultoría, podrás reducir riesgos y esfuerzo invertido en la atracción de este tipo de perfil profesional especializado. Además, gracias a selección executive de candidatos, maximizarás los resultados encontrando los perfiles adecuados al puesto basándonos en competencias, conocimientos, personalidad, expertise, etc. Además, aplicamos en todo momento la mirada apreciativa cuidando a los candidatos que participan en tu proceso.</p>
             </div>
 
-            <div className="p-8 bg-gray-100">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="px-0  mx-auto w-11/12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10">
                 {C_section.map((section, index) => (
                     <div
                     key={index}
@@ -264,7 +264,7 @@ const ConsultoraHeadhounter = () => {
                 </div>
             </div>
 
-            <div className="p-8">
+            <div className="p-10 mx-auto w-11/12">
                 <h2 className="text-3xl font-bold text-center text-gray-700">Especializados en los siguientes perfiles</h2>
                 <p className="w-full text-normal my-4 text-gray-700">Tras 50 años dedicándonos a la captación de talento de alto nivel, estamos especializados en atraer perfiles directivos de los siguientes sectores:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -284,7 +284,7 @@ const ConsultoraHeadhounter = () => {
                 </div>
             </div>
 
-            <div className="px-10 pb-10">
+            <div className="px-10 mx-auto w-11/12 pb-10">
                 <h2 className="text-3xl font-bold text-center mb-2 text-gray-700">Otros servicios que podrían ayudarte a crecer</h2>
                 <p className="text-center mb-4">En Montaner, además del servicio de consultoría de headhunting, podemos ayudarte en otros ámbitos:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -323,9 +323,14 @@ const ConsultoraHeadhounter = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Contacta Ya
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -361,7 +366,7 @@ const ConsultoraHeadhounter = () => {
                 ))}
                 </div>
             </div>
-            
+            <div className="h-1 bg-gray-100" id="scroll-target"></div> 
             <div className="w-full">
                 <ContactForm
                     handleSubmit={handleSubmit}

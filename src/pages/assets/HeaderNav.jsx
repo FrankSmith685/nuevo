@@ -5,17 +5,15 @@ import { TfiWorld } from 'react-icons/tfi';
 const HeaderNav = () => {
     const location = useLocation();
     const currentPath = location.pathname;
-    const logo1 = "Sandra Roggero Beratung";
+    const logo1 = "Sandra Roggero ";
 
     const menu1 = [
         { path: "/kandidaten", label: "KANDIDATEN" },
-        { path: "/presseraum", label: "PRESSERAUM" },
         { path: "/wir", label: "WIR" },
-        { path: "/blog", label: "BLOG" },
     ];
 
     const menu2 = [
-        { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "SELECCIÓN Y HEADHUNTING", subItems: [
+        { path: "/seleccion-y-headhunting/#", label: "SELECCIÓN Y HEADHUNTING", subItems: [
             { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento", label: "SELECCIÓN PERSONAL Y RECLUTAMIENTO" },
             { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "CONSULTORÍA HEADHUNTER" },
             { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios/", label: "SELECCIÓN DE DIRECTIVOS" },
@@ -23,7 +21,12 @@ const HeaderNav = () => {
             { path: "/seleccion-y-headhunting/evaluaciones-de-personal", label: "EVALUACIONES DE PERSONAL" },
         ]},
         { path: "/hr-business-partner", label: "HR BUSSINESS PARTNER" },
-        { path: "/*", label: "BERATUNG UND PERSONALFLUKTUATION" },
+        { path: "/consultoria/#", label: "BERATUNG UND PERSONALFLUKTUATION", subItems: [
+            { path: "/consultoria/formaciones-humanbits", label: "FORMACIONES" },
+            { path: "/consultoria", label: "CAMBIO ORGANIZACIONAL" },
+            { path: "/consultoria/acompanamiento-directivo", label: "COACHING DIRECTIVO" },
+            { path: "/consultoria/workshops/", label: "WORKSHOPS Y TALLERES" },
+        ]},
         { path: "/partnerships", label: "PARTNERSHIPS" },
         { path: "/Kontakt", label: "KONTAKT" },
     ];
@@ -54,7 +57,7 @@ const HeaderNav = () => {
 
     return (
         <nav className="p-0 w-full z-50">
-            <div className='bg-gradient-to-r from-blue-600 to-purple-600 h-14 w-full'>
+            <div className='bg-gradient-to-r from-customColor1 to-customColor2 h-14 w-full'>
                 <ul className="flex space-x-8 items-center justify-end h-full px-10">
                     {menu1.map((item, index) => (
                         <li key={index} className="text-center">
@@ -79,7 +82,7 @@ const HeaderNav = () => {
                 <ul className="flex space-x-8 py-0 items-center justify-center bg-gray-200 border-b-2 border-gray-400">
                     <li className="flex text-2xl items-center py-4">
                         <Link to="/" onClick={handleLinkClick}>
-                            <h2 className="font-lobster text-blue-700 hover:cursor-pointer">{logo1}</h2>
+                            <h2 className="font-bell text-blue-700 hover:cursor-pointer text-2xl">{logo1} <span className='text-customColor1 text-xl'>Beratung</span></h2>
                         </Link>
                     </li>
                     {menu2.map((item, index) => (

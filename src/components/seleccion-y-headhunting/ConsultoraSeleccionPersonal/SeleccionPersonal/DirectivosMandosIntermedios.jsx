@@ -1,23 +1,22 @@
-import { FaBullseye, FaChartLine, FaChartPie, FaClock, FaEye, FaHandsHelping, FaPeopleArrows, FaSearch, FaUserCheck, FaUserTie } from "react-icons/fa";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
-import { BriefcaseIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from "@heroicons/react/outline";
 
 
 import { useState } from "react";
 import { HiOutlineChartBar, HiOutlineChevronDown, HiOutlineChevronUp, HiOutlineCog, HiOutlineEye, HiOutlineHeart, HiOutlineLightBulb, HiOutlineThumbUp, HiOutlineUsers } from "react-icons/hi";
-import ContactForm from "../../home/contactForm/contactForm.jsx";
+
 import CardSeleccionPersonal from "./Cards/CardSeleccionPersonal.jsx";
 
 //Imagen Principal
-import imagenPrincipal from "../../../assets/imagenes/consultoria/imagen4.jpg";
+import imagenPrincipal from "../../../../assets/imagenes/consultoria/imagen4.jpg";
 
 // Imagen Servicio
-import service1 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
-import service2 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
-import service3 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
-import service4 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
+import service1 from "../../../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
+import service2 from "../../../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
+import service3 from "../../../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
+import service4 from "../../../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
+import ContactForm from "../../../common/contactForm.jsx";
+import { Link } from "react-scroll";
 
 const DirectivosMandosIntermedios = () => {
     const cardData = {
@@ -26,8 +25,8 @@ const DirectivosMandosIntermedios = () => {
         navegator3: "Directivos",
         title:"Empresa de Selección de directivos y mandos intermedios",
         description: "En Montaner contamos con más de 50 años trabajando con y para las personas. Ponemos la mirada en las personas cuando realizamos un proceso de selección de directivos y mandos intermedios. Es vital para conocer bien a los candidatos/as, entender sus motivaciones y sus objetivos. Poner el foco en qué va a aportar a la empresa y viceversa, nos permite trabajar mejor en esta nueva incorporación y asegurar el éxito de la oportunidad.",
-        subTitle_1:"Montaner es mucho más que una empresa de selección de directivos",
-        description_1:"Encontrar al talento que necesitas es una de nuestras especialidades cuando hablamos de selección de mandos intermedios y directivos competentes. Pero Montaner es mucho más. Nuestros servicios en consultoría, gestión del cambio, y formaciones para equipos y directivos, pueden ayudarte a satisfacer diversas necesidades que se dan en el día a día de las compañías. Somos especialistas en el encaje cultural entre directivos y empresas.",
+        // subTitle_1:"Montaner es mucho más que una empresa de selección de directivos",
+        // description_1:"Encontrar al talento que necesitas es una de nuestras especialidades cuando hablamos de selección de mandos intermedios y directivos competentes. Pero Montaner es mucho más. Nuestros servicios en consultoría, gestión del cambio, y formaciones para equipos y directivos, pueden ayudarte a satisfacer diversas necesidades que se dan en el día a día de las compañías. Somos especialistas en el encaje cultural entre directivos y empresas.",
         image: imagenPrincipal
     };
 
@@ -157,7 +156,7 @@ const DirectivosMandosIntermedios = () => {
                 image={cardData.image}
             />
 
-            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-16">
+            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-10">
                 <div className={`w-full h-full flex justify-center items-center space-x-20`}>
                     <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -173,9 +172,14 @@ const DirectivosMandosIntermedios = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Contacta Ya
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -247,7 +251,7 @@ const DirectivosMandosIntermedios = () => {
                 <p className="text-gray-700 text-start">Gracias a la contratación de nuestra consultoría, podrás reducir riesgos y esfuerzo invertido en la atracción de este tipo de perfil profesional especializado. Además, maximizarás los resultados encontrando los perfiles adecuados al puesto basándonos en competencias, conocimientos, personalidad, expertise, etc. Siempre aplicamos en todo momento la mirada apreciativa cuidando a los candidatos que participan en tu proceso.</p>
             </div>
 
-            <div className="py-10 px-10 w-11/12 mx-auto text-center">
+            <div className="py-10 px-10 w-11/12 mx-auto text-start">
                 <h2 className="text-3xl font-bold mb-4 text-gray-700">Funciones de los directivos de una empresa</h2>
                 <p className="text-gray-700 text-start pb-5">El director general es la persona encargada “formalmente” de la unidad organizacional. Esta autoridad formal le confiere un estatus especial dentro en la estructura de la empresa ante funciones interpersonales, informativas y de decisión.</p>
             
@@ -347,9 +351,14 @@ const DirectivosMandosIntermedios = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Contacta Ya
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -382,6 +391,7 @@ const DirectivosMandosIntermedios = () => {
 
                 </div>
             </div>
+            <div className="h-1 bg-gray-100" id="scroll-target"></div> 
             
             <div className="w-full ">
                 <ContactForm

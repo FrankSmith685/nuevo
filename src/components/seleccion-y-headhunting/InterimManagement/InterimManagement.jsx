@@ -1,23 +1,21 @@
-import { FaBullseye, FaChartLine, FaChartPie, FaClock, FaEye, FaHandsHelping, FaPeopleArrows, FaSearch, FaUserCheck, FaUserTie } from "react-icons/fa";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
-import { BriefcaseIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from "@heroicons/react/outline";
 
 
 import { useState } from "react";
-import { HiOutlineAcademicCap, HiOutlineChartBar, HiOutlineChevronDown, HiOutlineChevronUp, HiOutlineClock, HiOutlineCog, HiOutlineEye, HiOutlineHeart, HiOutlineLightBulb, HiOutlineRefresh, HiOutlineThumbUp, HiOutlineTrendingUp, HiOutlineUsers } from "react-icons/hi";
-import ContactForm from "../home/contactForm/contactForm.jsx";
-import CardSeleccionPersonal from "./Cards/CardSeleccionHeadHunting.jsx";
+import { HiOutlineAcademicCap, HiOutlineChevronDown, HiOutlineChevronUp, HiOutlineClock, HiOutlineRefresh, HiOutlineTrendingUp } from "react-icons/hi";
 
 //Imagen Principal
-import imagenPrincipal from "../../assets/imagenes/consultoria/imagen7.webp";
+import imagenPrincipal from "../../../assets/imagenes/consultoria/imagen7.webp";
 
 // Imagen Servicio
-import service1 from "../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
-import service2 from "../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
-import service3 from "../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
-import service4 from "../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
+import service1 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen1.jpg";
+import service2 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen2.jpg";
+import service3 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen3.jpg";
+import service4 from "../../../assets/imagenes/directivo_mandos_intermedios/imagen4.jpg";
+import ContactForm from "../../common/contactForm.jsx";
+import CardInterimManagement from "./Cards/CardInterimManagement.jsx";
+import { Link } from "react-scroll";
 
 const InterimManagement = () => {
     const cardData = {
@@ -60,24 +58,24 @@ const InterimManagement = () => {
       
 
     //
-    const D_section = [
-        {
-          title: "Más de 50 años seleccionando altos cargos",
-          icon: HiOutlineEye,
-        },
-        {
-          title: "Definición del perfil y análisis del mercado",
-          icon: HiOutlineUsers,
-        },
-        {
-          title: "Mirada apreciativa en la Selección ",
-          icon: HiOutlineThumbUp,
-        },
-        {
-          title: "Acompañamiento del directivo/a seleccionada en todo el proceso",
-          icon: HiOutlineChartBar,
-        },
-    ];
+    // const D_section = [
+    //     {
+    //       title: "Más de 50 años seleccionando altos cargos",
+    //       icon: HiOutlineEye,
+    //     },
+    //     {
+    //       title: "Definición del perfil y análisis del mercado",
+    //       icon: HiOutlineUsers,
+    //     },
+    //     {
+    //       title: "Mirada apreciativa en la Selección ",
+    //       icon: HiOutlineThumbUp,
+    //     },
+    //     {
+    //       title: "Acompañamiento del directivo/a seleccionada en todo el proceso",
+    //       icon: HiOutlineChartBar,
+    //     },
+    // ];
 
     // Servicios
     const services = [
@@ -143,17 +141,15 @@ const InterimManagement = () => {
 
     return (
         <div className="p-0"> 
-            <CardSeleccionPersonal
+            <CardInterimManagement
                 navegator1={cardData.navegator1} 
                 navegator2={cardData.navegator2}
                 title={cardData.title}
                 description={cardData.description}
-                subTitle_1={cardData.subTitle_1}
-                description_1={cardData.description_1}
                 image={cardData.image}
             />
 
-            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-16">
+            <div ref={ref1} className="bg-red-800 w-full h-auto flex items-center justify-center py-10">
                 <div className={`w-full h-full flex justify-center items-center space-x-20`}>
                     <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -169,9 +165,14 @@ const InterimManagement = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Quiero informarme
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -208,7 +209,7 @@ const InterimManagement = () => {
                 <h2 className="text-3xl font-bold text-start mb-4 text-gray-700">Metodología de selección Interim Management de Montaner</h2>
                 <p className="text-gray-700 text-start">Montaner es tu partner para proyectos interim. Ante los procesos de cambio organizacional, apostamos por minimizar sus efectos, seleccionando aquellos profesionales con las excelentes aptitudes y capacidades que mejor se adapten al reto planteado, buscando transformar las dificultades en oportunidades.</p>
                 <p className="text-gray-700 text-start py-4">Nuestra metodología se basa en establecer el foco en las personas:</p>
-                <ul className="list-disc list-inside mb-8">
+                <ul className="list-disc list-inside mb-8 text-gray-700">
                     <li className="mb-2">
                         <strong>Motivamos a los profesionales</strong>  más adecuados en cada proyecto para asegurar el éxito en la gestión del cambio.
                     </li>
@@ -237,9 +238,14 @@ const InterimManagement = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Contacta Ya
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
@@ -283,14 +289,19 @@ const InterimManagement = () => {
                     transition={{ duration: 0.5 }}
                     className=""
                     >
-                    <button className="bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <Link
+                        to="scroll-target"
+                        smooth={true}
+                        duration={500}
+                        className="hover:cursor-pointer bg-transparent border-white border-2 px-10 py-3 font-medium text-white hover:bg-white hover:text-blue-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
+                    >
                         Quiero informarme
-                    </button>
+                    </Link>
                     </motion.div>
                 </div>
             </div>
 
-            <div className="px-10 pt-10  bg-gray-100">
+            <div className="px-10  bg-gray-100">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-center text-3xl font-bold text-gray-500 py-10">Preguntas frecuentes sobre Interim Management</h2>
                     {sections4.map((section, index) => (
@@ -318,7 +329,7 @@ const InterimManagement = () => {
 
                 </div>
             </div>
-            
+            <div className="h-1 bg-gray-100" id="scroll-target"></div> 
             <div className="w-full ">
                 <ContactForm
                     handleSubmit={handleSubmit}
