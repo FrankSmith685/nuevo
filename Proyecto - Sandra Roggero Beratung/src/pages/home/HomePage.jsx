@@ -181,18 +181,18 @@ const HomePage = () => {
           <source src={bannerPrincipal} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
-        <div className="flex flex-col justify-center items-center h-full z-20 relative space-y-4 p-4 sm:p-6 md:p-8">
+        <div className="flex flex-col justify-center bg-bg_favorite_1 items-center h-full z-20 relative space-y-4 p-4 sm:p-6 md:p-8">
           <h2 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl font-bell text-center px-2">
             Berater für Humanressourcen
           </h2>
-          <Link
+          {/* <Link
             to="scroll-target"
             smooth={true}
             duration={500}
             className="hover:cursor-pointer bg-gradient-to-r from-customColor3 to-customColor4 text-white font-medium py-2 sm:py-3 px-6 sm:px-8 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-customColor3 focus:ring-opacity-50 hover:bg-customColor4"
           >
             <span className="inline-block mr-2 animate-bounce">🚀</span> Kontakt aufnehmen
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div ref={ref1} className="w-11/12 mx-auto text-gray-700">
@@ -474,7 +474,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className="py-10 w-full  bg-gray-100">
+      {/* <div className="py-10 w-full  bg-gray-100">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-700 w-11/12 mx-auto">HR-Beratung Dienstleistungen</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-11/12 mx-auto px-10">
           {sections2.map((section, index) => (
@@ -499,7 +499,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className="px-10 w-11/12 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -523,7 +523,7 @@ const HomePage = () => {
         <p className="text-gray-700 text-center">Eine Personalberatung wie unsere widmet sich einer wesentlichen Aufgabe für das Wachstum und die Effizienz Ihrer Organisation. Wir sind Experten darin, Ihre Personalstrategie zu analysieren, von den Teams bis hin zu den Tools und Verfahren, die sie beeinflussen. Wir möchten Ihr HR-Partner sein und gemeinsam an Projekten arbeiten, die Ihrem Unternehmen beim Wachstum helfen. Unser Ziel ist es, das Potenzial Ihres Humankapitals zu maximieren, damit es zu einem strategischen Vermögenswert bei der Erreichung Ihrer Unternehmensziele wird.</p>
         <p className="text-gray-700 text-center pt-5">Durch die Zusammenarbeit mit einer Personalberatung stellen Sie sicher, dass jeder Schritt, den Sie im Talentmanagement unternehmen, auf der Erfahrung und dem tiefen Wissen von Fachleuten basiert, die jahrelang daran gearbeitet haben, ihre Beratung in diesem Bereich zu perfektionieren. Bei Beratung bieten wir nicht nur Beratungsdienste an, sondern werden auch Ihre Verbündeten, führend in der Definition maßgeschneiderter Strategien. Wir sind hier, um Ihnen zu helfen, das beste Talent auszuwählen, zu binden und zu fördern, und betrachten jedes Projekt als eine Wachstumschance sowohl für Ihre Mitarbeiter als auch für Ihr Unternehmen.</p>
       </div>
-      <div className="  bg-gray-100 ">
+      {/* <div className="  bg-gray-100 ">
         <div className="w-11/12 mx-auto">
           {sections3.map((section, index) => (
             <div key={index} className="mb-0">
@@ -548,7 +548,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
 
       <div ref={ref8} className="bg-red-500 w-full h-auto flex items-center justify-center py-10">
@@ -587,7 +587,7 @@ const HomePage = () => {
         <p className="text-gray-700 text-center pt-5">Das Verstehen und Management der Employee Journey, oder Mitarbeiterreise, ist im aktuellen Umfeld von entscheidender Bedeutung. Für Beratung ist dieses Konzept ein integraler Bestandteil unseres Ansatzes in der Personalberatung. Wir erkennen an, dass der Prozess der Gewinnung, Entwicklung und Bindung von Talenten ein Schlüsselelement für den nachhaltigen Erfolg jedes Unternehmens in jedem Sektor ist.</p>
       </div>
 
-      <div className=" bg-gray-100">
+      {/* <div className=" bg-gray-100">
         <div className=" w-11/12 mx-auto">
           {sections4.map((section, index) => (
             <div key={index} className="mb-0">
@@ -616,7 +616,7 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="h-1 bg-gray-100" id="scroll-target"></div>
         <ContactForm/>

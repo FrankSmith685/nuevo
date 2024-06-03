@@ -9,7 +9,7 @@ const HeaderNav = () => {
     const logo1 = "Sandra Roggero";
 
     const menu1 = [
-        { path: "/kandidaten", label: "KANDIDATEN" },
+        // { path: "/kandidaten", label: "KANDIDATEN" },
         { path: "/wir", label: "WIR" },
     ];
 
@@ -64,7 +64,7 @@ const HeaderNav = () => {
 
     return (
         <nav className="p-0 w-full z-50">
-            <div className='bg-gradient-to-r from-customColor1 to-customColor2 h-14 w-full'>
+            <div className='bg-gradient-to-r from-customColor1 to-customColor2 h-20 w-full'>
                 <ul className="flex space-x-8 items-center justify-end h-full px-4 md:px-10">
                     {menu1.map((item, index) => (
                         <li key={index} className="text-center">
