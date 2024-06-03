@@ -29,7 +29,7 @@ const HeaderNav = () => {
             { path: "/consultoria/workshops/", label: "WORKSHOPS UND SEMINARE" },
         ]},
         { path: "/partnerships", label: "PARTNERSCHAFTEN" },
-        { path: "/Kontakt", label: "KONTAKT" },
+        { path: "/kontakt", label: "KONTAKT" },
     ];
     
 
