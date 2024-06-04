@@ -6,6 +6,7 @@ import Footer from "../pages/assets/Footer";
 import HrBusinessPartner from "../components/hr-business-partner/HrBusinessPartner";
 import AcompanamientoDIrectivo from "../components/consultoria/AcompanamientoDIrectivo";
 import KontakPage from "../pages/kontakt/kontaktPage";
+import WirPage from "../pages/wir/wirPage";
 
 // import InterimManagement from "../components/seleccion-y-headhunting/InterimManagement/InterimManagement";
 // import Evaluaciones from "../components/seleccion-y-headhunting/Evaluaciones/Evaluaciones";
@@ -65,6 +66,7 @@ export const AppRoutes = () => {
               <Route path="/hr-business-partner" element={<HrBusinessPartner />} />
 
               <Route path="/kontakt" element={<KontakPage />} />
+              <Route path="/wir" element={<WirPage />} />
 
               {/* <Route path="/seleccion-y-headhunting/seleccion-de-directivos" element={<SeleccionDirectivos />} />
               <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoriaHeadhunter />} />
