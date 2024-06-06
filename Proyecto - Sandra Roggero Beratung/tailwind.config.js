@@ -9,6 +9,8 @@ module.exports = {
         'lobster': ['Lobster', 'cursive'],
         'comic': ['"Comic Sans MS"', 'cursive'],
         'bell': ['"Bell MT"', 'serif'],
+        'streamline': ['"Streamline Moderne"', 'sans-serif'],
+        'quicksand': ['Quicksand', 'sans-serif'],
       },
       height:{
         h_screen_80: "80vh",
@@ -21,13 +23,16 @@ module.exports = {
         bg_favorite_1: "rgba(0,0,0,0.5)",
         bg_favorite_2: "rgba(219, 187, 136, 1)",
         bg_favorite_gradient_start: "rgba(219,187,136,1)",
-        bg_favorite_3: "#2F3452"
+        bg_favorite_3: "#2F3452",
+        bg_favorite_4: "#404858",
+        bg_favorite_5: "rgb(150, 148, 201)"
       },
       colors: {
         customColor1: "rgba(219, 187, 136, 1)",
         customColor2: "rgba(209, 169, 101, 1)",
         customColor3: "rgba(175, 150, 108, 1)",
         customColor4: "rgba(167, 135, 81, 1)",
+        customColor5: "rgb(150, 148, 201)",
 
       },
       animation: {

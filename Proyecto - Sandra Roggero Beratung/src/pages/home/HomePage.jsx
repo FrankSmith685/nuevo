@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
 // import banner1 from "../../assets/imagenes/imagen.webp";
@@ -17,7 +17,7 @@ import bannerPrincipal from "../../assets/video/banner.mp4";
 import { SearchIcon, PresentationChartBarIcon, ScaleIcon } from '@heroicons/react/outline';
 import { HiOutlineEye, HiOutlineUsers, HiOutlineThumbUp, HiOutlineChartBar,HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 
-import fotoPerfil from "../../assets/imagenes/fotoPerfil.PNG";
+import fotoPerfil from "../../assets/imagenes/fotoPerfil.jpg";
 
 // consultoria
 import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
@@ -27,8 +27,8 @@ import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import ContactForm from "../../components/common/contactForm";
-import { useNavigate } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { useNavigate,Link } from "react-router-dom";
+import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 
 
 // infoItems2
@@ -110,23 +110,23 @@ const HomePage = () => {
     },
   ];
 
-  const services = [
-    "FÜHRUNGSBEGLEITUNG",
-    "BEWERTUNGEN",
-    "WORKSHOPS UND TEAMBUILDINGS",
-    "AUSWAHL VON FÜHRUNGSKRÄFTEN",
-    "GLEICHSTELLUNGSPLÄNE",
-    "MANAGEMENT DES ORGANISATORISCHEN WANDELS",
-  ];
+  // const services = [
+  //   "FÜHRUNGSBEGLEITUNG",
+  //   "BEWERTUNGEN",
+  //   "WORKSHOPS UND TEAMBUILDINGS",
+  //   "AUSWAHL VON FÜHRUNGSKRÄFTEN",
+  //   "GLEICHSTELLUNGSPLÄNE",
+  //   "MANAGEMENT DES ORGANISATORISCHEN WANDELS",
+  // ];
   
-  const backgrounds = [
-    `url(${imagen1})`,
-    `url(${imagen2})`,
-    `url(${imagen3})`,
-    `url(${imagen4})`,
-    `url(${imagen5})`,
-    `url(${imagen6})`,
-  ];
+  // const backgrounds = [
+  //   `url(${imagen1})`,
+  //   `url(${imagen2})`,
+  //   `url(${imagen3})`,
+  //   `url(${imagen4})`,
+  //   `url(${imagen5})`,
+  //   `url(${imagen6})`,
+  // ];
   
   // 
   const sections3 = [
@@ -199,9 +199,9 @@ const HomePage = () => {
 
     useEffect(() => {
         const texts = [
-            "innovativen Lösungen?",
-            "qualifizierten Kandidaten?",
-            "einer professionellen Verbesserung?"
+            "INNOVATIVEN LÖSUNGEN?",
+            "QUALIFIZIERTEN KANDIDATEN?",
+            "EINER PROFESSIONELLEN VERBESSERUNG?"
         ];
 
         let typingSpeed = 150;
@@ -237,25 +237,50 @@ const HomePage = () => {
     }, [currentCharIndex, isDeleting, currentTextIndex]);
 
     const infoItems = [
-      { title: "Personalauswahl und Rekrutierung", description: "Wir bieten individuelle Unterstützung in Auswahlverfahren und Integration für Bewerber und Kunden." },
-      { title: "Personalbewertungen", description: "Sandra Roggero Beratung hilft bei der Team-Bewertung und -Entwicklung durch maßgeschneiderte Evaluierungen und individuelle Kompetenzpläne." },
-      { title: "International", description: "Sandra Roggero Beratung unterstützt Unternehmen weltweit bei der Rekrutierung von Fachkräften durch Talentmanagement und Auswahlprozesse." },
-      { title: "Funktionen", description: "Unterstützung bei der Talentidentifizierung, Humankapitalentwicklung, Einbindung von Fachkräften und Schaffung einer starken Unternehmenskultur." },
-      { title: "Fachspezifische Suche", description: "Die Auswahl passender Mitarbeiter ist entscheidend. Sandra Roggero hilft, Talente anzuziehen, die Ihre Geschichte teilen und Ihr Unternehmen formen können." },
-      { title: "Inklusionsaudit", description: "Wir überwinden Vorurteile im Auswahlprozess durch ein Inklusionsaudit, das jeden Schritt von der Stellenbeschreibung bis zum Onboarding analysiert." },
+      { title: "Personalauswahl und Rekrutierung", description: "Wir bieten individuelle Unterstützung in Auswahlverfahren und Integration für Bewerber und Kunden.", path: "/unternehmen/personalauswahl-und-rekrutierung" },
+      { title: "Personalbewertungen", description: "Unterstützung bei der Talentidentifizierung, Humankapitalentwicklung, Einbindung von Fachkräften und Schaffung einer starken Unternehmenskultur.", path: "/unternehmen/personalbewertungen" },
+      { title: "International", description: "Sandra Roggero-Beratung hilft bei der Teambewertung und -Entwicklung durch maßgeschneiderte Evaluierungen und individuelle Kompetenzpläne.", path: "/unternehmen/international" },
+      { title: "Funktionen", description: "Die Auswahl passender Mitarbeiter ist entscheidend. Sandra Roggero hilft, Talente anzuziehen, die Ihre Geschichte teilen und Ihr Unternehmen formen können.", path: "/unternehmen/funktionen" },
+      { title: "Fachspezifische Suche", description: "Sandra Roggero-Beratung unterstützt Unternehmen weltweit bei der Rekrutierung von Fachkräften durch Talentmanagement und Auswahlprozesse.", path: "/unternehmen/fachspezifische-suche" },
+      { title: "Inklusionsaudit", description: "Wir überwinden Vorurteile im Auswahlprozess durch ein Inklusionsaudit, das jeden Schritt von der Stellenbeschreibung bis zum Onboarding analysiert.", path: "/unternehmen/inklusionsaudit" },
     ];
+    
 
     const [activeIndex, setActiveIndex] = useState(null);
 
     const infoItems2 = [
-      { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
+      // { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
       { title: "INNOVATION", description: "Wir verfügen über eine innovative Methodik und bieten umfassende Begleitung.", image: imagenInfo2 },
       { title: "SPEZIALISIERUNG UND ENGAGEMENT", description: "Wir bieten spezialisierte Bereiche in jedem Sektor, um den idealen Kandidaten zu identifizieren.", image: imagenInfo3 },
       { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
       { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
       ];
 
+      const services = [
+        {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
+        {image:imagen2,title:"BEWERTUNGEN"},
+        {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
+        {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
+        {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
+        {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+    ];
+      
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextCard = () => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % services.length);
+    };
+
+    const prevCard = () => {
+        setCurrentIndex(prevIndex => (prevIndex === 0 ? services.length - 1 : prevIndex - 1));
+    };
     
+    const getCardPosition = (index, currentIndex, length) => {
+        if (index === currentIndex) return 'translate-x-0 opacity-100';
+        if (index === (currentIndex + 1) % length) return 'translate-x-full opacity-50';
+        if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
+        return 'hidden';
+      };
 
 
   return (
@@ -266,55 +291,56 @@ const HomePage = () => {
                 Tu navegador no soporta el elemento de video.
             </video>
             <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4 pt-96 sm:p-6 md:p-8">
-                <div className="w-2/5 h-auto mt-32 ">
-                    <h2 className="text-white font-bold text-4xl sm:text-4xl md:text-5xl font-bell text-end px-2">
-                        Suchen Sie nach
+                <div className="w-2/5 h-auto mt-24 font-streamline">
+                    <h2 className="text-white font-medium text-9xl sm:text-4xl md:text-5xl font-bell text-end px-2">
+                        SUCHEN SIE NACH
                     </h2>
-                    <h2 className="text-white font-bold text-4xl sm:text-4xl md:text-5xl font-bell text-end px-2">
+                    <h2 className="text-customColor5 font-medium text-9xl sm:text-4xl md:text-5xl font-bell text-end px-2">
                         <span>{displayText}</span>
                     </h2>
                 </div>
                 <div className="w-full h-auto flex justify-end items-end absolute bottom-0">
-                <div className="w-full grid grid-cols-3 text-white bg-transparent backdrop-blur-sm">
+                  <div className="w-full grid grid-cols-3 text-white bg-transparent backdrop-blur-sm">
                     {infoItems.map((item, index) => (
-                        <div 
-                            key={index} 
-                            className={`border-border_1 border-gray-500 p-4 h-36 flex items-center transition-all duration-300 ${activeIndex === index ? 'hover:bg-white hover:text-gray-700' : ''}`}
-                            onMouseEnter={() => setActiveIndex(index)}
-                            onMouseLeave={() => setActiveIndex(null)}
-                        >
-                            <div className="flex-1">
-                                <h3 className="font-bold">{item.title}</h3>
-                                {activeIndex === index && (
-                                    <p className="opacity-100 transition-opacity duration-300">{item.description}</p>
-                                )}
-                            </div>
-                            <FaArrowRight className="ml-2 text-xl" />
+                      <Link 
+                        to={item.path} 
+                        key={index} 
+                        className={`border-border_1 border-gray-500 p-4 h-36 flex items-center transition-all duration-300 ${activeIndex === index ? 'hover:bg-white hover:text-gray-700' : ''}`}
+                        onMouseEnter={() => setActiveIndex(index)}
+                        onMouseLeave={() => setActiveIndex(null)}
+                      >
+                        <div className="flex-1">
+                          <h3 className="font-bold">{item.title}</h3>
+                          {activeIndex === index && (
+                            <p className="opacity-100 transition-opacity duration-300">{item.description}</p>
+                          )}
                         </div>
+                        <FaArrowRight className="ml-2 text-xl" />
+                      </Link>
                     ))}
-                </div>
-            </div>
+                  </div>
+              </div>
             </div>
         </div>
       <div ref={ref1} className="w-11/12 mx-auto text-gray-700 flex flex-nowrap py-20 px-10">
-        <div className="w-full bg-red-500">
+        <div className="w-full ">
           <img src={fotoPerfil} alt="not found" className="w-full h-full object-cover" />
         </div>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={inView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full p-4 sm:p-10 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
+          className="w-full h-full p-4 sm:p-10 md:p-20 space-y-4 sm:space-y-6 md:space-y-8 "
         >
           {/* <h2 className="font-bell text-blue-700 hover:cursor-pointer text-3xl sm:text-4xl md:text-6xl">
             Sandra Roggero <span className="text-customColor1 text-2xl sm:text-3xl md:text-5xl">Beratung</span>
           </h2> */}
 
-            <div className="flex flex-col items-center">
-              <h2 className={`font-bell font-bold lg:text-5xl md:text-lg leading-3 transition-colors duration-300 text-gray-800`}>
-                  Sandra Rogero
+            <div className="flex flex-col items-center ">
+              <h2 className={`font-bell font-medium lg:text-5xl md:text-lg leading-3 transition-colors duration-300 text-gray-800`}>
+                  Sandra Roggero M.
               </h2>
-              <span className={`md:text-base lg:text-lg -mt-3 transition-colors duration-300 text-gray-800`}>
+              <span className={`md:text-base font-bell lg:text-lg -mt-1.5 transition-colors duration-300 text-gray-800`}>
                   Beratung
               </span>
           </div>
@@ -657,6 +683,44 @@ const HomePage = () => {
           ))}
         </div>
       </div> */}
+
+      <div className="bg-gray-800 w-full h-full">
+        <h2 className="text-3xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
+        <div className="relative w-full h-auto overflow-hidden ">
+            <div className="flex justify-center items-center  w-full h-96 p-20">
+                {services.map((service, index) => (
+                <div key={index} className={`absolute w-1/2  transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
+                    <div className="w-full h-full ">
+                    <img src={service.image} alt={service.title} className="w-full h-96 object-cover"/>
+                    </div>
+                    
+                    <div className="absolute inset-0 w-full flex items-end justify-center">
+                    <div className="w-full  bg-bg_favorite_4 text-center p-4">
+                        <h3 className="text-base font-bold text-white">{service.title}</h3>
+                    </div>
+                    </div>
+                </div>
+                ))}
+            </div>
+            
+        </div>
+        <div className="flex items-center justify-center py-5 w-1/2 mx-auto">
+            <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={prevCard}>
+            <FaAngleLeft />
+            </div>
+            <div className="relative w-full mx-4 h-1 bg-gray-700 rounded">
+            <div
+                className="absolute top-0 left-0 h-full bg-white transition-all duration-500 ease-in-out"
+                style={{ width: `${((currentIndex + 1) / services.length) * 100}%` }}
+            ></div>
+            </div>
+            <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={nextCard}>
+            <FaAngleRight />
+            </div>
+        </div>
+      </div>
+
+{/* 
       <div className="p-10 w-11/12 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -676,12 +740,12 @@ const HomePage = () => {
 </div>
 
 
-      </div>
-      <div className="p-10 w-11/12 mx-auto">
+      </div> */}
+      {/* <div className="p-10 w-11/12 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-700">Worin besteht genau eine Personalberatung?</h2>
         <p className="text-gray-700 text-center">Eine Personalberatung wie unsere widmet sich einer wesentlichen Aufgabe für das Wachstum und die Effizienz Ihrer Organisation. Wir sind Experten darin, Ihre Personalstrategie zu analysieren, von den Teams bis hin zu den Tools und Verfahren, die sie beeinflussen. Wir möchten Ihr HR-Partner sein und gemeinsam an Projekten arbeiten, die Ihrem Unternehmen beim Wachstum helfen. Unser Ziel ist es, das Potenzial Ihres Humankapitals zu maximieren, damit es zu einem strategischen Vermögenswert bei der Erreichung Ihrer Unternehmensziele wird.</p>
         <p className="text-gray-700 text-center pt-5">Durch die Zusammenarbeit mit einer Personalberatung stellen Sie sicher, dass jeder Schritt, den Sie im Talentmanagement unternehmen, auf der Erfahrung und dem tiefen Wissen von Fachleuten basiert, die jahrelang daran gearbeitet haben, ihre Beratung in diesem Bereich zu perfektionieren. Bei Beratung bieten wir nicht nur Beratungsdienste an, sondern werden auch Ihre Verbündeten, führend in der Definition maßgeschneiderter Strategien. Wir sind hier, um Ihnen zu helfen, das beste Talent auszuwählen, zu binden und zu fördern, und betrachten jedes Projekt als eine Wachstumschance sowohl für Ihre Mitarbeiter als auch für Ihr Unternehmen.</p>
-      </div>
+      </div> */}
       {/* <div className="  bg-gray-100 ">
         <div className="w-11/12 mx-auto">
           {sections3.map((section, index) => (
@@ -740,11 +804,11 @@ const HomePage = () => {
 
 
 
-      <div className="p-10 w-11/12 mx-auto">
+      {/* <div className="p-10 w-11/12 mx-auto">
         <h2 className="text-2xl font-bold text-center mb-12 text-gray-700">Die Employee Journey als Unterscheidungsmerkmal in der HR-Beratung</h2>
         <p className="text-gray-700 text-center">In der heutigen Geschäftswelt ist es offensichtlich geworden, dass erfolgreiche Organisationen sich nicht nur auf die Gegenwart konzentrieren, sondern auch die Zukunft ihrer Mitarbeiter innerhalb des Unternehmens planen. In diesem Kontext positioniert sich Beratung, nach 50 Jahren als Personalberatung, als strategischer Partner für Unternehmen, die ihr Talentmanagement optimieren möchten.</p>
         <p className="text-gray-700 text-center pt-5">Das Verstehen und Management der Employee Journey, oder Mitarbeiterreise, ist im aktuellen Umfeld von entscheidender Bedeutung. Für Beratung ist dieses Konzept ein integraler Bestandteil unseres Ansatzes in der Personalberatung. Wir erkennen an, dass der Prozess der Gewinnung, Entwicklung und Bindung von Talenten ein Schlüsselelement für den nachhaltigen Erfolg jedes Unternehmens in jedem Sektor ist.</p>
-      </div>
+      </div> */}
 
       <div className="w-full bg-gray-200 flex flex-nowrap">
         <div className="w-full h-auto">

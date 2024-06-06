@@ -7,6 +7,8 @@ import HrBusinessPartner from "../components/hr-business-partner/HrBusinessPartn
 import AcompanamientoDIrectivo from "../components/consultoria/AcompanamientoDIrectivo";
 import KontakPage from "../pages/kontakt/kontaktPage";
 import WirPage from "../pages/wir/wirPage";
+
+// import Personalbewertungen from "../components/Unternehmen/Personalbewertungen";
 // import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
 // import PersonalauswahlUndRekrutierung from './PersonalauswahlUndRekrutierung';
 
@@ -22,8 +24,15 @@ import WirPage from "../pages/wir/wirPage";
 // Importa los componentes de las páginas
 const HomePage = lazy(() => import("../pages/home/HomePage"));
 
-const SeleccionPersonalReclutamiento = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonalReclutamiento"));
+// const SeleccionPersonalReclutamiento = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonalReclutamiento"));
 const PersonalauswahlUndRekrutierung = lazy(() => import("../components/Unternehmen/PersonalauswahlUndRekrutierung"));
+const Personalbewertungen = lazy(() => import("../components/Unternehmen/Personalbewertungen"));
+const International = lazy(() => import("../components/Unternehmen/International"));
+const Funktionen = lazy(() => import("../components/Unternehmen/funktionen"));
+const FachspezifischeSuche = lazy(() => import("../components/Unternehmen/FachspezifischeSuche"));
+const Inklusionsaudit = lazy(() => import("../components/Unternehmen/Inklusionsaudit"));
+
+
 
 const DirectivosMandosIntermedios = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonal/DirectivosMandosIntermedios"));
 
@@ -57,9 +66,15 @@ export const AppRoutes = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               {/* Rutas para seleccion-y-headhunting */}
-              <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento" element={<SeleccionPersonalReclutamiento />} />
-              <Route path="/unternehmen/personalauswahl-und-rekrutierungr" element={<PersonalauswahlUndRekrutierung/>} />
+              {/* <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento" element={<SeleccionPersonalReclutamiento />} /> */}
+              <Route path="/unternehmen/personalauswahl-und-rekrutierung" element={<PersonalauswahlUndRekrutierung/>} />
+              <Route path="/unternehmen/personalbewertungen" element={<Personalbewertungen/>} />
+              <Route path="/unternehmen/international" element={<International/>} />
+              <Route path="/unternehmen/funktionen" element={<Funktionen/>} />
+              <Route path="/unternehmen/fachspezifische-suche" element={<FachspezifischeSuche/>} />
+              <Route path="/unternehmen/inklusionsaudit" element={<Inklusionsaudit/>} />
 
+              
               <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios" element={<DirectivosMandosIntermedios />} />
 
               <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoraHeadhounter />} />

@@ -9,8 +9,10 @@ import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
 import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-import { useEffect, useState } from "react";
-import { FaAngleLeft, FaAngleRight, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+import { useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const PersonalauswahlUndRekrutierung=()=>{
     const navigate = useNavigate();
@@ -44,7 +46,10 @@ const PersonalauswahlUndRekrutierung=()=>{
         if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
         return 'hidden';
       };
-      
+
+      const handleClickSeleccionReclutamiento = () => {
+        navigate("/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento");
+      };
 
     return(
         <>
@@ -67,7 +72,7 @@ const PersonalauswahlUndRekrutierung=()=>{
                     {' > '}
                     Personalauswahl und Rekrutierung
                 </p>
-                <p className="text-gray-700 text-center w-full ">
+                <p className="text-gray-700 text-start w-full ">
                     Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handeln würde, 
                     indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt, 
                     um sie zu beraten und ihre Bedürfnisse zu erkennen und zu erfüllen. Darüber hinaus begleiten und gewährleisten wir 
@@ -89,7 +94,7 @@ const PersonalauswahlUndRekrutierung=()=>{
                             </div>
                             
                             <div className="absolute inset-0 w-full flex items-end justify-center">
-                            <div className="w-full  bg-red-700 text-center p-4">
+                            <div className="w-full  bg-bg_favorite_4 text-center p-4">
                                 <h3 className="text-base font-bold text-white">{service.title}</h3>
                             </div>
                             </div>
@@ -111,6 +116,22 @@ const PersonalauswahlUndRekrutierung=()=>{
                     <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={nextCard}>
                     <FaAngleRight />
                     </div>
+                </div>
+            </div>
+            <div className="w-full bg-gray-200 flex flex-nowrap">
+                <div className="w-full h-auto">
+                <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-auto object-cover"/>
+                </div>
+                <div className="w-2/3 flex justify-center items-center">
+                <div className="w-full text-center ">
+                    <h2 className="font-semibold text-gray-800 my-2 text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <button
+                        className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200  focus:ring-opacity-50 "
+                        onClick={handleClickSeleccionReclutamiento}
+                    >
+                        Kontaktaufnahme
+                    </button>
+                </div>
                 </div>
             </div>
             

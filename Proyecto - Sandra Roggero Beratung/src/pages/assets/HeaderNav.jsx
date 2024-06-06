@@ -241,12 +241,12 @@ const HeaderNav = () => {
 
     const menu2 = [
         { path: "/unternehmen/#", label: "Unternehmen", subTema: "Wir wählen die Fachleute aus, die Ihr Unternehmen bilden werden, und fördern neue, der heutigen Zeit angepasste Führungsstile." ,subItems: [
-            { path: "/unternehmen/personalauswahl-und-rekrutierungr", label: "Personalauswahl und Rekrutierung" },
-            { path: "/unternehmen/consultoria-headhunter", label: "Personalbewertungen" },
-            { path: "/unternehmen/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios/", label: "International" },
-            { path: "/unternehmen/interim-management", label: "Funktionen " },
-            { path: "/unternehmen/evaluaciones-de-personal", label: "Fachspezifische Suche" },
-            { path: "/unternehmen/", label: "Inklusionsaudit" },
+            { path: "/unternehmen/personalauswahl-und-rekrutierung", label: "Personalauswahl und Rekrutierung" },
+            { path: "/unternehmen/personalbewertungen", label: "Personalbewertungen" },
+            { path: "/unternehmen/international", label: "International" },
+            { path: "/unternehmen/funktionen", label: "Funktionen" },
+            { path: "/unternehmen/fachspezifische-suche", label: "Fachspezifische Suche" },
+            { path: "/unternehmen/inklusionsaudit", label: "Inklusionsaudit" },
 
             // { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento", label: "Personalauswahl und Rekrutierung" },
             // { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "Headhunter-Beratung" },
@@ -298,10 +298,10 @@ const HeaderNav = () => {
                     <li className="text-center py-4 md:flex hidden">
                         <Link to="/" onClick={handleLinkClick} className="flex items-center">
                             <div className="flex flex-col items-center">
-                                <h2 className={`font-bell font-bold lg:text-3xl md:text-lg leading-3 transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
-                                    Sandra Rogero
+                                <h2 className={`font-medium font-bell lg:text-3xl md:text-lg transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                    Sandra Roggero M.
                                 </h2>
-                                <span className={`md:text-base lg:text-base -mt-3 transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                <span className={`md:text-base font-bell lg:text-base -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                     Beratung
                                 </span>
                             </div>

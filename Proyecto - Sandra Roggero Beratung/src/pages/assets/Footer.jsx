@@ -18,10 +18,10 @@ const Footer = () => {
                     </Link> */}
                     <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center">
                         <div className="flex flex-col items-center">
-                            <h2 className={`font-bell font-bold lg:text-3xl md:text-lg leading-3 transition-colors duration-300 text-white`}>
-                                Sandra Rogero
+                            <h2 className={`font-bell font-medium lg:text-3xl md:text-lg leading-3 transition-colors duration-300 text-white`}>
+                                Sandra Roggero M.
                             </h2>
-                            <span className={`md:text-base lg:text-base -mt-3 transition-colors duration-300 text-white`}>
+                            <span className={`md:text-base font-bell lg:text-base -mt-2 transition-colors duration-300 text-white`}>
                                 Beratung
                             </span>
                         </div>
