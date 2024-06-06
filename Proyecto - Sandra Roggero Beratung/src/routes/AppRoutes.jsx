@@ -7,6 +7,9 @@ import HrBusinessPartner from "../components/hr-business-partner/HrBusinessPartn
 import AcompanamientoDIrectivo from "../components/consultoria/AcompanamientoDIrectivo";
 import KontakPage from "../pages/kontakt/kontaktPage";
 import WirPage from "../pages/wir/wirPage";
+// import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
+// import PersonalauswahlUndRekrutierung from './PersonalauswahlUndRekrutierung';
+
 
 // import InterimManagement from "../components/seleccion-y-headhunting/InterimManagement/InterimManagement";
 // import Evaluaciones from "../components/seleccion-y-headhunting/Evaluaciones/Evaluaciones";
@@ -20,6 +23,8 @@ import WirPage from "../pages/wir/wirPage";
 const HomePage = lazy(() => import("../pages/home/HomePage"));
 
 const SeleccionPersonalReclutamiento = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonalReclutamiento"));
+const PersonalauswahlUndRekrutierung = lazy(() => import("../components/Unternehmen/PersonalauswahlUndRekrutierung"));
+
 const DirectivosMandosIntermedios = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonal/DirectivosMandosIntermedios"));
 
 const ConsultoraHeadhounter = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraHeadhounter/ConsultoraHeadhounter")); 
@@ -53,6 +58,8 @@ export const AppRoutes = () => {
               <Route path="/" element={<HomePage />} />
               {/* Rutas para seleccion-y-headhunting */}
               <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento" element={<SeleccionPersonalReclutamiento />} />
+              <Route path="/unternehmen/personalauswahl-und-rekrutierungr" element={<PersonalauswahlUndRekrutierung/>} />
+
               <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios" element={<DirectivosMandosIntermedios />} />
 
               <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoraHeadhounter />} />

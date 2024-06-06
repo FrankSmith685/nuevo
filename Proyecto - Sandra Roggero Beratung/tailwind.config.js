@@ -14,10 +14,14 @@ module.exports = {
         h_screen_80: "80vh",
         h_custom_1: "calc(100vh - 100px)",
       },
+      borderWidth:{
+        border_1: "1px",
+      },
       backgroundColor:{
-        bg_favorite_1: "rgba(0,0,0,0.4)",
+        bg_favorite_1: "rgba(0,0,0,0.5)",
         bg_favorite_2: "rgba(219, 187, 136, 1)",
         bg_favorite_gradient_start: "rgba(219,187,136,1)",
+        bg_favorite_3: "#2F3452"
       },
       colors: {
         customColor1: "rgba(219, 187, 136, 1)",

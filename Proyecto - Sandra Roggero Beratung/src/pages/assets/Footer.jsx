@@ -13,8 +13,18 @@ const Footer = () => {
         <footer className="bg-gray-700 text-white py-8">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8">
-                    <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center w-full">
+                    {/* <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center w-full">
                         <h2 className="font-bell text-blue-700 text-xl sm:text-2xl lg:text-3xl">{logo1} <span className='text-customColor1 text-lg sm:text-xl lg:text-2xl'>Beratung</span></h2>
+                    </Link> */}
+                    <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center">
+                        <div className="flex flex-col items-center">
+                            <h2 className={`font-bell font-bold lg:text-3xl md:text-lg leading-3 transition-colors duration-300 text-white`}>
+                                Sandra Rogero
+                            </h2>
+                            <span className={`md:text-base lg:text-base -mt-3 transition-colors duration-300 text-white`}>
+                                Beratung
+                            </span>
+                        </div>
                     </Link>
                 </div>
                 
