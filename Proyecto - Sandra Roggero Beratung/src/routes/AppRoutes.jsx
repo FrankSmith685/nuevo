@@ -7,6 +7,10 @@ import HrBusinessPartner from "../components/hr-business-partner/HrBusinessPartn
 import AcompanamientoDIrectivo from "../components/consultoria/AcompanamientoDIrectivo";
 import KontakPage from "../pages/kontakt/kontaktPage";
 import WirPage from "../pages/wir/wirPage";
+import RegistrierenSieIhrenLebenslauf from "../components/Kandidaten/RegistrierenSieIhrenLebenslauf";
+import InternationalesKarrieremanagement from "../components/Kandidaten/InternationalesKarrieremanagement";
+import UnserePhilosophie from "../components/Wir/UnserePhilosophie";
+import WerSindWir from "../components/Wir/WerSindWir";
 
 // import Personalbewertungen from "../components/Unternehmen/Personalbewertungen";
 // import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
@@ -73,6 +77,14 @@ export const AppRoutes = () => {
               <Route path="/unternehmen/funktionen" element={<Funktionen/>} />
               <Route path="/unternehmen/fachspezifische-suche" element={<FachspezifischeSuche/>} />
               <Route path="/unternehmen/inklusionsaudit" element={<Inklusionsaudit/>} />
+
+              <Route path="/kandidaten/registrieren-sie-ihren-lebenslauf" element={<RegistrierenSieIhrenLebenslauf/>} />
+              <Route path="/kandidaten/internationales-karrieremanagement" element={<InternationalesKarrieremanagement/>} />
+
+              <Route path="/wir/unsere-philosophie" element={<UnserePhilosophie/>} />
+              <Route path="/wir/wer-sind-wir" element={<WerSindWir/>} />
+
+
 
               
               <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios" element={<DirectivosMandosIntermedios />} />

@@ -291,11 +291,11 @@ const HomePage = () => {
                 Tu navegador no soporta el elemento de video.
             </video>
             <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4 pt-96 sm:p-6 md:p-8">
-                <div className="w-2/5 h-auto mt-24 font-streamline">
-                    <h2 className="text-white font-medium text-9xl sm:text-4xl md:text-5xl font-bell text-end px-2">
+                <div className="w-2/5 h-auto mt-32 font-streamline">
+                    <h2 className="text-white font-medium text-9xl sm:text-4xl md:text-3xl font-bell text-end px-2">
                         SUCHEN SIE NACH
                     </h2>
-                    <h2 className="text-customColor5 font-medium text-9xl sm:text-4xl md:text-5xl font-bell text-end px-2">
+                    <h2 className="text-customColor5 font-medium text-9xl sm:text-4xl md:text-3xl font-bell text-end px-2">
                         <span>{displayText}</span>
                     </h2>
                 </div>

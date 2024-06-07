@@ -247,20 +247,23 @@ const HeaderNav = () => {
             { path: "/unternehmen/funktionen", label: "Funktionen" },
             { path: "/unternehmen/fachspezifische-suche", label: "Fachspezifische Suche" },
             { path: "/unternehmen/inklusionsaudit", label: "Inklusionsaudit" },
+        ]},
+        { path: "/kandidaten/#", label: "Kandidaten", subTema: "Wir unterstützen Sie auf dem Weg zu Ihrer Karriere. Nutzen Sie unsere Stellenangebote, Karriereberatung und digitalen Ressourcen." ,subItems: [
+            { path: "/kandidaten/registrieren-sie-ihren-lebenslauf", label: "Registrieren Sie Ihren Lebenslauf" },
+            { path: "/kandidaten/internationales-karrieremanagement", label: "Internationales Karrieremanagement" },
+        ]},
+        { path: "/wir/#", label: "Wir", subTema: "Erfahren Sie mehr über unser Unternehmen und unsere Werte." ,subItems: [
+            { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
+            { path: "/wir/wer-sind-wir", label: "Wer Sind Wir" },
+        ]},
 
-            // { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento", label: "Personalauswahl und Rekrutierung" },
-            // { path: "/seleccion-y-headhunting/consultoria-headhunter", label: "Headhunter-Beratung" },
-            // { path: "/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios/", label: "Auswahl von Führungskräften" },
-            // { path: "/seleccion-y-headhunting/interim-management", label: "Interim Management" },
-            // { path: "/seleccion-y-headhunting/evaluaciones-de-personal", label: "Personalbewertungen" },
-        ]},
-        { path: "/hr-business-partner", label: "Kandidaten" },
-        { path: "/consultoria/#", label: "Wir", subItems: [
-            { path: "/consultoria/formaciones-humanbits", label: "Schulungen" },
-            { path: "/consultoria", label: "Organisatorischer Wandel" },
-            { path: "/consultoria/acompanamiento-directivo", label: "Führungscoaching" },
-            { path: "/consultoria/workshops/", label: "Workshops und Seminare" },
-        ]},
+
+        // { path: "/consultoria/#", label: "Wir", subItems: [
+        //     { path: "/consultoria/formaciones-humanbits", label: "Schulungen" },
+        //     { path: "/consultoria", label: "Organisatorischer Wandel" },
+        //     { path: "/consultoria/acompanamiento-directivo", label: "Führungscoaching" },
+        //     { path: "/consultoria/workshops/", label: "Workshops und Seminare" },
+        // ]},
         { path: "/partnerships", label: "Andere Dienstleistungen" },
         { path: "/kontakt", label: "Kontakt" },
     ];

@@ -1,0 +1,97 @@
+
+import { useNavigate } from "react-router-dom";
+import bannerPrincipal from "../../assets/imagenes/home/imagen12.jpg";
+import { useEffect } from "react";
+import { FaCheckCircle } from "react-icons/fa";
+
+const InternationalesKarrieremanagement=()=>{
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleClickHome=()=>{
+        navigate("/");
+    }
+
+    const beneficios = [
+        "Fügt einen einzigartigen Wert zum Lebenslauf hinzu",
+        "Erweitert Ihr berufliches Netzwerk",
+        "Beherrscht neue Sprachen",
+        "Verbessert soziale Fähigkeiten",
+        "Passt sich schnell an",
+        "Fördert Führungsqualitäten",
+        "Erkundet neue Kulturen",
+        "Übernimmt innovative Arbeitsmethoden"
+      ];
+      
+
+    return(
+        <>
+            <div className="w-full h-screen bg-bg_favorite_1 relative">
+                <img src={bannerPrincipal} alt="NOT FOUND" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
+                
+                <div className="bg-bg_favorite_1 flex flex-col justify-center items-end h-full z-20 relative space-y-4 p-4 pt-96 sm:p-6 md:p-8">
+                    <div className="w-1/2 h-auto ">
+                        <h2 className="text-white font-bold text-4xl sm:text-4xl md:text-5xl font-bell text-center px-2">
+                            Internationales Karrieremanagement
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div className="w-11/12 px-10 pb-10 mx-auto">
+                <p className="text-base text-gray-400 py-10">
+                    <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
+                        Sandra Rogero <span className="text-gray-500 font-medium text-xs">Beratung</span>
+                    </span>
+                    {' > '}
+                    Internationales Karrieremanagement
+                </p>
+                <h2 className="text-gray-700 text-start w-full pb-1 font-semibold text-2xl">Ihre Karriere hat keine Grenzen</h2>
+                <p className="text-gray-700 text-start w-full pb-1">
+                    Bereit für den nächsten Schritt? Deutschland wartet auf dich!
+                </p>
+                <p className="text-gray-700 text-start w-full pb-1">
+                    Wenn dein Ziel darin besteht, deine berufliche Laufbahn in Deutschland voranzutreiben, steht dir unser spezialisiertes Team 
+                    für internationale Karriereberatung zur Seite, um dich auf neue Höhen zu bringen.
+                </p>
+                <p className="text-gray-700 text-start w-full pb-1">
+                    Bei Sandra Roggero-Beratung betrachten wir nicht nur deinen Lebenslauf; wir schätzen die einzigartige Geschichte, die du deutschen 
+                    Organisationen erzählen kannst, sei es für permanente Positionen oder Interim-Management. Wir hören dir zu und erkennen die Qualitäten, die dich auszeichnen.
+                </p>
+                <p className="text-gray-700 text-start w-full pb-1">
+                    Wir sind Teil einer internationalen Gemeinschaft in ständiger Zusammenarbeit, was es uns ermöglicht, dich mit Organisationen zu verbinden,
+                    die ihre Teams mit vielfältigen Profilen und den einzigartigen Fähigkeiten von Fachkräften mit Auslandserfahrung bereichern möchten.
+                </p>
+            </div>
+            <div className="w-full bg-gray-800">
+                <div className="w-11/12 mx-auto">
+                    <div className="flex flex-col items-center justify-center h-auto p-8">
+                        <div className="w-full p-6  rounded-lg bg-white shadow-lg">
+                            <h1 className="text-2xl font-semibold text-center pb-4 text-gray-700">Vorteile des Arbeitens im Ausland</h1>
+                            <div className="grid grid-cols-4 gap-4 text-lg">
+                                {beneficios.map((beneficio, index) => (
+                                    <div key={index} className="flex items-center">
+                                        <FaCheckCircle className="text-green-500 mr-2" />
+                                        <span className="text-sm text-gray-700">{beneficio}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="w-11/12 mx-auto p-10">
+                <h2 className="text-2xl font-semibold text-start pb-4 text-gray-700">Bereit, den Schritt zu wagen?</h2>
+                <p className="text-start pb-4 text-gray-700">Senden Sie uns Ihren Lebenslauf und Ihre beruflichen Erwartungen an <span className="font-bold">example@gmail.com</span> und einer unserer Experten für internationales Karrieremanagement wird sich mit Ihnen in Verbindung setzen.</p>
+                <button
+                    className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200  focus:ring-opacity-50 "
+                >
+                    Senden Sie Ihren Lebenslauf
+                </button>                
+            </div>
+        </>
+    )
+}
+export default InternationalesKarrieremanagement;

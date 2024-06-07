@@ -11,11 +11,15 @@ import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Inklusionsaudit=()=>{
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleClickHome=()=>{
         navigate("/");

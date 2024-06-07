@@ -1,35 +1,35 @@
-
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import bannerPrincipal from "../../assets/imagenes/home/imagen1.jpg";
-
-// consultoria
 import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
 import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
 import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
 import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
-import { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const PersonalauswahlUndRekrutierung=()=>{
+const PersonalauswahlUndRekrutierung = () => {
     const navigate = useNavigate();
 
-    const handleClickHome=()=>{
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleClickHome = () => {
         navigate("/");
     }
 
     const services = [
-        {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
-        {image:imagen2,title:"BEWERTUNGEN"},
-        {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
-        {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
-        {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
-        {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+        { image: imagen1, title: "FÜHRUNGSBEGLEITUNG" },
+        { image: imagen2, title: "BEWERTUNGEN" },
+        { image: imagen3, title: "WORKSHOPS UND TEAMBUILDINGS" },
+        { image: imagen4, title: "AUSWAHL VON FÜHRUNGSKRÄFTEN" },
+        { image: imagen5, title: "GLEICHSTELLUNGSPLÄNE" },
+        { image: imagen6, title: "MANAGEMENT DES ORGANISATORISCHEN WANDELS" },
     ];
-      
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextCard = () => {
@@ -39,19 +39,19 @@ const PersonalauswahlUndRekrutierung=()=>{
     const prevCard = () => {
         setCurrentIndex(prevIndex => (prevIndex === 0 ? services.length - 1 : prevIndex - 1));
     };
-    
+
     const getCardPosition = (index, currentIndex, length) => {
         if (index === currentIndex) return 'translate-x-0 opacity-100';
         if (index === (currentIndex + 1) % length) return 'translate-x-full opacity-50';
         if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
         return 'hidden';
-      };
+    };
 
-      const handleClickSeleccionReclutamiento = () => {
+    const handleClickSeleccionReclutamiento = () => {
         navigate("/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento");
-      };
+    };
 
-    return(
+    return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img src={bannerPrincipal} alt="NOT FOUND" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
@@ -86,56 +86,52 @@ const PersonalauswahlUndRekrutierung=()=>{
             <div className="bg-gray-800 w-full h-full">
                 <h2 className="text-3xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
                 <div className="relative w-full h-auto overflow-hidden ">
-                    <div className="flex justify-center items-center  w-full h-96 p-20">
+                    <div className="flex justify-center items-center w-full h-96 p-20">
                         {services.map((service, index) => (
-                        <div key={index} className={`absolute w-1/2  transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
-                            <div className="w-full h-full ">
-                            <img src={service.image} alt={service.title} className="w-full h-96 object-cover"/>
+                            <div key={index} className={`absolute w-1/2 transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
+                                <div className="w-full h-full ">
+                                    <img src={service.image} alt={service.title} className="w-full h-96 object-cover" />
+                                </div>
+                                <div className="absolute inset-0 w-full flex items-end justify-center">
+                                    <div className="w-full bg-bg_favorite_4 text-center p-4">
+                                        <h3 className="text-base font-bold text-white">{service.title}</h3>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div className="absolute inset-0 w-full flex items-end justify-center">
-                            <div className="w-full  bg-bg_favorite_4 text-center p-4">
-                                <h3 className="text-base font-bold text-white">{service.title}</h3>
-                            </div>
-                            </div>
-                        </div>
                         ))}
                     </div>
-                    
                 </div>
                 <div className="flex items-center justify-center py-5 w-1/2 mx-auto">
-                    <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={prevCard}>
-                    <FaAngleLeft />
+                    <div className="flex items-center justify-center w-12 text-3xl bg-opacity-50 text-white cursor-pointer" onClick={prevCard}>
+                        <FaAngleLeft />
                     </div>
                     <div className="relative w-full mx-4 h-1 bg-gray-700 rounded">
-                    <div
-                        className="absolute top-0 left-0 h-full bg-white transition-all duration-500 ease-in-out"
-                        style={{ width: `${((currentIndex + 1) / services.length) * 100}%` }}
-                    ></div>
+                        <div
+                            className="absolute top-0 left-0 h-full bg-white transition-all duration-500 ease-in-out"
+                            style={{ width: `${((currentIndex + 1) / services.length) * 100}%` }}
+                        ></div>
                     </div>
-                    <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={nextCard}>
-                    <FaAngleRight />
+                    <div className="flex items-center justify-center w-12 text-3xl bg-opacity-50 text-white cursor-pointer" onClick={nextCard}>
+                        <FaAngleRight />
                     </div>
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-nowrap">
                 <div className="w-full h-auto">
-                <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-auto object-cover"/>
+                    <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-auto object-cover" />
                 </div>
                 <div className="w-2/3 flex justify-center items-center">
-                <div className="w-full text-center ">
-                    <h2 className="font-semibold text-gray-800 my-2 text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
-                    <button
-                        className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200  focus:ring-opacity-50 "
-                        onClick={handleClickSeleccionReclutamiento}
-                    >
-                        Kontaktaufnahme
-                    </button>
-                </div>
+                    <div className="w-full text-center">
+                        <h2 className="font-semibold text-gray-800 my-2 text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                        <button
+                            className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                            onClick={handleClickSeleccionReclutamiento}
+                        >
+                            Kontaktaufnahme
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-
         </>
     )
 }
