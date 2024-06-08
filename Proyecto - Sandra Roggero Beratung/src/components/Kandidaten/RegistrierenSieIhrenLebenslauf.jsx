@@ -107,9 +107,17 @@ const RegistrierenSieIhrenLebenslauf = () => {
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
-                                <Button variant="contained" color="primary" type="submit" className="bg-bg_favorite_3">
+                                {/* <Button variant="contained" color="primary" type="submit" className="bg-bg_favorite_3 w-1/3">
                                     Senden
-                                </Button>
+                                </Button> */}
+                                <button 
+                                    type="submit" 
+                                    variant="contained" 
+                                    color="primary" 
+                                    className="w-1/3 py-2 bg-bg_favorite_3 hover:bg-bg_favorite_4 text-white font-bold rounded transition duration-200"
+                                    >
+                                    Senden
+                                </button>
                             </Box>
                         </form>
                     </CardContent>

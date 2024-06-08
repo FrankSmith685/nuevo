@@ -253,8 +253,8 @@ const HeaderNav = () => {
             { path: "/kandidaten/internationales-karrieremanagement", label: "Internationales Karrieremanagement" },
         ]},
         { path: "/wir/#", label: "Wir", subTema: "Erfahren Sie mehr über unser Unternehmen und unsere Werte." ,subItems: [
+            { path: "/wir/wer-wir-sind", label: "Wer Wir Sind" },
             { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
-            { path: "/wir/wer-sind-wir", label: "Wer Sind Wir" },
         ]},
 
 

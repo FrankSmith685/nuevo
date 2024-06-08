@@ -53,16 +53,17 @@ const InternationalesKarrieremanagement=()=>{
                     Bereit für den nächsten Schritt? Deutschland wartet auf dich!
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wenn dein Ziel darin besteht, deine berufliche Laufbahn in Deutschland voranzutreiben, steht dir unser spezialisiertes Team 
-                    für internationale Karriereberatung zur Seite, um dich auf neue Höhen zu bringen.
+                    Wenn dein Ziel darin besteht, deine berufliche Laufbahn in Deutschland voranzutreiben, steht dir unser spezialisiertes 
+                    Team für internationale Karriereberatung zur Seite, Ihr Talent sehr weit zu bringen.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Bei Sandra Roggero-Beratung betrachten wir nicht nur deinen Lebenslauf; wir schätzen die einzigartige Geschichte, die du deutschen 
-                    Organisationen erzählen kannst, sei es für permanente Positionen oder Interim-Management. Wir hören dir zu und erkennen die Qualitäten, die dich auszeichnen.
+                    Bei Sandra Roggero sehen wir über Ihren Lebenslauf hinaus, wir schätzen die einzigartige Geschichte, die Sie in deutsche Unternehmen einbringen können,
+                    Wir werde Ihnen zu hören und werde wissen, wie man die Qualitäten erkennt, die Sie auszeichnen, und die Eigenschaften, die Sie zum Strahlen bringen können.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wir sind Teil einer internationalen Gemeinschaft in ständiger Zusammenarbeit, was es uns ermöglicht, dich mit Organisationen zu verbinden,
-                    die ihre Teams mit vielfältigen Profilen und den einzigartigen Fähigkeiten von Fachkräften mit Auslandserfahrung bereichern möchten.
+                    Aufgrund unseres aktiven internationalen Engagements und der ständigen Zusammenarbeit mit Unternehmen können wir Sie mit Unternehmen in 
+                    Verbindung bringen, die ihre Teams mit unterschiedlichen Profilen und den einzigartigen Fähigkeiten von Fachleuten mit internationaler 
+                    Erfahrung bereichern möchten.
                 </p>
             </div>
             <div className="w-full bg-gray-800">

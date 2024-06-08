@@ -10,7 +10,8 @@ import WirPage from "../pages/wir/wirPage";
 import RegistrierenSieIhrenLebenslauf from "../components/Kandidaten/RegistrierenSieIhrenLebenslauf";
 import InternationalesKarrieremanagement from "../components/Kandidaten/InternationalesKarrieremanagement";
 import UnserePhilosophie from "../components/Wir/UnserePhilosophie";
-import WerSindWir from "../components/Wir/WerSindWir";
+import WerWirSind from "../components/Wir/WerWirSind";
+import Kontakt from "../components/Kontakt/kontakt";
 
 // import Personalbewertungen from "../components/Unternehmen/Personalbewertungen";
 // import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
@@ -82,7 +83,7 @@ export const AppRoutes = () => {
               <Route path="/kandidaten/internationales-karrieremanagement" element={<InternationalesKarrieremanagement/>} />
 
               <Route path="/wir/unsere-philosophie" element={<UnserePhilosophie/>} />
-              <Route path="/wir/wer-sind-wir" element={<WerSindWir/>} />
+              <Route path="/wir/wer-wir-sind" element={<WerWirSind/>} />
 
 
 
@@ -99,7 +100,7 @@ export const AppRoutes = () => {
 
               <Route path="/hr-business-partner" element={<HrBusinessPartner />} />
 
-              <Route path="/kontakt" element={<KontakPage />} />
+              <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/wir" element={<WirPage />} />
 
               {/* <Route path="/seleccion-y-headhunting/seleccion-de-directivos" element={<SeleccionDirectivos />} />

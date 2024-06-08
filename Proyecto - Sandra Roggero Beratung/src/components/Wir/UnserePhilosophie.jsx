@@ -77,20 +77,13 @@ const UnserePhilosophie=()=>{
                     Unsere Philosophie
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wir fördern die einzigartigen Geschichten unserer Kandidaten und Kunden.
-                    Unsere Fähigkeit, wirklich zu verstehen, was sie brauchen, ermöglicht es uns, fesselnde Geschichten zu kreieren und zu teilen, 
-                    was den Unterschied ausmacht.
-                    Geschichten sind wichtig, denn wenn wir unsere Pläne, Erfahrungen und Ambitionen teilen, öffnet sich eine Welt voller Möglichkeiten. 
-                    Das Zuhören hilft uns, langfristige Beziehungen aufzubauen, die auf Vertrauen und Empathie basieren.
-                    In Peru und Deutschland besteht unser kleines Team spezialisierter Berater aus talentierten Menschen mit einer globalen und fachkundigen Perspektive. 
-                    Und indem wir Geschichten miteinander teilen, fördern wir Teamarbeit, von der wir überzeugt sind, dass sie uns zum Erfolg führt – nicht nur unseren, 
-                    sondern auch den unserer Kandidaten und Kunden weltweit.
-                    Dank der Geschichten der Menschen sind wir in der Lage, über den Lebenslauf oder die Stellenbeschreibung hinauszusehen und diese einzigartige Eigenschaft 
-                    zu finden, die die Verbindung einer Organisation mit einem Team oder einem Kandidaten außergewöhnlich macht.
-                    Wir sind in der Lage, Organisationen bei der Suche nach Talenten zu unterstützen, die ihnen helfen, all ihre Ziele zu erreichen, jetzt und in der Zukunft. 
-                    Natürlich können wir auch Menschen helfen, das nächste Kapitel ihrer beruflichen Laufbahn zu definieren, das ihnen ermöglicht, all ihre Ambitionen zu 
-                    verwirklichen.
-                    Die größten Chancen beginnen mit einer Geschichte. Erzählen Sie uns Ihre heute.
+                Wir treiben die einzigartigen Geschichten unserer Kandidaten und Kunden voran.
+                Unsere Fähigkeit zu verstehen, was Sie wirklich brauchen, ermöglicht es uns, fesselnde Geschichten zu entwickeln und weiterzugeben, was den Unterschied ausmacht.
+                Geschichten sind wichtig, denn wenn wir unsere Pläne, Erfahrungen und Ambitionen teilen, eröffnet sich uns eine Welt der Möglichkeiten. Wenn wir ihnen zuhören, können wir langfristige Beziehungen aufbauen, die auf Vertrauen und Einfühlungsvermögen beruhen.
+                In Peru und Deutschland besteht unser kleines Team aus spezialisierten Beratern, aus talentierten Menschen mit einer fachkundigen, globalen Perspektive. Und durch den Austausch von Geschichten untereinander fördern wir die Teamarbeit, von der wir überzeugt sind, dass sie zum Erfolg führt – nicht nur für uns, sondern auch für unsere Kandidaten und Kunden in aller Welt.
+                Dank der Geschichten der Menschen sind wir in der Lage, über den Lebenslauf oder die Stellenbeschreibung hinauszuschauen und die einzigartige Eigenschaft zu finden, die die Übereinstimmung zwischen einem Unternehmen und einem Team oder einem Bewerber außergewöhnlich macht.
+                Wir sind in der Lage, Unternehmen dabei zu unterstützen, die Talente zu finden, die ihnen helfen, alle ihre Ziele zu erreichen – jetzt und in Zukunft. Natürlich sind wir auch in der Lage, Menschen dabei zu helfen, das nächste Kapitel ihrer Karriere zu definieren, das es ihnen ermöglicht, alle ihre Ambitionen zu erfüllen. 
+                Die größten Chancen beginnen mit einer Geschichte. Erzählen Sie uns Ihre
                 </p>
             </div>
             <div className="bg-gray-800 w-full h-full">
