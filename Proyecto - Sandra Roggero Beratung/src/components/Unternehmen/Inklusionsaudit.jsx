@@ -58,23 +58,26 @@ const Inklusionsaudit=()=>{
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
-                <img src={bannerPrincipal} alt="NOT FOUND" className="absolute top-0 left-0 w-full h-full object-cover z-0" />
-                
-                <div className="bg-bg_favorite_1 flex flex-col justify-center items-end h-full z-20 relative space-y-4 p-4 pt-96 sm:p-6 md:p-8">
-                    <div className="w-1/2 h-auto ">
-                        <h2 className="text-white font-bold text-4xl sm:text-4xl md:text-5xl font-bell text-center px-2">
-                            Inklusionsaudit 
-                        </h2>
-                    </div>
+                <img 
+                src={bannerPrincipal} 
+                alt="NOT FOUND" 
+                className="absolute top-0 left-0 w-full h-full object-cover z-0" 
+                />
+                <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
+                <div className="w-full md:w-1/2 h-auto">
+                    <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
+                    Inklusionsaudit
+                    </h2>
+                </div>
                 </div>
             </div>
-            <div className="w-11/12 px-10 pb-10 mx-auto">
-                <p className="text-base text-gray-400 py-10">
-                    <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
-                        Sandra Rogero <span className="text-gray-500 font-medium text-xs">Beratung</span>
-                    </span>
-                    {' > '}
-                    Inklusionsaudit
+            <div className="w-11/12 px-2 sm:px-10 pb-10 mx-auto">
+                <p className="text-lg text-gray-400 py-10 font-bell">
+                <span onClick={handleClickHome} className="hover:cursor-pointer  text-gray-800 font-medium">
+                    Sandra Rogero <span className="text-gray-500 font-medium text-base">Beratung</span>
+                </span>
+                {' > '}
+                Inklusionsaudit
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
                     Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess.
@@ -85,14 +88,13 @@ const Inklusionsaudit=()=>{
                     für diese Position über Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. 
                     Dieser Ansatz bietet durchgängige Sichtbarkeit und Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile.
                 </p>
-                
             </div>
             <div className="bg-gray-800 w-full h-full">
-                <h2 className="text-3xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
+                <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
                 <div className="relative w-full h-auto overflow-hidden ">
                     <div className="flex justify-center items-center  w-full h-96 p-20">
                         {services.map((service, index) => (
-                        <div key={index} className={`absolute w-1/2  transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
+                        <div key={index} className={`absolute w-full md:w-1/2  transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
                             <div className="w-full h-full ">
                             <img src={service.image} alt={service.title} className="w-full h-96 object-cover"/>
                             </div>
@@ -105,7 +107,6 @@ const Inklusionsaudit=()=>{
                         </div>
                         ))}
                     </div>
-                    
                 </div>
                 <div className="flex items-center justify-center py-5 w-1/2 mx-auto">
                     <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={prevCard}>
@@ -122,22 +123,24 @@ const Inklusionsaudit=()=>{
                     </div>
                 </div>
             </div>
-            <div className="w-full bg-gray-200 flex flex-nowrap">
-                <div className="w-full h-auto">
-                <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-auto object-cover"/>
+            <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
+                <div className="w-full sm:w-1/3 h-auto">
+                <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover"/>
                 </div>
-                <div className="w-2/3 flex justify-center items-center">
-                <div className="w-full text-center ">
-                    <h2 className="font-semibold text-gray-800 my-2 text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                <div className="w-full sm:w-2/3 flex justify-center items-center">
+                <div className="w-full text-center p-4">
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
                     <button
-                        className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200  focus:ring-opacity-50 "
-                        onClick={handleClickSeleccionReclutamiento}
+                    className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                    onClick={handleClickSeleccionReclutamiento}
                     >
-                        Kontaktaufnahme
+                    Kontaktaufnahme
                     </button>
                 </div>
                 </div>
             </div>
+
+            
             
 
         </>
