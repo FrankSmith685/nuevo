@@ -11,10 +11,12 @@ module.exports = {
         'bell': ['"Bell MT"', 'serif'],
         'streamline': ['"Streamline Moderne"', 'sans-serif'],
         'quicksand': ['Quicksand', 'sans-serif'],
+        'roboto-thin': ['Roboto', 'sans-serif'],  // Agrega esta línea
       },
       height:{
         h_screen_80: "80vh",
         h_custom_1: "calc(100vh - 100px)",
+        favorite_1:"1px"
       },
       borderWidth:{
         border_1: "1px",

@@ -57,7 +57,7 @@ const InternationalesKarrieremanagement=()=>{
                     Team für internationale Karriereberatung zur Seite, Ihr Talent sehr weit zu bringen.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Bei Sandra Roggero sehen wir über Ihren Lebenslauf hinaus, wir schätzen die einzigartige Geschichte, die Sie in deutsche Unternehmen einbringen können,
+                    Bei Sandra Roggero M. Beratung sehen wir über Ihren Lebenslauf hinaus, wir schätzen die einzigartige Geschichte, die Sie in deutsche Unternehmen einbringen können,
                     Wir werde Ihnen zu hören und werde wissen, wie man die Qualitäten erkennt, die Sie auszeichnen, und die Eigenschaften, die Sie zum Strahlen bringen können.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">

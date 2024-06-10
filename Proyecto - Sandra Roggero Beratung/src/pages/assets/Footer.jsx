@@ -2,8 +2,9 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import logoPrincipal from "../../assets/imagenes/logoPrincipal.png"; 
+
 const Footer = () => {
-    const logo1 = "Sandra Roggero";
 
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -13,19 +14,19 @@ const Footer = () => {
         <footer className="bg-gray-700 text-white py-8">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8">
-                    {/* <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center w-full">
-                        <h2 className="font-bell text-blue-700 text-xl sm:text-2xl lg:text-3xl">{logo1} <span className='text-customColor1 text-lg sm:text-xl lg:text-2xl'>Beratung</span></h2>
-                    </Link> */}
-                    <Link to="/" onClick={handleLinkClick} className="flex items-center justify-center">
-                        <div className="flex flex-col items-center">
-                            <h2 className={`font-bell font-medium lg:text-3xl md:text-lg leading-3 transition-colors duration-300 text-white`}>
-                                Sandra Roggero M.
-                            </h2>
-                            <span className={`md:text-base font-bell lg:text-base -mt-2 transition-colors duration-300 text-white`}>
-                                Beratung
-                            </span>
-                        </div>
-                    </Link>
+                    <div className="flex items-center justify-center ">
+                         <Link to="/" onClick={handleLinkClick} className='flex flex-col items-center'>
+                            <img src={logoPrincipal} alt="" className='h-14' />
+                            <div className="flex flex-col items-center">
+                                <h2 className={`font-bell font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white`}>
+                                    SANDRA ROGGERO M.
+                                </h2>
+                                <span className={`md:text-base font-roboto-thin lg:text-sm -mt-2 transition-colors duration-300 text-white`}>
+                                    BERATUNG
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
