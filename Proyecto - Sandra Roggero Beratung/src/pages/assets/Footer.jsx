@@ -21,7 +21,7 @@ const Footer = () => {
                                 <h2 className={`font-bell font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white`}>
                                     SANDRA ROGGERO M.
                                 </h2>
-                                <span className={`md:text-base font-roboto-thin lg:text-sm -mt-2 transition-colors duration-300 text-white`}>
+                                <span className={` font-roboto-thin text-sm -mt-2 transition-colors duration-300 text-white`}>
                                     BERATUNG
                                 </span>
                             </div>

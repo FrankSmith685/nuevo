@@ -18,6 +18,7 @@ const HeaderNav = () => {
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setIsMobileMenuOpen(false);
+        setHoveredMenuItem(null);
     };
 
     useEffect(() => {
@@ -232,9 +233,9 @@ const HeaderNav = () => {
                                     {item.label}
                                     {item.subItems && <FaAngleRight className="ml-2" />}
                                 </Link>
-                                <hr className={`${isActiveSubMenuMobile === item.label ? 'text-white flex w-full h-1':'hidden'}`}/>
+                                <hr className={`${isActiveSubMenuMobile === item.label ? 'text-white flex w-full':'hidden'}`}/>
                                 {item.subItems && hoveredMenuItem === item.path && (
-                                    <ul className={` px-2 my-2 ${isActiveSubMenuMobile === item.label ? 'text-white':''}`}>
+                                    <ul className={` p-2  bg-gray-800 ${isActiveSubMenuMobile === item.label ? 'text-white':'text-gray-700'}`}>
                                         {item.subItems.map((subItem, subIndex) => (
                                             <li key={subIndex}>
                                                 <Link
