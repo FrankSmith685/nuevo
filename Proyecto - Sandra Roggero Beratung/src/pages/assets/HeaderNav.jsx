@@ -56,7 +56,12 @@ const HeaderNav = () => {
             { path: "/wir/wer-wir-sind", label: "Wer Wir Sind" },
             { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
         ]},
-        { id:3,path: "/partnerships", label: "Andere Dienstleistungen" },
+        { id:3,path: "/meine-dienstleistungen", label: "Meine Dienstleistungen" ,subTema: "Wir bieten Dienstleistungen für deine akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Transport, Visa und Sprachen.", subItems: [
+            { path: "/meine-dienstleistungen/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
+            { path: "/meine-dienstleistungen/arbeit-steuern", label: "Arbeit - Steuern" },
+            { path: "/meine-dienstleistungen/wohnen-transport", label: "Wohnen - Transport" },
+            { path: "/meine-dienstleistungen/visum-sprache", label: "Visum - Sprache" },
+        ]},
         { id:4,path: "/kontakt", label: "Kontakt" },
     ];
 
@@ -83,7 +88,7 @@ const HeaderNav = () => {
     return (
         <nav className="p-0 w-full z-50 fixed top-0">
             <div 
-                className={`h-28 w-full transition-colors duration-300 ${isNavHovered ? 'bg-white' : 'bg-transparent'}`}
+                className={`h-32 w-full transition-colors duration-300 ${isNavHovered ? 'bg-white' : 'bg-transparent'}`}
                 onMouseEnter={onMouseEnterNavHovered  }
                 onMouseLeave={onMouseLeaveNavHovered   }
             >
@@ -93,12 +98,12 @@ const HeaderNav = () => {
                             {isNavHovered ? (
                                 <>
                                 <div className='flex flex-col items-center'>
-                                    <img src={logoPrincipal_1} alt="" className='h-14' />
+                                    <img src={logoPrincipal_1} alt="" className='h-20' />
                                     <div className="flex flex-col items-center">
-                                        <h2 className={`font-bell font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                        <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                             SANDRA ROGGERO M.
                                         </h2>
-                                        <span className={` font-roboto-thin text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                        <span className={` font-bell text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
                                             BERATUNG
                                         </span>
                                     </div>
@@ -107,12 +112,12 @@ const HeaderNav = () => {
                             ): (
                                 <>
                                 <div className='flex flex-col items-center'>
-                                    <img src={logoPrincipal} alt="" className='h-14' />
+                                    <img src={logoPrincipal} alt="" className='h-20' />
                                     <div className="flex flex-col items-center">
-                                        <h2 className={`font-bell font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                        <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                             SANDRA ROGGERO M.
                                         </h2>
-                                        <span className={` font-roboto-thin text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
+                                        <span className={`font-bell text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
                                             BERATUNG
                                         </span>
                                     </div>

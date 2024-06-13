@@ -35,6 +35,7 @@ module.exports = {
         customColor3: "rgba(175, 150, 108, 1)",
         customColor4: "rgba(167, 135, 81, 1)",
         customColor5: "rgb(150, 148, 201)",
+        customColor6: "rgb(90, 89, 121)",
 
       },
       animation: {

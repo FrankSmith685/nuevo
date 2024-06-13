@@ -7,12 +7,23 @@ import bannerPrincipal from "../../assets/video/banner.mp4";
 import fotoPerfil from "../../assets/imagenes/fotoPerfil.jpg";
 
 // consultoria
-import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
+// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
+// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
+// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
+// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
+// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
+// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
+
+import imagen1 from "../../assets/imagenes/MeineDienstleistungen/imagen1.jpg";
+import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
+import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
+import imagen4 from "../../assets/imagenes/MeineDienstleistungen/imagen4.jpg";
+import imagen5 from "../../assets/imagenes/MeineDienstleistungen/imagen5.jpg";
+import imagen6 from "../../assets/imagenes/MeineDienstleistungen/imagen6.jpg";
+import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
+import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
+import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
+
 import { useNavigate,Link } from "react-router-dom";
 import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 
@@ -100,12 +111,15 @@ const HomePage = () => {
       ];
 
       const services = [
-        {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
-        {image:imagen2,title:"BEWERTUNGEN"},
-        {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
-        {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
-        {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
-        {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+        {image:imagen1,title:"STUDIUM"},
+        {image:imagen2,title:"AUSBILDUNG"},
+        {image:imagen3,title:"PARKTIKUM"},
+        {image:imagen4,title:"ARBEIT"},
+        {image:imagen5,title:"STEUERN"},
+        {image:imagen6,title:"WOHNEN"},
+        {image:imagen7,title:"TRANSPORT"},
+        {image:imagen8,title:"VISUM"},
+        {image:imagen9,title:"SPRACHE"},
     ];
       
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -125,6 +139,14 @@ const HomePage = () => {
         return 'hidden';
       };
 
+    //   useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    //     }, 5000);
+
+    //     return () => clearInterval(interval);
+    // }, []);
+
 
   return (
     <>
@@ -134,7 +156,7 @@ const HomePage = () => {
           Tu navegador no soporta el elemento de video.
         </video>
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
-          <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-streamline">
+          <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
             <h2 className="text-white font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">
               SUCHEN SIE NACH
             </h2>

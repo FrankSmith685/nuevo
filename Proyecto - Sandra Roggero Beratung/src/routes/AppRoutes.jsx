@@ -12,6 +12,11 @@ import InternationalesKarrieremanagement from "../components/Kandidaten/Internat
 import UnserePhilosophie from "../components/Wir/UnserePhilosophie";
 import WerWirSind from "../components/Wir/WerWirSind";
 import Kontakt from "../components/Kontakt/kontakt";
+// import WohnenTransport from "../components/Meine-Dienstleistungen/WohnenTransport";
+// import VisumSprache from "../components/Meine-Dienstleistungen/VisumSprache";
+// import ArbeitSteuern from "../components/Meine-Dienstleistungen/ArbeitSteuern";
+
+// import StudiumAusbildungPraktikum from "../components/Meine-Dienstleistungen/StudiumAusbildungPraktikum";
 
 // import Personalbewertungen from "../components/Unternehmen/Personalbewertungen";
 // import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
@@ -37,8 +42,6 @@ const Funktionen = lazy(() => import("../components/Unternehmen/funktionen"));
 const FachspezifischeSuche = lazy(() => import("../components/Unternehmen/FachspezifischeSuche"));
 const Inklusionsaudit = lazy(() => import("../components/Unternehmen/Inklusionsaudit"));
 
-
-
 const DirectivosMandosIntermedios = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonal/DirectivosMandosIntermedios"));
 
 const ConsultoraHeadhounter = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraHeadhounter/ConsultoraHeadhounter")); 
@@ -50,6 +53,15 @@ const Evaluaciones = lazy(() => import("../components/seleccion-y-headhunting/Ev
 const GestionCambio = lazy(() => import("../components/gestionCambio/GestionCambio"));
 
 const Formaciones = lazy(() => import("../components/gestionCambio/Formaciones/Formaciones")); 
+
+
+
+// Meine-Dienstleistungen
+const StudiumAusbildungPraktikum = lazy(() => import("../components/Meine-Dienstleistungen/StudiumAusbildungPraktikum")); 
+const ArbeitSteuern = lazy(() => import("../components/Meine-Dienstleistungen/ArbeitSteuern"));
+const WohnenTransport = lazy(() => import("../components/Meine-Dienstleistungen/WohnenTransport"));
+const VisumSprache = lazy(() => import("../components/Meine-Dienstleistungen/VisumSprache"));
+
 
 // const ConsultoriaHeadhunter = lazy(() => import("../pages/seleccion-y-headhunting/ConsultoriaHeadhunter"));
 // const InterimManagement = lazy(() => import("../pages/seleccion-y-headhunting/InterimManagement"));
@@ -97,8 +109,13 @@ export const AppRoutes = () => {
               <Route path="/consultoria" element={<GestionCambio />} />
               <Route path="/consultoria/formaciones-humanbits" element={<Formaciones />} />
               <Route path="/consultoria/acompanamiento-directivo" element={<AcompanamientoDIrectivo />} />
+              
+              {/*Meine-Dienstleistungen*/}
+              <Route path="/meine-dienstleistungen/studium-ausbildung-praktikum" element={<StudiumAusbildungPraktikum />} />
+              <Route path="/meine-dienstleistungen/arbeit-steuern" element={<ArbeitSteuern />} />
+              <Route path="/meine-dienstleistungen/wohnen-transport" element={<WohnenTransport />} />
+              <Route path="/meine-dienstleistungen/visum-sprache" element={<VisumSprache />} />
 
-              <Route path="/hr-business-partner" element={<HrBusinessPartner />} />
 
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/wir" element={<WirPage />} />

@@ -16,12 +16,12 @@ const Footer = () => {
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center ">
                          <Link to="/" onClick={handleLinkClick} className='flex flex-col items-center'>
-                            <img src={logoPrincipal} alt="" className='h-14' />
+                            <img src={logoPrincipal} alt="" className='h-20' />
                             <div className="flex flex-col items-center">
-                                <h2 className={`font-bell font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white`}>
+                                <h2 className={`font-roboto-thin font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white`}>
                                     SANDRA ROGGERO M.
                                 </h2>
-                                <span className={` font-roboto-thin text-sm -mt-2 transition-colors duration-300 text-white`}>
+                                <span className={`font-bell text-sm -mt-2 transition-colors duration-300 text-white`}>
                                     BERATUNG
                                 </span>
                             </div>
