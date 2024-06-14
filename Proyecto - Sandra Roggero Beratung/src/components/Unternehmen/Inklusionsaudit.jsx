@@ -52,8 +52,8 @@ const Inklusionsaudit=()=>{
       };
       
       const handleClickSeleccionReclutamiento = () => {
-        navigate("/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento");
-      };
+        navigate("/kontakt");
+    };
 
     return(
         <>
@@ -124,10 +124,10 @@ const Inklusionsaudit=()=>{
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-                <div className="w-full sm:w-1/3 h-auto">
+                {/* <div className="w-full h-auto">
                 <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover"/>
-                </div>
-                <div className="w-full sm:w-2/3 flex justify-center items-center">
+                </div> */}
+                <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
                     <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
                     <button
