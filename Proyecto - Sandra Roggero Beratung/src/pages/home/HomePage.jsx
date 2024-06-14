@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
 import bannerPrincipal from "../../assets/video/banner.mp4";
+import bannerSecondary from "../../assets/video/banner1.mp4";
 
 import fotoPerfil from "../../assets/imagenes/fotoPerfil.jpg";
 
@@ -34,6 +35,8 @@ import imagenInfo3 from "../../assets/imagenes/InfoImagenesHome/imagen3.jpg";
 import imagenInfo4 from "../../assets/imagenes/InfoImagenesHome/imagen4.jpg";
 import imagenInfo5 from "../../assets/imagenes/InfoImagenesHome/imagen5.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+import imagenInfo7 from "../../assets/imagenes/InfoImagenesHome/imagen7.jpg";
+import imagenInfo8 from "../../assets/imagenes/InfoImagenesHome/imagen8.jpg";
 
 const HomePage = () => {
 
@@ -104,10 +107,12 @@ const HomePage = () => {
 
     const infoItems2 = [
       // { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
-      { title: "INNOVATION", description: "Wir verfügen über eine innovative Methodik und bieten umfassende Begleitung.", image: imagenInfo2 },
-      { title: "SPEZIALISIERUNG UND ENGAGEMENT", description: "Wir bieten spezialisierte Bereiche in jedem Sektor, um den idealen Kandidaten zu identifizieren.", image: imagenInfo3 },
-      { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
-      { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
+      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", image: imagenInfo2 },
+      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", image: imagenInfo3 },
+      // { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
+      // { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
+      { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", image: imagenInfo7 },
+      { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "EiMit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", image: imagenInfo8 }
       ];
 
       const services = [
@@ -239,7 +244,7 @@ const HomePage = () => {
           DIE GESELLSCHAFT VERÄNDERT SICH, DIE FÜHRUNGSSTILE ENTWICKELN SICH WEITER, WARUM ALSO NICHT AUCH DAS AUSWAHLVERFAHREN WEITERENTWICKELN?
         </p>
       </div>
-      <div className="p-4 w-full bg-bg_favorite_3">
+      {/* <div className="p-4 w-full bg-bg_favorite_3">
       {infoItems2.map((item, index) => (
         <motion.div 
           key={index} 
@@ -271,7 +276,76 @@ const HomePage = () => {
           </motion.div>
         </motion.div>
       ))}
+    </div> */}
+
+
+
+      {/* <div className="relative overflow-hidden min-h-screen"> */}
+      {/* <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src={bannerSecondary} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+      {/* <div className="bg-slate-100 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
+        <div className="relative z-10 p-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {infoItems2.map((item, index) => (
+              <motion.div 
+                key={index} 
+                className="relative bg-white  border border-gray-300 rounded-lg shadow-lg overflow-hidden"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+              >
+                <div className="relative h-64">
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-bold text-xl text-gray-800">{item.title}</h3>
+                  <p className="text-gray-700 mt-2">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div> */}
+    {/* </div> */}
+
+    <div className="min-h-screen bg-white py-8 px-4 sm:px-8 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {infoItems2.map((item, index) => (
+          <motion.div 
+            key={index} 
+            className="relative bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          >
+            <div className="relative h-64">
+              <img 
+                src={item.image} 
+                alt={item.title} 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+            </div>
+            <div className="p-6">
+              <h3 className="font-bold text-xl text-gray-800">{item.title}</h3>
+              <p className="text-gray-700 mt-2">{item.description}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
+
+
+
       <div className="bg-gray-800 w-full h-full">
         <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
         <div className="relative w-full h-auto overflow-hidden ">

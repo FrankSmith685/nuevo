@@ -103,7 +103,7 @@ const HeaderNav = () => {
                                         <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                             SANDRA ROGGERO M.
                                         </h2>
-                                        <span className={` font-bell text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
+                                        <span className={` font-bell text-sm -mt-1 transition-colors font-bold duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
                                             BERATUNG
                                         </span>
                                     </div>
@@ -117,7 +117,7 @@ const HeaderNav = () => {
                                         <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                             SANDRA ROGGERO M.
                                         </h2>
-                                        <span className={`font-bell text-sm -mt-2 transition-colors duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
+                                        <span className={`font-bell text-sm -mt-1 transition-colors font-bold duration-300 ${isNavHovered ? 'text-violet-900' : 'text-white'}`}>
                                             BERATUNG
                                         </span>
                                     </div>
