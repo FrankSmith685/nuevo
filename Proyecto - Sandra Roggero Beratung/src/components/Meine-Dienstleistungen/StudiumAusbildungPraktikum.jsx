@@ -71,19 +71,13 @@ const StudiumAusbildungPraktikum = () => {
                     <h2 className="font-medium">Studium</h2>
                     <p className="">Das bringt dir ein Praktikum in Deutschland!</p>
                     <p className="pb-1">
-                        Wir geben Dir hier einen kleinen Überblick darüber, welche Vorteile ein Studium in Deutschland speziell 
-                        für internationale Studierende mit sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des 
-                        Studienangebots… Keine Studiengebühren und niedrige Kosten… Förderprogramme und die Möglichkeit zu arbeiten.
                         Du erlebst den Arbeitsalltag aus erster Hand. So erfährst du, welche Aufgaben auf dich zukommen.
-                    </p>
-                    <h2 className="font-medium">Ausbildung</h2>
-                    <p className="pb-1">
                         Du kannst danach besser einschätzen, ob ein Beruf oder eine Branche zu deinen Interessen und Stärken passen.
                         Du kannst deine Praktika in deinem Lebenslauf aufnehmen. Damit kannst du bei weiteren Bewerbungen zusätzlich punkten.
                         Dein Praktikumsbetrieb lernt dich kennen. Das kann dir bei einer späteren Bewerbung helfen, zum Beispiel für eine Stelle
                         als Werkstudent oder für eine Ausbildung. Vielleicht bietet man Dir auch eine Ausbildungsstelle an.
                     </p>
-                    <h2 className="font-medium">Praktikum</h2>
+                    <h2 className="font-medium">Ausbildung</h2>
                     <h2 className="">Welche Vorteile hat man nach der Ausbildung?</h2>
                     <p className="pb-1">
                         Eine Ausbildung ist:
@@ -92,6 +86,13 @@ const StudiumAusbildungPraktikum = () => {
                         Lukrativ. Vom ersten Tag an hast du dein eigenes Einkommen.
                         Zukunftssicher.
                         Aussichtsreich.
+                    </p>
+                    <h2 className="font-medium">Praktikum</h2>
+                    <p className="pb-1">
+                        Wir geben Dir hier einen kleinen Überblick darüber, welche Vorteile ein Studium in Deutschland speziell 
+                        für internationale Studierende mit sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des 
+                        Studienangebots… Keine Studiengebühren und niedrige Kosten… Förderprogramme und die Möglichkeit zu arbeiten.
+                        Du erlebst den Arbeitsalltag aus erster Hand. So erfährst du, welche Aufgaben auf dich zukommen.
                     </p>
                 </div>
             </div>
