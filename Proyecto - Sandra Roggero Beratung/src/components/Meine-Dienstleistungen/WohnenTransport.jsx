@@ -43,7 +43,7 @@ const WohnenTransport = () => {
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                     <div className="w-full md:w-3/5 h-auto">
                         <h2 className="text-white font-bold text-2xl sm:text-4xl md:text-5xl font-bell text-center md:text-end px-2">
-                            Wohnen - Transport
+                            Wohnen - Beförderung
                         </h2>
                     </div>
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
@@ -63,19 +63,19 @@ const WohnenTransport = () => {
                         Sandra Rogero <span className="text-gray-500 font-medium text-base">Beratung</span>
                     </span>
                     {' > '}
-                        Wohnen - Transport
+                        Wohnen - Beförderung
                 </p>
                 <div className="text-gray-700 text-start w-full">
                     <h2 className="font-medium">Wohnen</h2>
                     <p className="pb-1">
-                        Deutschland ist eines der besten Länder zum Leben. Das germanische Land zeichnet sich durch seine Multikulturalität aus 
-                        und hat eine große Zahl von Einwanderern aus der ganzen Welt. Dies hat es zu einem der beliebtesten Ziele für 
-                        Menschen gemacht, die ein neues Leben beginnen wollen.
+                    Deutschland ist eines der besten Länder zum Leben. Deutschland zeichnet sich durch seine Multikulturalität 
+                    aus und hat eine große Zahl von Einwanderern aus der ganzen Welt. Dies hat es zu einem der beliebtesten Ziele 
+                    für Menschen gemacht, die ein neues Leben beginnen wollen.
                     </p>
-                        <h2 className="font-medium">Transport</h2>
+                        <h2 className="font-medium">Beförderung</h2>
                     <p className="pb-1">
-                        In Deutschland kann man mit dem Zug, aber auch mit der Straßenbahn oder dem Bus zu vielen Zielen reisen. Der Zug, 
-                        die U-Bahn, die S-Bahn, die Straßenbahn und der Bus sind die verschiedenen öffentlichen Verkehrsmittel des Fern- und Nahverkehrs.
+                    In Deutschland kann man mit dem Zug, aber auch mit der Straßenbahn oder dem Bus zu vielen Zielen reisen.
+                     Der Zug, die U-Bahn, die S-Bahn, die Straßenbahn und der Bus sind die verschiedenen öffentlichen Verkehrsmittel des Fern- und Nahverkehrs.
                     </p>
                 </div>
             </div>

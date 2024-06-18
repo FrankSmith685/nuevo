@@ -70,20 +70,18 @@ const VisumSprache = () => {
                 <div className="text-gray-700 text-start w-full">
                     <h2 className="font-medium">Visum</h2>
                     <p className="pb-1">
-                        Die Visumbeantragung eines Arbeits- oder Studiengangs für Deutschland ist eines der wichtigsten Verfahren, 
-                        wenn Sie Ihre Integration in dem deutschsprachigen Land beginnen möchten. Deutschland ist eine der größten Wirtschaftsmächte 
-                        in Europa. Es bietet sehr gute Gehaltsmöglichkeiten und ist zu einer ausgezeichneten Option für diejenigen geworden, 
-                        die entschlossen sind, ihren Lebensweg zu ändern.
-                        Wenn Sie sich in diesem Land richtig etablieren wollen, müssen Sie jedoch die Dinge richtig machen. Es ist wichtig, 
-                        dass Sie alle Informationen über die zu erledigenden Unterlagen zur Hand haben.
-                        Zählen Sie auf uns!
+                    Die Visumbeantragung eines Arbeits- oder Studiengangs für Deutschland ist eines der wichtigsten Verfahren, wenn Sie Ihre Integration in dem 
+                    deutschsprachigen Land beginnen möchten. Deutschland ist eine der größten Wirtschaftsmächte in Europa. Es bietet sehr gute Gehaltsmöglichkeiten
+                     und ist zu einer ausgezeichneten Option für diejenigen geworden, die entschlossen sind, ihren Lebensweg zu ändern. Wenn Sie sich in diesem 
+                     Land richtig etablieren wollen, müssen Sie jedoch die Dinge richtig machen. Es ist wichtig, dass Sie alle Informationen über die zu 
+                     erledigenden Unterlagen zur Hand haben. Zählen Sie auf uns!
                     </p>
 
                     <h2 className="font-medium">Sprache</h2>
                     <p className="pb-1">
-                        Unsere Partnerschulen befinden sich in den schönsten und interessantesten Städten Deutschlands, die reich an Kultur 
-                        und Geschichte sind. Ihre Deutschkurse werden Sie ermutigen und motivieren, die Sprache mit Leichtigkeit zu lernen und 
-                        gleichzeitig diese Kultur intensiv zu erleben. Wir werden Ihnen zur Seite je nach Ihrem Zeitplan und Ihrer Verfügbarkeit stehen.
+                    Unsere Partnerschulen befinden sich in den schönsten und interessantesten Städten Deutschlands, die reich an Kultur und Geschichte sind.
+                     Ihre Deutschkurse werden Sie ermutigen und motivieren, die Sprache mit Leichtigkeit zu lernen und gleichzeitig diese Kultur intensiv zu
+                      erleben. Wir werden Ihnen zur Seite stehen je nach Ihrem Zeitplan und Ihrer Verfügbarkeit.
                     </p>
                 </div>
             </div>

@@ -7,7 +7,6 @@ import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
 import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const PersonalauswahlUndRekrutierung = () => {
@@ -76,14 +75,14 @@ const PersonalauswahlUndRekrutierung = () => {
                 Personalauswahl und Rekrutierung
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handeln würde, 
-                indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt, 
-                um sie zu beraten und ihre Bedürfnisse zu erkennen und zu erfüllen. Darüber hinaus begleiten und gewährleisten wir 
-                dank unseres eigenen Dienstes „Onboarding Selektion“ die bestmögliche Integration der Kandidaten in das Unternehmen. 
-                Wir sind Personalvermittler und Integration Coaches. Der Onboarding-Prozess konzentriert sich nicht nur auf das Follow-up nach 
-                der Auswahl, sondern wir begleiten den Prozess von Anfang an, immer im Einklang mit dem Auftrag und dem Ziel des Unternehmens. 
-                Jeder Auswahlprozess ist einzigartig, denn keine zwei Personen oder Unternehmen sind gleich. Es gibt eine Lösung für jedes 
-                Unternehmen, und wir von Sandra Roggero-Beratung wissen, wie man sie findet.
+                Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handelt, 
+                indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt. 
+                Dabei nimmt Beratung und das Erkennen von Bedürfnissen einen hohen Stellenwert ein. Weiterhin begleiten und 
+                gewährleisten wir dank unseres eigenen Dienstes „Onboarding Selektion“ die bestmögliche Integration der Kandidaten 
+                in das Unternehmen. Wir sind Personalvermittler und Integrations Coaches. Der Onboarding-Prozess konzentriert sich 
+                nicht nur auf das Follow-up nach der Auswahl, sondern wir begleiten den Prozess von Anfang an, immer im Einklang mit
+                dem Auftrag und dem Ziel des Unternehmens. Jeder Auswahlprozess ist einzigartig, denn keine zwei Personen oder Unternehmen 
+                sind gleich. Es gibt eine Lösung für jedes Unternehmen, und wir von Sandra Roggero-Beratung wissen, wie man sie findet.
                 </p>
             </div>
             <div className="bg-gray-800 w-full h-full">

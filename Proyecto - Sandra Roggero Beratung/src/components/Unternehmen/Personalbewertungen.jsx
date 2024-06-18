@@ -81,28 +81,28 @@ const Personalbewertungen=()=>{
                     Personalbewertungen
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                    Die Leistungsbewertung ist ein wichtiges Instrument zur Steigerung der Produktivität. Wenn Sie die Fähigkeiten Ihrer 
-                    Teams kennen und wissen, was sie zum Unternehmen beitragen können, können Sie ihnen die notwendigen Instrumente an die 
-                    Hand geben, um sowohl ihre berufliche Entwicklung als auch die des Unternehmens zu fördern.
+                Die Leistungsbewertung ist ein wichtiges Instrument zur Steigerung der Produktivität. Wenn Sie die Fähigkeiten Ihrer 
+                Teams kennen und wissen, was sie zum Unternehmen beitragen können, können Sie ihnen die notwendigen Instrumente an die Hand geben, 
+                um sowohl ihre berufliche Entwicklung als auch die des Unternehmens zu fördern.
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                    Sandra Roggero Beratung hilft Ihnen, Ihre Teams zu bewerten, indem wir uns auf die Menschen konzentrieren, die sie bilden:
+                Sandra Roggero Beratung hilft Ihnen, Ihre Teams zu bewerten, indem wir uns auf die Menschen konzentrieren.
                 </p>
                 <ul className="list-disc list-inside pl-1">
                     <li className="mb-2 text-gray-800">
-                        Erkennen und entwickeln Sie die einzigartigen Talente Ihres Unternehmens.
+                    Erkennen und entwickeln Sie die einzigartigen Talente Ihres Unternehmens.
                     </li>
                     <li className="mb-2 text-gray-800">
-                        Durchführung von Evaluierungen, die auf Ihre Herausforderungen und Ihr Team zugeschnitten sind.
+                    Durchführung von Evaluierungen, die auf Ihre Herausforderungen und Ihr Team zugeschnitten sind.
                     </li>
                     <li className="mb-2 text-gray-800">
-                        Belohnung der Produktivität und Leistung von Mitarbeitern im Rahmen von internen Beförderungs- oder Auswahlprozessen.
+                    Belohnung der Produktivität und Leistung von Mitarbeitern im Rahmen von internen Förderungs- oder Auswahlprozessen.
                     </li>
                     <li className="mb-2 text-gray-800">
-                        Messung persönlicher Kompetenzen, das Potenzial und die Interessen der Mitarbeiter anhand der Unternehmensstrategie und der Unternehmensziele.
+                    Messung persönlicher Kompetenzen, des Potenzial und den Interessen der Mitarbeiter anhand der Unternehmensstrategie und der Unternehmensziele.
                     </li>
                     <li className="mb-2 text-gray-800">
-                        Einbindung von Kompetenzentwicklungsplänen, die auf die jeweilige Person und Position zugeschnitten sind.
+                    Einbindung von Kompetenzentwicklungsplänen, die auf die jeweilige Person und Position zugeschnitten sind.
                     </li>
                 </ul>
             </div>

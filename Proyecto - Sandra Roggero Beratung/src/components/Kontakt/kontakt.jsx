@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import {
   Box,
@@ -273,7 +273,9 @@ const Kontakt = () => {
                                 onChange={handleChange}
                                 className="form-checkbox h-4 w-4 mr-2"
                             />
-                            Ich akzeptiere kommerzielle Informationen zu erhalten, auch auf elektronischem Weg.
+                            Ich akzeptiere die
+                            <Link to="/datenschutzrichtlinie" className="font-normal text-gray-to-blue-600">datenschutzrichtlinie</Link>
+                            
                         </label>
                     )}
                     <label className="flex items-center text-gray-700">
@@ -285,7 +287,18 @@ const Kontakt = () => {
                             required
                             className="form-checkbox h-4 w-4 mr-2"
                         />
-                        {formType === 'firma' ? "Ich akzeptiere die Datenschutzrichtlinie und das Impressum." : "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie."}
+                        {/* {formType === 'firma' ? "Ich akzeptiere die Datenschutzrichtlinie und das Impressum." : "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie."} */}
+                        {formType === 'firma' ? (
+                                <>
+                                    Ich akzeptiere die 
+                                    <Link to="/benutzerrechte" className="font-normal ml-1 text-gray-to-blue-600">Benutzerrechte</Link>.
+                                </>
+                            ) : (
+                                <>
+                                    Ich akzeptiere die
+                                    <Link to="/benutzerrechte" className="font-normal ml-1 text-gray-to-blue-600">Benutzerrechte</Link> 
+                                </>
+                        )}
                     </label>
                 </div>
                 <div className="col-span-2">

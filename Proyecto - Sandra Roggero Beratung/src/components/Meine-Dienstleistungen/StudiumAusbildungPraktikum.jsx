@@ -69,30 +69,26 @@ const StudiumAusbildungPraktikum = () => {
                 </p>
                 <div className="text-gray-700 text-start w-full">
                     <h2 className="font-medium">Studium</h2>
-                    <p className="">Das bringt dir ein Praktikum in Deutschland!</p>
+                    
                     <p className="pb-1">
-                        Du erlebst den Arbeitsalltag aus erster Hand. So erfährst du, welche Aufgaben auf dich zukommen.
-                        Du kannst danach besser einschätzen, ob ein Beruf oder eine Branche zu deinen Interessen und Stärken passen.
-                        Du kannst deine Praktika in deinem Lebenslauf aufnehmen. Damit kannst du bei weiteren Bewerbungen zusätzlich punkten.
-                        Dein Praktikumsbetrieb lernt dich kennen. Das kann dir bei einer späteren Bewerbung helfen, zum Beispiel für eine Stelle
-                        als Werkstudent oder für eine Ausbildung. Vielleicht bietet man Dir auch eine Ausbildungsstelle an.
+                    Wir geben Ihnen hier einen kleinen Überblick, welche Vorteile ein Studium in Deutschland speziell für internationale Studierende mit 
+                    sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des Studienangebots… Geringe Studiengebühren und niedrige Kosten… 
+                    Förderprogramme und die Möglichkeit zu arbeiten. Sie erleben den Arbeitsalltag aus erster Hand. So erfahren Sie, welche Aufgaben auf Sie zukommen.
                     </p>
                     <h2 className="font-medium">Ausbildung</h2>
                     <h2 className="">Welche Vorteile hat man nach der Ausbildung?</h2>
                     <p className="pb-1">
-                        Eine Ausbildung ist:
-                        Praxisnah. Du kannst Gelerntes direkt anwenden und siehst, was du erreicht hast.
-                        Sinnvoll. Du kannst früh Verantwortung übernehmen, bist aber nicht alleine: Die Zusammenarbeit im Betrieb ist das A und O.
-                        Lukrativ. Vom ersten Tag an hast du dein eigenes Einkommen.
-                        Zukunftssicher.
-                        Aussichtsreich.
+                    Eine Ausbildung ist Praxisnah. Sie können Gelerntes direkt anwenden und sehen was Sie erreicht haben. Sie können früh Verantwortung übernehmen,
+                     sind aber nicht alleine: Die Zusammenarbeit im Betrieb ist das A und O. Eine Ausbildung ist auch lukrativ, weil Sie vom ersten Tag an Ihr eigenes
+                      Einkommen haben. Zukunftssicher. Aussichtsreich.
                     </p>
                     <h2 className="font-medium">Praktikum</h2>
+                    <p className="">Das bringt Ihnen ein Praktikum in Deutschland!</p>
                     <p className="pb-1">
-                        Wir geben Dir hier einen kleinen Überblick darüber, welche Vorteile ein Studium in Deutschland speziell 
-                        für internationale Studierende mit sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des 
-                        Studienangebots… Keine Studiengebühren und niedrige Kosten… Förderprogramme und die Möglichkeit zu arbeiten.
-                        Du erlebst den Arbeitsalltag aus erster Hand. So erfährst du, welche Aufgaben auf dich zukommen.
+                    Sie können danach besser einschätzen, ob ein Beruf oder eine Branche zu Ihren Interessen und Stärken passt. Sie können Ihre Praktika in 
+                    Ihren Lebenslauf aufnehmen. Damit können Sie bei weiteren Bewerbungen zusätzlich punkten. Ihr Praktikumsbetrieb lernt Sie kennen. 
+                    Das kann Ihnen bei einer späteren Bewerbung helfen, zum Beispiel für eine Stelle als Werkstudent oder für eine Ausbildung. 
+                    Vielleicht bietet man Ihnen sogar eine Ausbildungsstelle an.
                     </p>
                 </div>
             </div>

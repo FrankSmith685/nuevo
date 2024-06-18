@@ -53,26 +53,28 @@ const InternationalesKarrieremanagement=()=>{
                 </p>
                 <h2 className="text-gray-700 text-start w-full pb-1 font-semibold text-2xl">Ihre Karriere hat keine Grenzen</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Bereit für den nächsten Schritt? Deutschland wartet auf dich!
+                Bereit für den nächsten Schritt? Deutschland wartet auf Dich!
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wenn dein Ziel darin besteht, deine berufliche Laufbahn in Deutschland voranzutreiben, steht dir unser spezialisiertes 
+                    
+                    Wenn Ihr Ziel darin besteht, Ihre berufliche Laufbahn in Deutschland voranzutreiben, steht Ihnen unser spezialisiertes 
                     Team für internationale Karriereberatung zur Seite, Ihr Talent sehr weit zu bringen.
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Bei Sandra Roggero M. Beratung sehen wir über Ihren Lebenslauf hinaus, wir schätzen die einzigartige Geschichte, die Sie in deutsche Unternehmen einbringen können,
-                    Wir werde Ihnen zu hören und werde wissen, wie man die Qualitäten erkennt, die Sie auszeichnen, und die Eigenschaften, die Sie zum Strahlen bringen können.
+                Bei Sandra Roggero M. Beratung sehen wir über Ihren Lebenslauf hinaus, wir schätzen die einzigartige Geschichte, die Sie in
+                deutsche Unternehmen einbringen können, Wir werde Ihnen zuhören und wir wissen, wie man die Qualitäten erkennt, die Sie auszeichnen, und die Eigenschaften, die Sie zum Strahlen bringen können.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Aufgrund unseres aktiven internationalen Engagements und der ständigen Zusammenarbeit mit Unternehmen können wir Sie mit Unternehmen in 
-                    Verbindung bringen, die ihre Teams mit unterschiedlichen Profilen und den einzigartigen Fähigkeiten von Fachleuten mit internationaler 
-                    Erfahrung bereichern möchten.
+                Aufgrund unseres aktiven internationalen Engagements und der ständigen Zusammenarbeit mit Unternehmen können wir Sie mit Unternehmen 
+                in Verbindung bringen, die ihre Teams mit unterschiedlichen Profilen und den einzigartigen Fähigkeiten von Fachleuten mit internationaler 
+                Erfahrung bereichern möchten.
                 </p>
             </div>
             <div className="w-full bg-gray-800">
                 <div className="w-11/12 mx-auto">
                     <div className="flex flex-col items-center justify-center p-4 md:p-8">
-                        <div className="w-full md:w-3/4 lg:w-1/2 xl:w-2/5 p-6 rounded-lg bg-white shadow-lg">
+                        <div className="w-full p-6 rounded-lg bg-white shadow-lg">
                             <h1 className="text-2xl font-semibold text-center pb-4 text-gray-700">Vorteile des Arbeitens im Ausland</h1>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-lg">
                                 {beneficios.map((beneficio, index) => (

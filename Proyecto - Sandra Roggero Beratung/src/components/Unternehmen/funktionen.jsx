@@ -80,12 +80,11 @@ const Funktionen=()=>{
                     Funktionen
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Identifizierung von Talenten, Kenntnis und Entwicklung des Humankapitals.
-                    Verständnis des Arbeitsmarktes, um neue Bedürfnisse zu erkennen und die vom Unternehmen kurzfristig benötigten Profile vorherzusehen. 
-                    Um die besten Wege zu finden, Sie in das Unternehmen einzugliedern.
-                    Einbindung von Fachkräften in die verschiedenen Bereiche des Unternehmens, sich über ihre Fähigkeiten im Klaren sein und wissen, 
-                    wie sie einen Mehrwert für das Unternehmen schaffen können.
-                    Schaffung einer soliden Unternehmenskultur.
+                Identifizierung von Talenten, Kenntnis und Entwicklung des Humankapitals. Verständnis des Arbeitsmarktes, 
+                um neue Bedürfnisse zu erkennen und die vom Unternehmen kurzfristig benötigten Profile vorherzusehen. 
+                Um die besten Wege zu finden, sie in das Unternehmen einzugliedern. Einbindung von Fachkräften in die 
+                verschiedenen Bereiche des Unternehmens, sich über ihre Fähigkeiten im Klaren sein und wissen, wie sie 
+                einen Mehrwert für das Unternehmen schaffen können. Schaffung einer soliden Unternehmenskultur.
                 </p>
             </div>
             <div className="bg-gray-800 w-full h-full">

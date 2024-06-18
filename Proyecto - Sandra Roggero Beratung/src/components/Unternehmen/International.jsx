@@ -81,21 +81,20 @@ const International=()=>{
                 International
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Internationale Talente und Arbeitskräfte Wenn es darum geht, die Tätigkeit in einem Land zu konsolidieren, 
-                    ist es notwendig, über Profile mit spezifischer Erfahrung und Expertise zu verfügen, sei es auf nationaler 
-                    oder internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben.
+                Wenn es darum geht internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, 
+                über Profile mit spezifischer Erfahrung und Expertisen zu verfügen, sei es auf nationaler oder 
+                internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                    Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, 
-                    um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden.
+                Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden.
                 </p>
                 <h2 className="text-gray-700 text-start font-medium w-full pb-1">EINE SPEZIALISIERTE ABTEILUNG</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort.
+                Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort.
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                    Unsere direkte und proaktive Suchmethodik auf dem Markt, unsere internationale Erfahrung, unser Hauptsitz in Peru und 
-                    unsere Mitarbeiter in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden.
+                Unsere direkte und proaktive Suchmethodik auf dem Markt, unsere internationale Erfahrung, unser Hauptsitz in Peru und unsere Mitarbeiter 
+                in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden.
                 </p>
             </div>
             <div className="bg-gray-800 w-full h-full">

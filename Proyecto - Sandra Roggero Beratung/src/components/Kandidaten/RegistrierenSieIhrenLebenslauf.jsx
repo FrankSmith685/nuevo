@@ -83,7 +83,7 @@ const RegistrierenSieIhrenLebenslauf = () => {
         </p>
     {/* <Typography variant="body1" color="textSecondary" className="py-0"> */}
         <p className="text-gray-700 text-start w-full pb-1 px-2">
-            Wir helfen Ihnen, das nächste Kapitel Ihrer Karriere zu schreiben - erzählen Sie uns Ihre Geschichte!
+        Wir helfen Ihnen, das nächste Kapitel Ihrer Karriere zu schreiben. Erzählen Sie uns Ihre Geschichte!
         </p>
     {/* </Typography> */}
     <form onSubmit={handleSubmit} className="w-full maxlg mx-w--auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

@@ -12,6 +12,8 @@ import InternationalesKarrieremanagement from "../components/Kandidaten/Internat
 import UnserePhilosophie from "../components/Wir/UnserePhilosophie";
 import WerWirSind from "../components/Wir/WerWirSind";
 import Kontakt from "../components/Kontakt/kontakt";
+import PrivacyPolicy from "../pages/assets/PrivacyPolicy";
+import Benutzerrechte from "../pages/assets/Benutzerrechte";
 // import WohnenTransport from "../components/Meine-Dienstleistungen/WohnenTransport";
 // import VisumSprache from "../components/Meine-Dienstleistungen/VisumSprache";
 // import ArbeitSteuern from "../components/Meine-Dienstleistungen/ArbeitSteuern";
@@ -113,12 +115,16 @@ export const AppRoutes = () => {
               {/*Meine-Dienstleistungen*/}
               <Route path="/meine-dienstleistungen/studium-ausbildung-praktikum" element={<StudiumAusbildungPraktikum />} />
               <Route path="/meine-dienstleistungen/arbeit-steuern" element={<ArbeitSteuern />} />
-              <Route path="/meine-dienstleistungen/wohnen-transport" element={<WohnenTransport />} />
+              <Route path="/meine-dienstleistungen/wohnen-beförderung" element={<WohnenTransport />} />
               <Route path="/meine-dienstleistungen/visum-sprache" element={<VisumSprache />} />
 
 
               <Route path="/kontakt" element={<Kontakt />} />
               <Route path="/wir" element={<WirPage />} />
+
+              <Route path="/datenschutzrichtlinie" element={<PrivacyPolicy />} />
+              <Route path="/benutzerrechte" element={<Benutzerrechte />} />
+
 
               {/* <Route path="/seleccion-y-headhunting/seleccion-de-directivos" element={<SeleccionDirectivos />} />
               <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoriaHeadhunter />} />

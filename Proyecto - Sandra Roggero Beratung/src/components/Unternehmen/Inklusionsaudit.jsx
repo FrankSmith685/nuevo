@@ -80,13 +80,12 @@ const Inklusionsaudit=()=>{
                 Inklusionsaudit
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess.
-                    Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt und zusätzliche Systeme, Inhalte oder Technologien einbezogen. 
-                    Auch wenn diese Prozesse einen funktionierenden Service und Erfahrung bei der Talentauswahl bieten, werden wahrscheinlich in jeder 
-                    Phase Ihres Prozesses dennoch Vorurteile bestehen.
-                    Unser Inclusivity-Audit analysiert jeden Kontaktpunkt mit dem Kandidaten während des Auswahlprozesses, von der Stellenbeschreibung 
-                    für diese Position über Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. 
-                    Dieser Ansatz bietet durchgängige Sichtbarkeit und Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile.
+                Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess. Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt
+                 und zusätzliche Systeme, Inhalte oder Technologien sind entstanden. Auch wenn diese Prozesse einen funktionierenden Service und Erfahrung
+                  bei der Talentauswahl bieten, werden wahrscheinlich in jeder Phase Ihres Prozesses dennoch Vorurteile bestehen. Unser Inclusivity-Audit
+                   analysiert jeden Kontaktpunkt mit dem Kandidaten während des Auswahlprozesses, von der Stellenbeschreibung für diese Position über 
+                   Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. Dieser Ansatz 
+                   bietet durchgängige Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile.
                 </p>
             </div>
             <div className="bg-gray-800 w-full h-full">

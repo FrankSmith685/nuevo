@@ -81,16 +81,16 @@ const WerWirSind=()=>{
                     Wer Wir Sind
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im 
-                    Bereich Human Resources und Personalbeschaffung in Lima, Peru und Expertin für Öffentlichkeitsarbeit, nach Deutschland auswanderte. 
-                    Fünfzehn Jahre zuvor hatte sie Europa bereist, wo sie die Arbeitsmarktbedürfnisse ihres Herkunftslandes und die dort vorhandene 
-                    hochqualifizierte Arbeitskraft evaluiert und analysiert hatte, mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie 
-                    sich schließlich niederlassen würde.
+                Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im 
+                Bereich Human Resources und Personalbeschaffung in Lima, Peru und Expertin für Öffentlichkeitsarbeit, 
+                nach Deutschland auswanderte. Fünfzehn Jahre zuvor hatte sie Europa bereist, wo sie die Arbeitsmarktbedürfnisse
+                 ihres Herkunftslandes und die dort vorhandene hochqualifizierte Arbeitskraft evaluiert und analysiert hatte, 
+                 mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie sich schließlich niederlassen würde.
                 </p>
                 <h2 className="text-gray-700 text-start text-xl font-semibold w-full pb-1">Wir sind anders</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                    Zunächst einmal, weil wir Fragen stellen. Wir fordern. Wir mischen uns ein. Wir beraten. Wir sind ehrlich und reden nicht um den heißen 
-                    Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache.
+                Zunächst einmal, weil wir Fragen stellen. Wir fordern. Wir mischen uns ein. Wir beraten. Wir sind ehrlich und reden nicht um 
+                den heißen Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache.
                 </p>
             </div>
 
