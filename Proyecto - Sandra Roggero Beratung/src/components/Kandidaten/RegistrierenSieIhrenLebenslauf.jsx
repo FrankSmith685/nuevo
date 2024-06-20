@@ -54,8 +54,8 @@ const RegistrierenSieIhrenLebenslauf = () => {
             </div> */}
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src={bannerPrincipal} 
-                alt="NOT FOUND" 
+                src="" 
+                alt="Registrieren Sie Ihren Lebenslauf" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">

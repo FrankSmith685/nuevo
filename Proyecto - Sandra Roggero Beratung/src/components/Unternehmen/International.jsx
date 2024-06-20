@@ -25,13 +25,25 @@ const International=()=>{
         navigate("/");
     }
 
+    // const services = [
+    //     {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
+    //     {image:imagen2,title:"BEWERTUNGEN"},
+    //     {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
+    //     {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
+    //     {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
+    //     {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+    // ];
+
     const services = [
-        {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
-        {image:imagen2,title:"BEWERTUNGEN"},
-        {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
-        {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
-        {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
-        {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+        {title:"STUDIUM"},
+        {title:"AUSBILDUNG"},
+        {title:"PARKTIKUM"},
+        {title:"ARBEIT"},
+        {title:"STEUERN"},
+        {title:"WOHNEN"},
+        {title:"TRANSPORT"},
+        {title:"VISUM"},
+        {title:"SPRACHE"},
     ];
       
     const [currentIndex, setCurrentIndex] = useState(0);

@@ -4,7 +4,8 @@ import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
 import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
-const images = [imagen8, imagen9];
+// const images = [imagen8, imagen9];
+const images = [null, null];
 
 const VisumSprache = () => {
     const navigate = useNavigate();

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const PrivacyPolicy = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="bg-white text-gray-800 p-10 rounded-lg shadow-lg mt-32 max-w-3xl mx-auto">
             <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">Datenschutzrichtlinie</h1>

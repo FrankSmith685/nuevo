@@ -25,13 +25,26 @@ const Inklusionsaudit=()=>{
         navigate("/");
     }
 
+    // const services = [
+    //     {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
+    //     {image:imagen2,title:"BEWERTUNGEN"},
+    //     {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
+    //     {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
+    //     {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
+    //     {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+    // ];
+
+
     const services = [
-        {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
-        {image:imagen2,title:"BEWERTUNGEN"},
-        {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
-        {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
-        {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
-        {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
+        {title:"STUDIUM"},
+        {title:"AUSBILDUNG"},
+        {title:"PARKTIKUM"},
+        {title:"ARBEIT"},
+        {title:"STEUERN"},
+        {title:"WOHNEN"},
+        {title:"TRANSPORT"},
+        {title:"VISUM"},
+        {title:"SPRACHE"},
     ];
       
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,8 +72,8 @@ const Inklusionsaudit=()=>{
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src={bannerPrincipal} 
-                alt="NOT FOUND" 
+                src="" 
+                alt="Inklusionsaudit" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">

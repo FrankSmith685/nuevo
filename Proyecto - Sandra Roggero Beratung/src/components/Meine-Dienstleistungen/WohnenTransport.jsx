@@ -4,7 +4,8 @@ import imagen6 from "../../assets/imagenes/MeineDienstleistungen/imagen6.jpg";
 import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
-const images = [imagen6, imagen7];
+// const images = [imagen6, imagen7];
+const images = [null,null];
 
 const WohnenTransport = () => {
     const navigate = useNavigate();

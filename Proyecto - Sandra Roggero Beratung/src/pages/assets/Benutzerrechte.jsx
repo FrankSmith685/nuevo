@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Benutzerrechte = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="p-8 bg-white text-gray-900 mt-32 max-w-4xl mx-auto shadow-lg rounded-lg">
             <h1 className="text-3xl font-extrabold mb-6 text-center text-blue-700">Benutzerrechte</h1>

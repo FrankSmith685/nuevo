@@ -114,7 +114,7 @@ const Footer = () => {
                     </div>
                 </div>
                 
-                <div className="flex flex-wrap justify-between items-start px-10">
+                <div className="flex flex-wrap justify-between items-start px-0">
                     <div className="mb-6">
                         <h2 className="text-lg font-semibold mb-4">Informationen</h2>
                         <ul className="text-white px-2">

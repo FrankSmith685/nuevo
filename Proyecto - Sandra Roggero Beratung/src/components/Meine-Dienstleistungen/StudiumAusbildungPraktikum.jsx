@@ -5,7 +5,8 @@ import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
 import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
-const images = [imagen1, imagen2, imagen3];
+// const images = [imagen1, imagen2, imagen3];
+const images = [null, null, null];
 
 const StudiumAusbildungPraktikum = () => {
     const navigate = useNavigate();

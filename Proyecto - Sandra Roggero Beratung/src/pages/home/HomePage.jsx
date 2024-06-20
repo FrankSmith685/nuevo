@@ -38,6 +38,9 @@ import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import imagenInfo7 from "../../assets/imagenes/InfoImagenesHome/imagen7.jpg";
 import imagenInfo8 from "../../assets/imagenes/InfoImagenesHome/imagen8.jpg";
 
+// Logo principal
+import logoPrincipal from "../../assets/imagenes/LogoPrincipal_1.png"; 
+
 const HomePage = () => {
 
   const [ref1, inView1] = useInView();
@@ -111,21 +114,33 @@ const HomePage = () => {
       { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", image: imagenInfo3 },
       // { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
       // { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
-      { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", image: imagenInfo7 },
-      { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", image: imagenInfo8 }
+      { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", },
+      { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", }
       ];
 
-      const services = [
-        {image:imagen1,title:"STUDIUM"},
-        {image:imagen2,title:"AUSBILDUNG"},
-        {image:imagen3,title:"PARKTIKUM"},
-        {image:imagen4,title:"ARBEIT"},
-        {image:imagen5,title:"STEUERN"},
-        {image:imagen6,title:"WOHNEN"},
-        {image:imagen7,title:"TRANSPORT"},
-        {image:imagen8,title:"VISUM"},
-        {image:imagen9,title:"SPRACHE"},
-    ];
+    //   const services = [
+    //     {image:imagen1,title:"STUDIUM"},
+    //     {image:imagen2,title:"AUSBILDUNG"},
+    //     {image:imagen3,title:"PARKTIKUM"},
+    //     {image:imagen4,title:"ARBEIT"},
+    //     {image:imagen5,title:"STEUERN"},
+    //     {image:imagen6,title:"WOHNEN"},
+    //     {image:imagen7,title:"TRANSPORT"},
+    //     {image:imagen8,title:"VISUM"},
+    //     {image:imagen9,title:"SPRACHE"},
+    // ];
+
+    const services = [
+      {title:"STUDIUM"},
+      {title:"AUSBILDUNG"},
+      {title:"PARKTIKUM"},
+      {title:"ARBEIT"},
+      {title:"STEUERN"},
+      {title:"WOHNEN"},
+      {title:"TRANSPORT"},
+      {title:"VISUM"},
+      {title:"SPRACHE"},
+  ];
       
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -205,13 +220,24 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
       >
-        <div className="flex flex-col items-center sm:items-start">
+        {/* <div className="flex flex-col items-center sm:items-start">
           <h2 className="font-bell font-medium text-lg sm:text-2xl md:text-2xl lg:text-5xl leading-3 transition-colors duration-300 text-gray-800">
             Sandra Roggero M.
           </h2>
           <span className="md:text-base font-bell text-sm sm:text-base lg:text-xl mt-0 transition-colors duration-300 text-gray-800">
             Beratung
           </span>
+        </div> */}
+        <div className='flex flex-col items-center justify-start'>
+            <img src={logoPrincipal} alt="Logo Principal" className='h-20' />
+            <div className="flex flex-col items-center">
+                <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 text-gray-800`}>
+                    SANDRA ROGGERO M.
+                </h2>
+                <span className={`font-bell text-sm -mt-1 transition-colors font-bold duration-300 text-violet-900`}>
+                    BERATUNG
+                </span>
+            </div>
         </div>
         <p className="text-start text-sm sm:text-sm md:text-lg">
           Wir tragen jeden Tag dazu bei, dass Menschen eine tiefe Erfüllung auf ihrem beruflichen Weg erfahren und persönlich wachsen.
@@ -244,78 +270,6 @@ const HomePage = () => {
           DIE GESELLSCHAFT VERÄNDERT SICH, DIE FÜHRUNGSSTILE ENTWICKELN SICH WEITER, WARUM ALSO NICHT AUCH DAS AUSWAHLVERFAHREN WEITERENTWICKELN?
         </p>
       </div>
-      {/* <div className="p-4 w-full bg-bg_favorite_3">
-      {infoItems2.map((item, index) => (
-        <motion.div 
-          key={index} 
-          className={`flex flex-col sm:flex-row ${index % 2 === 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'} items-center my-12 relative w-full sm:w-11/12 mx-auto`}
-          initial={{ opacity: 0, x: index % 2 === 1 ? -100 : 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1, duration: 0.5 }}
-        >
-          <motion.div 
-            className="w-full md:w-1/3 h-64 md:h-80 relative overflow-hidden rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-          >
-            <img 
-              src={item.image} 
-              alt={item.title} 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-          </motion.div>
-          <motion.div 
-            className="w-full md:w-1/3 p-4 sm:mx-4 md:p-8 bg-white bg-opacity-80 backdrop-blur-md border border-gray-300 rounded-lg shadow-lg mx-0 md:mx-8 mt-4 md:mt-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-          >
-            <h3 className="font-bold text-lg md:text-2xl text-gray-800">{item.title}</h3>
-            <p className="text-gray-700 mt-2 md:mt-4">{item.description}</p>
-          </motion.div>
-        </motion.div>
-      ))}
-    </div> */}
-
-
-
-      {/* <div className="relative overflow-hidden min-h-screen"> */}
-      {/* <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src={bannerSecondary} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */}
-      {/* <div className="bg-slate-100 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
-        <div className="relative z-10 p-8 w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {infoItems2.map((item, index) => (
-              <motion.div 
-                key={index} 
-                className="relative bg-white  border border-gray-300 rounded-lg shadow-lg overflow-hidden"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              >
-                <div className="relative h-64">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-xl text-gray-800">{item.title}</h3>
-                  <p className="text-gray-700 mt-2">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div> */}
-    {/* </div> */}
-
     <div className="min-h-screen bg-white py-8 px-4 sm:px-8 lg:px-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {infoItems2.map((item, index) => (
