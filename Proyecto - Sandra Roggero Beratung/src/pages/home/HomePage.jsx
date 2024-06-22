@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
@@ -26,7 +26,7 @@ import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
 import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
 
 import { useNavigate,Link } from "react-router-dom";
-import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaArrowRight, FaSpinner } from "react-icons/fa";
 
 
 // infoItems2
@@ -40,6 +40,22 @@ import imagenInfo8 from "../../assets/imagenes/InfoImagenesHome/imagen8.jpg";
 
 // Logo principal
 import logoPrincipal from "../../assets/imagenes/LogoPrincipal_1.png"; 
+
+
+import ReactPlayer from "react-player";
+
+
+// import { Cloudinary } from '@cloudinary/url-gen';
+// import { AdvancedVideo } from '@cloudinary/url-gen/dist/esm/advanced/video';
+// import { fetchVideo } from '@cloudinary/url-gen/dist/esm/fetch/video';
+// import { Upload } from '@cloudinary/url-gen/dist/esm/api/upload';
+
+
+// const cloudName = 'TU_CLOUD_NAME'; // Reemplaza con tu cloud name de Cloudinary
+// const unsignedUploadPreset = 'TU_UNSIGNED_UPLOAD_PRESET'; // Obtén esto desde la configuración de Cloudinary
+
+// const cloudinary = new Cloudinary({ cloud_name: cloudName });
+
 
 const HomePage = () => {
 
@@ -167,14 +183,180 @@ const HomePage = () => {
     //     return () => clearInterval(interval);
     // }, []);
 
+  //   const iframeRef = useRef(null);
+
+  // useEffect(() => {
+  //   const iframe = iframeRef.current;
+  //   const onMessage = (event) => {
+  //     if (event.origin !== 'https://streamable.com') return;
+
+  //     // Reenvía el comando para silenciar y hacer bucle si es necesario.
+  //     if (event.data === 'loaded') {
+  //       iframe.contentWindow.postMessage('mute', '*');
+  //       iframe.contentWindow.postMessage('loop', '*');
+  //     }
+  //   };
+
+  //   window.addEventListener('message', onMessage);
+
+  //   return () => {
+  //     window.removeEventListener('message', onMessage);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const uploadVideo = async () => {
+  //     try {
+  //       const formData = new FormData();
+  //       formData.append('file', bannerPrincipal);
+  //       formData.append('upload_preset', unsignedUploadPreset);
+
+  //       const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/video/upload`, {
+  //         method: 'POST',
+  //         body: formData,
+  //       });
+
+  //       if (!response.ok) {
+  //         throw new Error('Error al subir el video');
+  //       }
+
+  //       const data = await response.json();
+  //       const videoURL = data.secure_url;
+  //       console.log('Video subido correctamente:', videoURL);
+
+  //       // Aquí puedes manejar la URL del video como necesites (por ejemplo, guardarla en estado)
+
+  //     } catch (error) {
+  //       console.error('Error al subir el video:', error);
+  //     }
+  //   };
+
+  //   // Llama a la función de carga de video al montar el componente
+  //   uploadVideo();
+  // }, []); // Dependencias vacías para asegurar que se ejecute una vez
+
+
+  // const [videoUrl, setVideoUrl] = useState('');
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   // Simulación de carga asincrónica del video
+  //   const loadVideo = async () => {
+  //     try {
+  //       // Aquí podrías hacer cualquier lógica de carga, como fetch o importación de un archivo local
+  //       // const videoSource = require('../../assets/video/banner.mp4').default; // Importa el video desde tus assets
+  //       setVideoUrl(bannerPrincipal);
+  //     } catch (error) {
+  //       console.error('Error al cargar el video:', error);
+  //       // Manejo de errores si es necesario
+  //     } finally {
+  //       setLoading(false); // Indica que la carga ha finalizado
+  //     }
+  //   };
+
+  //   loadVideo();
+  // }, []);
+
+  // if (loading) {
+  //   // Muestra el spinner mientras se carga el video
+  //   return (
+  //     <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+  //       <FaSpinner className="animate-spin text-9xl text-gray-500" />
+  //     </div>
+  //   );
+  // }
+
+  const [videoUrl, setVideoUrl] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadVideo = async () => {
+      try {
+        // Intenta obtener la URL del video desde localStorage
+        const storedVideoUrl = localStorage.getItem('videoUrl');
+        if (storedVideoUrl) {
+          setVideoUrl(storedVideoUrl);
+        } else {
+          // Si no está almacenada, carga el video desde los assets locales
+          // const videoSource = require('../../assets/video/banner.mp4').default; // Importa el video desde tus assets
+          setVideoUrl(bannerPrincipal);
+          // Almacena la URL del video en localStorage para futuras visitas
+          localStorage.setItem('videoUrl', bannerPrincipal);
+        }
+      } catch (error) {
+        console.error('Error al cargar el video:', error);
+        // Manejo de errores si es necesario
+      } finally {
+        setLoading(false); // Indica que la carga ha finalizado
+      }
+    };
+
+    loadVideo();
+  }, []);
+
+  if (loading) {
+    // Muestra el spinner mientras se carga el video
+    return (
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+        <FaSpinner className="animate-spin text-9xl text-gray-500" />
+      </div>
+    );
+  }
+
 
   return (
     <>
-      <div className="w-full h-screen bg-bg_favorite_1 relative">
-        <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
+      {/* <video 
+        autoPlay 
+        loop 
+        muted 
+        className="absolute top-[-20px] left-0 w-full h-[calc(100%+20px)] object-cover z-0">
+        <source src="https://www.youtube.com/watch?v=f_pQL8ECrBM&ab_channel=LatinaNoticias" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video> */}
+
+
+
+      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src={videoUrl} type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+        {/* <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
           <source src={bannerPrincipal} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
-        </video>
+        </video> */}
+
+
+
+
+        {/* <div> */}
+        {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <ReactPlayer
+        url="https://youtu.be/MzSI4lgNFX8"
+        playing={true}
+        loop={true}
+        muted={true}
+        controls={false}
+        config={{
+          youtube: {
+            playerVars: {
+              controls: 0, // Oculta los controles del reproductor de YouTube
+              modestbranding: 1, // Oculta el logo de YouTube al inicio
+              rel: 0, // No muestra videos relacionados al final
+              showinfo: 0, // Oculta la información del video al inicio
+              autoplay: 1, // Inicia la reproducción automáticamente
+            },
+          },
+        }}
+        width="100%"
+        height="100vh"
+        object="cover"
+        className="absolute top-0 left-0"
+        style={{ objectFit: 'cover', transform: 'scale(1.9)' }} // Aplica un zoom para recortar el video
+      />
+        </div> */}
+        {/* </div> */}
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
           <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
             <h2 className="text-white font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">

@@ -14,29 +14,9 @@ import WerWirSind from "../components/Wir/WerWirSind";
 import Kontakt from "../components/Kontakt/kontakt";
 import PrivacyPolicy from "../pages/assets/PrivacyPolicy";
 import Benutzerrechte from "../pages/assets/Benutzerrechte";
-// import WohnenTransport from "../components/Meine-Dienstleistungen/WohnenTransport";
-// import VisumSprache from "../components/Meine-Dienstleistungen/VisumSprache";
-// import ArbeitSteuern from "../components/Meine-Dienstleistungen/ArbeitSteuern";
-
-// import StudiumAusbildungPraktikum from "../components/Meine-Dienstleistungen/StudiumAusbildungPraktikum";
-
-// import Personalbewertungen from "../components/Unternehmen/Personalbewertungen";
-// import PersonalauswahlUndRekrutierung from "../components/Unternehmen/PersonalauswahlUndRekrutierung";
-// import PersonalauswahlUndRekrutierung from './PersonalauswahlUndRekrutierung';
-
-
-// import InterimManagement from "../components/seleccion-y-headhunting/InterimManagement/InterimManagement";
-// import Evaluaciones from "../components/seleccion-y-headhunting/Evaluaciones/Evaluaciones";
-// import InterimManagement from "../components/seleccion-y-headhunting/InterimManagement/InterimManagement";
-// import ConsultoraHeadhounter from "../components/seleccion-y-headhunting/ConsultoraHeadhounter/ConsultoraHeadhounter";
-// import ConsultoraHeadhounter from "../components/seleccion-y-headhunting/ConsultoraHeadhounter";
-// import AboutPage from "../pages/about/AboutPage";
-// import ProjectPage from "../pages/project/ProjectPage";
-
 // Importa los componentes de las páginas
 const HomePage = lazy(() => import("../pages/home/HomePage"));
 
-// const SeleccionPersonalReclutamiento = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonalReclutamiento"));
 const PersonalauswahlUndRekrutierung = lazy(() => import("../components/Unternehmen/PersonalauswahlUndRekrutierung"));
 const Personalbewertungen = lazy(() => import("../components/Unternehmen/Personalbewertungen"));
 const International = lazy(() => import("../components/Unternehmen/International"));
@@ -64,12 +44,6 @@ const ArbeitSteuern = lazy(() => import("../components/Meine-Dienstleistungen/Ar
 const WohnenTransport = lazy(() => import("../components/Meine-Dienstleistungen/WohnenTransport"));
 const VisumSprache = lazy(() => import("../components/Meine-Dienstleistungen/VisumSprache"));
 
-
-// const ConsultoriaHeadhunter = lazy(() => import("../pages/seleccion-y-headhunting/ConsultoriaHeadhunter"));
-// const InterimManagement = lazy(() => import("../pages/seleccion-y-headhunting/InterimManagement"));
-// const EvaluacionesPersonal = lazy(() => import("../pages/seleccion-y-headhunting/EvaluacionesPersonal"));
-// Añade aquí otros componentes de las páginas que quieras importar
-
 export const AppRoutes = () => {
   return (
     <>
@@ -84,8 +58,6 @@ export const AppRoutes = () => {
           )}>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              {/* Rutas para seleccion-y-headhunting */}
-              {/* <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento" element={<SeleccionPersonalReclutamiento />} /> */}
               <Route path="/unternehmen/personalauswahl-und-rekrutierung" element={<PersonalauswahlUndRekrutierung/>} />
               <Route path="/unternehmen/personalbewertungen" element={<Personalbewertungen/>} />
               <Route path="/unternehmen/international" element={<International/>} />
@@ -124,13 +96,7 @@ export const AppRoutes = () => {
 
               <Route path="/datenschutzrichtlinie" element={<PrivacyPolicy />} />
               <Route path="/benutzerrechte" element={<Benutzerrechte />} />
-
-
-              {/* <Route path="/seleccion-y-headhunting/seleccion-de-directivos" element={<SeleccionDirectivos />} />
-              <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoriaHeadhunter />} />
-              <Route path="/seleccion-y-headhunting/interim-management" element={<InterimManagement />} />
-              <Route path="/seleccion-y-headhunting/evaluaciones-de-personal" element={<EvaluacionesPersonal />} /> */}
-              {/* Agrega aquí más rutas para otras páginas */}
+              
             </Routes>
           </Suspense>
           <Footer />
