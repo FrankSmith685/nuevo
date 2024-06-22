@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
 import bannerPrincipal from "../../assets/video/banner.mp4";
 import bannerSecondary from "../../assets/video/banner1.mp4";
-
 import fotoPerfil from "../../assets/imagenes/fotoPerfil.jpg";
 
 // consultoria
@@ -43,26 +42,16 @@ import logoPrincipal from "../../assets/imagenes/LogoPrincipal_1.png";
 
 
 import ReactPlayer from "react-player";
+import { useAppState } from "../../hooks/useAppState";
 
-
-// import { Cloudinary } from '@cloudinary/url-gen';
-// import { AdvancedVideo } from '@cloudinary/url-gen/dist/esm/advanced/video';
-// import { fetchVideo } from '@cloudinary/url-gen/dist/esm/fetch/video';
-// import { Upload } from '@cloudinary/url-gen/dist/esm/api/upload';
-
-
-// const cloudName = 'TU_CLOUD_NAME'; // Reemplaza con tu cloud name de Cloudinary
-// const unsignedUploadPreset = 'TU_UNSIGNED_UPLOAD_PRESET'; // Obtén esto desde la configuración de Cloudinary
-
-// const cloudinary = new Cloudinary({ cloud_name: cloudName });
 
 
 const HomePage = () => {
-
+  const {imagenesPreloader,videosPreloader } = useAppState();
   const [ref1, inView1] = useInView();
-
   const navigate = useNavigate();
 
+  console.log("",imagenesPreloader);
 
   const handleClickSeleccionReclutamiento = () => {
     navigate("/kontakt");
@@ -126,25 +115,13 @@ const HomePage = () => {
 
     const infoItems2 = [
       // { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
-      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", image: imagenInfo2 },
-      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", image: imagenInfo3 },
+      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", image: imagenesPreloader?.imagenInfo2?.src },
+      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", image: imagenesPreloader?.imagenInfo3?.src },
       // { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
       // { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
       { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", },
       { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", }
       ];
-
-    //   const services = [
-    //     {image:imagen1,title:"STUDIUM"},
-    //     {image:imagen2,title:"AUSBILDUNG"},
-    //     {image:imagen3,title:"PARKTIKUM"},
-    //     {image:imagen4,title:"ARBEIT"},
-    //     {image:imagen5,title:"STEUERN"},
-    //     {image:imagen6,title:"WOHNEN"},
-    //     {image:imagen7,title:"TRANSPORT"},
-    //     {image:imagen8,title:"VISUM"},
-    //     {image:imagen9,title:"SPRACHE"},
-    // ];
 
     const services = [
       {title:"STUDIUM"},
@@ -175,188 +152,13 @@ const HomePage = () => {
         return 'hidden';
       };
 
-    //   useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
-    //     }, 5000);
-
-    //     return () => clearInterval(interval);
-    // }, []);
-
-  //   const iframeRef = useRef(null);
-
-  // useEffect(() => {
-  //   const iframe = iframeRef.current;
-  //   const onMessage = (event) => {
-  //     if (event.origin !== 'https://streamable.com') return;
-
-  //     // Reenvía el comando para silenciar y hacer bucle si es necesario.
-  //     if (event.data === 'loaded') {
-  //       iframe.contentWindow.postMessage('mute', '*');
-  //       iframe.contentWindow.postMessage('loop', '*');
-  //     }
-  //   };
-
-  //   window.addEventListener('message', onMessage);
-
-  //   return () => {
-  //     window.removeEventListener('message', onMessage);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const uploadVideo = async () => {
-  //     try {
-  //       const formData = new FormData();
-  //       formData.append('file', bannerPrincipal);
-  //       formData.append('upload_preset', unsignedUploadPreset);
-
-  //       const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/video/upload`, {
-  //         method: 'POST',
-  //         body: formData,
-  //       });
-
-  //       if (!response.ok) {
-  //         throw new Error('Error al subir el video');
-  //       }
-
-  //       const data = await response.json();
-  //       const videoURL = data.secure_url;
-  //       console.log('Video subido correctamente:', videoURL);
-
-  //       // Aquí puedes manejar la URL del video como necesites (por ejemplo, guardarla en estado)
-
-  //     } catch (error) {
-  //       console.error('Error al subir el video:', error);
-  //     }
-  //   };
-
-  //   // Llama a la función de carga de video al montar el componente
-  //   uploadVideo();
-  // }, []); // Dependencias vacías para asegurar que se ejecute una vez
-
-
-  // const [videoUrl, setVideoUrl] = useState('');
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   // Simulación de carga asincrónica del video
-  //   const loadVideo = async () => {
-  //     try {
-  //       // Aquí podrías hacer cualquier lógica de carga, como fetch o importación de un archivo local
-  //       // const videoSource = require('../../assets/video/banner.mp4').default; // Importa el video desde tus assets
-  //       setVideoUrl(bannerPrincipal);
-  //     } catch (error) {
-  //       console.error('Error al cargar el video:', error);
-  //       // Manejo de errores si es necesario
-  //     } finally {
-  //       setLoading(false); // Indica que la carga ha finalizado
-  //     }
-  //   };
-
-  //   loadVideo();
-  // }, []);
-
-  // if (loading) {
-  //   // Muestra el spinner mientras se carga el video
-  //   return (
-  //     <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
-  //       <FaSpinner className="animate-spin text-9xl text-gray-500" />
-  //     </div>
-  //   );
-  // }
-
-  const [videoUrl, setVideoUrl] = useState('');
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadVideo = async () => {
-      try {
-        // Intenta obtener la URL del video desde localStorage
-        const storedVideoUrl = localStorage.getItem('videoUrl');
-        if (storedVideoUrl) {
-          setVideoUrl(storedVideoUrl);
-        } else {
-          // Si no está almacenada, carga el video desde los assets locales
-          // const videoSource = require('../../assets/video/banner.mp4').default; // Importa el video desde tus assets
-          setVideoUrl(bannerPrincipal);
-          // Almacena la URL del video en localStorage para futuras visitas
-          localStorage.setItem('videoUrl', bannerPrincipal);
-        }
-      } catch (error) {
-        console.error('Error al cargar el video:', error);
-        // Manejo de errores si es necesario
-      } finally {
-        setLoading(false); // Indica que la carga ha finalizado
-      }
-    };
-
-    loadVideo();
-  }, []);
-
-  if (loading) {
-    // Muestra el spinner mientras se carga el video
-    return (
-      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
-        <FaSpinner className="animate-spin text-9xl text-gray-500" />
-      </div>
-    );
-  }
-
-
   return (
     <>
       <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
-      {/* <video 
-        autoPlay 
-        loop 
-        muted 
-        className="absolute top-[-20px] left-0 w-full h-[calc(100%+20px)] object-cover z-0">
-        <source src="https://www.youtube.com/watch?v=f_pQL8ECrBM&ab_channel=LatinaNoticias" type="video/mp4" />
-        Tu navegador no soporta el elemento de video.
-      </video> */}
-
-
-
-      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src={videoUrl} type="video/mp4" />
-        Tu navegador no soporta el elemento de video.
-      </video>
-        {/* <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src={bannerPrincipal} type="video/mp4" />
+        <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+          <source src={videosPreloader?.bannerPrincipal} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
-        </video> */}
-
-
-
-
-        {/* <div> */}
-        {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <ReactPlayer
-        url="https://youtu.be/MzSI4lgNFX8"
-        playing={true}
-        loop={true}
-        muted={true}
-        controls={false}
-        config={{
-          youtube: {
-            playerVars: {
-              controls: 0, // Oculta los controles del reproductor de YouTube
-              modestbranding: 1, // Oculta el logo de YouTube al inicio
-              rel: 0, // No muestra videos relacionados al final
-              showinfo: 0, // Oculta la información del video al inicio
-              autoplay: 1, // Inicia la reproducción automáticamente
-            },
-          },
-        }}
-        width="100%"
-        height="100vh"
-        object="cover"
-        className="absolute top-0 left-0"
-        style={{ objectFit: 'cover', transform: 'scale(1.9)' }} // Aplica un zoom para recortar el video
-      />
-        </div> */}
-        {/* </div> */}
+        </video>
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
           <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
             <h2 className="text-white font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">
@@ -394,7 +196,7 @@ const HomePage = () => {
 
       <div ref={ref1} className="w-11/12 mx-auto text-gray-700 flex flex-wrap py-5 px-2 md:py-20 md:px-10">
       <div className="w-full sm:w-1/2">
-        <img src={fotoPerfil} alt="not found" className="w-full h-full object-cover" />
+        <img src={imagenesPreloader?.fotoPerfil?.src} alt="not found" className="w-full h-full object-cover" />
       </div>
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -402,14 +204,6 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
       >
-        {/* <div className="flex flex-col items-center sm:items-start">
-          <h2 className="font-bell font-medium text-lg sm:text-2xl md:text-2xl lg:text-5xl leading-3 transition-colors duration-300 text-gray-800">
-            Sandra Roggero M.
-          </h2>
-          <span className="md:text-base font-bell text-sm sm:text-base lg:text-xl mt-0 transition-colors duration-300 text-gray-800">
-            Beratung
-          </span>
-        </div> */}
         <div className='flex flex-col items-center justify-start'>
             <img src={logoPrincipal} alt="Logo Principal" className='h-20' />
             <div className="flex flex-col items-center">
@@ -517,9 +311,6 @@ const HomePage = () => {
         </div>
       </div>
       <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-        {/* <div className="w-full sm:w-1/3 h-auto">
-          <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover"/>
-        </div> */}
         <div className="w-full flex justify-center items-center">
           <div className="w-full text-center p-4">
             <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
