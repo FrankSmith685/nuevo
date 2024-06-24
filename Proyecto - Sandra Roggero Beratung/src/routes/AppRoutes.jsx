@@ -3,20 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FaSpinner } from 'react-icons/fa';
 import HeaderNav from "../pages/assets/HeaderNav";
 import Footer from "../pages/assets/Footer";
-import HrBusinessPartner from "../components/hr-business-partner/HrBusinessPartner";
-import AcompanamientoDIrectivo from "../components/consultoria/AcompanamientoDIrectivo";
-import KontakPage from "../pages/kontakt/kontaktPage";
-import WirPage from "../pages/wir/wirPage";
-import RegistrierenSieIhrenLebenslauf from "../components/Kandidaten/RegistrierenSieIhrenLebenslauf";
-import InternationalesKarrieremanagement from "../components/Kandidaten/InternationalesKarrieremanagement";
-import UnserePhilosophie from "../components/Wir/UnserePhilosophie";
-import WerWirSind from "../components/Wir/WerWirSind";
-import Kontakt from "../components/Kontakt/kontakt";
-import PrivacyPolicy from "../pages/assets/PrivacyPolicy";
-import Benutzerrechte from "../pages/assets/Benutzerrechte";
 
 import useImagePreloading from "../hooks/useImagenesPreLoader";
-import useVideoPreloading from "../hooks/useVideoPreLoader";
 import { useAppState } from "../hooks/useAppState";
 // Importa los componentes de las páginas
 const HomePage = lazy(() => import("../pages/home/HomePage"));
@@ -28,41 +16,26 @@ const Funktionen = lazy(() => import("../components/Unternehmen/funktionen"));
 const FachspezifischeSuche = lazy(() => import("../components/Unternehmen/FachspezifischeSuche"));
 const Inklusionsaudit = lazy(() => import("../components/Unternehmen/Inklusionsaudit"));
 
-const DirectivosMandosIntermedios = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraSeleccionPersonal/SeleccionPersonal/DirectivosMandosIntermedios"));
+const RegistrierenSieIhrenLebenslauf = lazy(() => import("../components/Kandidaten/RegistrierenSieIhrenLebenslauf"));
+const InternationalesKarrieremanagement = lazy(() => import("../components/Kandidaten/InternationalesKarrieremanagement"));
 
-const ConsultoraHeadhounter = lazy(() => import("../components/seleccion-y-headhunting/ConsultoraHeadhounter/ConsultoraHeadhounter")); 
+const UnserePhilosophie = lazy(() => import("../components/Wir/UnserePhilosophie"));
+const WerWirSind = lazy(() => import("../components/Wir/WerWirSind"));
 
-const InterimManagement = lazy(() => import("../components/seleccion-y-headhunting/InterimManagement/InterimManagement")); 
-
-const Evaluaciones = lazy(() => import("../components/seleccion-y-headhunting/Evaluaciones/Evaluaciones"));
-
-const GestionCambio = lazy(() => import("../components/gestionCambio/GestionCambio"));
-
-const Formaciones = lazy(() => import("../components/gestionCambio/Formaciones/Formaciones")); 
-
-
-
-// Meine-Dienstleistungen
 const StudiumAusbildungPraktikum = lazy(() => import("../components/Meine-Dienstleistungen/StudiumAusbildungPraktikum")); 
 const ArbeitSteuern = lazy(() => import("../components/Meine-Dienstleistungen/ArbeitSteuern"));
 const WohnenTransport = lazy(() => import("../components/Meine-Dienstleistungen/WohnenTransport"));
 const VisumSprache = lazy(() => import("../components/Meine-Dienstleistungen/VisumSprache"));
 
+const Kontakt = lazy(() => import("../components/Kontakt/kontakt"));
 
-
-
-
-
+const PrivacyPolicy = lazy(() => import("../pages/assets/PrivacyPolicy"));
+const Benutzerrechte = lazy(() => import("../pages/assets/Benutzerrechte"));
 
 export const AppRoutes = () => {
-
   const {activeCarga} = useAppState();
-
   // Cargamos las imagenes
   useImagePreloading();
-  // useVideoPreloading();
-
-  console.log("",activeCarga);
 
   return (
     <>
@@ -92,19 +65,6 @@ export const AppRoutes = () => {
 
                 <Route path="/wir/unsere-philosophie" element={<UnserePhilosophie/>} />
                 <Route path="/wir/wer-wir-sind" element={<WerWirSind/>} />
-
-
-
-                
-                <Route path="/seleccion-y-headhunting/consultora-seleccion-personal-y-reclutamiento/directivos-mandos-intermedios" element={<DirectivosMandosIntermedios />} />
-
-                <Route path="/seleccion-y-headhunting/consultoria-headhunter" element={<ConsultoraHeadhounter />} />
-                <Route path="/seleccion-y-headhunting/interim-management" element={<InterimManagement />} />
-                <Route path="/seleccion-y-headhunting/evaluaciones-de-personal" element={<Evaluaciones />} />
-
-                <Route path="/consultoria" element={<GestionCambio />} />
-                <Route path="/consultoria/formaciones-humanbits" element={<Formaciones />} />
-                <Route path="/consultoria/acompanamiento-directivo" element={<AcompanamientoDIrectivo />} />
                 
                 {/*Meine-Dienstleistungen*/}
                 <Route path="/meine-dienstleistungen/studium-ausbildung-praktikum" element={<StudiumAusbildungPraktikum />} />
@@ -112,10 +72,8 @@ export const AppRoutes = () => {
                 <Route path="/meine-dienstleistungen/wohnen-beförderung" element={<WohnenTransport />} />
                 <Route path="/meine-dienstleistungen/visum-sprache" element={<VisumSprache />} />
 
-
                 <Route path="/kontakt" element={<Kontakt />} />
-                <Route path="/wir" element={<WirPage />} />
-
+            
                 <Route path="/datenschutzrichtlinie" element={<PrivacyPolicy />} />
                 <Route path="/benutzerrechte" element={<Benutzerrechte />} />
                 

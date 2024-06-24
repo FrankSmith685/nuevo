@@ -7,6 +7,15 @@ import imagenInfo3 from "../assets/imagenes/InfoImagenesHome/imagen3.jpg";
 
 import fotoPerfil from "../assets/imagenes/fotoPerfil.jpg";
 
+// 
+import bannerPrincipal1 from "../assets/imagenes/home/imagen1.jpg";
+import bannerPrincipal2 from "../assets/imagenes/home/imagen6.jpg";
+import bannerPrincipal3 from "../assets/imagenes/home/imagen7.jpg";
+import bannerPrincipal4 from "../assets/imagenes/home/imagen8.jpg";
+import bannerPrincipal5 from "../assets/imagenes/home/imagen9.jpg";
+
+
+
 const useImagePreloading = () => {
   const {setImagenesPreloader, imagenesPreloader,setVideosPreloader,activeCarga,setActiveCarga } = useAppState();
   
@@ -16,11 +25,22 @@ const useImagePreloading = () => {
 
     const fotoPerfilImage = new Image();
 
+    const bannerPrincipal1Image = new Image();
+    const bannerPrincipal2Image = new Image();
+    const bannerPrincipal3Image = new Image();
+    const bannerPrincipal4Image = new Image();
+    const bannerPrincipal5Image = new Image();
+
 
 
     imagenInfo2Image.src = imagenInfo2;
     imagenInfo3Image.src = imagenInfo3;
     fotoPerfilImage.src = fotoPerfil;
+    bannerPrincipal1Image.src = bannerPrincipal1;
+    bannerPrincipal2Image.src = bannerPrincipal2;
+    bannerPrincipal3Image.src = bannerPrincipal3;
+    bannerPrincipal4Image.src = bannerPrincipal4;
+    bannerPrincipal5Image.src = bannerPrincipal5;
 
     // Preload del video
    const videoElement = document.createElement('video');
@@ -38,6 +58,12 @@ const useImagePreloading = () => {
             imagenInfo2: imagenInfo2Image,
             imagenInfo3: imagenInfo3Image,
             fotoPerfil: fotoPerfilImage,
+            bannerPrincipal1: bannerPrincipal1Image,
+            bannerPrincipal2: bannerPrincipal2Image,
+            bannerPrincipal3: bannerPrincipal3Image,
+            bannerPrincipal4: bannerPrincipal4Image,
+            bannerPrincipal5: bannerPrincipal5Image,
+            
         });
      }
    };

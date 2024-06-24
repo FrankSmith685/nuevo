@@ -1,54 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-// import { Link } from "react-scroll";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer"; 
-import bannerPrincipal from "../../assets/video/banner.mp4";
-import bannerSecondary from "../../assets/video/banner1.mp4";
-import fotoPerfil from "../../assets/imagenes/fotoPerfil.jpg";
-
-// consultoria
-// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-
-import imagen1 from "../../assets/imagenes/MeineDienstleistungen/imagen1.jpg";
-import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
-import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
-import imagen4 from "../../assets/imagenes/MeineDienstleistungen/imagen4.jpg";
-import imagen5 from "../../assets/imagenes/MeineDienstleistungen/imagen5.jpg";
-import imagen6 from "../../assets/imagenes/MeineDienstleistungen/imagen6.jpg";
-import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
-import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
-import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
-
+import React, { useEffect, useState } from "react";
 import { useNavigate,Link } from "react-router-dom";
-import { FaAngleLeft, FaAngleRight, FaArrowRight, FaSpinner } from "react-icons/fa";
-
-
-// infoItems2
-import imagenInfo2 from "../../assets/imagenes/InfoImagenesHome/imagen2.jpg";
-import imagenInfo3 from "../../assets/imagenes/InfoImagenesHome/imagen3.jpg";
-import imagenInfo4 from "../../assets/imagenes/InfoImagenesHome/imagen4.jpg";
-import imagenInfo5 from "../../assets/imagenes/InfoImagenesHome/imagen5.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
-import imagenInfo7 from "../../assets/imagenes/InfoImagenesHome/imagen7.jpg";
-import imagenInfo8 from "../../assets/imagenes/InfoImagenesHome/imagen8.jpg";
+import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 
 // Logo principal
 import logoPrincipal from "../../assets/imagenes/LogoPrincipal_1.png"; 
-
-
-import ReactPlayer from "react-player";
 import { useAppState } from "../../hooks/useAppState";
 
 
 
 const HomePage = () => {
   const {imagenesPreloader,videosPreloader } = useAppState();
-  const [ref1, inView1] = useInView();
   const navigate = useNavigate();
 
   console.log("",imagenesPreloader);
@@ -115,8 +76,8 @@ const HomePage = () => {
 
     const infoItems2 = [
       // { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
-      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", image: imagenesPreloader?.imagenInfo2?.src },
-      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", image: imagenesPreloader?.imagenInfo3?.src },
+      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.",image: imagenesPreloader?.imagenInfo2?.src  },
+      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.",image: imagenesPreloader?.imagenInfo3?.src  },
       // { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
       // { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
       { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", },
@@ -194,16 +155,13 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div ref={ref1} className="w-11/12 mx-auto text-gray-700 flex flex-wrap py-5 px-2 md:py-20 md:px-10">
+      <div className="w-11/12 mx-auto text-gray-700 flex flex-wrap py-5 px-2 md:py-20 md:px-10">
       <div className="w-full sm:w-1/2">
         <img src={imagenesPreloader?.fotoPerfil?.src} alt="not found" className="w-full h-full object-cover" />
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={inView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 0.5 }}
-        className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
-      >
+        <div
+          className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
+        >
         <div className='flex flex-col items-center justify-start'>
             <img src={logoPrincipal} alt="Logo Principal" className='h-20' />
             <div className="flex flex-col items-center">
@@ -239,7 +197,7 @@ const HomePage = () => {
         >
           Kontaktaufnahme
         </button>
-      </motion.div>
+        </div>
     </div>
       <div className="w-full h-96 bg-gray-800 flex justify-center items-center">
         <p className="w-11/12 m-auto text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white text-center">
@@ -249,14 +207,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-white py-8 px-4 sm:px-8 lg:px-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {infoItems2.map((item, index) => (
-          <motion.div 
-            key={index} 
-            className="relative bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-          >
+            <div key={index}  className="relative bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
             <div className="relative h-64">
               <img 
                 src={item.image} 
@@ -269,7 +220,7 @@ const HomePage = () => {
               <h3 className="font-bold text-xl text-gray-800">{item.title}</h3>
               <p className="text-gray-700 mt-2">{item.description}</p>
             </div>
-          </motion.div>
+            </div>
         ))}
       </div>
     </div>

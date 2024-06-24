@@ -8,8 +8,11 @@ import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
 import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
 import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useAppState } from "../../hooks/useAppState";
 
 const PersonalauswahlUndRekrutierung = () => {
+  const {imagenesPreloader } = useAppState();
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -20,14 +23,6 @@ const PersonalauswahlUndRekrutierung = () => {
         navigate("/");
     }
 
-    // const services = [
-    //     { image: imagen1, title: "FÜHRUNGSBEGLEITUNG" },
-    //     { image: imagen2, title: "BEWERTUNGEN" },
-    //     { image: imagen3, title: "WORKSHOPS UND TEAMBUILDINGS" },
-    //     { image: imagen4, title: "AUSWAHL VON FÜHRUNGSKRÄFTEN" },
-    //     { image: imagen5, title: "GLEICHSTELLUNGSPLÄNE" },
-    //     { image: imagen6, title: "MANAGEMENT DES ORGANISATORISCHEN WANDELS" },
-    // ];
 
     const services = [
         {title:"STUDIUM"},
@@ -67,7 +62,7 @@ const PersonalauswahlUndRekrutierung = () => {
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src={bannerPrincipal} 
+                src={imagenesPreloader?.bannerPrincipal1?.src} 
                 alt="NOT FOUND" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />

@@ -13,8 +13,11 @@ import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useAppState } from "../../hooks/useAppState";
 
 const Personalbewertungen=()=>{
+  const {imagenesPreloader } = useAppState();
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -73,7 +76,7 @@ const Personalbewertungen=()=>{
 
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src={bannerPrincipal} 
+                src={imagenesPreloader?.bannerPrincipal2?.src} 
                 alt="NOT FOUND" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />
