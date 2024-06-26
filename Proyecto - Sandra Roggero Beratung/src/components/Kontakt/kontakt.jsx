@@ -93,7 +93,7 @@ const Kontakt = () => {
         {/* <Container> */}
         <p className="text-base text-gray-400 py-10">
             <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
-                Sandra Rogero <span className="text-gray-500 font-medium text-xs">Beratung</span>
+                Sandra Roggero <span className="text-gray-500 font-medium text-xs">Beratung</span>
             </span>
             {' > '}
             Kontakt

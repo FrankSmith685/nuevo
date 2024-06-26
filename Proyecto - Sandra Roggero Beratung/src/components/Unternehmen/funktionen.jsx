@@ -89,7 +89,7 @@ const Funktionen=()=>{
             <div className="w-11/12 px-2 sm:px-10 pb-10 mx-auto">
                 <p className="text-lg text-gray-400 py-10 font-bell">
                 <span onClick={handleClickHome} className="hover:cursor-pointer  text-gray-800 font-medium">
-                    Sandra Rogero <span className="text-gray-500 font-medium text-base">Beratung</span>
+                    Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
                     Funktionen

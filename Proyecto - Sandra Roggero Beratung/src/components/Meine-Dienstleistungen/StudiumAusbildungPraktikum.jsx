@@ -4,11 +4,16 @@ import imagen1 from "../../assets/imagenes/MeineDienstleistungen/imagen1.jpg";
 import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
 import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+import { useAppState } from "../../hooks/useAppState";
 
-// const images = [imagen1, imagen2, imagen3];
-const images = [null, null, null];
+
+
 
 const StudiumAusbildungPraktikum = () => {
+    const {imagenesPreloader } = useAppState();
+    // const images = [imagen1, imagen2, imagen3];  
+    const images = [imagenesPreloader?.MeineDienstleistungen1?.src, null, null];
+
     const navigate = useNavigate();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -63,7 +68,7 @@ const StudiumAusbildungPraktikum = () => {
             <div className="w-11/12 px-2 sm:px-10 pb-10 mx-auto">
                 <p className="text-lg text-gray-400 py-10 font-bell">
                     <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-medium">
-                        Sandra Rogero <span className="text-gray-500 font-medium text-base">Beratung</span>
+                        Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                     </span>
                     {' > '}
                     Studium - Ausbildung - Praktikum

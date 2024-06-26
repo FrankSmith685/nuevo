@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { TextField, Button, Container, Typography, Box, Card, CardContent, IconButton, Avatar } from '@mui/material';
 import { CloudUpload, Delete } from '@mui/icons-material';
 import { useDropzone } from 'react-dropzone';
+import { useAppState } from "../../hooks/useAppState";
 
 const RegistrierenSieIhrenLebenslauf = () => {
+  const {imagenesPreloader } = useAppState();
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [cv, setCv] = useState(null);
@@ -54,7 +56,7 @@ const RegistrierenSieIhrenLebenslauf = () => {
             </div> */}
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src="" 
+                src={imagenesPreloader?.kandidate1?.src} 
                 alt="Registrieren Sie Ihren Lebenslauf" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />
@@ -69,14 +71,14 @@ const RegistrierenSieIhrenLebenslauf = () => {
             <Container maxWidth="md" className="pb-10">
     {/* <Typography variant="body1" color="textSecondary" className="py-10">
         <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
-            Sandra Rogero <span className="text-gray-500 font-medium text-xs">Beratung</span>
+            Sandra Roggero <span className="text-gray-500 font-medium text-xs">Beratung</span>
         </span>
         {' > '}
         Registrieren Sie Ihren Lebenslauf 
     </Typography> */}
         <p className="text-base text-gray-400 py-10">
             <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
-                Sandra Rogero <span className="text-gray-500 font-medium text-xs">Beratung</span>
+                Sandra Roggero <span className="text-gray-500 font-medium text-xs">Beratung</span>
             </span>
             {' > '}
             Registrieren Sie Ihren Lebenslauf
