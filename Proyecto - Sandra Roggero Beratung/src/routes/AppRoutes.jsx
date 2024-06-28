@@ -35,15 +35,15 @@ const Benutzerrechte = lazy(() => import("../pages/assets/Benutzerrechte"));
 export const AppRoutes = () => {
   const {activeCarga} = useAppState();
   // Cargamos las imagenes
-  useImagePreloading();
+  // useImagePreloading();
 
   return (
     <>
       <Router>
         <div>
-        {!activeCarga ? (<div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+        {/* {!activeCarga ? (<div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
                 <FaSpinner className="animate-spin text-9xl text-gray-500" />
-              </div>) : (
+              </div>) : ( */}
           <>
             <HeaderNav />
             <Suspense fallback={(
@@ -81,7 +81,7 @@ export const AppRoutes = () => {
             </Suspense>
             <Footer />
           </>
-        )}
+        {/* // )} */}
         </div>
       </Router>
     </>

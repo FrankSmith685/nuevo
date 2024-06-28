@@ -74,12 +74,15 @@ const HomePage = () => {
 
     const infoItems2 = [
       // { title: "MENSCHEN ZUERST", description: "Wir sind Teil der Eurofirms Group und folgen der Kultur People first, wo das Wohlergehen der Menschen im Mittelpunkt unserer Prozesse steht.", image: imagenInfo1 },
-      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.",image: imagenesPreloader?.imagenInfo2?.src  },
-      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.",image: imagenesPreloader?.imagenInfo3?.src  },
+      // { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.",image: imagenesPreloader?.imagenInfo2?.src  },
+      { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.",image: "https://res.cloudinary.com/dievolijo/image/upload/v1719429422/bxeybnb6rq6jqnlpd3t1.jpg"  },
+      // { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.",image: imagenesPreloader?.imagenInfo3?.src  },
+      { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.",image: "https://res.cloudinary.com/dievolijo/image/upload/v1719432618/xfum9gljkffxtjhfd5tu.jpg"  },
       // { title: "WERTE", description: "Wir setzen auf eine humane Vision von Talenten. Transparenz, Verantwortung und Respekt bilden unsere Hauptwerte.", image: imagenInfo4 },
       // { title: "GLOBALE LÖSUNGEN", description: "Wir sind national und international präsent, um die Führungskräfte zu finden, die Ihr Unternehmen vorantreiben.", image: imagenInfo5 }
       { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.", },
-      { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", image: imagenesPreloader?.imagenInfo5?.src}
+      // { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", image: imagenesPreloader?.imagenInfo5?.src}
+      { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", image: "https://res.cloudinary.com/dievolijo/image/upload/v1719434278/rru0wddozzlje8tv7wo7.jpg"}
       ];
 
     const services = [
@@ -115,7 +118,8 @@ const HomePage = () => {
     <>
       <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
         <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src={videosPreloader?.bannerPrincipal} type="video/mp4" />
+          {/* <source src={videosPreloader?.bannerPrincipal} type="video/mp4" /> */}
+          <source src="https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
@@ -155,7 +159,8 @@ const HomePage = () => {
 
       <div className="w-11/12 mx-auto text-gray-700 flex flex-wrap py-5 px-2 md:py-20 md:px-10">
       <div className="w-full sm:w-1/2">
-        <img src={imagenesPreloader?.fotoPerfil?.src} alt="not found" className="w-full h-full object-cover" />
+        {/* <img src={imagenesPreloader?.fotoPerfil?.src} alt="not found" className="w-full h-full object-cover" /> */}
+        <img src="https://res.cloudinary.com/dievolijo/image/upload/v1719431720/ljqc8ytxjnqzr9q8woqu.jpg" alt="not found" className="w-full h-full object-cover" />
       </div>
         <div
           className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
