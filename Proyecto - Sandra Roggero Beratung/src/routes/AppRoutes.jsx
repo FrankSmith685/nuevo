@@ -4,8 +4,8 @@ import { FaSpinner } from 'react-icons/fa';
 import HeaderNav from "../pages/assets/HeaderNav";
 import Footer from "../pages/assets/Footer";
 
-import useImagePreloading from "../hooks/useImagenesPreLoader";
 import { useAppState } from "../hooks/useAppState";
+import useVideoPreloading from "../hooks/useVideosPreLoader";
 // Importa los componentes de las páginas
 const HomePage = lazy(() => import("../pages/home/HomePage"));
 
@@ -35,7 +35,7 @@ const Benutzerrechte = lazy(() => import("../pages/assets/Benutzerrechte"));
 export const AppRoutes = () => {
   const {activeCarga} = useAppState();
   // Cargamos las imagenes
-  useImagePreloading();
+  useVideoPreloading();
 
   return (
     <>
