@@ -52,13 +52,6 @@ const useVideoPreloading = () => {
       }
     };
     
-    // Agregar el elemento de video al DOM para forzar la carga
-    document.body.appendChild(videoElement);
-    
-    // Remover el elemento de video del DOM después de que se cargue
-    return () => {
-      document.body.removeChild(videoElement);
-    };
   }, [activeCarga, setActiveCarga, setVideosPreloader]);
 };
 
