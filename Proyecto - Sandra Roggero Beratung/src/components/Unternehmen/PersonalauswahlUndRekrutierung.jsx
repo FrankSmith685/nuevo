@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import bannerPrincipal from "../../assets/imagenes/home/imagen1.jpg";
-import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
+// import bannerPrincipal from "../../assets/imagenes/home/imagen1.jpg";
+// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
+// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
+// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
+// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
+// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
+// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 

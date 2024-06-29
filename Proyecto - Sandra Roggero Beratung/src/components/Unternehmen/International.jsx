@@ -1,16 +1,16 @@
 
 import { useNavigate } from "react-router-dom";
-import bannerPrincipal from "../../assets/imagenes/home/imagen7.jpg";
+// import bannerPrincipal from "../../assets/imagenes/home/imagen7.jpg";
 
-// consultoria
-import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
+// // consultoria
+// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
+// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
+// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
+// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
+// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
+// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+// import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
@@ -147,9 +147,6 @@ const International=()=>{
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-                {/* <div className="w-full sm:w-1/3 h-auto">
-                <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover"/>
-                </div> */}
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
                     <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
