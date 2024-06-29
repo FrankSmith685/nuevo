@@ -12,7 +12,7 @@ import { useAppState } from "../../hooks/useAppState";
 const StudiumAusbildungPraktikum = () => {
     const {imagenesPreloader } = useAppState();
     // const images = [imagen1, imagen2, imagen3];  
-    const images = [imagenesPreloader?.MeineDienstleistungen1?.src, null, null];
+    const images = ["https://res.cloudinary.com/dievolijo/image/upload/v1719434278/ocddglzj4wpc5lbidcve.jpg", null, null];
 
     const navigate = useNavigate();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -46,6 +46,7 @@ const StudiumAusbildungPraktikum = () => {
                     src={images[currentImageIndex]}
                     alt="NOT FOUND"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                    loading="lazy"
                 />
                 
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">

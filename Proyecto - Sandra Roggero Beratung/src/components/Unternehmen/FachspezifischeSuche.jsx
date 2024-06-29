@@ -74,9 +74,10 @@ const FachspezifischeSuche=()=>{
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src={imagenesPreloader?.bannerPrincipal5?.src} 
+                src="https://res.cloudinary.com/dievolijo/image/upload/v1719433282/kzypcgahflcdvyfdl8tn.jpg"
                 alt="NOT FOUND" 
-                className="absolute top-0 left-0 w-full h-full object-cover z-0" 
+                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                loading="lazy" 
                 />
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
