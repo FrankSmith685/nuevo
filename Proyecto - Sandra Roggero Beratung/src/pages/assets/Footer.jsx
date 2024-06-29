@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center ">
                         <Link to="/" onClick={handleLinkClick} className='flex flex-col items-center'>
-                            <img src={optimizedImageURL('v1719690680/w24ybh8okav1nil30ylm.png')} alt="Logo Principal" className='h-20' />
+                            <img src={optimizedImageURL('v1719690680/w24ybh8okav1nil30ylm.png')} alt="Logo Principal" className='h-20' loading='lazy'/>
                             <div className="flex flex-col items-center">
                                 <h2 className="font-roboto-thin font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white">
                                     SANDRA ROGGERO M.

@@ -277,7 +277,7 @@ const HomePage = () => {
             className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
           >
           <div className='flex flex-col items-center justify-start'>
-              <img src={optimizedImageURL('v1719690680/yxcetofgrpqxqb7ziwnr.png')} alt="Logo Principal" className='h-20' />
+              <img src={optimizedImageURL('v1719690680/yxcetofgrpqxqb7ziwnr.png')} alt="Logo Principal" className='h-20' loading='lazy'/>
               <div className="flex flex-col items-center">
                   <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 text-gray-800`}>
                       SANDRA ROGGERO M.
