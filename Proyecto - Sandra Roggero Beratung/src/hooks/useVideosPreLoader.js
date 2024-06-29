@@ -1,58 +1,26 @@
-// import { useEffect } from "react";
-// import { useAppState } from "./useAppState";
-
-// const useVideoPreloading = () => {
-//   const {setVideosPreloader,activeCarga,setActiveCarga } = useAppState();
-  
-//   useEffect(() => {
-
-    
-
-//     const bannerPrincipal = 'https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4';
-
-
-//     // Preload del video
-//    const videoElement = document.createElement('video');
-//    videoElement.src = bannerPrincipal;
-//    videoElement.onloadeddata = () => {
-//      // Actualizar el estado cuando el video está cargado
-//      if(activeCarga === false){
-//         setActiveCarga(true);
-//         setVideosPreloader({
-//             bannerPrincipal: bannerPrincipal, // Aquí guardamos la URL del video
-//         });
-//      }
-//    };
-    
-//   }, []);
-
-// };
-
-// export default useVideoPreloading;
-
-
 import { useEffect } from "react";
 import { useAppState } from "./useAppState";
 
 const useVideoPreloading = () => {
-  const { setVideosPreloader, activeCarga, setActiveCarga } = useAppState();
-
+  const {setVideosPreloader,activeCarga,setActiveCarga } = useAppState();
+  
   useEffect(() => {
     const bannerPrincipal = 'https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4';
-
-    const videoElement = document.createElement('video');
-    videoElement.src = bannerPrincipal;
-    videoElement.preload = 'auto'; // Asegúrate de que el video se precargue
-    videoElement.onloadeddata = () => {
-      if (!activeCarga) {
+    // Preload del video
+   const videoElement = document.createElement('video');
+   videoElement.src = bannerPrincipal;
+   videoElement.onloadeddata = () => {
+     // Actualizar el estado cuando el video está cargado
+     if(activeCarga === false){
         setActiveCarga(true);
         setVideosPreloader({
-          bannerPrincipal: bannerPrincipal,
+            bannerPrincipal: bannerPrincipal, // Aquí guardamos la URL del video
         });
-      }
-    };
+     }
+   };
     
-  }, [activeCarga, setActiveCarga, setVideosPreloader]);
+  }, []);
+
 };
 
 export default useVideoPreloading;
