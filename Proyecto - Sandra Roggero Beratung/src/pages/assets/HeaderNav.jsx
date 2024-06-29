@@ -3,8 +3,8 @@ import { TfiWorld } from 'react-icons/tfi';
 import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect, useState } from "react";
 
-import logoPrincipal from "../../assets/imagenes/logoPrincipal.png"; 
-import logoPrincipal_1 from "../../assets/imagenes/LogoPrincipal_1.png"; 
+// import logoPrincipal from "../../assets/imagenes/logoPrincipal.png"; 
+// import logoPrincipal_1 from "../../assets/imagenes/LogoPrincipal_1.png"; 
 
 const HeaderNav = () => {
     const [isNavHovered, setIsNavHovered] = useState(false);
@@ -12,6 +12,11 @@ const HeaderNav = () => {
     const [isActiveHoverNav, setIsActiveHoverNav] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isActiveSubMenuMobile, setIsActiveSubMenuMobile] = useState(null);
+
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_800/${url}`;
+    };
 
     const location = useLocation();
 
@@ -110,7 +115,7 @@ const HeaderNav = () => {
                             {isNavHovered ? (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={logoPrincipal_1} alt="Logo Principal" className='h-20' />
+                                        <img src={optimizedImageURL('v1719690680/yxcetofgrpqxqb7ziwnr.png')} alt="Logo Principal" className='h-20' />
                                         <div className="flex flex-col items-center">
                                             <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.
@@ -124,7 +129,7 @@ const HeaderNav = () => {
                             ) : (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={logoPrincipal} alt="Logo Principal" className='h-20' />
+                                        <img src={optimizedImageURL('v1719690680/w24ybh8okav1nil30ylm.png')} alt="Logo Principal" className='h-20' />
                                         <div className="flex flex-col items-center">
                                             <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.

@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoPrincipal from "../../assets/imagenes/logoPrincipal.png";
+// import logoPrincipal from "../../assets/imagenes/logoPrincipal.png";
 
 const Footer = () => {
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_800/${url}`;
     };
 
     return (
@@ -13,7 +17,7 @@ const Footer = () => {
                 <div className="text-center mb-8">
                     <div className="flex items-center justify-center ">
                         <Link to="/" onClick={handleLinkClick} className='flex flex-col items-center'>
-                            <img src={logoPrincipal} alt="Logo Principal" className='h-20' />
+                            <img src={optimizedImageURL('v1719690680/w24ybh8okav1nil30ylm.png')} alt="Logo Principal" className='h-20' />
                             <div className="flex flex-col items-center">
                                 <h2 className="font-roboto-thin font-medium lg:text-xl md:text-lg transition-colors duration-300 text-white">
                                     SANDRA ROGGERO M.
