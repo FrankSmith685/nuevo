@@ -60,14 +60,15 @@ const PersonalauswahlUndRekrutierung = () => {
 
     const optimizedImageURL = (url) => {
         const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
-        return `${cloudinaryBaseURL}c_scale,w_800/${url}`;
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                    src="https://res.cloudinary.com/dievolijo/image/upload/v1719433441/w0hfv4paxus96kbjo2pi.jpg" 
+                    src={optimizedImageURL("v1719433441/w0hfv4paxus96kbjo2pi.jpg")}
+                    // "https://res.cloudinary.com/dievolijo/image/upload/v1719433441/w0hfv4paxus96kbjo2pi.jpg" 
                     alt="NOT FOUND" 
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                     loading="lazy"

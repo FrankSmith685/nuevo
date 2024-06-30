@@ -68,6 +68,11 @@ const Inklusionsaudit=()=>{
         navigate("/kontakt");
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">

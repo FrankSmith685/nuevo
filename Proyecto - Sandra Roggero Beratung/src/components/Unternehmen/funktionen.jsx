@@ -70,11 +70,17 @@ const Funktionen=()=>{
         navigate("/kontakt");
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src="https://res.cloudinary.com/dievolijo/image/upload/v1719433285/pk1xb6epqgswmkk8qrdl.jpg"
+                // src="https://res.cloudinary.com/dievolijo/image/upload/v1719433285/pk1xb6epqgswmkk8qrdl.jpg"
+                src={optimizedImageURL("v1719433285/pk1xb6epqgswmkk8qrdl.jpg")}
                 alt="NOT FOUND" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 loading="lazy"
