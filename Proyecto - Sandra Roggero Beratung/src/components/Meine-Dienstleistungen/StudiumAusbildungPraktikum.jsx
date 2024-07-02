@@ -12,7 +12,7 @@ import { useAppState } from "../../hooks/useAppState";
 const StudiumAusbildungPraktikum = () => {
     const {imagenesPreloader } = useAppState();
     // const images = [imagen1, imagen2, imagen3];  
-    const images = ["v1719434278/ocddglzj4wpc5lbidcve.jpg", null, null];
+    const images = ["v1719434278/ocddglzj4wpc5lbidcve.jpg", "v1719434278/rru0wddozzlje8tv7wo7.jpg", null];
 
     const navigate = useNavigate();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

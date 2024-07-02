@@ -162,10 +162,12 @@ const HomePage = () => {
       image: optimizedImageURL('v1719432618/xfum9gljkffxtjhfd5tu.jpg')
       // image: imagenesPreloader?.imagenInfo3?.src 
     },
-    { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen." },
+    { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.",
+      image: optimizedImageURL('v1719875148/cl4jynz7brqnggwvxwzm.jpg')
+     },
     { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", 
       // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719434278/rru0wddozzlje8tv7wo7.jpg"
-      image: optimizedImageURL('v1719434278/rru0wddozzlje8tv7wo7.jpg')
+      image: optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg')
     }
   ], []);
 

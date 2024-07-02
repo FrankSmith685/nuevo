@@ -68,12 +68,17 @@ const WerWirSind=()=>{
         navigate("/kontakt");
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };  
+
     return(
         <>
             
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src="" 
+                src={optimizedImageURL("v1719875769/xqh0ss1f1tgxoujwu1cv.jpg")} 
                 alt="Wer Wir Sind" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />
