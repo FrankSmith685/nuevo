@@ -25,13 +25,19 @@ const InternationalesKarrieremanagement=()=>{
         "Erkundet neue Kulturen",
         "Übernimmt innovative Arbeitsmethoden"
       ];
-      
 
+
+      const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+    
+    //   https://res.cloudinary.com/dievolijo/image/upload/v1720047156/m0ztlmbrykc8c3x0vqjb.jpg
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src="" 
+                src={optimizedImageURL("v1720047156/m0ztlmbrykc8c3x0vqjb.jpg")} 
                 alt="Internationales Karrieremanagement " 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />

@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { TfiWorld } from 'react-icons/tfi';
 import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect, useState } from "react";
@@ -12,6 +12,8 @@ const HeaderNav = () => {
     const [isActiveHoverNav, setIsActiveHoverNav] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isActiveSubMenuMobile, setIsActiveSubMenuMobile] = useState(null);
+
+    const navigate= useNavigate();
 
     const optimizedImageURL = (url) => {
         const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
@@ -153,11 +155,11 @@ const HeaderNav = () => {
                             {menu2.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="text-center transition-colors duration-300 h-full flex items-center justify-center hover:cursor-pointer hover:text-white hover:bg-gray-500 w-auto px-8 text-sm"
+                                    className="text-center transition-colors duration-300 h-full flex items-center justify-center hover:cursor-pointer hover:text-white hover:bg-gray-500 w-auto px-0 text-sm"
                                     onMouseEnter={() => handleMenuItem(item)}
                                     onMouseLeave={handleMenuLeaveItem}
                                 >
-                                    <Link
+                                    {/* <Link
                                         to={item.path}
                                         onClick={(e) => {
                                             if (item.subItems) {
@@ -167,12 +169,21 @@ const HeaderNav = () => {
                                                 handleLinkClick();
                                             }
                                         }}
-                                        className=""
-                                    >
-                                        <p className={`hover:text-white md:text-xs h-full lg:text-sm transition-transform duration-300 transform hover:cursor-pointer hover:translate-y-[-3px] ${isNavHovered ? isActiveHoverNav === item.label ? 'text-white' : 'text-gray-700' : 'text-white'}`}>
+                                    > */}
+                                        <p className={`hover:text-white flex w-full px-8 justify-center items-center md:text-xs h-full lg:text-sm transition-transform duration-300 transform hover:cursor-pointer hover:translate-y-[-3px] ${isNavHovered ? isActiveHoverNav === item.label ? 'text-white' : 'text-gray-700' : 'text-white'}`}
+                                            onClick={(e) => {
+                                                if (item.subItems) {
+                                                    e.preventDefault();
+                                                    setHoveredMenuItem(item.path);
+                                                } else {
+                                                    handleLinkClick();
+                                                    navigate(item.path);
+                                                }
+                                            }}
+                                        >
                                             {item.label}
                                         </p>
-                                    </Link>
+                                    {/* </Link> */}
                                     {item.subItems && hoveredMenuItem === item.path && (
                                         <div
                                             className="w-full hover:cursor-default absolute top-full left-0 py-6 px-20 text-gray-700 flex-col justify-start items-start bg-white shadow-lg mt-0 space-y-2 border-gray-300 border-t-2"

@@ -73,11 +73,13 @@ const Inklusionsaudit=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    // https://res.cloudinary.com/dievolijo/image/upload/v1720047059/wucb1mcaftn2o4kr6bva.jpg
+
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                src="" 
+                src={optimizedImageURL("v1720047059/wucb1mcaftn2o4kr6bva.jpg")} 
                 alt="Inklusionsaudit" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
                 />

@@ -62,7 +62,7 @@ const RegistrierenSieIhrenLebenslauf = () => {
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
                 // src="https://res.cloudinary.com/dievolijo/image/upload/v1719434278/dkaggura0qwgds4k2z1r.jpg" 
-                src={optimizedImageURL("v1719434278/dkaggura0qwgds4k2z1r.jpg")}
+                src={optimizedImageURL("v1720047881/tai02jjyhgvlyd7mtu8q.jpg")}
                 alt="Registrieren Sie Ihren Lebenslauf" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 loading="lazy" 

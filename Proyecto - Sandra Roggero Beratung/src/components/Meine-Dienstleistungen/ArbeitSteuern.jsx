@@ -5,7 +5,8 @@ import imagen5 from "../../assets/imagenes/MeineDienstleistungen/imagen5.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
 // const images = [imagen4, imagen5];
-const images = [null, null];
+// const images = [null, null];
+const images = ["v1720047637/okxctjjmmdegr4ptljhn.jpg", "v1720047700/pqjjlckzyuvgt32bxkhk.jpg"];
 
 const ArbeitSteuern = () => {
     const navigate = useNavigate();
@@ -33,11 +34,16 @@ const ArbeitSteuern = () => {
         setCurrentImageIndex(index);
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img
-                    src={images[currentImageIndex]}
+                    src={optimizedImageURL(images[currentImageIndex])}
                     alt="NOT FOUND"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />

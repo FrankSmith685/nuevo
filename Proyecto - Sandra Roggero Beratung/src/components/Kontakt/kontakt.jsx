@@ -73,11 +73,18 @@ const Kontakt = () => {
     navigate("/");
 };
 
+const optimizedImageURL = (url) => {
+    const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+    return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+};
+
+// https://res.cloudinary.com/dievolijo/image/upload/v1720048164/r5phhfvrwr57yofnqlsu.jpg
+
   return (
     <>
       <div className="w-full h-screen bg-bg_favorite_1 relative">
         <img 
-        src={bannerPrincipal} 
+        src={optimizedImageURL("v1720048164/r5phhfvrwr57yofnqlsu.jpg")} 
         alt="NOT FOUND" 
         className="absolute top-0 left-0 w-full h-full object-cover z-0" 
         />
