@@ -18,7 +18,11 @@ export const AppReducer = (state = {}, action) => {
             ...state,
             activeCarga:action.payload
             }
-      
+        case types.setTipoIdioma:
+          return{
+          ...state,
+          tipoIdioma:action.payload
+          }
         default:
             return state;
     }

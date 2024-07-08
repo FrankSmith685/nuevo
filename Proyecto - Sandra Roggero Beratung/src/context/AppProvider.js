@@ -7,6 +7,7 @@ const INITIAL_STATE = {
     imagenesPreloader:{},
     videosPreloader:{},
     activeCarga:false,
+    tipoIdioma:'de'
 };
 
 export const AppProvider = ({ children }) => {
@@ -23,6 +24,9 @@ export const AppProvider = ({ children }) => {
         dispatch(actions.setActiveCarga(value));
     } 
 
+    const setTipoIdioma = (value) => {
+        dispatch(actions.setTipoIdioma(value));
+    }
 
     const [appState, dispatch] = useReducer(AppReducer, INITIAL_STATE);
 
@@ -32,7 +36,8 @@ export const AppProvider = ({ children }) => {
                 appState,
                 setImagenesPreloader,
                 setVideosPreloader,
-                setActiveCarga
+                setActiveCarga,
+                setTipoIdioma
             }}
         >
             {children}

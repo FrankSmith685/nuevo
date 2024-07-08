@@ -18,8 +18,13 @@ module.exports = {
         h_custom_1: "calc(100vh - 100px)",
         favorite_1:"1px"
       },
+      width:{
+        favorite_1:'1px',
+        favorite_2:'0.2px'
+      },
       borderWidth:{
         border_1: "1px",
+        border__5: "0.5px",
       },
       backgroundColor:{
         bg_favorite_1: "rgba(0,0,0,0.5)",
@@ -61,7 +66,8 @@ module.exports = {
         },
       },
       screens: {
-        md: "1035px",
+        // md: "1035px",
+        md: "1120px",
         lg: "1200px",
       },
     },

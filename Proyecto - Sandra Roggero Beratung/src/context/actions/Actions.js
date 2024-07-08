@@ -15,4 +15,8 @@ export const setActiveCarga = (activeCarga) => ({
     type:types.setActiveCarga,
     payload: activeCarga
 });
-        
+   
+export const setTipoIdioma = (tipoIdioma) => ({
+    type:types.setTipoIdioma,
+    payload: tipoIdioma
+});

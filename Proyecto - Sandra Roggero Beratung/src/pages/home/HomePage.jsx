@@ -120,9 +120,11 @@ import { useNavigate, Link } from "react-router-dom";
 import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 // import logoPrincipal from "../../assets/imagenes/LogoPrincipal_1.png";
 import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const HomePage = () => {
-  const {  videosPreloader } = useAppState();
+  const {  videosPreloader,tipoIdioma } = useAppState();
   const navigate = useNavigate();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -131,57 +133,75 @@ const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const texts = useMemo(() => [
-    "INNOVATIVEN LÖSUNGEN?",
-    "QUALIFIZIERTEN KANDIDATEN?",
-    "EINER PROFESSIONELLEN VERBESSERUNG?"
-  ], []);
+  const [homeData,setHomeData] = useState(de.home);
 
-  const infoItems = useMemo(() => [
-    { title: "Personalauswahl und Rekrutierung", description: "Wir bieten individuelle Unterstützung in Auswahlverfahren und Integration für Bewerber und Kunden.", path: "/unternehmen/personalauswahl-und-rekrutierung" },
-    { title: "Personalbewertungen", description: "Unterstützung bei der Talentidentifizierung, Humankapitalentwicklung, Einbindung von Fachkräften und Schaffung einer starken Unternehmenskultur.", path: "/unternehmen/personalbewertungen" },
-    { title: "International", description: "Sandra Roggero-Beratung hilft bei der Teambewertung und -Entwicklung durch maßgeschneiderte Evaluierungen und individuelle Kompetenzpläne.", path: "/unternehmen/international" },
-    { title: "Funktionen", description: "Die Auswahl passender Mitarbeiter ist entscheidend. Sandra Roggero hilft, Talente anzuziehen, die Ihre Geschichte teilen und Ihr Unternehmen formen können.", path: "/unternehmen/funktionen" },
-    { title: "Fachspezifische Suche", description: "Sandra Roggero-Beratung unterstützt Unternehmen weltweit bei der Rekrutierung von Fachkräften durch Talentmanagement und Auswahlprozesse.", path: "/unternehmen/fachspezifische-suche" },
-    { title: "Inklusionsaudit", description: "Wir überwinden Vorurteile im Auswahlprozess durch ein Inklusionsaudit, das jeden Schritt von der Stellenbeschreibung bis zum Onboarding analysiert.", path: "/unternehmen/inklusionsaudit" },
-  ], []);
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+          setHomeData(de.home);
+        }else{
+          setHomeData(es.home);
+        }
+    },[tipoIdioma]);
+
+  const texts = useMemo(() => homeData.texts, [homeData]);
+  // [
+    // "INNOVATIVEN LÖSUNGEN?",
+    // "QUALIFIZIERTEN KANDIDATEN?",
+    // "EINER PROFESSIONELLEN VERBESSERUNG?"
+  // ]
+
+  const infoItems = useMemo(() =>
+    // { title: "Personalauswahl und Rekrutierung", description: "Wir bieten individuelle Unterstützung in Auswahlverfahren und Integration für Bewerber und Kunden.", path: "/unternehmen/personalauswahl-und-rekrutierung" },
+    // { title: "Personalbewertungen", description: "Unterstützung bei der Talentidentifizierung, Humankapitalentwicklung, Einbindung von Fachkräften und Schaffung einer starken Unternehmenskultur.", path: "/unternehmen/personalbewertungen" },
+    // { title: "International", description: "Sandra Roggero-Beratung hilft bei der Teambewertung und -Entwicklung durch maßgeschneiderte Evaluierungen und individuelle Kompetenzpläne.", path: "/unternehmen/international" },
+    // { title: "Funktionen", description: "Die Auswahl passender Mitarbeiter ist entscheidend. Sandra Roggero hilft, Talente anzuziehen, die Ihre Geschichte teilen und Ihr Unternehmen formen können.", path: "/unternehmen/funktionen" },
+    // { title: "Fachspezifische Suche", description: "Sandra Roggero-Beratung unterstützt Unternehmen weltweit bei der Rekrutierung von Fachkräften durch Talentmanagement und Auswahlprozesse.", path: "/unternehmen/fachspezifische-suche" },
+    // { title: "Inklusionsaudit", description: "Wir überwinden Vorurteile im Auswahlprozess durch ein Inklusionsaudit, das jeden Schritt von der Stellenbeschreibung bis zum Onboarding analysiert.", path: "/unternehmen/inklusionsaudit" },
+    homeData.infoItems
+  , [homeData]);
 
   const optimizedImageURL = (url) => {
     const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
     return `${cloudinaryBaseURL}c_scale,w_800/${url}`;
   };
 
-  const infoItems2 = useMemo(() => [
-    { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", 
-      // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719429422/bxeybnb6rq6jqnlpd3t1.jpg"
-      image: optimizedImageURL('v1719429422/bxeybnb6rq6jqnlpd3t1.jpg')
-      // image: imagenesPreloader?.imagenInfo2?.src 
-    },
-    { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", 
-      // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719432618/xfum9gljkffxtjhfd5tu.jpg"
-      image: optimizedImageURL('v1719432618/xfum9gljkffxtjhfd5tu.jpg')
-      // image: imagenesPreloader?.imagenInfo3?.src 
-    },
-    { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.",
-      image: optimizedImageURL('v1719875148/cl4jynz7brqnggwvxwzm.jpg')
-     },
-    { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", 
-      // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719434278/rru0wddozzlje8tv7wo7.jpg"
-      image: optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg')
-    }
-  ], []);
+  const infoItems2 = useMemo(() => 
+    homeData.infoItems2
+  //   [
+  //   { title: "INNOVATION", description: "Heute geht es um mehr als nur darum, 'schnell' neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. Deshalb brauchen Unternehmen einen Partner, der den Markt versteht und über praktische Erfahrungen verfügt.", 
+  //     // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719429422/bxeybnb6rq6jqnlpd3t1.jpg"
+  //     image: optimizedImageURL('v1719429422/bxeybnb6rq6jqnlpd3t1.jpg')
+  //     // image: imagenesPreloader?.imagenInfo2?.src 
+  //   },
+  //   { title: "RECRUITING KOMPETENZ", description: "Gründliche Bewertung unserer Kandidaten, damit unsere Firmenkunden optimale Arbeitsteams bilden können, die sich aus engagierten, disziplinierten und gut strukturierten jungen Menschen und/oder Erwachsenen zusammensetzen, die Ihren Unternehmenszielen entsprechen.", 
+  //     // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719432618/xfum9gljkffxtjhfd5tu.jpg"
+  //     image: optimizedImageURL('v1719432618/xfum9gljkffxtjhfd5tu.jpg')
+  //     // image: imagenesPreloader?.imagenInfo3?.src 
+  //   },
+  //   { title: "VISION", description: "Unser Ziel ist es, hochperformante Teams zu schaffen, die Unternehmensziele erreichen und zu einer positiven, inklusiven Arbeitskultur beitragen.",
+  //     image: optimizedImageURL('v1719875148/cl4jynz7brqnggwvxwzm.jpg')
+  //    },
+  //   { title: "NEUE WEGE IN DER PERSONALBESCHAFFUNG", description: "Mit frischen Ideen und leidenschaftlichem Engagement streben wir danach, den Bereich der Personalbeschaffung zu revolutionieren.", 
+  //     // image: "https://res.cloudinary.com/dievolijo/image/upload/v1719434278/rru0wddozzlje8tv7wo7.jpg"
+  //     image: optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg')
+  //   }
+  // ]
+  , [homeData]);
 
-  const services = useMemo(() => [
-    { title: "STUDIUM" },
-    { title: "AUSBILDUNG" },
-    { title: "PARKTIKUM" },
-    { title: "ARBEIT" },
-    { title: "STEUERN" },
-    { title: "WOHNEN" },
-    { title: "TRANSPORT" },
-    { title: "VISUM" },
-    { title: "SPRACHE" },
-  ], []);
+  const services = useMemo(() => 
+    homeData.services
+  //   [
+  //   { title: "STUDIUM" },
+  //   { title: "AUSBILDUNG" },
+  //   { title: "PARKTIKUM" },
+  //   { title: "ARBEIT" },
+  //   { title: "STEUERN" },
+  //   { title: "WOHNEN" },
+  //   { title: "TRANSPORT" },
+  //   { title: "VISUM" },
+  //   { title: "SPRACHE" },
+  // ]
+  , [homeData]);
 
   useEffect(() => {
     const typingSpeed = isDeleting ? 75 : 150;
@@ -240,7 +260,8 @@ const HomePage = () => {
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
             <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
               <h2 className="text-white font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">
-                SUCHEN SIE NACH
+                {/* SUCHEN SIE NACH */}
+                {homeData.text1}
               </h2>
               <h2 className="text-customColor5 font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">
                 <span>{displayText}</span>
@@ -290,22 +311,26 @@ const HomePage = () => {
               </div>
           </div>
           <p className="text-start text-sm sm:text-sm md:text-lg">
-            Wir tragen jeden Tag dazu bei, dass Menschen eine tiefe Erfüllung auf ihrem beruflichen Weg erfahren und persönlich wachsen.
+            {homeData.detail1}
+            {/* Wir tragen jeden Tag dazu bei, dass Menschen eine tiefe Erfüllung auf ihrem beruflichen Weg erfahren und persönlich wachsen. */}
           </p>
           <p className="text-start text-sm sm:text-sm md:text-lg">
-            Heute geht es um mehr als nur darum, "schnell" neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen.
+            {homeData.detail2}
+            {/* Heute geht es um mehr als nur darum, "schnell" neue Mitarbeiter zu finden. Es geht um den Aufbau optimaler Arbeitsteams, die sich aus einer sinnvoll strukturierten Organisation im Einklang mit den Unternehmenszielen zusammensetzen. */}
           </p>
           <button
             className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
             onClick={handleClickSeleccionReclutamiento}
           >
-            Kontaktaufnahme
+            {homeData.detail3}
+            {/* Kontaktaufnahme */}
           </button>
           </div>
       </div>
       <div className="w-full h-96 bg-gray-800 flex justify-center items-center">
         <p className="w-11/12 m-auto text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white text-center">
-          DIE GESELLSCHAFT VERÄNDERT SICH, DIE FÜHRUNGSSTILE ENTWICKELN SICH WEITER, WARUM ALSO NICHT AUCH DAS AUSWAHLVERFAHREN WEITERENTWICKELN?
+          {homeData.homeInfo1}
+          {/* DIE GESELLSCHAFT VERÄNDERT SICH, DIE FÜHRUNGSSTILE ENTWICKELN SICH WEITER, WARUM ALSO NICHT AUCH DAS AUSWAHLVERFAHREN WEITERENTWICKELN? */}
         </p>
       </div>
 
@@ -331,7 +356,7 @@ const HomePage = () => {
 
 
       <div className="bg-gray-800 w-full h-full">
-          <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
+          <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">{homeData.tituloServicio}</h2>
           <div className="relative w-full h-auto overflow-hidden ">
               <div className="flex justify-center items-center  w-full h-96 p-20">
                   {services.map((service, index) => (
@@ -367,12 +392,12 @@ const HomePage = () => {
         <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
           <div className="w-full flex justify-center items-center">
             <div className="w-full text-center p-4">
-              <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+              <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{homeData.homeInfo2}</h2>
               <button
                 className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                 onClick={handleClickSeleccionReclutamiento}
               >
-                Kontaktaufnahme
+                {homeData.homeInfo3}
               </button>
             </div>
           </div>
