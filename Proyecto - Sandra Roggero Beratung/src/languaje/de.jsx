@@ -62,18 +62,37 @@ const de = {
         ],
         tituloServicio:"Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:",
         services: [
-            { title: "STUDIUM" },
-            { title: "AUSBILDUNG" },
-            { title: "PARKTIKUM" },
-            { title: "ARBEIT" },
-            { title: "STEUERN" },
-            { title: "WOHNEN" },
-            { title: "BEFÖRDERUNG" },
-            { title: "VISUM" },
-            { title: "SPRACHE" },
+            { title: "STUDIUM",image:optimizedImageURL('v1719434278/ocddglzj4wpc5lbidcve.jpg') },
+            { title: "AUSBILDUNG",image:optimizedImageURL('v1719434278/rru0wddozzlje8tv7wo7.jpg') },
+            { title: "PARKTIKUM",image:optimizedImageURL('v1720047308/qhowjwv3jbywvh3fgqeb.jpg') },
+            { title: "ARBEIT",image:optimizedImageURL('v1720047637/okxctjjmmdegr4ptljhn.jpg') },
+            { title: "STEUERN",image:optimizedImageURL('v1720047700/pqjjlckzyuvgt32bxkhk.jpg') },
+            { title: "WOHNEN",image:optimizedImageURL('v1720616614/cebiafyysmleabgeofvi.jpg') },
+            { title: "BEFÖRDERUNG",image:optimizedImageURL('') },
+            { title: "VISUM",image:optimizedImageURL('v1720616615/ri3t504mktrg3ho4ra5v.jpg') },
+            { title: "SPRACHE",image:optimizedImageURL('v1720616615/vdnl4cfalk8uwbin6h9k.jpg') },
         ],
         homeInfo2:"MÖCHTEN SIE WEITERE INFORMATIONEN?",
         homeInfo3:"Kontaktaufnahme",
+        
+    },
+    footer:{
+        Informationen:{title:"Informationen",links:[
+            {link:"/benutzerrechte",detail:"Benutzerrechte"},
+            {link:"/datenschutzrichtlinie",detail:"Datenschutzrichtlinie"},
+        ]},
+        MeineDienstleistungen:{title:"Meine Dienstleistungen",links:[
+            {link:"/meine-dienstleistungen/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
+            {link:"/meine-dienstleistungen/arbeit-steuern",detail:"Arbeit - Steuern"},
+            {link:"/meine-dienstleistungen/wohnen-transport",detail:"Wohnen - Beförderung"},
+            {link:"/meine-dienstleistungen/visum-sprache",detail:"Visum - Sprache"},
+        ]},
+        Kontakt:{title:"Kontakt",links:[
+            {detail:"Email: kontakt@sandra-roggero.de"},
+            {detail:"Telefon: +49 123 456 789"},
+            {detail:"Adresse: Musterstraße 1, 12345 Musterstadt, Deutschland"},
+            {detail:"Öffnungszeiten: Mo-Fr, 9:00 - 18:00 Uhr"},
+        ]},
     }
 }
 

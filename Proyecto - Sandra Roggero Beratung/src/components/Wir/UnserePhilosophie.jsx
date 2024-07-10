@@ -13,6 +13,7 @@ import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 
 const UnserePhilosophie=()=>{
     const navigate = useNavigate();
@@ -112,7 +113,7 @@ const UnserePhilosophie=()=>{
                    alle ihre Ambitionen zu erfüllen. Die größten Chancen beginnen mit einer Geschichte. Erzählen Sie uns Ihre.
                 </p>
             </div>
-            <div className="bg-gray-800 w-full h-full">
+            {/* <div className="bg-gray-800 w-full h-full">
                 <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
                 <div className="relative w-full h-auto overflow-hidden ">
                     <div className="flex justify-center items-center  w-full h-96 p-20">
@@ -145,7 +146,8 @@ const UnserePhilosophie=()=>{
                     <FaAngleRight />
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <MeineDienstleistungen/>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">

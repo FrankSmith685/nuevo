@@ -13,6 +13,7 @@ import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 
 const WerWirSind=()=>{
     const navigate = useNavigate();
@@ -111,7 +112,7 @@ const WerWirSind=()=>{
                 den heißen Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache.
                 </p>
             </div>
-
+{/* 
              <div className="bg-gray-800 w-full h-full">
                 <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
                 <div className="relative w-full h-auto overflow-hidden ">
@@ -145,7 +146,8 @@ const WerWirSind=()=>{
                     <FaAngleRight />
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <MeineDienstleistungen/>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">

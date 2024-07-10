@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
+import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 
 const International=()=>{
   const {imagenesPreloader } = useAppState();
@@ -119,7 +120,7 @@ const International=()=>{
                 in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden.
                 </p>
             </div>
-            <div className="bg-gray-800 w-full h-full">
+            {/* <div className="bg-gray-800 w-full h-full">
                 <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
                 <div className="relative w-full h-auto overflow-hidden ">
                     <div className="flex justify-center items-center  w-full h-96 p-20">
@@ -152,7 +153,8 @@ const International=()=>{
                     <FaAngleRight />
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <MeineDienstleistungen/>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">

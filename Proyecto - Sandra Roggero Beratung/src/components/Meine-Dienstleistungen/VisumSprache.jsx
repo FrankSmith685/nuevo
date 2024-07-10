@@ -5,7 +5,7 @@ import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
 // const images = [imagen8, imagen9];
-const images = [null, null];
+const images = ["v1720616615/ri3t504mktrg3ho4ra5v.jpg", "v1720616615/vdnl4cfalk8uwbin6h9k.jpg"];
 
 const VisumSprache = () => {
     const navigate = useNavigate();
@@ -33,11 +33,16 @@ const VisumSprache = () => {
         setCurrentImageIndex(index);
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img
-                    src={images[currentImageIndex]}
+                    src={optimizedImageURL(images[currentImageIndex])}
                     alt="NOT FOUND"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />

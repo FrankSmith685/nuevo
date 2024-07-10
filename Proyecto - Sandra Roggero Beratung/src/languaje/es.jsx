@@ -60,20 +60,39 @@ const es = {
         ],
         tituloServicio: "Como consultoría de recursos humanos, también podemos ayudarle con lo siguiente:",
         services: [
-            { title: "ESTUDIOS" },
-            { title: "FORMACIÓN" },
-            { title: "PRÁCTICAS" },
-            { title: "TRABAJO" },
-            { title: "IMPUESTOS" },
-            { title: "VIVIENDA" },
-            { title: "TRANSPORTE" },
-            { title: "VISA" },
-            { title: "IDIOMA" },
+            { title: "STUDIUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "AUSBILDUNG",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "PARKTIKUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "ARBEIT",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "STEUERN",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "WOHNEN",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "BEFÖRDERUNG",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "VISUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "SPRACHE",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
         ],
         homeInfo2: "¿DESEAS MÁS INFORMACIÓN?",
         homeInfo3: "Contactar",
         
+    },
+    footer:{
+        Informationen:{title:"Información",links:[
+            {link:"/derechos-del-usuario",detail:"Derechos del Usuario"},
+            {link:"/politica-de-privacidad",detail:"Política de Privacidad"},
+        ]},
+        MeineDienstleistungen:{title:"Mis Servicios",links:[
+            {link:"/mis-servicios/estudio-formacion-practicas",detail:"Estudio - Formación - Prácticas"},
+            {link:"/mis-servicios/trabajo-impuestos",detail:"Trabajo - Impuestos"},
+            {link:"/mis-servicios/vivienda-transporte",detail:"Vivienda - Transporte"},
+            {link:"/mis-servicios/visa-idioma",detail:"Visa - Idioma"},
+        ]},
+        Kontakt:{title:"Contacto",links:[
+            {detail:"Email: contacto@sandra-roggero.de"},
+            {detail:"Teléfono: +49 123 456 789"},
+            {detail:"Dirección: Calle Ejemplo 1, 12345 Ciudad Ejemplo, Alemania"},
+            {detail:"Horario: Lun-Vie, 9:00 - 18:00"},
+        ]},
     }
+    
     
 }
 

@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {FaAngleRight,FaAngleLeft} from 'react-icons/fa'
+import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 // import logoPrincipal from "../../assets/imagenes/logoPrincipal.png";
 
 const Footer = () => {
@@ -15,6 +18,17 @@ const Footer = () => {
     const [activeInformationen,setActiveInformationen] = useState(false);
     const [meineDienstleistungen,setMeineDienstleistungen] = useState(false);
     const [kontakt,setKontakt] = useState(false);
+
+    const { tipoIdioma } = useAppState();
+  const [homeData,setHomeData] = useState(de.footer);
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+          setHomeData(de.footer);
+        }else{
+          setHomeData(es.footer);
+        }
+    },[tipoIdioma]);
 
     return (
         <footer className="bg-gray-700 text-white py-8">
@@ -38,38 +52,57 @@ const Footer = () => {
                 <div className="md:flex  md:flex-wrap md:justify-between md:items-start px-0 w-full">
                     <div className="mb-6 w-full md:w-auto bg-white text-gray-700 md:bg-transparent md:text-white px-2 py-1">
                         <div className="w-full flex justify-between items-center" onClick={()=>setActiveInformationen(!activeInformationen)}>
-                            <h2 className="text-lg font-semibold py-1">Informationen</h2>
+                            {/* <h2 className="text-lg font-semibold py-1">Informationen</h2> */}
+                            <h2 className="text-lg font-semibold py-1">{homeData.Informationen.title}</h2>
                             <FaAngleRight className="hover:cursor-pointer md:hidden"/>
                         </div>
                         <ul className={`${activeInformationen ? '' :'hidden'} px-2 md:block py-2`}>
-                            <li className="mb-2"><Link to="/benutzerrechte" className="font-normal">Benutzerrechte</Link></li>
-                            <li className="mb-2"><Link to="/datenschutzrichtlinie" className="font-normal">Datenschutzrichtlinie</Link></li>
+                            {homeData.Informationen.links.map((link)=>{
+                                return (
+                                    <li className="mb-2"><Link to={link.link} className="font-normal">{link.detail}</Link></li>
+                                )
+                            })}
+                            {/* <li className="mb-2"><Link to="/benutzerrechte" className="font-normal">Benutzerrechte</Link></li>
+                            <li className="mb-2"><Link to="/datenschutzrichtlinie" className="font-normal">Datenschutzrichtlinie</Link></li> */}
                         </ul>
                     </div>
 
                     <div className="mb-6 w-full md:w-auto bg-white text-gray-700 md:bg-transparent md:text-white px-2 py-1">
                         <div className="w-full flex justify-between items-center" onClick={()=>setMeineDienstleistungen(!meineDienstleistungen)}>
-                            <h2 className="text-lg font-semibold py-1">Meine Dienstleistungen</h2>
+                            <h2 className="text-lg font-semibold py-1">{homeData.MeineDienstleistungen.title} </h2>
                             <FaAngleRight className="hover:cursor-pointer md:hidden"/>
                         </div>
                         <ul className={`${meineDienstleistungen ? '' :'hidden'} px-2 md:block py-2`}>
-                            <li className="mb-2"><Link to="/meine-dienstleistungen/studium-ausbildung-praktikum" className="font-normal">Studium - Ausbildung - Praktikum</Link></li>
+                            {homeData.MeineDienstleistungen.links.map((link)=>{ 
+                                return (
+                                    <li className="mb-2"><Link to={link.link} className="font-normal">{link.detail}</Link></li>
+                                )
+                            })}
+                            {/* <li className="mb-2"><Link to="/meine-dienstleistungen/studium-ausbildung-praktikum" className="font-normal">Studium - Ausbildung - Praktikum</Link></li>
                             <li className="mb-2"><Link to="/meine-dienstleistungen/arbeit-steuern" className="font-normal">Arbeit - Steuern</Link></li>
                             <li className="mb-2"><Link to="/meine-dienstleistungen/wohnen-transport" className="font-normal">Wohnen - Beförderung</Link></li>
-                            <li className="mb-2"><Link to="/meine-dienstleistungen/visum-sprache" className="font-normal">Visum - Sprache</Link></li>
+                            <li className="mb-2"><Link to="/meine-dienstleistungen/visum-sprache" className="font-normal">Visum - Sprache</Link></li> */}
                         </ul>
                     </div>
 
                     <div className="mb-6 w-full md:w-auto bg-white text-gray-700 md:bg-transparent md:text-white px-2 py-1">
                         <div className="w-full flex justify-between items-center" onClick={()=>setKontakt(!kontakt)}>
-                            <h2 className="text-lg font-semibold py-1">Kontakt</h2>
+                            {/* <h2 className="text-lg font-semibold py-1">Kontakt</h2> */}
+                            <h2 className="text-lg font-semibold py-1">{homeData.Kontakt.title}</h2>
                             <FaAngleRight className="hover:cursor-pointer md:hidden"/>
                         </div>
                         <ul className={`${kontakt ? '' :'hidden'} px-2 md:block py-2`}>
-                            <li className="mb-2">Email: kontakt@sandra-roggero.de</li>
+                            {homeData.Kontakt.links.map((link)=>{ 
+                                return (
+                                    // <li className="mb-2"><Link to={link.link} className="font-normal">{link.detail}</Link></li>
+                                    <li className="mb-2">{link.detail}</li>
+
+                                )
+                            })}
+                            {/* <li className="mb-2">Email: kontakt@sandra-roggero.de</li>
                             <li className="mb-2">Telefon: +49 123 456 789</li>
                             <li className="mb-2">Adresse: Musterstraße 1, 12345 Musterstadt, Deutschland</li>
-                            <li className="mb-2">Öffnungszeiten: Mo-Fr, 9:00 - 18:00 Uhr</li>
+                            <li className="mb-2">Öffnungszeiten: Mo-Fr, 9:00 - 18:00 Uhr</li> */}
                         </ul>
                     </div>
 

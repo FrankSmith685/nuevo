@@ -5,7 +5,7 @@ import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
 // const images = [imagen6, imagen7];
-const images = [null,null];
+const images = ["v1720616614/cebiafyysmleabgeofvi.jpg",null];
 
 const WohnenTransport = () => {
     const navigate = useNavigate();
@@ -32,11 +32,16 @@ const WohnenTransport = () => {
         setCurrentImageIndex(index);
     };
 
+    const optimizedImageURL = (url) => {
+        const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
+        return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
+    };
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img
-                    src={images[currentImageIndex]}
+                    src={optimizedImageURL(images[currentImageIndex])}
                     alt="NOT FOUND"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />

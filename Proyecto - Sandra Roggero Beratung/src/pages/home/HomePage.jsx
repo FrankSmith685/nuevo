@@ -122,6 +122,7 @@ import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import MeineDienstleistungen from "../assets/MeineDienstleistungen";
 
 const HomePage = () => {
   const {  videosPreloader,tipoIdioma } = useAppState();
@@ -231,20 +232,20 @@ const HomePage = () => {
     return () => clearInterval(typingInterval);
   }, [currentCharIndex, isDeleting, currentTextIndex, texts]);
 
-  const nextCard = useCallback(() => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % services.length);
-  }, [services.length]);
+  // const nextCard = useCallback(() => {
+  //   setCurrentIndex(prevIndex => (prevIndex + 1) % services.length);
+  // }, [services.length]);
 
-  const prevCard = useCallback(() => {
-    setCurrentIndex(prevIndex => (prevIndex === 0 ? services.length - 1 : prevIndex - 1));
-  }, [services.length]);
+  // const prevCard = useCallback(() => {
+  //   setCurrentIndex(prevIndex => (prevIndex === 0 ? services.length - 1 : prevIndex - 1));
+  // }, [services.length]);
 
-  const getCardPosition = (index, currentIndex, length) => {
-    if (index === currentIndex) return 'translate-x-0 opacity-100';
-    if (index === (currentIndex + 1) % length) return 'translate-x-full opacity-50';
-    if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
-    return 'hidden';
-  };
+  // const getCardPosition = (index, currentIndex, length) => {
+  //   if (index === currentIndex) return 'translate-x-0 opacity-100';
+  //   if (index === (currentIndex + 1) % length) return 'translate-x-full opacity-50';
+  //   if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
+  //   return 'hidden';
+  // };
 
   const handleClickSeleccionReclutamiento = useCallback(() => {
     navigate("/kontakt");
@@ -355,7 +356,7 @@ const HomePage = () => {
 
 
 
-      <div className="bg-gray-800 w-full h-full">
+      {/* <div className="bg-gray-800 w-full h-full">
           <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">{homeData.tituloServicio}</h2>
           <div className="relative w-full h-auto overflow-hidden ">
               <div className="flex justify-center items-center  w-full h-96 p-20">
@@ -388,7 +389,8 @@ const HomePage = () => {
               <FaAngleRight />
               </div>
           </div>
-        </div>
+        </div> */}
+        <MeineDienstleistungen/>
         <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
           <div className="w-full flex justify-center items-center">
             <div className="w-full text-center p-4">

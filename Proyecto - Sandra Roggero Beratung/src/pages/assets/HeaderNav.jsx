@@ -138,7 +138,7 @@ const HeaderNav = () => {
     return (
         <nav className="p-0 w-full z-50 fixed top-0">
             <div 
-                className={`h-32 w-full transition-colors duration-300 ${isNavHovered ? 'bg-white' : 'bg-transparent'}`}
+                className={`h-36 w-full transition-colors duration-300 ${isNavHovered ? 'bg-white' : 'bg-transparent'}`}
                 onMouseEnter={onMouseEnterNavHovered}
                 onMouseLeave={onMouseLeaveNavHovered}
             >
