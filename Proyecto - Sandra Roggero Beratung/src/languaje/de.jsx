@@ -68,7 +68,7 @@ const de = {
             { title: "ARBEIT",image:optimizedImageURL('v1720047637/okxctjjmmdegr4ptljhn.jpg') },
             { title: "STEUERN",image:optimizedImageURL('v1720047700/pqjjlckzyuvgt32bxkhk.jpg') },
             { title: "WOHNEN",image:optimizedImageURL('v1720616614/cebiafyysmleabgeofvi.jpg') },
-            { title: "BEFÖRDERUNG",image:optimizedImageURL('') },
+            { title: "BEFÖRDERUNG",image:optimizedImageURL('v1720622228/omcgfbrslqda69acfxr0.jpg') },
             { title: "VISUM",image:optimizedImageURL('v1720616615/ri3t504mktrg3ho4ra5v.jpg') },
             { title: "SPRACHE",image:optimizedImageURL('v1720616615/vdnl4cfalk8uwbin6h9k.jpg') },
         ],

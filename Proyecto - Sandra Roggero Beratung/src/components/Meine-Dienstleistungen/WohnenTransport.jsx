@@ -5,7 +5,7 @@ import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
 // const images = [imagen6, imagen7];
-const images = ["v1720616614/cebiafyysmleabgeofvi.jpg",null];
+const images = ["v1720616614/cebiafyysmleabgeofvi.jpg","v1720622228/omcgfbrslqda69acfxr0.jpg"];
 
 const WohnenTransport = () => {
     const navigate = useNavigate();
