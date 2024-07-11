@@ -16,9 +16,11 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const Personalbewertungen=()=>{
-  const {imagenesPreloader } = useAppState();
+  const {imagenesPreloader,tipoIdioma } = useAppState();
 
     const navigate = useNavigate();
 
@@ -78,6 +80,16 @@ const Personalbewertungen=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const [data,setData] = useState(de.Unternehmen);
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Unternehmen);
+        }else{
+            setData(es.Unternehmen);
+        }
+    },[tipoIdioma]);
+
     return(
         <>
 
@@ -92,7 +104,9 @@ const Personalbewertungen=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                        Personalbewertungen
+                        {/* Personalbewertungen */}
+                        {data.Personalbewertungen.title}
+
                     </h2>
                 </div>
                 </div>
@@ -103,18 +117,31 @@ const Personalbewertungen=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                    Personalbewertungen
+                    {/* Personalbewertungen */}
+                    {data.Personalbewertungen.title}
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                Die Leistungsbewertung ist ein wichtiges Instrument zur Steigerung der Produktivität. Wenn Sie die Fähigkeiten Ihrer 
+                {/* Die Leistungsbewertung ist ein wichtiges Instrument zur Steigerung der Produktivität. Wenn Sie die Fähigkeiten Ihrer 
                 Teams kennen und wissen, was sie zum Unternehmen beitragen können, können Sie ihnen die notwendigen Instrumente an die Hand geben, 
-                um sowohl ihre berufliche Entwicklung als auch die des Unternehmens zu fördern.
+                um sowohl ihre berufliche Entwicklung als auch die des Unternehmens zu fördern. */}
+                {data.Personalbewertungen.description}
+
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                Sandra Roggero Beratung hilft Ihnen, Ihre Teams zu bewerten, indem wir uns auf die Menschen konzentrieren.
+                {/* Sandra Roggero Beratung hilft Ihnen, Ihre Teams zu bewerten, indem wir uns auf die Menschen konzentrieren. */}
+                {data.Personalbewertungen.description2}
+
                 </p>
                 <ul className="list-disc list-inside pl-1">
-                    <li className="mb-2 text-gray-800">
+                    {data.Personalbewertungen.dataInfo.map((d)=>{
+                        return(
+                            <li className="mb-2 text-gray-800">
+                                {d}
+                            </li>
+                        )
+                    })}
+                    
+                    {/* <li className="mb-2 text-gray-800">
                     Erkennen und entwickeln Sie die einzigartigen Talente Ihres Unternehmens.
                     </li>
                     <li className="mb-2 text-gray-800">
@@ -128,7 +155,7 @@ const Personalbewertungen=()=>{
                     </li>
                     <li className="mb-2 text-gray-800">
                     Einbindung von Kompetenzentwicklungsplänen, die auf die jeweilige Person und Position zugeschnitten sind.
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             {/* <div className="bg-gray-800 w-full h-full">
@@ -169,12 +196,12 @@ const Personalbewertungen=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

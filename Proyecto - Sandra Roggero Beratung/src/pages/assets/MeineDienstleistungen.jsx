@@ -1,11 +1,21 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import de from "../../languaje/de";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useAppState } from "../../hooks/useAppState";
+import es from "../../languaje/es";
 
 const MeineDienstleistungen = () => {
-
-    const [homeData,setHomeData] = useState(de.home);
+    const {tipoIdioma} = useAppState();
+const [homeData,setHomeData] = useState(de.home);   
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(()=>{
+    if(tipoIdioma==='de'){
+      setHomeData(de.home);
+    }else{
+      setHomeData(es.home);
+    }
+},[tipoIdioma]);
 
   const services = useMemo(() => 
     homeData.services

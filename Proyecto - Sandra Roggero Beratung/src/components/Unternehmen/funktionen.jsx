@@ -15,6 +15,8 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const Funktionen=()=>{
   const {imagenesPreloader } = useAppState();
@@ -76,6 +78,18 @@ const Funktionen=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const {tipoIdioma} = useAppState();
+    const [data,setData] = useState(de.Unternehmen);
+
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Unternehmen);
+        }else{
+            setData(es.Unternehmen);
+        }
+    },[tipoIdioma]);
+
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
@@ -89,7 +103,8 @@ const Funktionen=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                        Funktionen
+                        {/* Funktionen */}
+                        {data.Funktionen.title}
                     </h2>
                 </div>
                 </div>
@@ -100,14 +115,18 @@ const Funktionen=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                    Funktionen
+                    {/* Funktionen */}
+                    {data.Funktionen.title}
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Identifizierung von Talenten, Kenntnis und Entwicklung des Humankapitals. Verständnis des Arbeitsmarktes, 
+                {/* Identifizierung von Talenten, Kenntnis und Entwicklung des Humankapitals. Verständnis des Arbeitsmarktes, 
                 um neue Bedürfnisse zu erkennen und die vom Unternehmen kurzfristig benötigten Profile vorherzusehen. 
                 Um die besten Wege zu finden, sie in das Unternehmen einzugliedern. Einbindung von Fachkräften in die 
                 verschiedenen Bereiche des Unternehmens, sich über ihre Fähigkeiten im Klaren sein und wissen, wie sie 
-                einen Mehrwert für das Unternehmen schaffen können. Schaffung einer soliden Unternehmenskultur.
+                einen Mehrwert für das Unternehmen schaffen können. Schaffung einer soliden Unternehmenskultur. */}
+                        {data.Funktionen.description}
+
                 </p>
             </div>
             {/* <div className="bg-gray-800 w-full h-full">
@@ -148,12 +167,12 @@ const Funktionen=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

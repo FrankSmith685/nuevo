@@ -15,9 +15,11 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const International=()=>{
-  const {imagenesPreloader } = useAppState();
+  const {imagenesPreloader,tipoIdioma } = useAppState();
 
     const navigate = useNavigate();
 
@@ -76,6 +78,16 @@ const International=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const [data,setData] = useState(de.Unternehmen);
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Unternehmen);
+        }else{
+            setData(es.Unternehmen);
+        }
+    },[tipoIdioma]);
+
     return(
         <>
 
@@ -90,7 +102,7 @@ const International=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                    International
+                    {data.International.title}
                     </h2>
                 </div>
                 </div>
@@ -101,23 +113,34 @@ const International=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                International
+                {/* International */}
+                {data.International.title}
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Wenn es darum geht internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, 
+                {/* Wenn es darum geht internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, 
                 über Profile mit spezifischer Erfahrung und Expertisen zu verfügen, sei es auf nationaler oder 
-                internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben.
+                internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben. */}
+                    {data.International.description}
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden.
+                {/* Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden. */}
+                {data.International.description2}
+                
                 </p>
-                <h2 className="text-gray-700 text-start font-medium w-full pb-1">EINE SPEZIALISIERTE ABTEILUNG</h2>
+                {/* <h2 className="text-gray-700 text-start font-medium w-full pb-1">EINE SPEZIALISIERTE ABTEILUNG</h2> */}
+                <h2 className="text-gray-700 text-start font-medium w-full pb-1">{data.International.description3}</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort.
+                {/* Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort. */}
+                    {data.International.description4}
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                Unsere direkte und proaktive Suchmethodik auf dem Markt, unsere internationale Erfahrung, unser Hauptsitz in Peru und unsere Mitarbeiter 
-                in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden.
+                {/* Unsere direkte und proaktive Suchmethodik auf dem Markt, unsere internationale Erfahrung, unser Hauptsitz in Peru und unsere Mitarbeiter 
+                in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden. */}
+                    {data.International.description5}
+
                 </p>
             </div>
             {/* <div className="bg-gray-800 w-full h-full">
@@ -158,12 +181,12 @@ const International=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

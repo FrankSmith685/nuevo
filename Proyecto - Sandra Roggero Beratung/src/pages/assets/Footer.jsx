@@ -114,7 +114,8 @@ const Footer = () => {
                 <hr className="my-8 border-white" />
 
                 <div className="text-center">
-                    <p className="font-medium">&copy; 2024 Alle Rechte vorbehalten</p>
+                    {/* <p className="font-medium">&copy; 2024 Alle Rechte vorbehalten</p> */}
+                    <p className="font-medium">&copy; {homeData.info}</p>
                 </div>
             </div>
         </footer>

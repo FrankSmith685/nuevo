@@ -14,6 +14,9 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const Inklusionsaudit=()=>{
     const navigate = useNavigate();
@@ -74,6 +77,18 @@ const Inklusionsaudit=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const {tipoIdioma} = useAppState();
+    const [data,setData] = useState(de.Unternehmen);
+
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Unternehmen);
+        }else{
+            setData(es.Unternehmen);
+        }
+    },[tipoIdioma]);
+
     // https://res.cloudinary.com/dievolijo/image/upload/v1720047059/wucb1mcaftn2o4kr6bva.jpg
 
     return(
@@ -87,7 +102,8 @@ const Inklusionsaudit=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                    Inklusionsaudit
+                    {/* Inklusionsaudit */}
+                    {data.Inklusionsaudit.title}
                     </h2>
                 </div>
                 </div>
@@ -98,15 +114,18 @@ const Inklusionsaudit=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                Inklusionsaudit
+                {/* Inklusionsaudit */}
+                {data.Inklusionsaudit.title}
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess. Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt
+                {/* Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess. Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt
                  und zusätzliche Systeme, Inhalte oder Technologien sind entstanden. Auch wenn diese Prozesse einen funktionierenden Service und Erfahrung
                   bei der Talentauswahl bieten, werden wahrscheinlich in jeder Phase Ihres Prozesses dennoch Vorurteile bestehen. Unser Inclusivity-Audit
                    analysiert jeden Kontaktpunkt mit dem Kandidaten während des Auswahlprozesses, von der Stellenbeschreibung für diese Position über 
                    Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. Dieser Ansatz 
-                   bietet durchgängige Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile.
+                   bietet durchgängige Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile. */}
+                    {data.Inklusionsaudit.description}
+
                 </p>
             </div>
             {/* <div className="bg-gray-800 w-full h-full">
@@ -147,12 +166,12 @@ const Inklusionsaudit=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

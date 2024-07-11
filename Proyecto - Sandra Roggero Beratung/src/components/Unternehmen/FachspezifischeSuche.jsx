@@ -15,6 +15,8 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const FachspezifischeSuche=()=>{
   const {imagenesPreloader } = useAppState();
@@ -77,6 +79,18 @@ const FachspezifischeSuche=()=>{
     };
 
 
+    const {tipoIdioma} = useAppState();
+    const [data,setData] = useState(de.Unternehmen);
+
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Unternehmen);
+        }else{
+            setData(es.Unternehmen);
+        }
+    },[tipoIdioma]);
+
     return(
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
@@ -90,7 +104,9 @@ const FachspezifischeSuche=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                        Fachspezifische Suche
+                        {/* Fachspezifische Suche */}
+                        {data.FachspezifischeSuche.title}
+
                     </h2>
                 </div>
                 </div>
@@ -101,10 +117,12 @@ const FachspezifischeSuche=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                    Fachspezifische Suche
+                    {/* Fachspezifische Suche */}
+                    {data.FachspezifischeSuche.title}
+
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Die Menschen sind das Herzstück eines jeden Projekts.
+                {/* Die Menschen sind das Herzstück eines jeden Projekts.
                  Die Auswahl qualifizierter Mitarbeiter ist sicherlich einer der wichtigsten Faktoren, wenn es darum geht,
                   alle Ziele Ihres Unternehmens zu erreichen. Daher muss die Einbeziehung von Berufsprofilen, zu den Werten
                    und der Mission Ihres Unternehmens passen und eine Ihrer Prioritäten sein. Um die begehrtesten, qualifizierten
@@ -113,7 +131,9 @@ const FachspezifischeSuche=()=>{
                     die weiß, was Sie wirklich brauchen und über ein breites Netzwerk von Fachkräften verfügt, die das Potenzial 
                     in einem Unternehmen wie dem Ihren voll ausschöpfen wollen. Bei Sandra Roggero-Beratung blicken wir über die 
                     Stellenbeschreibung hinaus, um die Geschichte zu verstehen, die Ihr Unternehmen erzählt und bringen Sie mit den richtigen
-                     Leuten zusammen, die Ihnen helfen, Ihr Unternehmen umzugestalten.
+                     Leuten zusammen, die Ihnen helfen, Ihr Unternehmen umzugestalten. */}
+                        {data.FachspezifischeSuche.description}
+
                 </p>
             </div>
             {/* <div className="bg-gray-800 w-full h-full">
@@ -154,12 +174,12 @@ const FachspezifischeSuche=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

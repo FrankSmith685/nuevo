@@ -60,15 +60,15 @@ const es = {
         ],
         tituloServicio: "Como consultoría de recursos humanos, también podemos ayudarle con lo siguiente:",
         services: [
-            { title: "STUDIUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "AUSBILDUNG",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "PARKTIKUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "ARBEIT",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "STEUERN",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "WOHNEN",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "BEFÖRDERUNG",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "VISUM",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
-            { title: "SPRACHE",image:optimizedImageURL('v1719875147/jghjwlvwkdizzhrdpb4r.jpg') },
+            { title: "ESTUDIOS", image: optimizedImageURL('v1719434278/ocddglzj4wpc5lbidcve.jpg') },
+            { title: "FORMACIÓN", image: optimizedImageURL('v1719434278/rru0wddozzlje8tv7wo7.jpg') },
+            { title: "PRÁCTICAS", image: optimizedImageURL('v1720047308/qhowjwv3jbywvh3fgqeb.jpg') },
+            { title: "TRABAJO", image: optimizedImageURL('v1720047637/okxctjjmmdegr4ptljhn.jpg') },
+            { title: "IMPUESTOS", image: optimizedImageURL('v1720047700/pqjjlckzyuvgt32bxkhk.jpg') },
+            { title: "VIVIENDA", image: optimizedImageURL('v1720616614/cebiafyysmleabgeofvi.jpg') },
+            { title: "TRANSPORTE", image: optimizedImageURL('v1720622228/omcgfbrslqda69acfxr0.jpg') },
+            { title: "VISADO",image:optimizedImageURL('v1720648648/yazfttcufijofwthhes8.jpg') },
+            { title: "IDIOMA",image:optimizedImageURL('v1720652893/zwpk88oskknftyafqm5u.jpg') },
         ],
         homeInfo2: "¿DESEAS MÁS INFORMACIÓN?",
         homeInfo3: "Contactar",
@@ -91,8 +91,49 @@ const es = {
             {detail:"Dirección: Calle Ejemplo 1, 12345 Ciudad Ejemplo, Alemania"},
             {detail:"Horario: Lun-Vie, 9:00 - 18:00"},
         ]},
-    }
+        info:"2024 Todos los derechos reservados"
+    },
     
+    Unternehmen:{
+        PersonalauswahlUndRekrutierung:{
+            title:"Selección y Reclutamiento de Personal",
+            description:"Nos comprometemos en cada proceso de selección como si fuera nuestra propia empresa, enfocándonos en las personas y escuchándolas, ya sean candidatos o clientes. La consultoría y el reconocimiento de necesidades tienen un papel significativo. Además, gracias a nuestro propio servicio 'Selección de Onboarding', acompañamos y aseguramos la mejor integración posible de los candidatos en la empresa. Somos consultores de reclutamiento y coaches de integración. El proceso de onboarding no solo se enfoca en el seguimiento después de la selección, sino que acompaña el proceso desde el principio, siempre en línea con la misión y el objetivo de la empresa. Cada proceso de selección es único porque no hay dos personas o empresas iguales. Hay una solución para cada empresa, y nosotros en Sandra Roggero Consulting sabemos cómo encontrarla."
+        },
+        Personalbewertungen:{
+            title:"Evaluaciones de Personal",
+            description:"La evaluación del desempeño es una herramienta importante para aumentar la productividad. Conocer las habilidades de sus equipos y entender lo que pueden aportar a la empresa le permite proporcionarles las herramientas necesarias para promover tanto su desarrollo profesional como el de la empresa.",
+            description2:"Sandra Roggero Consulting le ayuda a evaluar sus equipos enfocándose en las personas.",
+            dataInfo:[
+                "Reconocer y desarrollar los talentos únicos de su empresa.",
+                "Realizar evaluaciones adaptadas a sus desafíos y equipo.",
+                "Recompensar la productividad y el rendimiento de los empleados en procesos de promoción o selección internos.",
+                "Medir las competencias personales, el potencial y los intereses de los empleados en línea con la estrategia y los objetivos de la empresa.",
+                "Incorporar planes de desarrollo de competencias adaptados a la persona y al puesto."
+            ]
+        },
+        International:{
+            title:"Internacional",
+            description:"Cuando se trata de consolidar talentos y mano de obra internacional, es necesario contar con perfiles con experiencia y conocimientos específicos, ya sea a nivel nacional o internacional, para impulsar la siguiente fase de la empresa.",
+            description2:"Le acompañamos en proyectos internacionales gestionando la gestión de talentos y los procesos de selección para encontrar los profesionales adecuados en Alemania y/o en el extranjero.",
+            description3:"UN DEPARTAMENTO ESPECIALIZADO",
+            description4:"Encontramos a los profesionales adecuados, independientemente de su ubicación.",
+            description5:"Nuestra metodología de búsqueda directa y proactiva en el mercado, nuestra experiencia internacional, nuestra sede en Perú y nuestro personal en todo el mundo nos ayudan a encontrar los talentos más calificados."
+        },
+        Inklusionsaudit:{
+            title:"Auditoría de Inclusión",
+            description:"Identificamos sesgos y eliminamos obstáculos en el proceso de selección. Los procesos de selección han evolucionado con el tiempo, y han surgido sistemas, contenidos o tecnologías adicionales. Aunque estos procesos ofrecen un servicio funcional y experiencia en la selección de talentos, es probable que existan sesgos en cada etapa de su proceso. Nuestra auditoría de inclusión analiza cada punto de contacto con el candidato durante el proceso de selección, desde la descripción del puesto para esta posición, pasando por su área de talento interno, el proceso de solicitud, la entrevista y la selección, hasta la incorporación. Este enfoque proporciona una transparencia constante en cuanto a barreras y sesgos activos y ocultos."
+        },
+        Funktionen:{
+            title:"Funciones",
+            description:"Identificación de talentos, comprensión y desarrollo del capital humano. Comprender el mercado laboral para reconocer nuevas necesidades y prever los perfiles que la empresa necesitará a corto plazo. Encontrar las mejores maneras de integrarlos en la empresa. Incorporar profesionales en las diferentes áreas de la empresa, siendo conscientes de sus habilidades y sabiendo cómo pueden añadir valor a la empresa. Crear una cultura corporativa sólida."
+        },
+        FachspezifischeSuche:{
+            title:"Búsqueda Especializada",
+            description:"Las personas son el corazón de cada proyecto. La selección de empleados calificados es sin duda uno de los factores más importantes cuando se trata de alcanzar todos los objetivos de su empresa. Por lo tanto, la incorporación de perfiles profesionales que se ajusten a los valores y la misión de su empresa debe ser una de sus prioridades. Para atraer a los talentos más buscados y calificados, debe contar la historia única detrás de su empresa. Por eso es importante buscar el apoyo y la experiencia de una consultoría de personal especializada que sepa lo que realmente necesita y tenga una amplia red de profesionales que quieran realizar todo su potencial en una empresa como la suya. En Sandra Roggero Consulting, miramos más allá de la descripción del puesto para entender la historia que cuenta su empresa y lo conectamos con las personas adecuadas que lo ayudarán a transformar su empresa."
+        },
+        homeInfo2:"¿QUIERE MÁS INFORMACIÓN?",
+        homeInfo3:"Contactar"
+    }
     
 }
 

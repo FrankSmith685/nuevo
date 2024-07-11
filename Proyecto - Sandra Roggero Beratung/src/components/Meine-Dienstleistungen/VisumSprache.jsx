@@ -5,7 +5,7 @@ import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 
 // const images = [imagen8, imagen9];
-const images = ["v1720616615/ri3t504mktrg3ho4ra5v.jpg", "v1720616615/vdnl4cfalk8uwbin6h9k.jpg"];
+const images = ["v1720648648/yazfttcufijofwthhes8.jpg", "v1720652893/zwpk88oskknftyafqm5u.jpg"];
 
 const VisumSprache = () => {
     const navigate = useNavigate();
