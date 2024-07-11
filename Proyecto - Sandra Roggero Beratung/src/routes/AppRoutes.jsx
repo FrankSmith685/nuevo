@@ -237,11 +237,11 @@ export const AppRoutes = () => {
     <>
       <Router>
         <div>
-          {!activeCarga ? (
+          {/* {!activeCarga ? (
             <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 to-gray-700">
               <FaSpinner className="animate-spin text-9xl text-gray-500" />
             </div>
-          ) : (
+          ) : ( */}
             <>
               <HeaderNav />
               <Suspense
@@ -302,7 +302,7 @@ export const AppRoutes = () => {
               </Suspense>
               <Footer />
             </>
-          )}
+          {/* )} */}
         </div>
       </Router>
     </>

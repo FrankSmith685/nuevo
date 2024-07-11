@@ -2,21 +2,22 @@ import { useEffect } from "react";
 import { useAppState } from "./useAppState";
 
 const useVideoPreloading = () => {
-  const {setVideosPreloader,activeCarga,setActiveCarga } = useAppState();
-  
+  const {setVideosPreloader,activeCarga,setActiveCarga,videosPreloader } = useAppState();
+  const videoElement = document.createElement('video');
+
   useEffect(() => {
     const bannerPrincipal = 'https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4';
     // Preload del video
-   const videoElement = document.createElement('video');
+   
    videoElement.src = bannerPrincipal;
    videoElement.onloadeddata = () => {
      // Actualizar el estado cuando el video está cargado
-     if(activeCarga === false){
-        setActiveCarga(true);
+    //  if(activeCarga === false){
+        // setActiveCarga(true);
         setVideosPreloader({
             bannerPrincipal: bannerPrincipal, // Aquí guardamos la URL del video
         });
-     }
+    //  }
    };
     
   }, []);
