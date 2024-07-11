@@ -254,11 +254,18 @@ const HomePage = () => {
   return (
     <>
       <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
-        <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          {/* <source src={videosPreloader?.bannerPrincipal} type="video/mp4" /> */}
-          <source src="https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
+        {/* <div className="relative w-full h-full"> */}
+          <img 
+            src="URL_DE_TU_IMAGEN_PRELOADER" 
+            className="absolute top-0 left-0 w-full h-full object-cover z-0" 
+            alt="Loading video..."
+          />
+          <video autoPlay loop muted preload="auto" className="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        {/* </div> */}
+
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
             <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
               <h2 className="text-white font-medium text-xl sm:text-3xl lg:text-4xl text-center md:text-end px-2">
