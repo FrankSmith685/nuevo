@@ -256,7 +256,7 @@ const HomePage = () => {
       <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
         {/* <div className="relative w-full h-full"> */}
           <img 
-            src="URL_DE_TU_IMAGEN_PRELOADER" 
+            src={optimizedImageURL("v1720714061/f2thxhzee96nw41mmgs6.jpg")} 
             className="absolute top-0 left-0 w-full h-full object-cover z-0" 
             alt="Loading video..."
           />
