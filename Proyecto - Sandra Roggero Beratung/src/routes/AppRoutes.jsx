@@ -275,7 +275,29 @@ export const AppRoutes = () => {
                       <Route path="/benutzerrechte" element={<Benutzerrechte />} />
                     </>
                   ) : (
-                    <>
+                    tipoIdioma === 'en'? (
+                      <>
+                        <Route path="/company/personnel-selection-and-recruitment" element={<PersonalauswahlUndRekrutierung />} />
+                        <Route path="/company/personnel-evaluations" element={<Personalbewertungen />} />
+                        <Route path="/company/international" element={<International />} />
+                        <Route path="/company/functions" element={<Funktionen />} />
+                        <Route path="/company/specialized-search" element={<FachspezifischeSuche />} />
+                        <Route path="/company/inclusion-audit" element={<Inklusionsaudit />} />
+                        <Route path="/candidates/register-your-resume" element={<RegistrierenSieIhrenLebenslauf />} />
+                        <Route path="/candidates/international-career-management" element={<InternationalesKarrieremanagement />} />
+                        <Route path="/about-us/our-philosophy" element={<UnserePhilosophie />} />
+                        <Route path="/about-us/who-we-are" element={<WerWirSind />} />
+                        <Route path="/my-services/study-training-internships" element={<StudiumAusbildungPraktikum />} />
+                        <Route path="/my-services/work-taxes" element={<ArbeitSteuern />} />
+                        <Route path="/my-services/housing-transport" element={<WohnenTransport />} />
+                        <Route path="/my-services/visa-language" element={<VisumSprache />} />
+                        <Route path="/contact" element={<Kontakt />} />
+                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="/user-rights" element={<Benutzerrechte />} />
+                      </>
+
+                    ):(
+                      <>
                       <Route path="/empresa/seleccion-y-reclutamiento-de-personal" element={<PersonalauswahlUndRekrutierung />} />
                       <Route path="/empresa/evaluaciones-de-personal" element={<Personalbewertungen />} />
                       <Route path="/empresa/internacional" element={<International />} />
@@ -294,6 +316,7 @@ export const AppRoutes = () => {
                       <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
                       <Route path="/derechos-del-usuario" element={<Benutzerrechte />} />
                     </>
+                    )
                   )}
                   
                   {/* Redirigir rutas no coincidentes a la página de inicio */}

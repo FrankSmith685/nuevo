@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import imagen6 from "../../assets/imagenes/MeineDienstleistungen/imagen6.jpg";
 import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 // const images = [imagen6, imagen7];
 const images = ["v1720616614/cebiafyysmleabgeofvi.jpg","v1720622228/omcgfbrslqda69acfxr0.jpg"];
@@ -37,6 +40,17 @@ const WohnenTransport = () => {
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const [data,setData] = useState(de.MeineDienstleistungen);
+    const {tipoIdioma} = useAppState();
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.MeineDienstleistungen);
+        }else{
+            setData(es.MeineDienstleistungen);
+        }
+    },[tipoIdioma]);
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
@@ -49,7 +63,8 @@ const WohnenTransport = () => {
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                     <div className="w-full md:w-3/5 h-auto">
                         <h2 className="text-white font-bold text-2xl sm:text-4xl md:text-5xl font-bell text-center md:text-end px-2">
-                            Wohnen - Beförderung
+                            
+                            {data.WohnenBeförderung.title}
                         </h2>
                     </div>
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
@@ -69,36 +84,31 @@ const WohnenTransport = () => {
                         Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                     </span>
                     {' > '}
-                        Wohnen - Beförderung
+                    {data.WohnenBeförderung.title}
+
                 </p>
                 <div className="text-gray-700 text-start w-full">
-                    <h2 className="font-medium">Wohnen</h2>
+                    <h2 className="font-medium">{data.WohnenBeförderung.description0}</h2>
                     <p className="pb-1">
-                    Deutschland ist eines der besten Länder zum Leben. Deutschland zeichnet sich durch seine Multikulturalität 
-                    aus und hat eine große Zahl von Einwanderern aus der ganzen Welt. Dies hat es zu einem der beliebtesten Ziele 
-                    für Menschen gemacht, die ein neues Leben beginnen wollen.
+                    {data.WohnenBeförderung.description}
                     </p>
-                        <h2 className="font-medium">Beförderung</h2>
+                        <h2 className="font-medium">{data.WohnenBeförderung.description2}</h2>
                     <p className="pb-1">
-                    In Deutschland kann man mit dem Zug, aber auch mit der Straßenbahn oder dem Bus zu vielen Zielen reisen.
-                     Der Zug, die U-Bahn, die S-Bahn, die Straßenbahn und der Bus sind die verschiedenen öffentlichen Verkehrsmittel des Fern- und Nahverkehrs.
+                    {data.WohnenBeförderung.description3}
                     </p>
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-                {/* <div className="w-full sm:w-1/3 h-auto">
-                    <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover" />
-                </div> */}
                 <div className="w-full flex justify-center items-center">
-                    <div className="w-full text-center p-4">
-                        <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
-                        <button
-                            className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
-                            onClick={handleClickSeleccionReclutamiento}
-                        >
-                            Kontaktaufnahme
-                        </button>
-                    </div>
+                <div className="w-full text-center p-4">
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
+                    <button
+                    className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                    onClick={handleClickSeleccionReclutamiento}
+                    >
+                    {data.homeInfo3}
+                    </button>
+                </div>
                 </div>
             </div>
         </>

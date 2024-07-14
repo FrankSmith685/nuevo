@@ -5,6 +5,8 @@ import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
 import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 
 
@@ -44,6 +46,17 @@ const StudiumAusbildungPraktikum = () => {
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const [data,setData] = useState(de.MeineDienstleistungen);
+    const {tipoIdioma} = useAppState();
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.MeineDienstleistungen);
+        }else{
+            setData(es.MeineDienstleistungen);
+        }
+    },[tipoIdioma]);
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
@@ -57,7 +70,7 @@ const StudiumAusbildungPraktikum = () => {
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                     <div className="w-full md:w-3/5 h-auto">
                         <h2 className="text-white font-bold text-2xl sm:text-4xl md:text-5xl font-bell text-center md:text-end px-2">
-                            Studium - Ausbildung - Praktikum
+                        {data.StudiumAusbildungPraktikum.title}
                         </h2>
                     </div>
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
@@ -77,47 +90,37 @@ const StudiumAusbildungPraktikum = () => {
                         Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                     </span>
                     {' > '}
-                    Studium - Ausbildung - Praktikum
+                    {data.StudiumAusbildungPraktikum.title}
                 </p>
                 <div className="text-gray-700 text-start w-full">
-                    <h2 className="font-medium">Studium</h2>
+                    <h2 className="font-medium"> {data.StudiumAusbildungPraktikum.description}</h2>
                     
                     <p className="pb-1">
-                    Wir geben Ihnen hier einen kleinen Überblick, welche Vorteile ein Studium in Deutschland speziell für internationale Studierende mit 
-                    sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des Studienangebots… Geringe Studiengebühren und niedrige Kosten… 
-                    Förderprogramme und die Möglichkeit zu arbeiten. Sie erleben den Arbeitsalltag aus erster Hand. So erfahren Sie, welche Aufgaben auf Sie zukommen.
+                    {data.StudiumAusbildungPraktikum.description2}
                     </p>
-                    <h2 className="font-medium">Ausbildung</h2>
-                    <h2 className="">Welche Vorteile hat man nach der Ausbildung?</h2>
+                    <h2 className="font-medium"> {data.StudiumAusbildungPraktikum.description3}</h2>
+                    <h2 className=""> {data.StudiumAusbildungPraktikum.description4}</h2>
                     <p className="pb-1">
-                    Eine Ausbildung ist Praxisnah. Sie können Gelerntes direkt anwenden und sehen was Sie erreicht haben. Sie können früh Verantwortung übernehmen,
-                     sind aber nicht alleine: Die Zusammenarbeit im Betrieb ist das A und O. Eine Ausbildung ist auch lukrativ, weil Sie vom ersten Tag an Ihr eigenes
-                      Einkommen haben. Zukunftssicher. Aussichtsreich.
+                    {data.StudiumAusbildungPraktikum.description5}
                     </p>
-                    <h2 className="font-medium">Praktikum</h2>
-                    <p className="">Das bringt Ihnen ein Praktikum in Deutschland!</p>
+                    <h2 className="font-medium"> {data.StudiumAusbildungPraktikum.description6}</h2>
+                    <p className=""> {data.StudiumAusbildungPraktikum.description7}</p>
                     <p className="pb-1">
-                    Sie können danach besser einschätzen, ob ein Beruf oder eine Branche zu Ihren Interessen und Stärken passt. Sie können Ihre Praktika in 
-                    Ihren Lebenslauf aufnehmen. Damit können Sie bei weiteren Bewerbungen zusätzlich punkten. Ihr Praktikumsbetrieb lernt Sie kennen. 
-                    Das kann Ihnen bei einer späteren Bewerbung helfen, zum Beispiel für eine Stelle als Werkstudent oder für eine Ausbildung. 
-                    Vielleicht bietet man Ihnen sogar eine Ausbildungsstelle an.
+                    {data.StudiumAusbildungPraktikum.description8}
                     </p>
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-                {/* <div className="w-full sm:w-1/3 h-auto">
-                    <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover" />
-                </div> */}
                 <div className="w-full flex justify-center items-center">
-                    <div className="w-full text-center p-4">
-                        <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
-                        <button
-                            className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
-                            onClick={handleClickSeleccionReclutamiento}
-                        >
-                            Kontaktaufnahme
-                        </button>
-                    </div>
+                <div className="w-full text-center p-4">
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
+                    <button
+                    className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                    onClick={handleClickSeleccionReclutamiento}
+                    >
+                    {data.homeInfo3}
+                    </button>
+                </div>
                 </div>
             </div>
         </>

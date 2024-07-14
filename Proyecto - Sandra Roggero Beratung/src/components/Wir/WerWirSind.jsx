@@ -14,6 +14,9 @@ import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
+import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 const WerWirSind=()=>{
     const navigate = useNavigate();
@@ -74,6 +77,17 @@ const WerWirSind=()=>{
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };  
 
+    const [data,setData] = useState(de.Wir);
+    const {tipoIdioma} = useAppState();
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.Wir);
+        }else{
+            setData(es.Wir);
+        }
+    },[tipoIdioma]);
+
     return(
         <>
             
@@ -86,7 +100,8 @@ const WerWirSind=()=>{
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                        Wer Wir Sind 
+                        {/* Wer Wir Sind  */}
+                        {data.WerWirSind.title}
                     </h2>
                 </div>
                 </div>
@@ -97,19 +112,23 @@ const WerWirSind=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                    Wer Wir Sind
+                    {/* Wer Wir Sind */}
+                    {data.WerWirSind.title}
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im 
+                {data.WerWirSind.description}
+
+                {/* Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im 
                 Bereich Human Resources und Personalbeschaffung in Lima, Peru und Expertin für Öffentlichkeitsarbeit, 
                 nach Deutschland auswanderte. Fünfzehn Jahre zuvor hatte sie Europa bereist, wo sie die Arbeitsmarktbedürfnisse
                  ihres Herkunftslandes und die dort vorhandene hochqualifizierte Arbeitskraft evaluiert und analysiert hatte, 
-                 mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie sich schließlich niederlassen würde.
+                 mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie sich schließlich niederlassen würde. */}
                 </p>
-                <h2 className="text-gray-700 text-start text-xl font-semibold w-full pb-1">Wir sind anders</h2>
+                <h2 className="text-gray-700 text-start text-xl font-semibold w-full pb-1">{data.WerWirSind.description2}</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                Zunächst einmal, weil wir Fragen stellen. Wir fordern. Wir mischen uns ein. Wir beraten. Wir sind ehrlich und reden nicht um 
-                den heißen Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache.
+                {/* Zunächst einmal, weil wir Fragen stellen. Wir fordern. Wir mischen uns ein. Wir beraten. Wir sind ehrlich und reden nicht um 
+                den heißen Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache. */}
+                        {data.WerWirSind.description3}
                 </p>
             </div>
 {/* 
@@ -151,12 +170,12 @@ const WerWirSind=()=>{
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">
                 <div className="w-full text-center p-4">
-                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
                     <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     onClick={handleClickSeleccionReclutamiento}
                     >
-                    Kontaktaufnahme
+                    {data.homeInfo3}
                     </button>
                 </div>
                 </div>

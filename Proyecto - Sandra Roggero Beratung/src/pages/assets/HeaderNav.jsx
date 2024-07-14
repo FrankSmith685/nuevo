@@ -124,7 +124,11 @@ const HeaderNav = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setMenuData(de.menu2);
-        }else{
+        }
+        // else if(tipoIdioma==='en'){
+        //     setMenuData(en.menu2);
+        // }
+        else{
             setMenuData(es.menu2);
         }
     },[tipoIdioma]);
@@ -135,6 +139,10 @@ const HeaderNav = () => {
 
     const handleClickIdiomaEs=()=>{
         setTipoIdioma('es');
+    }
+
+    const handleClickIdiomaEn=()=>{
+        setTipoIdioma('en');
     }
 
     return (
@@ -237,6 +245,29 @@ const HeaderNav = () => {
                             title="ES"
                         />
                         ES
+                    </p>
+                    <div
+                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                            isNavHovered ? 'bg-gray-500' : 'bg-white'
+                        }`}
+                    ></div>
+                    <p
+                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                            tipoIdioma === 'en' ? 'font-medium' : 'font-light '
+                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                        onClick={handleClickIdiomaEn}
+                    >
+                         <ReactCountryFlag
+        countryCode="GB"  // Cambio de "EN" a "GB"
+        svg
+        style={{
+            width: '20px',
+            height: '20px',
+            marginRight: '0.5rem',
+        }}
+        title="EN"
+    />
+                        EN
                     </p>
                 </>
             )}
@@ -386,6 +417,30 @@ const HeaderNav = () => {
                         />
                         ES
                     </p>
+                    <div
+                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                            isNavHovered ? 'bg-gray-500' : 'bg-white'
+                        }`}
+                    ></div>
+                    <p
+    className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+        tipoIdioma === 'en' ? 'font-medium' : 'font-light '
+    } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+    onClick={handleClickIdiomaEn}
+>
+<ReactCountryFlag
+        countryCode="GB"  // Cambio de "EN" a "GB"
+        svg
+        style={{
+            width: '20px',
+            height: '20px',
+            marginRight: '0.5rem',
+        }}
+        title="EN"
+    />
+    EN
+</p>
+
                 </>
             )}
                                     </div>

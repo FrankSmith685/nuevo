@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
 import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
 import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
+import { useAppState } from "../../hooks/useAppState";
+import de from "../../languaje/de";
+import es from "../../languaje/es";
 
 // const images = [imagen8, imagen9];
 const images = ["v1720648648/yazfttcufijofwthhes8.jpg", "v1720652893/zwpk88oskknftyafqm5u.jpg"];
@@ -38,6 +41,17 @@ const VisumSprache = () => {
         return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
     };
 
+    const [data,setData] = useState(de.MeineDienstleistungen);
+    const {tipoIdioma} = useAppState();
+
+    useEffect(()=>{
+        if(tipoIdioma==='de'){
+            setData(de.MeineDienstleistungen);
+        }else{
+            setData(es.MeineDienstleistungen);
+        }
+    },[tipoIdioma]);
+
     return (
         <>
             <div className="w-full h-screen bg-bg_favorite_1 relative">
@@ -50,7 +64,7 @@ const VisumSprache = () => {
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                     <div className="w-full md:w-3/5 h-auto">
                         <h2 className="text-white font-bold text-2xl sm:text-4xl md:text-5xl font-bell text-center md:text-end px-2">
-                            Visum - Sprache
+                        {data.VisumSprache.title}
                         </h2>
                     </div>
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
@@ -70,41 +84,32 @@ const VisumSprache = () => {
                         Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                     </span>
                     {' > '}
-                        Visum - Sprache
+                    {data.VisumSprache.title}
 
                 </p>
                 <div className="text-gray-700 text-start w-full">
-                    <h2 className="font-medium">Visum</h2>
+                    <h2 className="font-medium">{data.VisumSprache.description}</h2>
                     <p className="pb-1">
-                    Die Visumbeantragung eines Arbeits- oder Studiengangs für Deutschland ist eines der wichtigsten Verfahren, wenn Sie Ihre Integration in dem 
-                    deutschsprachigen Land beginnen möchten. Deutschland ist eine der größten Wirtschaftsmächte in Europa. Es bietet sehr gute Gehaltsmöglichkeiten
-                     und ist zu einer ausgezeichneten Option für diejenigen geworden, die entschlossen sind, ihren Lebensweg zu ändern. Wenn Sie sich in diesem 
-                     Land richtig etablieren wollen, müssen Sie jedoch die Dinge richtig machen. Es ist wichtig, dass Sie alle Informationen über die zu 
-                     erledigenden Unterlagen zur Hand haben. Zählen Sie auf uns!
+                    {data.VisumSprache.description2}
                     </p>
 
-                    <h2 className="font-medium">Sprache</h2>
+                    <h2 className="font-medium">{data.VisumSprache.description3}</h2>
                     <p className="pb-1">
-                    Unsere Partnerschulen befinden sich in den schönsten und interessantesten Städten Deutschlands, die reich an Kultur und Geschichte sind.
-                     Ihre Deutschkurse werden Sie ermutigen und motivieren, die Sprache mit Leichtigkeit zu lernen und gleichzeitig diese Kultur intensiv zu
-                      erleben. Wir werden Ihnen zur Seite stehen je nach Ihrem Zeitplan und Ihrer Verfügbarkeit.
+                    {data.VisumSprache.description4}
                     </p>
                 </div>
             </div>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
-                {/* <div className="w-full sm:w-1/3 h-auto">
-                    <img src={imagenInfo6} alt="NOT FOUND" className="w-full h-full object-cover" />
-                </div> */}
                 <div className="w-full flex justify-center items-center">
-                    <div className="w-full text-center p-4">
-                        <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">MÖCHTEN SIE WEITERE INFORMATIONEN?</h2>
-                        <button
-                            className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
-                            onClick={handleClickSeleccionReclutamiento}
-                        >
-                            Kontaktaufnahme
-                        </button>
-                    </div>
+                <div className="w-full text-center p-4">
+                    <h2 className="font-semibold text-gray-800 my-2 text-2xl md:text-3xl">{data.homeInfo2}</h2>
+                    <button
+                    className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                    onClick={handleClickSeleccionReclutamiento}
+                    >
+                    {data.homeInfo3}
+                    </button>
+                </div>
                 </div>
             </div>
         </>

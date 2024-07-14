@@ -22,7 +22,7 @@ const es = {
             { path: "/nosotros/nuestra-filosofia", label: "Nuestra Filosofía" },
         ]},
         { id:3, path: "/mis-servicios", label: "Mis Servicios", subTema: "Ofrecemos servicios para su desarrollo académico, profesional y personal, incluyendo estudios, trabajo, vivienda, transporte, visados e idiomas.", subItems: [
-            { path: "/mis-servicios/estudios-formacion-practicas", label: "Estudios - Formación - Prácticas" },
+            { path: "/mis-servicios/estudio-formacion-practicas", label: "Estudios - Formación - Prácticas" },
             { path: "/mis-servicios/trabajo-impuestos", label: "Trabajo - Impuestos" },
             { path: "/mis-servicios/vivienda-transporte", label: "Vivienda - Transporte" },
             { path: "/mis-servicios/visado-idioma", label: "Visado - Idioma" },
@@ -133,8 +133,121 @@ const es = {
         },
         homeInfo2:"¿QUIERE MÁS INFORMACIÓN?",
         homeInfo3:"Contactar"
+    },
+    Kandidaten:{
+        RegistrierenSieIhrenLebenslauf:{
+            title:"Registre su currículum",
+            description:"Le ayudamos a escribir el próximo capítulo de su carrera. ¡Cuéntenos su historia!",
+            email:"Correo electrónico",
+            file1:"Arrastre su currículum aquí o haga clic para seleccionar un archivo",
+            file2:"(Solo archivos PDF o Word)",
+            message:"Mensaje (Opcional)",
+            message2:"Su mensaje aquí...",
+            senden:"Enviar"
+        },
+        InternationalesKarrieremanagement:{
+            title:"Gestión de Carrera Internacional",
+            description1:"Su carrera no tiene límites",
+            description2:"¿Listo para el próximo paso? ¡Alemania te espera!",
+            description3:"Si su objetivo es impulsar su trayectoria profesional en Alemania, nuestro equipo especializado en asesoría de carrera internacional está a su disposición para llevar su talento muy lejos.",
+            description4:"En Sandra Roggero M. Beratung miramos más allá de su currículum, valoramos la historia única que puede aportar a las empresas alemanas. Le escucharemos y sabremos reconocer las cualidades que le distinguen y las características que pueden hacerle destacar.",
+            description5:"Debido a nuestro activo compromiso internacional y la constante colaboración con empresas, podemos conectarle con empresas que desean enriquecer sus equipos con perfiles diversos y las habilidades únicas de profesionales con experiencia internacional.",
+            info1:"Ventajas de trabajar en el extranjero",
+            beneficios:[
+                "Añade un valor único al currículum",
+                "Amplía su red profesional",
+                "Domina nuevos idiomas",
+                "Mejora habilidades sociales",
+                "Se adapta rápidamente",
+                "Fomenta habilidades de liderazgo",
+                "Explora nuevas culturas",
+                "Adopta métodos de trabajo innovadores"
+            ],
+            description6:"¿Listo para dar el paso?",
+            description7:"Envíenos su currículum y sus expectativas profesionales a",
+            description8:"y uno de nuestros expertos en gestión de carrera internacional se pondrá en contacto con usted.",
+            description9:"Envíe su currículum"
+        }
+        
+    },
+    Wir:{
+        WerWirSind:{
+            title:"Quiénes Somos",
+            description:"Nuestra historia comienza en el año 2014, cuando Sandra Roggero Manrique, nacida en Perú, altamente especializada en Recursos Humanos y Reclutamiento de Personal en Lima, Perú y experta en Relaciones Públicas, emigró a Alemania. Quince años antes, había viajado por Europa, donde evaluó y analizó las necesidades del mercado laboral de su país de origen y la mano de obra altamente calificada existente, con la visión de que también se necesitarían en Alemania, donde finalmente se establecería.",
+            description2:"Somos diferentes",
+            description3:"En primer lugar, porque hacemos preguntas. Exigimos. Nos involucramos. Asesoramos. Somos honestos y no andamos con rodeos. Invertimos nuestro tiempo y dedicación. Estamos comprometidos con corazón y pasión.",
+        },
+        UnserePhilosophie:{
+            title:"Nuestra Filosofía",
+            description:"Impulsamos las historias únicas de nuestros candidatos y clientes. Nuestra capacidad para comprender lo que realmente necesita nos permite desarrollar y compartir historias cautivadoras que marcan la diferencia. Las historias son importantes, porque cuando compartimos nuestros planes, experiencias y ambiciones, se nos abre un mundo de posibilidades. Al escucharle, podemos construir relaciones a largo plazo basadas en la confianza y la empatía. En Perú y Alemania, nuestro pequeño equipo está compuesto por asesores especializados, personas talentosas con una perspectiva global experta. Y a través del intercambio de historias entre nosotros, fomentamos el trabajo en equipo, del cual estamos convencidos que conduce al éxito, no solo para nosotros, sino también para nuestros candidatos y clientes en todo el mundo. Gracias a las historias de las personas, somos capaces de mirar más allá del currículum o la descripción del puesto y encontrar la característica única que hace que la coincidencia entre una empresa y un equipo o un candidato sea excepcional. Somos capaces de apoyar a las empresas en la búsqueda de los talentos que les ayuden a alcanzar todos sus objetivos, ahora y en el futuro. Por supuesto, también somos capaces de ayudar a las personas a definir el próximo capítulo de su carrera que les permita cumplir todas sus ambiciones. Las mayores oportunidades comienzan con una historia. Cuéntenos la suya.",
+        },
+        homeInfo2:"¿DESEA MÁS INFORMACIÓN?",
+        homeInfo3:"Contactar",
+    },
+    MeineDienstleistungen:{
+        StudiumAusbildungPraktikum:{
+            title:"Estudio - Formación - Prácticas",
+            description:"Estudio",
+            description2:"Aquí le damos una pequeña visión general de las ventajas que tiene estudiar en Alemania, especialmente para los estudiantes internacionales. Reputación internacional de la enseñanza e investigación... Variedad de la oferta académica... Bajas tasas de matrícula y costos reducidos... Programas de apoyo y la posibilidad de trabajar. Experimentará el día a día laboral de primera mano. Así sabrá qué tareas le esperan.",
+            description3:"Formación",
+            description4:"¿Qué ventajas tiene después de la formación?",
+            description5:"Una formación es práctica. Puede aplicar directamente lo aprendido y ver lo que ha logrado. Puede asumir responsabilidades temprano, pero no estará solo: La colaboración en la empresa es esencial. Una formación también es lucrativa, ya que desde el primer día tendrá su propio ingreso. Seguro para el futuro. Prometedor.",
+            description6:"Prácticas",
+            description7:"¡Esto le aporta una práctica en Alemania!",
+            description8:"Podrá evaluar mejor si una profesión o un sector se ajusta a sus intereses y fortalezas. Puede incluir sus prácticas en su currículum. Esto puede darle una ventaja en futuras solicitudes de empleo. Su empresa de prácticas lo conocerá. Esto puede ayudarle en una futura solicitud, por ejemplo, para un puesto de estudiante trabajador o para una formación. Quizás incluso le ofrezcan un puesto de formación.",
+        },
+        ArbeitSteuern:{
+            title:"Trabajo - Impuestos",
+            description:"Trabajo",
+            description2:"Las principales ventajas del trabajo en Alemania son:",
+            description3:"El rápido crecimiento económico y las numerosas oportunidades de empleo en los sectores de TI, tecnología e industria. En comparación con otros países, Alemania ofrece salarios y sueldos justos. Y el gobierno alemán se esfuerza continuamente por atraer a trabajadores extranjeros.",
+            description4:"Impuestos",
+            description5:"En Alemania hay diferentes tipos de impuestos, como el impuesto sobre la renta, el impuesto de actividades económicas y el impuesto sobre el valor añadido. Son las principales fuentes de ingresos del Estado, con las que financia gastos para el bienestar común, como la seguridad social, la educación, la atención sanitaria o la infraestructura de transporte. El sistema fiscal alemán se basa en la capacidad económica del contribuyente, la transparencia y la justicia.",
+        },
+        WohnenBeförderung:{
+            title:"Vivienda - Transporte",
+            description0:"Vivienda",
+            description:"Alemania es uno de los mejores países para vivir. Alemania se caracteriza por su multiculturalidad y tiene un gran número de inmigrantes de todo el mundo. Esto lo ha convertido en uno de los destinos más populares para las personas que quieren empezar una nueva vida.",
+            description2:"Transporte",
+            description3:"En Alemania se puede viajar a muchos destinos en tren, pero también en tranvía o autobús. El tren, el metro, el tren suburbano, el tranvía y el autobús son los diferentes medios de transporte público de larga y corta distancia.",
+        },
+        VisumSprache:{
+            title:"Visado - Idioma",
+            description:"Visado",
+            description2:"La solicitud de un visado de trabajo o de estudios para Alemania es uno de los procedimientos más importantes si desea comenzar su integración en el país de habla alemana. Alemania es una de las mayores potencias económicas de Europa. Ofrece muy buenas oportunidades salariales y se ha convertido en una excelente opción para quienes están decididos a cambiar su vida. Sin embargo, si desea establecerse correctamente en este país, debe hacer las cosas bien. Es importante que tenga toda la información sobre los documentos necesarios. ¡Cuente con nosotros!",
+            description3:"Idioma",
+            description4:"Nuestras escuelas asociadas están situadas en las ciudades más hermosas e interesantes de Alemania, ricas en cultura e historia. Sus cursos de alemán le animarán y motivarán a aprender el idioma con facilidad y, al mismo tiempo, a experimentar intensamente esta cultura. Estaremos a su lado según su horario y disponibilidad.",
+        },
+        homeInfo2:"¿DESEA MÁS INFORMACIÓN?",
+        homeInfo3:"Contactar",
+    },
+    Kontakt:{
+        title:"Contacto",
+        option1:"SOY UNA EMPRESA",
+        option2:"SOY UN SOLICITANTE",
+        nombre:"Nombre",
+        apellido:"Apellido",
+        telefono:"Teléfono",
+        empresa:"Empresa",
+        stadt:"Ciudad",
+        position:"Posición",
+        email:"Correo electrónico",
+        mensaje:"Mensaje (opcional)",
+        mensaje2:"mensaje",
+        archivo1:"Arrastre su currículum aquí o haga clic para seleccionar un archivo",
+        archivo2:" (Solo archivos PDF o Word)",
+        firma1:"Acepto la",
+        firma2:"política de privacidad",
+        firma2Link:"/política-de-privacidad",
+        firma3:"aceptoPolíticaDePrivacidad",
+        firma4:"Acepto los ",
+        firma5:"Derechos de Usuario",
+        firma5Link:"/derechos-de-usuario",
+        firma6:"Acepto los",
+        firma7:"Derechos de Usuario",
+        senden:"Enviar"
     }
-    
+
 }
 
 export default es;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import {
@@ -18,6 +18,9 @@ import {
 } from '@mui/material';
 import { CloudUpload, CloudUploadOutlined, Delete, DeleteOutline } from '@mui/icons-material';
 import bannerPrincipal from "../../assets/imagenes/home/imagen15.jpg";
+import de from '../../languaje/de';
+import { useAppState } from '../../hooks/useAppState';
+import es from '../../languaje/es';
 
 const Kontakt = () => {
   const navigate = useNavigate();
@@ -78,7 +81,19 @@ const optimizedImageURL = (url) => {
     return `${cloudinaryBaseURL}c_scale,w_2000/${url}`;
 };
 
-// https://res.cloudinary.com/dievolijo/image/upload/v1720048164/r5phhfvrwr57yofnqlsu.jpg
+
+
+const [data,setData] = useState(de.Kontakt);
+const {tipoIdioma} = useAppState();
+
+useEffect(()=>{
+    if(tipoIdioma==='de'){
+        setData(de.Kontakt);
+    }else{
+        setData(es.Kontakt);
+    }
+},[tipoIdioma]);
+
 
   return (
     <>
@@ -91,7 +106,7 @@ const optimizedImageURL = (url) => {
         <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
           <div className="w-full md:w-1/2 h-auto">
               <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                Kontakt 
+                {data.title} 
               </h2>
           </div>
         </div>
@@ -103,20 +118,20 @@ const optimizedImageURL = (url) => {
                 Sandra Roggero <span className="text-gray-500 font-medium text-xs">Beratung</span>
             </span>
             {' > '}
-            Kontakt
+            {data.title}
         </p>
         <div className="flex justify-center py-4">
             <button
                 onClick={() => setFormType('firma')}
                 className={`px-4 py-2 font-bold ${formType === 'firma' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-700'} rounded-l`}
             >
-                ICH BIN EIN UNTERNEHMEN
+                {data.option1} 
             </button>
             <button
                 onClick={() => setFormType('bewerber')}
                 className={`px-4 py-2 font-bold ${formType === 'bewerber' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-700'} rounded-r`}
             >
-                ICH BIN EIN BEWERBER
+                {data.option2} 
             </button>
         </div>
         <div className="w-full maxlg mx-w--auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
@@ -124,7 +139,7 @@ const optimizedImageURL = (url) => {
             <form onSubmit={handleSubmit} className="grid grid-cols-2  gap-4 ">
               {/* grid grid-cols-1 sm:grid-cols-2 gap-4 */}
                 <div className="w-full col-span-2 sm:col-span-1">
-                    <label className="block mb-2 text-sm text-gray-600" htmlFor="vorname">Vorname</label>
+                    <label className="block mb-2 text-sm text-gray-600" htmlFor="vorname">{data.nombre}</label>
                     <input
                         type="text"
                         id="vorname"
@@ -136,7 +151,7 @@ const optimizedImageURL = (url) => {
                     />
                 </div>
                 <div className="w-full col-span-2 sm:col-span-1">
-                    <label className="block mb-2 text-sm text-gray-600" htmlFor="nachname">Nachname</label>
+                    <label className="block mb-2 text-sm text-gray-600" htmlFor="nachname">{data.apellido}</label>
                     <input
                         type="text"
                         id="nachname"
@@ -148,7 +163,7 @@ const optimizedImageURL = (url) => {
                     />
                 </div>
                 <div className="w-full col-span-2 sm:col-span-1">
-                    <label className="block mb-2 text-sm text-gray-600" htmlFor="telefon">Telefon</label>
+                    <label className="block mb-2 text-sm text-gray-600" htmlFor="telefon">{data.telefono}</label>
                     <input
                         type="tel"
                         id="telefon"
@@ -162,7 +177,7 @@ const optimizedImageURL = (url) => {
                 {formType === 'firma' && (
                     <>
                         <div className="w-full col-span-2 sm:col-span-1">
-                            <label className="block mb-2 text-sm text-gray-600" htmlFor="firma">Firma</label>
+                            <label className="block mb-2 text-sm text-gray-600" htmlFor="firma">{data.empresa}</label>
                             <input
                                 type="text"
                                 id="firma"
@@ -174,7 +189,7 @@ const optimizedImageURL = (url) => {
                             />
                         </div>
                         <div className="w-full col-span-2 sm:col-span-1">
-                            <label className="block mb-2 text-sm text-gray-600" htmlFor="stadt">Stadt</label>
+                            <label className="block mb-2 text-sm text-gray-600" htmlFor="stadt">{data.stadt}</label>
                             <input
                                 type="text"
                                 id="stadt"
@@ -186,7 +201,7 @@ const optimizedImageURL = (url) => {
                             />
                         </div>
                         <div className="w-full col-span-2 sm:col-span-1">
-                            <label className="block mb-2 text-sm text-gray-600" htmlFor="position">Position</label>
+                            <label className="block mb-2 text-sm text-gray-600" htmlFor="position">{data.position}</label>
                             <input
                                 type="text"
                                 id="position"
@@ -200,7 +215,7 @@ const optimizedImageURL = (url) => {
                     </>
                 )}
                 <div className="col-span-2">
-                    <label className="block mb-2 text-sm text-gray-600" htmlFor="email">Email</label>
+                    <label className="block mb-2 text-sm text-gray-600" htmlFor="email">{data.email}</label>
                     <input
                         type="email"
                         id="email"
@@ -212,7 +227,7 @@ const optimizedImageURL = (url) => {
                     />
                 </div>
                 <div className="col-span-2">
-                    <label className="block mb-2 text-sm text-gray-600" htmlFor="nachricht">Nachricht (optional)</label>
+                    <label className="block mb-2 text-sm text-gray-600" htmlFor="nachricht">{data.mensaje}</label>
                     <textarea
                         id="nachricht"
                         name="nachricht"
@@ -250,10 +265,12 @@ const optimizedImageURL = (url) => {
                           <input {...getInputProps()} />
                           <CloudUpload style={{ fontSize: '2rem', color: '#ccc' }} />
                               <p className="text-base mt-2">
-                                  Ziehen Sie Ihren Lebenslauf hierher oder klicken Sie, um eine Datei auszuwählen
+                                {data.archivo1}
+                                  {/* Ziehen Sie Ihren Lebenslauf hierher oder klicken Sie, um eine Datei auszuwählen */}
                               </p>
                               <p className="text-sm mt-2">
-                                  (Nur PDF- oder Word-Dateien)
+                                {data.archivo2}
+                                  {/* (Nur PDF- oder Word-Dateien) */}
                               </p>
                       </Box>
                       {formValues.cv && (
@@ -280,8 +297,9 @@ const optimizedImageURL = (url) => {
                                 onChange={handleChange}
                                 className="form-checkbox h-4 w-4 mr-2"
                             />
-                            Ich akzeptiere die
-                            <Link to="/datenschutzrichtlinie" className="font-normal text-gray-to-blue-600">datenschutzrichtlinie</Link>
+                            {data.firma1}
+                            {/* Ich akzeptiere die */}
+                            <Link to={data.firma2Link} className="font-normal text-gray-to-blue-600">{data.firma2}</Link>
                             
                         </label>
                     )}
@@ -297,13 +315,15 @@ const optimizedImageURL = (url) => {
                         {/* {formType === 'firma' ? "Ich akzeptiere die Datenschutzrichtlinie und das Impressum." : "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie."} */}
                         {formType === 'firma' ? (
                                 <>
-                                    Ich akzeptiere die 
-                                    <Link to="/benutzerrechte" className="font-normal ml-1 text-gray-to-blue-600">Benutzerrechte</Link>.
+                                {data.firma4}
+                                    {/* Ich akzeptiere die  */}
+                                    <Link to={data.firma5Link} className="font-normal ml-1 text-gray-to-blue-600">{data.firma5}</Link>.
                                 </>
                             ) : (
                                 <>
-                                    Ich akzeptiere die
-                                    <Link to="/benutzerrechte" className="font-normal ml-1 text-gray-to-blue-600">Benutzerrechte</Link> 
+                                    {/* Ich akzeptiere die */}
+                                    {data.firma6}
+                                    <Link to={data.firma5Link} className="font-normal ml-1 text-gray-to-blue-600">{data.firma7}</Link> 
                                 </>
                         )}
                     </label>
@@ -313,7 +333,7 @@ const optimizedImageURL = (url) => {
                         type="submit"
                         className="w-full md:w-1/3 py-2 bg-gray-800 text-white font-bold rounded transition duration-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
                     >
-                        Senden
+                        {data.senden}
                     </button>
                 </div>
             </form>
