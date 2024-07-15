@@ -17,6 +17,7 @@ import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import de from "../../languaje/de";
 import { useAppState } from "../../hooks/useAppState";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const UnserePhilosophie=()=>{
     const navigate = useNavigate();
@@ -82,6 +83,8 @@ const UnserePhilosophie=()=>{
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Wir);
+        }else if(tipoIdioma==='en'){
+            setData(en.Wir);
         }else{
             setData(es.Wir);
         }

@@ -4,6 +4,7 @@ import {FaAngleRight,FaAngleLeft} from 'react-icons/fa'
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 // import logoPrincipal from "../../assets/imagenes/logoPrincipal.png";
 
 const Footer = () => {
@@ -25,7 +26,11 @@ const Footer = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
           setHomeData(de.footer);
-        }else{
+        }
+        else if(tipoIdioma==='en'){
+            setHomeData(en.footer);
+        }
+        else{
           setHomeData(es.footer);
         }
     },[tipoIdioma]);

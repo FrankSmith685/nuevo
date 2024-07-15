@@ -7,6 +7,7 @@ import { useAppState } from '../../hooks/useAppState';
 import es from '../../languaje/es';
 import { FiFlag } from 'react-icons/fi';
 import ReactCountryFlag from 'react-country-flag';
+import en from '../../languaje/en';
 
 const HeaderNav = () => {
     const {tipoIdioma,setTipoIdioma} = useAppState();
@@ -125,9 +126,9 @@ const HeaderNav = () => {
         if(tipoIdioma==='de'){
             setMenuData(de.menu2);
         }
-        // else if(tipoIdioma==='en'){
-        //     setMenuData(en.menu2);
-        // }
+        else if(tipoIdioma==='en'){
+            setMenuData(en.menu2);
+        }
         else{
             setMenuData(es.menu2);
         }

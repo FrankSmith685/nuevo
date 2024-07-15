@@ -17,6 +17,7 @@ import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const International=()=>{
   const {imagenesPreloader,tipoIdioma } = useAppState();
@@ -83,6 +84,8 @@ const International=()=>{
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Unternehmen);
+        }else if(tipoIdioma==='en'){
+            setData(en.Unternehmen);
         }else{
             setData(es.Unternehmen);
         }

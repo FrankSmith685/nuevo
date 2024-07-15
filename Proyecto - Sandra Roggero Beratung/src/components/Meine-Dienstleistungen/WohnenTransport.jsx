@@ -6,6 +6,7 @@ import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 // const images = [imagen6, imagen7];
 const images = ["v1720616614/cebiafyysmleabgeofvi.jpg","v1720622228/omcgfbrslqda69acfxr0.jpg"];
@@ -46,6 +47,8 @@ const WohnenTransport = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.MeineDienstleistungen);
+        }else if(tipoIdioma==='en'){
+            setData(en.MeineDienstleistungen);
         }else{
             setData(es.MeineDienstleistungen);
         }

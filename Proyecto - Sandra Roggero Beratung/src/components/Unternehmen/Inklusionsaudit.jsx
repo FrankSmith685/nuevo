@@ -17,6 +17,7 @@ import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const Inklusionsaudit=()=>{
     const navigate = useNavigate();
@@ -84,6 +85,8 @@ const Inklusionsaudit=()=>{
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Unternehmen);
+        }else if(tipoIdioma==='en'){
+            setData(en.Unternehmen);
         }else{
             setData(es.Unternehmen);
         }

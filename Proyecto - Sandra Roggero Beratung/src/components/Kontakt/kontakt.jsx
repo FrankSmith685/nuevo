@@ -21,6 +21,7 @@ import bannerPrincipal from "../../assets/imagenes/home/imagen15.jpg";
 import de from '../../languaje/de';
 import { useAppState } from '../../hooks/useAppState';
 import es from '../../languaje/es';
+import en from '../../languaje/en';
 
 const Kontakt = () => {
   const navigate = useNavigate();
@@ -89,6 +90,8 @@ const {tipoIdioma} = useAppState();
 useEffect(()=>{
     if(tipoIdioma==='de'){
         setData(de.Kontakt);
+    }else if(tipoIdioma==='en'){
+        setData(en.Kontakt);
     }else{
         setData(es.Kontakt);
     }

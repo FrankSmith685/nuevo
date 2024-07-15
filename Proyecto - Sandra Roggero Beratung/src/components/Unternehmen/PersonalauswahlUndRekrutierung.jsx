@@ -12,6 +12,7 @@ import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const PersonalauswahlUndRekrutierung = () => {
   const {imagenesPreloader,tipoIdioma } = useAppState();
@@ -53,6 +54,8 @@ const PersonalauswahlUndRekrutierung = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Unternehmen);
+        }else if(tipoIdioma==='en'){
+            setData(en.Unternehmen);
         }else{
             setData(es.Unternehmen);
         }

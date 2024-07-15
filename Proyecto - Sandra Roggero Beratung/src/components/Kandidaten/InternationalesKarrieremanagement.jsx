@@ -6,6 +6,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import { useAppState } from "../../hooks/useAppState";
+import en from "../../languaje/en";
 
 const InternationalesKarrieremanagement=()=>{
     const navigate = useNavigate();
@@ -41,6 +42,8 @@ const InternationalesKarrieremanagement=()=>{
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Kandidaten);
+        }else if(tipoIdioma==='en'){
+            setData(en.Kandidaten);
         }else{
             setData(es.Kandidaten);
         }

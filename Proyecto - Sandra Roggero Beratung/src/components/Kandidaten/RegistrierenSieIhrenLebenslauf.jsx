@@ -7,6 +7,7 @@ import { useDropzone } from 'react-dropzone';
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const RegistrierenSieIhrenLebenslauf = () => {
   const {imagenesPreloader,tipoIdioma } = useAppState();
@@ -53,6 +54,8 @@ const RegistrierenSieIhrenLebenslauf = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Kandidaten);
+        }else if(tipoIdioma==='en'){
+            setData(en.Kandidaten);
         }else{
             setData(es.Kandidaten);
         }

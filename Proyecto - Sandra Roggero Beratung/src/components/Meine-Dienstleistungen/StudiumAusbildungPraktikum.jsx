@@ -7,6 +7,7 @@ import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 
 
@@ -52,6 +53,8 @@ const StudiumAusbildungPraktikum = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.MeineDienstleistungen);
+        }else if(tipoIdioma==='en'){
+            setData(en.MeineDienstleistungen);
         }else{
             setData(es.MeineDienstleistungen);
         }

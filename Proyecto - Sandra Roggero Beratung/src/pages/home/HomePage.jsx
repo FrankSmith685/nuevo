@@ -123,6 +123,7 @@ import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import MeineDienstleistungen from "../assets/MeineDienstleistungen";
+import en from "../../languaje/en";
 
 const HomePage = () => {
   const {  videosPreloader,tipoIdioma } = useAppState();
@@ -139,7 +140,10 @@ const HomePage = () => {
     useEffect(()=>{
         if(tipoIdioma==='de'){
           setHomeData(de.home);
-        }else{
+        }
+        else if(tipoIdioma==='en'){
+          setHomeData(en.home);
+      }else{
           setHomeData(es.home);
         }
     },[tipoIdioma]);

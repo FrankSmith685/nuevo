@@ -17,6 +17,7 @@ import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
+import en from "../../languaje/en";
 
 const WerWirSind=()=>{
     const navigate = useNavigate();
@@ -83,6 +84,8 @@ const WerWirSind=()=>{
     useEffect(()=>{
         if(tipoIdioma==='de'){
             setData(de.Wir);
+        }else if(tipoIdioma==='en'){
+            setData(en.Wir);
         }else{
             setData(es.Wir);
         }
