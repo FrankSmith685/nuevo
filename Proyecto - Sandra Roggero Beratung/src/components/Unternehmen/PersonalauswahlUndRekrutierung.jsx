@@ -1,13 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import bannerPrincipal from "../../assets/imagenes/home/imagen1.jpg";
-// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import de from "../../languaje/de";
@@ -15,7 +7,7 @@ import es from "../../languaje/es";
 import en from "../../languaje/en";
 
 const PersonalauswahlUndRekrutierung = () => {
-  const {imagenesPreloader,tipoIdioma } = useAppState();
+  const {tipoIdioma } = useAppState();
 
     const navigate = useNavigate();
 
@@ -26,19 +18,6 @@ const PersonalauswahlUndRekrutierung = () => {
     const handleClickHome = () => {
         navigate("/");
     }
-
-
-    const services = [
-        {title:"STUDIUM"},
-        {title:"AUSBILDUNG"},
-        {title:"PARKTIKUM"},
-        {title:"ARBEIT"},
-        {title:"STEUERN"},
-        {title:"WOHNEN"},
-        {title:"TRANSPORT"},
-        {title:"VISUM"},
-        {title:"SPRACHE"},
-    ];
 
     const handleClickSeleccionReclutamiento = () => {
         navigate("/kontakt");
@@ -68,7 +47,6 @@ const PersonalauswahlUndRekrutierung = () => {
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
                     src={optimizedImageURL("v1719433441/w0hfv4paxus96kbjo2pi.jpg")}
-                    // "https://res.cloudinary.com/dievolijo/image/upload/v1719433441/w0hfv4paxus96kbjo2pi.jpg" 
                     alt="NOT FOUND" 
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                     loading="lazy"
@@ -76,7 +54,6 @@ const PersonalauswahlUndRekrutierung = () => {
                 <div className="bg-bg_favorite_1 flex flex-col justify-center items-center md:items-end h-full z-20 relative space-y-4 p-4 pt-32 sm:pt-48 md:pt-64 sm:p-6 md:p-8">
                 <div className="w-full md:w-1/2 h-auto">
                     <h2 className="text-white font-bold text-2xl sm:text-4xl  md:text-5xl font-bell text-center md:text-end px-2">
-                    {/* Personalauswahl und Rekrutierung */}
                     {data.PersonalauswahlUndRekrutierung.title}
                     </h2>
                 </div>
@@ -88,18 +65,9 @@ const PersonalauswahlUndRekrutierung = () => {
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                {/* Personalauswahl und Rekrutierung */}
                 {data.PersonalauswahlUndRekrutierung.title}
                 </p>
                 <p className="text-gray-700 text-start w-full">
-                {/* Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handelt, 
-                indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt. 
-                Dabei nimmt Beratung und das Erkennen von Bedürfnissen einen hohen Stellenwert ein. Weiterhin begleiten und 
-                gewährleisten wir dank unseres eigenen Dienstes „Onboarding Selektion“ die bestmögliche Integration der Kandidaten 
-                in das Unternehmen. Wir sind Personalvermittler und Integrations Coaches. Der Onboarding-Prozess konzentriert sich 
-                nicht nur auf das Follow-up nach der Auswahl, sondern wir begleiten den Prozess von Anfang an, immer im Einklang mit
-                dem Auftrag und dem Ziel des Unternehmens. Jeder Auswahlprozess ist einzigartig, denn keine zwei Personen oder Unternehmen 
-                sind gleich. Es gibt eine Lösung für jedes Unternehmen, und wir von Sandra Roggero-Beratung wissen, wie man sie findet. */}
                     {data.PersonalauswahlUndRekrutierung.description}
                 </p>
             </div>

@@ -1,14 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import imagen8 from "../../assets/imagenes/MeineDienstleistungen/imagen8.jpg";
-import imagen9 from "../../assets/imagenes/MeineDienstleistungen/imagen9.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import en from "../../languaje/en";
 
-// const images = [imagen8, imagen9];
 const images = ["v1720648648/yazfttcufijofwthhes8.jpg", "v1720652893/zwpk88oskknftyafqm5u.jpg"];
 
 const VisumSprache = () => {

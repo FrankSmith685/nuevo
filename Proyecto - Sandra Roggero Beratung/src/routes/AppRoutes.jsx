@@ -311,7 +311,7 @@ export const AppRoutes = () => {
                       <Route path="/mis-servicios/estudio-formacion-practicas" element={<StudiumAusbildungPraktikum />} />
                       <Route path="/mis-servicios/trabajo-impuestos" element={<ArbeitSteuern />} />
                       <Route path="/mis-servicios/vivienda-transporte" element={<WohnenTransport />} />
-                      <Route path="/mis-servicios/visado-idioma" element={<VisumSprache />} />
+                      <Route path="/mis-servicios/visa-idioma" element={<VisumSprache />} />
                       <Route path="/contacto" element={<Kontakt />} />
                       <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
                       <Route path="/derechos-del-usuario" element={<Benutzerrechte />} />

@@ -1,9 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import imagen1 from "../../assets/imagenes/MeineDienstleistungen/imagen1.jpg";
-import imagen2 from "../../assets/imagenes/MeineDienstleistungen/imagen2.jpg";
-import imagen3 from "../../assets/imagenes/MeineDienstleistungen/imagen3.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
@@ -13,8 +9,6 @@ import en from "../../languaje/en";
 
 
 const StudiumAusbildungPraktikum = () => {
-    const {imagenesPreloader } = useAppState();
-    // const images = [imagen1, imagen2, imagen3];  
     const images = ["v1719434278/ocddglzj4wpc5lbidcve.jpg", "v1719434278/rru0wddozzlje8tv7wo7.jpg", "v1720047308/qhowjwv3jbywvh3fgqeb.jpg"];
 
     const navigate = useNavigate();

@@ -3,21 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import {
   Box,
-  Button,
-  FormControl,
-  FormControlLabel,
-  Checkbox,
-  TextField,
   Typography,
-  FormGroup,
-  Grid,
-  Paper,
-  Container,
   Avatar,
   IconButton
 } from '@mui/material';
-import { CloudUpload, CloudUploadOutlined, Delete, DeleteOutline } from '@mui/icons-material';
-import bannerPrincipal from "../../assets/imagenes/home/imagen15.jpg";
+import { CloudUpload, Delete } from '@mui/icons-material';
 import de from '../../languaje/de';
 import { useAppState } from '../../hooks/useAppState';
 import es from '../../languaje/es';
@@ -64,7 +54,6 @@ const Kontakt = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formValues);
   };
 
@@ -115,7 +104,6 @@ useEffect(()=>{
         </div>
       </div>
       <div className="container mx-auto w-11/12 md:w-3/5 pb-10">
-        {/* <Container> */}
         <p className="text-base text-gray-400 py-10">
             <span onClick={handleClickHome} className="hover:cursor-pointer text-gray-800 font-bold">
                 Sandra Roggero <span className="text-gray-500 font-medium text-xs">Beratung</span>
@@ -138,9 +126,7 @@ useEffect(()=>{
             </button>
         </div>
         <div className="w-full maxlg mx-w--auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
-          {/* p-4 md:p-8 bg-white rounded-lg shadow-lg */}
             <form onSubmit={handleSubmit} className="grid grid-cols-2  gap-4 ">
-              {/* grid grid-cols-1 sm:grid-cols-2 gap-4 */}
                 <div className="w-full col-span-2 sm:col-span-1">
                     <label className="block mb-2 text-sm text-gray-600" htmlFor="vorname">{data.nombre}</label>
                     <input
@@ -240,27 +226,6 @@ useEffect(()=>{
                         className="w-full px-3 py-2 border rounded-md focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
                     ></textarea>
                 </div>
-                
-                {/* {formType === 'bewerber' && (
-                    <div className="col-span-2">
-                        <div {...getRootProps()} className="border-2 border-dashed border-gray-300 rounded-md p-4 cursor-pointer hover:bg-gray-100">
-                            <input {...getInputProps()} />
-                            <CloudUploadOutlined className="h-6 w-6 text-gray-400 mb-2 mx-auto" />
-                            <p className="text-center text-gray-600">Ziehen Sie Ihren Lebenslauf hierher oder klicken Sie, um eine Datei auszuwählen (Nur PDF- oder Word-Dateien)</p>
-                        </div>
-                        {formValues.cv && (
-                            <div className="flex items-center justify-between mt-2">
-                                <Avatar className="bg-blue-500">
-                                    <CloudUploadOutlined className="h-6 w-6 text-white" />
-                                </Avatar>
-                                <p className="text-gray-700">{formValues.cv.name}</p>
-                                <IconButton onClick={handleRemoveCv}>
-                                    <DeleteOutline className="text-red-500" />
-                                </IconButton>
-                            </div>
-                        )}
-                    </div>
-                )} */}
                 {
                   formType === 'bewerber' && (
                     <div className="col-span-2 ">
@@ -269,11 +234,9 @@ useEffect(()=>{
                           <CloudUpload style={{ fontSize: '2rem', color: '#ccc' }} />
                               <p className="text-base mt-2">
                                 {data.archivo1}
-                                  {/* Ziehen Sie Ihren Lebenslauf hierher oder klicken Sie, um eine Datei auszuwählen */}
                               </p>
                               <p className="text-sm mt-2">
                                 {data.archivo2}
-                                  {/* (Nur PDF- oder Word-Dateien) */}
                               </p>
                       </Box>
                       {formValues.cv && (
@@ -301,7 +264,6 @@ useEffect(()=>{
                                 className="form-checkbox h-4 w-4 mr-2"
                             />
                             {data.firma1}
-                            {/* Ich akzeptiere die */}
                             <Link to={data.firma2Link} className="font-normal text-gray-to-blue-600">{data.firma2}</Link>
                             
                         </label>
@@ -315,16 +277,13 @@ useEffect(()=>{
                             required
                             className="form-checkbox h-4 w-4 mr-2"
                         />
-                        {/* {formType === 'firma' ? "Ich akzeptiere die Datenschutzrichtlinie und das Impressum." : "Ich habe die Datenschutzrichtlinie gelesen und akzeptiere sie."} */}
                         {formType === 'firma' ? (
                                 <>
                                 {data.firma4}
-                                    {/* Ich akzeptiere die  */}
                                     <Link to={data.firma5Link} className="font-normal ml-1 text-gray-to-blue-600">{data.firma5}</Link>.
                                 </>
                             ) : (
                                 <>
-                                    {/* Ich akzeptiere die */}
                                     {data.firma6}
                                     <Link to={data.firma5Link} className="font-normal ml-1 text-gray-to-blue-600">{data.firma7}</Link> 
                                 </>

@@ -1,15 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import imagen4 from "../../assets/imagenes/MeineDienstleistungen/imagen4.jpg";
-import imagen5 from "../../assets/imagenes/MeineDienstleistungen/imagen5.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import { useAppState } from "../../hooks/useAppState";
 import en from "../../languaje/en";
 
-// const images = [imagen4, imagen5];
-// const images = [null, null];
+
 const images = ["v1720047637/okxctjjmmdegr4ptljhn.jpg", "v1720047700/pqjjlckzyuvgt32bxkhk.jpg"];
 
 const ArbeitSteuern = () => {

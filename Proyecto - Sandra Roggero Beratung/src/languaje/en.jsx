@@ -22,9 +22,9 @@ const en = {
             { path: "/about-us/our-philosophy", label: "Our Philosophy" },
         ]},
         { id:3, path: "/my-services", label: "My Services", subTema: "We offer services for your academic, professional, and personal development, including studies, work, housing, transportation, visas, and languages.", subItems: [
-            { path: "/my-services/studies-training-internships", label: "Studies - Training - Internships" },
+            { path: "/my-services/study-training-internships", label: "Studies - Training - Internships" },
             { path: "/my-services/work-taxes", label: "Work - Taxes" },
-            { path: "/my-services/housing-transportation", label: "Housing - Transportation" },
+            { path: "/my-services/housing-transport", label: "Housing - Transportation" },
             { path: "/my-services/visa-language", label: "Visa - Language" },
         ]},
         { id:4, path: "/contact", label: "Contact" },
@@ -79,9 +79,9 @@ const en = {
             { link: "/privacy-policy", detail: "Privacy Policy" },
         ]},
         MeineDienstleistungen: { title: "My Services", links: [
-            { link: "/my-services/studies-training-internships", detail: "Studies - Training - Internships" },
+            { link: "/my-services/study-training-internships", detail: "Studies - Training - Internships" },
             { link: "/my-services/work-taxes", detail: "Work - Taxes" },
-            { link: "/my-services/housing-transportation", detail: "Housing - Transportation" },
+            { link: "/my-services/housing-transport", detail: "Housing - Transportation" },
             { link: "/my-services/visa-language", detail: "Visa - Language" },
         ]},
         Kontakt: { title: "Contact", links: [
@@ -243,7 +243,73 @@ const en = {
         "firma6": "I accept the",
         "firma7": "User Rights",
         "senden": "Send"
+    },
+    Benutzerrechte:{
+        title:"User Rights",
+        description1:"You have the right to request access to your data, as well as its correction or deletion. To exercise these rights, please contact us at:",
+        infos:{
+            info1:"Your Company Name:",
+            info2:"Address:",
+            info3:"Email Address:",
+            info4:"Phone:"
+        },
+        description2:"For more details, please see our full privacy policy on our website.",
+        tem1:"Legal Notice",
+        tem1info1:"1. General Information",
+        tem1info2:"These legal notices govern the use of the website [Name of the Website], which is owned by Sandra Roggero M. Beratung:",
+        infoContacts:{
+            info1:"Company Name:",
+            info2:"Address:",
+            info3:"Email:",
+            info4:"Phone:",
+            info5:"Legal Representative:",
+            info6:"Tax Identification Number:",
+        },
+        tema2info1:"2. Terms and Conditions of Use",
+        tema2info2:"By accessing and using this website, you agree to the terms and conditions outlined in this legal notice. If you do not agree with these terms, you must refrain from using the website.",
+        tema3info1:"3. Intellectual Property",
+        tema3info2:"All content on this website, including texts, graphics, logos, images, and software, is the property of Sandra Roggero M. Beratung or its licensors and is protected by copyright. Unauthorized reproduction, distribution, or alteration of these contents is prohibited.",
+        tema4info1:"4. Limitation of Liability",
+        tema4info2:"The information and services contained on this website, or available through it, may contain inaccuracies or typographical errors. Sandra Roggero M. Beratung does not guarantee the accuracy or reliability of the information contained on this website. Use of the website is at your own risk.",
+        tema5info1:"5. Links to Third Parties",
+        tema5info2:"This website may contain links to other websites operated by third parties. Sandra Roggero M. Beratung is not responsible for the content or privacy practices of these external sites. The inclusion of such links does not imply endorsement of the linked pages.",
+        tema6info1:"6. Data Protection",
+        tema6info2:"All personal data collected through this website will be treated in accordance with our privacy policy.",
+        tema7info1:"7. Changes to the Legal Notice",
+        tema7info2:"Sandra Roggero M. Beratung reserves the right to modify these notices at any time. Changes will take effect upon publication on the website. We recommend that you regularly review these legal notices to stay informed of any changes.",
+        tema8info1:"8. Applicable Law and Jurisdiction",
+        tema8info2:"This legal notice is governed by German law. For all disputes arising in connection with this website, the courts of [City/Region] shall have exclusive jurisdiction.",
+        tema9info1:"9. Contact",
+        tema9infos:{
+            info1:"Your Company Name:",
+            info2:"Address:",
+            info3:"Email Address:",
+            info4:"Phone:"
+        }
+    },
+
+    Datenschutzrichtlinie:{
+        title:"Privacy Policy",
+        description1:"At Sandra Roggero M. Beratung, we are committed to protecting your privacy. When you submit your resume and personal data through our form, the information is sent directly to a specific email address and is not stored in a database.",
+        infos1:{
+            title:"Data Collected",
+            info1:"Name",
+            info2:"Your Email Address",
+            info3:"Phone Number",
+            info4:"Resume and Professional Background Details"
+        },
+        infos2:{
+            title:"Use of Data",
+            description1:"We use your personal data for the following purposes:",
+            info1:"to assess your suitability for a position.",
+            info2:"to communicate with you about your application."
+        },
+        infos3:{
+            title:"To Protect Your Data",
+            description1:"Your information is securely sent to our email address and not stored in a database. We take all reasonable measures to protect your data from unauthorized access."
+        }
     }
+
 
     
 }

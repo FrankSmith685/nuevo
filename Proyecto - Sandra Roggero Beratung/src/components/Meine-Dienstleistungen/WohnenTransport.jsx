@@ -1,14 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import imagen6 from "../../assets/imagenes/MeineDienstleistungen/imagen6.jpg";
-import imagen7 from "../../assets/imagenes/MeineDienstleistungen/imagen7.jpg";
-import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import en from "../../languaje/en";
 
-// const images = [imagen6, imagen7];
 const images = ["v1720616614/cebiafyysmleabgeofvi.jpg","v1720622228/omcgfbrslqda69acfxr0.jpg"];
 
 const WohnenTransport = () => {

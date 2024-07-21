@@ -1,18 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-// import bannerPrincipal from "../../assets/imagenes/home/imagen7.jpg";
-
-// // consultoria
-// import imagen1 from "../../assets/imagenes/consultoria/imagen1.jpg";
-// import imagen2 from "../../assets/imagenes/consultoria/imagen2.webp";
-// import imagen3 from "../../assets/imagenes/consultoria/imagen3.webp";
-// import imagen4 from "../../assets/imagenes/consultoria/imagen4.jpg";
-// import imagen6 from "../../assets/imagenes/consultoria/imagen5.webp";
-// import imagen5 from "../../assets/imagenes/consultoria/imagen6.jpg";
-
-// import imagenInfo6 from "../../assets/imagenes/InfoImagenesHome/imagen6.jpg";
 import { useEffect, useState } from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { useAppState } from "../../hooks/useAppState";
 import MeineDienstleistungen from "../../pages/assets/MeineDienstleistungen";
 import de from "../../languaje/de";
@@ -20,7 +8,7 @@ import es from "../../languaje/es";
 import en from "../../languaje/en";
 
 const International=()=>{
-  const {imagenesPreloader,tipoIdioma } = useAppState();
+  const {tipoIdioma } = useAppState();
 
     const navigate = useNavigate();
 
@@ -31,44 +19,6 @@ const International=()=>{
     const handleClickHome=()=>{
         navigate("/");
     }
-
-    // const services = [
-    //     {image:imagen1,title:"FÜHRUNGSBEGLEITUNG"},
-    //     {image:imagen2,title:"BEWERTUNGEN"},
-    //     {image:imagen3,title:"WORKSHOPS UND TEAMBUILDINGS"},
-    //     {image:imagen4,title:"AUSWAHL VON FÜHRUNGSKRÄFTEN"},
-    //     {image:imagen5,title:"GLEICHSTELLUNGSPLÄNE"},
-    //     {image:imagen6,title:"MANAGEMENT DES ORGANISATORISCHEN WANDELS"},
-    // ];
-
-    const services = [
-        {title:"STUDIUM"},
-        {title:"AUSBILDUNG"},
-        {title:"PARKTIKUM"},
-        {title:"ARBEIT"},
-        {title:"STEUERN"},
-        {title:"WOHNEN"},
-        {title:"TRANSPORT"},
-        {title:"VISUM"},
-        {title:"SPRACHE"},
-    ];
-      
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextCard = () => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % services.length);
-    };
-
-    const prevCard = () => {
-        setCurrentIndex(prevIndex => (prevIndex === 0 ? services.length - 1 : prevIndex - 1));
-    };
-    
-    const getCardPosition = (index, currentIndex, length) => {
-        if (index === currentIndex) return 'translate-x-0 opacity-100';
-        if (index === (currentIndex + 1) % length) return 'translate-x-full opacity-50';
-        if (index === (currentIndex - 1 + length) % length) return '-translate-x-full opacity-50';
-        return 'hidden';
-      };
       
       const handleClickSeleccionReclutamiento = () => {
         navigate("/kontakt");
@@ -96,7 +46,6 @@ const International=()=>{
 
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <img 
-                // src="https://res.cloudinary.com/dievolijo/image/upload/v1719433441/acmhyoekou8wz4n4qlhk.jpg" 
                 src={optimizedImageURL("v1719433441/acmhyoekou8wz4n4qlhk.jpg")}
                 alt="NOT FOUND" 
                 className="absolute top-0 left-0 w-full h-full object-cover z-0" 
@@ -116,70 +65,26 @@ const International=()=>{
                     Sandra Roggero <span className="text-gray-500 font-medium text-base">Beratung</span>
                 </span>
                 {' > '}
-                {/* International */}
                 {data.International.title}
 
                 </p>
                 <p className="text-gray-700 text-start w-full pb-1">
-                {/* Wenn es darum geht internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, 
-                über Profile mit spezifischer Erfahrung und Expertisen zu verfügen, sei es auf nationaler oder 
-                internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben. */}
                     {data.International.description}
 
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                {/* Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden. */}
-                {data.International.description2}
+                    {data.International.description2}
                 
                 </p>
-                {/* <h2 className="text-gray-700 text-start font-medium w-full pb-1">EINE SPEZIALISIERTE ABTEILUNG</h2> */}
                 <h2 className="text-gray-700 text-start font-medium w-full pb-1">{data.International.description3}</h2>
                 <p className="text-gray-700 text-start w-full pb-1">
-                {/* Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort. */}
                     {data.International.description4}
-
                 </p>
                 <p className="text-gray-700 text-start w-full pb-2">
-                {/* Unsere direkte und proaktive Suchmethodik auf dem Markt, unsere internationale Erfahrung, unser Hauptsitz in Peru und unsere Mitarbeiter 
-                in der ganzen Welt helfen uns, die qualifiziertesten Talente zu finden. */}
                     {data.International.description5}
-
                 </p>
             </div>
-            {/* <div className="bg-gray-800 w-full h-full">
-                <h2 className="md:text-3xl text-xl sm:text-2xl font-bold text-center py-10 text-white">Als HR-Beratung können wir Ihnen auch bei Folgendem helfen:</h2>
-                <div className="relative w-full h-auto overflow-hidden ">
-                    <div className="flex justify-center items-center  w-full h-96 p-20">
-                        {services.map((service, index) => (
-                        <div key={index} className={`absolute w-full md:w-1/2  transition-transform duration-500 ease-in-out ${getCardPosition(index, currentIndex, services.length)}`}>
-                            <div className="w-full h-full ">
-                            <img src={service.image} alt={service.title} className="w-full h-96 object-cover"/>
-                            </div>
-                            
-                            <div className="absolute inset-0 w-full flex items-end justify-center">
-                            <div className="w-full  bg-bg_favorite_4 text-center p-4">
-                                <h3 className="text-base font-bold text-white">{service.title}</h3>
-                            </div>
-                            </div>
-                        </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="flex items-center justify-center py-5 w-1/2 mx-auto">
-                    <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={prevCard}>
-                    <FaAngleLeft />
-                    </div>
-                    <div className="relative w-full mx-4 h-1 bg-gray-700 rounded">
-                    <div
-                        className="absolute top-0 left-0 h-full bg-white transition-all duration-500 ease-in-out"
-                        style={{ width: `${((currentIndex + 1) / services.length) * 100}%` }}
-                    ></div>
-                    </div>
-                    <div className="flex items-center justify-center w-12 text-3xl  bg-opacity-50 text-white cursor-pointer" onClick={nextCard}>
-                    <FaAngleRight />
-                    </div>
-                </div>
-            </div> */}
+            
             <MeineDienstleistungen/>
             <div className="w-full bg-gray-200 flex flex-col sm:flex-row flex-nowrap">
                 <div className="w-full flex justify-center items-center">

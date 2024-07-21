@@ -84,7 +84,7 @@ const de = {
         MeineDienstleistungen:{title:"Meine Dienstleistungen",links:[
             {link:"/meine-dienstleistungen/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
             {link:"/meine-dienstleistungen/arbeit-steuern",detail:"Arbeit - Steuern"},
-            {link:"/meine-dienstleistungen/wohnen-transport",detail:"Wohnen - Beförderung"},
+            {link:"/meine-dienstleistungen/wohnen-beförderung",detail:"Wohnen - Beförderung"},
             {link:"/meine-dienstleistungen/visum-sprache",detail:"Visum - Sprache"},
         ]},
         Kontakt:{title:"Kontakt",links:[
@@ -247,6 +247,70 @@ const de = {
         firma6:"Ich akzeptiere die",
         firma7:"Benutzerrechte",
         senden:"Senden"
+    },
+    Benutzerrechte:{
+        title:"Benutzerrechte",
+        description1:"Sie haben das Recht, Zugang zu Ihren Daten sowie deren Berichtigung oder Löschung zu verlangen. Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter:",
+        infos:{
+            info1:"Name Ihres Unternehmens:",
+            info2:"Adresse:",
+            info3:"E-Mail Adresse:",
+            info4:"Telefon:"
+        },
+        description2:"Weitere Einzelheiten finden Sie in unserer vollständigen Datenschutzrichtlinie auf unserer Webseite.",
+        tem1:"Rechtlicher Hinweis",
+        tem1info1:"1. Allgemeine Informationen",
+        tem1info2:"Diese rechtlichen Hinweise regeln die Nutzung der Website [Name der Website], die Eigentum von Sandra Roggero M. Beratung ist:",
+        infoContacts:{
+            info1:"Firmenname:",
+            info2:"Adresse:",
+            info3:"E-Mail:",
+            info4:"Telefon:",
+            info5:"Gesetzlicher Vertreter:",
+            info6:"Steueridentifikationsnummer:",
+        },
+        tema2info1:"2. Nutzungsbestimmungen und -bedingungen",
+        tema2info2:"Durch den Zugriff auf diese Website und deren Nutzung erklären Sie sich mit den in diesem rechtlichen Hinweis aufgeführten Bedingungen einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, müssen Sie von der Nutzung der Website absehen.",
+        tema3info1:"3. Geistiges Eigentum",
+        tema3info2:"Alle Inhalte dieser Website, einschließlich der Texte, Grafiken, Logos, Bilder und Software, sind Eigentum von Sandra Roggero M. Beratung oder deren Lizenzgebern und sind urheberrechtlich geschützt. Die unerlaubte Vervielfältigung, Verbreitung oder Veränderung dieser Inhalte ist untersagt.",
+        tema4info1:"4. Beschränkung der Haftung",
+        tema4info2:"Die Informationen und Dienstleistungen, die auf dieser Website enthalten sind, oder über sie verfügbar sind, können Ungenauigkeiten oder typografische Fehler enthalten. Sandra Roggero M. Beratung übernimmt keine Garantie für die Richtigkeit oder die Zuverlässigkeit der auf dieser Website enthaltenen Informationen. Die Nutzung der Website erfolgt auf eigene Gefahr.",
+        tema5info1:"5. Links zu Drittparteien",
+        tema5info2:"Diese Website kann Links zu anderen Websites enthalten, die von Dritten betrieben werden. Sandra Roggero M. Beratung ist nicht verantwortlich für den Inhalt oder die Datenschutzpraktiken dieser externen Seiten. Die Aufnahme solcher Links bedeutet nicht, dass die verlinkten Seiten gebilligt werden.",
+        tema6info1:"6. Schutz der Daten",
+        tema6info2:"Alle persönlichen Daten, die über diese Website gesammelt werden, werden in Übereinstimmung mit unserer Datenschutzrichtlinie behandelt.",
+        tema7info1:"7. Änderungen des rechtlichen Hinweises",
+        tema7info2:"Sandra Roggero M. Beratung behält sich das Recht vor, diese Hinweise jederzeit zu ändern. Die Änderungen werden mit der Veröffentlichung auf der Website wirksam. Wir empfehlen Ihnen, diese rechtlichen Hinweise regelmäßig zu überprüfen, um sich über etwaige Änderungen zu informieren.",
+        tema8info1:"8. Anwendbares Recht und Gerichtsbarkeit",
+        tema8info2:"Dieser rechtliche Hinweis unterliegt dem deutschen Recht. Für alle Streitigkeiten, die im Zusammenhang mit dieser Website entstehen, sind ausschließlich die Gerichte von [Stadt/Region] zuständig.",
+        tema9info1:"9. Kontakt",
+        tema9infos:{
+            info1:"Name Ihres Unternehmens:",
+            info2:"Adresse:",
+            info3:"E-Mail Adresse:",
+            info4:"Telefon:"
+        }
+    },
+    Datenschutzrichtlinie:{
+        title:"Datenschutzrichtlinie",
+        description1:"Wir von Sandra Roggero M. Beratung verpflichten uns, Ihre Privatsphäre zu schützen. Wenn Sie Ihren Lebenslauf und Ihre persönlichen Daten über unser Formular übermitteln, werden die Informationen direkt an eine bestimmte E-Mail-Adresse gesendet und nicht in einer Datenbank gespeichert.",
+        infos1:{
+            title:"Erfasste Daten",
+            info1:"Name",
+            info2:"Ihre E-Mail-Adresse",
+            info3:"Telefonnummer",
+            info4:"Lebenslauf und Angaben zum beruflichen Werdegang"
+        },
+        infos2:{
+            title:"Verwendung der Daten",
+            description1:"Wir verwenden Ihre persönlichen Daten für folgende Angelegenheiten:",
+            info1:"um Ihre Eignung für eine Stelle zu beurteilen.",
+            info2:"um mit Ihnen über Ihre Bewerbung zu kommunizieren."
+        },
+        infos3:{
+            title:"Zum Schutz Ihrer Daten",
+            description1:"Ihre Angaben werden sicher an unsere E-Mail-Adresse gesendet und nicht in einer Datenbank gespeichert. Wir ergreifen alle angemessenen Maßnahmen, um Ihre Daten vor unbefugtem Zugriff zu schützen."
+        }
     }
 }
 

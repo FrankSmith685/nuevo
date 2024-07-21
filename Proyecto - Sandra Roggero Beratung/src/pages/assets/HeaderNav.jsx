@@ -1,11 +1,10 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { TfiWorld } from 'react-icons/tfi';
-import { FaAngleDown, FaAngleRight, FaAngleUp, FaBars, FaFlag, FaTimes } from 'react-icons/fa';
+import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect, useState } from "react";
 import de from '../../languaje/de';
 import { useAppState } from '../../hooks/useAppState';
 import es from '../../languaje/es';
-import { FiFlag } from 'react-icons/fi';
 import ReactCountryFlag from 'react-country-flag';
 import en from '../../languaje/en';
 
@@ -16,8 +15,6 @@ const HeaderNav = () => {
     const [isActiveHoverNav, setIsActiveHoverNav] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isActiveSubMenuMobile, setIsActiveSubMenuMobile] = useState(null);
-
-    const [isNavHoveredAux,setIsNavHoveredAux] = useState(false);
 
     const navigate= useNavigate();
 
@@ -39,7 +36,17 @@ const HeaderNav = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (location.pathname === '/datenschutzrichtlinie' || location.pathname === '/benutzerrechte') {
+            const pathsToCheck = [
+                '/datenschutzrichtlinie',
+                '/benutzerrechte',
+                '/derechos-del-usuario',
+                '/politica-de-privacidad',
+                '/user-rights',
+                '/privacy-policy'
+            ];
+            
+            const locationMatches = pathsToCheck.includes(location.pathname);
+            if (locationMatches) {
                 setIsNavHovered(true);
             }else{
                 if (isActiveHoverNav) {
@@ -47,8 +54,6 @@ const HeaderNav = () => {
                 } else {
                     if (!isMobileMenuOpen) {
                         setIsNavHovered(window.scrollY > 0);
-                        // setIsNavHovered(true);
-                        // setIsNavHoveredAux(window.scrollY > 0);
 
                     }
                 }
@@ -61,32 +66,6 @@ const HeaderNav = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [isActiveHoverNav, isMobileMenuOpen,location.pathname]);
-
-    // const menu2 = [
-    //     { id:0, path: "/unternehmen/#", label: "Unternehmen", subTema: "Wir wählen die Fachleute aus, die Ihr Unternehmen braucht und fördern neue, der heutigen Zeit angepasste Führungsstile.", subItems: [
-    //         { path: "/unternehmen/personalauswahl-und-rekrutierung", label: "Personalauswahl und Rekrutierung" },
-    //         { path: "/unternehmen/personalbewertungen", label: "Personalbewertungen" },
-    //         { path: "/unternehmen/international", label: "International" },
-    //         { path: "/unternehmen/funktionen", label: "Funktionen" },
-    //         { path: "/unternehmen/fachspezifische-suche", label: "Fachspezifische Suche" },
-    //         { path: "/unternehmen/inklusionsaudit", label: "Inklusionsaudit" },
-    //     ]},
-    //     { id:1, path: "/kandidaten/#", label: "Kandidaten", subTema: "Wir unterstützen Sie auf dem Weg zu Ihrer Karriere. Nutzen Sie unsere Stellenangebote, Karriereberatung und digitalen Ressourcen.", subItems: [
-    //         { path: "/kandidaten/registrieren-sie-ihren-lebenslauf", label: "Registrieren Sie Ihren Lebenslauf" },
-    //         { path: "/kandidaten/internationales-karrieremanagement", label: "Internationales Karrieremanagement" },
-    //     ]},
-    //     { id:2, path: "/wir/#", label: "Wir", subTema: "Erfahren Sie mehr über unser Unternehmen und unsere Werte.", subItems: [
-    //         { path: "/wir/wer-wir-sind", label: "Wer Wir Sind" },
-    //         { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
-    //     ]},
-    //     { id:3, path: "/meine-dienstleistungen", label: "Meine Dienstleistungen", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
-    //         { path: "/meine-dienstleistungen/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
-    //         { path: "/meine-dienstleistungen/arbeit-steuern", label: "Arbeit - Steuern" },
-    //         { path: "/meine-dienstleistungen/wohnen-beförderung", label: "Wohnen - Beförderung" },
-    //         { path: "/meine-dienstleistungen/visum-sprache", label: "Visum - Sprache" },
-    //     ]},
-    //     { id:4, path: "/kontakt", label: "Kontakt" },
-    // ];
 
     const handleMenuItem = (item) => {
         setHoveredMenuItem(item.path);
@@ -104,15 +83,29 @@ const HeaderNav = () => {
         // setIsNavHoveredAux(true);
     };
 
+    const [menuData,setMenuData] = useState(de.menu2);
+
     const onMouseLeaveNavHovered = () => {
-        if (location.pathname === '/datenschutzrichtlinie' || location.pathname === '/benutzerrechte') {
+        const pathsToCheck = [
+            '/datenschutzrichtlinie',
+            '/benutzerrechte',
+            '/derechos-del-usuario',
+            '/politica-de-privacidad',
+            '/user-rights',
+            '/privacy-policy'
+        ];
+        
+        const locationMatches = pathsToCheck.includes(location.pathname);
+        console.log(locationMatches);
+        if (locationMatches) {
             setIsNavHovered(true);
-        }else{
+        } else {
             if (!isMobileMenuOpen) {
                 setIsNavHovered(window.scrollY > 0);
             }
         }
     };
+    
 
     const [activeIdioma,setActiveIdioma] = useState(false);
 
@@ -120,7 +113,7 @@ const HeaderNav = () => {
         setActiveIdioma(!activeIdioma);
     }
 
-    const [menuData,setMenuData] = useState(de.menu2);
+    
 
     useEffect(()=>{
         if(tipoIdioma==='de'){
@@ -153,7 +146,6 @@ const HeaderNav = () => {
                 onMouseEnter={onMouseEnterNavHovered}
                 onMouseLeave={onMouseLeaveNavHovered}
             >
-                {/* lg:justify-normal */}
                 <ul className="flex items-center justify-between w-full px-4 md:px-10 h-full ">
                     <li className="text-center  flex items-center justify-center lg:w-72 h-full">
                         <Link to="/" onClick={handleLinkClick} className="flex items-center">
@@ -196,82 +188,74 @@ const HeaderNav = () => {
                                         
                                         <div className='w-full flex flex-nowrap items-center space-x-1 overflow-hidden'>
                                             <div className={`transition-transform duration-300 ${activeIdioma ? 'translate-x-0' : 'translate-x-full'} flex items-center space-x-1`}>
-                                                {/* {
-                                                    activeIdioma && (<>
-                                                        <p className={`transition-colors duration-300 text-sm hover:cursor-pointer ${tipoIdioma === 'de' ? 'font-medium' : 'font-light '} ${isNavHovered ? 'text-gray-800' : 'text-white'}`} onClick={handleClickIdiomaDe}>DE</p>
-                                                        <div className={`transition-colors duration-300 h-4 w-favorite_2 ${isNavHovered ? 'bg-gray-500' : 'bg-white'}`}>
-                                                        </div>
-                                                        <p className={`transition-colors duration-300 text-sm hover:cursor-pointer ${tipoIdioma === 'es' ? 'font-medium' : 'font-light '} ${isNavHovered ? 'text-gray-800' : 'text-white'}`} onClick={handleClickIdiomaEs}>ES</p>
-                                                    </>)
-                                                } */}
                                                {activeIdioma && (
-                <>
-                    <p
-                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-                            tipoIdioma === 'de' ? 'font-medium' : 'font-light '
-                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-                        onClick={handleClickIdiomaDe}
-                    >
-                        <ReactCountryFlag
-                            countryCode="DE"
-                            svg
-                            style={{
-                                width: '20px',
-                                height: '20px',
-                                marginRight: '0.5rem',
-                            }}
-                            title="DE"
-                        />
-                        DE
-                    </p>
-                    <div
-                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
-                            isNavHovered ? 'bg-gray-500' : 'bg-white'
-                        }`}
-                    ></div>
-                    <p
-                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-                            tipoIdioma === 'es' ? 'font-medium' : 'font-light '
-                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-                        onClick={handleClickIdiomaEs}
-                    >
-                        <ReactCountryFlag
-                            countryCode="ES"
-                            svg
-                            style={{
-                                width: '20px',
-                                height: '20px',
-                                marginRight: '0.5rem',
-                            }}
-                            title="ES"
-                        />
-                        ES
-                    </p>
-                    <div
-                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
-                            isNavHovered ? 'bg-gray-500' : 'bg-white'
-                        }`}
-                    ></div>
-                    <p
-                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-                            tipoIdioma === 'en' ? 'font-medium' : 'font-light '
-                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-                        onClick={handleClickIdiomaEn}
-                    >
-                         <ReactCountryFlag
-        countryCode="GB"  // Cambio de "EN" a "GB"
-        svg
-        style={{
-            width: '20px',
-            height: '20px',
-            marginRight: '0.5rem',
-        }}
-        title="EN"
-    />
-                        EN
-                    </p>
-                </>
-            )}
+                                    <>
+                                        <p
+                                            className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                tipoIdioma === 'de' ? 'font-medium' : 'font-light '
+                                            } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                            onClick={handleClickIdiomaDe}
+                                        >
+                                            <ReactCountryFlag
+                                                countryCode="DE"
+                                                svg
+                                                style={{
+                                                    width: '20px',
+                                                    height: '20px',
+                                                    marginRight: '0.5rem',
+                                                }}
+                                                title="DE"
+                                            />
+                                            DE
+                                        </p>
+                                        <div
+                                            className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                                                isNavHovered ? 'bg-gray-500' : 'bg-white'
+                                            }`}
+                                        ></div>
+                                        <p
+                                            className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                tipoIdioma === 'es' ? 'font-medium' : 'font-light '
+                                            } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                            onClick={handleClickIdiomaEs}
+                                        >
+                                            <ReactCountryFlag
+                                                countryCode="ES"
+                                                svg
+                                                style={{
+                                                    width: '20px',
+                                                    height: '20px',
+                                                    marginRight: '0.5rem',
+                                                }}
+                                                title="ES"
+                                            />
+                                            ES
+                                        </p>
+                                        <div
+                                            className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                                                isNavHovered ? 'bg-gray-500' : 'bg-white'
+                                            }`}
+                                        ></div>
+                                        <p
+                                            className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                tipoIdioma === 'en' ? 'font-medium' : 'font-light '
+                                            } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                            onClick={handleClickIdiomaEn}
+                                        >
+                                            <ReactCountryFlag
+                                                countryCode="GB"
+                                                svg
+                                                style={{
+                                                    width: '20px',
+                                                    height: '20px',
+                                                    marginRight: '0.5rem',
+                                                }}
+                                                title="EN"
+                                            />
+                                            EN
+                                        </p>
+                                    </>
+                                    )}
                                             </div>
                                             <TfiWorld onClick={handleClickActiveIdioma} size={20} className={`transition-colors duration-300 hover:cursor-pointer ${isNavHovered ? 'text-gray-800' : 'text-white'}`} />
                                         </div>
@@ -307,7 +291,6 @@ const HeaderNav = () => {
                                         >
                                             {item.label}
                                         </p>
-                                    {/* </Link> */}
                                     {item.subItems && hoveredMenuItem === item.path && (
                                         <div
                                             className="w-full hover:cursor-default absolute top-full left-0 py-6 px-20 text-gray-700 flex-col justify-start items-start bg-white shadow-lg mt-0 space-y-2 border-gray-300 border-t-2"
@@ -367,83 +350,75 @@ const HeaderNav = () => {
                                 </div>
                                 <div className='w-full flex flex-nowrap items-center space-x-1 overflow-hidden'>
                                     <div className={`transition-transform duration-300 ${activeIdioma ? 'translate-x-0' : 'translate-x-full'} flex items-center space-x-1`}>
-                                        {/* {
-                                            activeIdioma && (<>
-                                                <p className={`transition-colors duration-300 text-sm hover:cursor-pointer ${tipoIdioma === 'de' ? 'font-medium' : 'font-light '} ${isNavHovered ? 'text-gray-800' : 'text-white'}`} onClick={handleClickIdiomaDe}>DE</p>
-                                                <div className={`transition-colors duration-300 h-4 w-favorite_2 ${isNavHovered ? 'bg-gray-500' : 'bg-white'}`}>
-                                                </div>
-                                                <p className={`transition-colors duration-300 text-sm hover:cursor-pointer ${tipoIdioma === 'es' ? 'font-medium' : 'font-light '} ${isNavHovered ? 'text-gray-800' : 'text-white'}`} onClick={handleClickIdiomaEs}>ES</p>
-                                            </>)
-                                        } */}
                                        {activeIdioma && (
-                <>
-                    <p
-                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-                            tipoIdioma === 'de' ? 'font-medium' : 'font-light '
-                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-                        onClick={handleClickIdiomaDe}
-                    >
-                        <ReactCountryFlag
-                            countryCode="DE"
-                            svg
-                            style={{
-                                width: '20px',
-                                height: '20px',
-                                marginRight: '0.5rem',
-                            }}
-                            title="DE"
-                        />
-                        DE
-                    </p>
-                    <div
-                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
-                            isNavHovered ? 'bg-gray-500' : 'bg-white'
-                        }`}
-                    ></div>
-                    <p
-                        className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-                            tipoIdioma === 'es' ? 'font-medium' : 'font-light '
-                        } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-                        onClick={handleClickIdiomaEs}
-                    >
-                        <ReactCountryFlag
-                            countryCode="ES"
-                            svg
-                            style={{
-                                width: '20px',
-                                height: '20px',
-                                marginRight: '0.5rem',
-                            }}
-                            title="ES"
-                        />
-                        ES
-                    </p>
-                    <div
-                        className={`transition-colors duration-300 h-4 w-favorite_2 ${
-                            isNavHovered ? 'bg-gray-500' : 'bg-white'
-                        }`}
-                    ></div>
-                    <p
-    className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
-        tipoIdioma === 'en' ? 'font-medium' : 'font-light '
-    } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
-    onClick={handleClickIdiomaEn}
->
-<ReactCountryFlag
-        countryCode="GB"  // Cambio de "EN" a "GB"
-        svg
-        style={{
-            width: '20px',
-            height: '20px',
-            marginRight: '0.5rem',
-        }}
-        title="EN"
-    />
-    EN
-</p>
+                                            <>
+                                                <p
+                                                    className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                        tipoIdioma === 'de' ? 'font-medium' : 'font-light '
+                                                    } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                                    onClick={handleClickIdiomaDe}
+                                                >
+                                                    <ReactCountryFlag
+                                                        countryCode="DE"
+                                                        svg
+                                                        style={{
+                                                            width: '20px',
+                                                            height: '20px',
+                                                            marginRight: '0.5rem',
+                                                        }}
+                                                        title="DE"
+                                                    />
+                                                    DE
+                                                </p>
+                                                <div
+                                                    className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                                                        isNavHovered ? 'bg-gray-500' : 'bg-white'
+                                                    }`}
+                                                ></div>
+                                                <p
+                                                    className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                        tipoIdioma === 'es' ? 'font-medium' : 'font-light '
+                                                    } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                                    onClick={handleClickIdiomaEs}
+                                                >
+                                                    <ReactCountryFlag
+                                                        countryCode="ES"
+                                                        svg
+                                                        style={{
+                                                            width: '20px',
+                                                            height: '20px',
+                                                            marginRight: '0.5rem',
+                                                        }}
+                                                        title="ES"
+                                                    />
+                                                    ES
+                                                </p>
+                                                <div
+                                                    className={`transition-colors duration-300 h-4 w-favorite_2 ${
+                                                        isNavHovered ? 'bg-gray-500' : 'bg-white'
+                                                    }`}
+                                                ></div>
+                                                <p
+                                                    className={`transition-colors duration-300 text-sm hover:cursor-pointer ${
+                                                        tipoIdioma === 'en' ? 'font-medium' : 'font-light '
+                                                    } ${isNavHovered ? 'text-gray-800' : 'text-white'}`}
+                                                    onClick={handleClickIdiomaEn}
+                                                >
+                                                <ReactCountryFlag
+                                                        countryCode="GB"  // Cambio de "EN" a "GB"
+                                                        svg
+                                                        style={{
+                                                            width: '20px',
+                                                            height: '20px',
+                                                            marginRight: '0.5rem',
+                                                        }}
+                                                        title="EN"
+                                                    />
+                                                    EN
+                                                </p>
 
-                </>
-            )}
+                                            </>
+                                        )}
                                     </div>
                                     <TfiWorld onClick={handleClickActiveIdioma} className={`transition-colors duration-300 hover:cursor-pointer ${isNavHovered ? 'text-gray-800' : 'text-white'}`} />
                                 </div>
@@ -452,20 +427,11 @@ const HeaderNav = () => {
 
                             
                         </ul>
-                        {/* <ul className=''>
-                            
-                        </ul> */}
-                        {/* <strong className={`transition-colors duration-300 font-light text-2xl ${isNavHovered ? ' text-gray-800' : ' text-white'}`}>|</strong> */}
-                        {/*  */}
-                        {/* <TfiWorld className={`transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`} /> */}
                     </li>
                 </ul>
             </div>
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-32 left-0 w-full bg-white shadow-lg z-40 border-t-gray-300 border-t-border_1">
-                    {/* <div className='px-4 bg-red-500'>
-                        HOLA
-                    </div> */}
+                <div className="md:hidden absolute top-36 left-0 w-full bg-white shadow-lg z-40 border-t-gray-300 border-t-border_1">
                     <ul className="flex flex-col space-y-0 p-2">
                         {menuData.map((item, index) => (
                             <li key={index} className={`text-gray-800 hover:bg-bg_favorite_4 text-sm hover:text-white`}>

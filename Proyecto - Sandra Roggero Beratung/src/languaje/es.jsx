@@ -25,7 +25,7 @@ const es = {
             { path: "/mis-servicios/estudio-formacion-practicas", label: "Estudios - Formación - Prácticas" },
             { path: "/mis-servicios/trabajo-impuestos", label: "Trabajo - Impuestos" },
             { path: "/mis-servicios/vivienda-transporte", label: "Vivienda - Transporte" },
-            { path: "/mis-servicios/visado-idioma", label: "Visado - Idioma" },
+            { path: "/mis-servicios/visa-idioma", label: "Visado - Idioma" },
         ]},
         { id:4, path: "/contacto", label: "Contacto" },
     ],
@@ -236,17 +236,83 @@ const es = {
         mensaje2:"mensaje",
         archivo1:"Arrastre su currículum aquí o haga clic para seleccionar un archivo",
         archivo2:" (Solo archivos PDF o Word)",
-        firma1:"Acepto la",
-        firma2:"política de privacidad",
-        firma2Link:"/política-de-privacidad",
+        firma1:"Acepto la ",
+        firma2:" política de privacidad",
+        firma2Link:"/politica-de-privacidad",
         firma3:"aceptoPolíticaDePrivacidad",
         firma4:"Acepto los ",
         firma5:"Derechos de Usuario",
-        firma5Link:"/derechos-de-usuario",
+        firma5Link:"/derechos-del-usuario",
         firma6:"Acepto los",
         firma7:"Derechos de Usuario",
         senden:"Enviar"
+    },
+    Benutzerrechte:{
+        title:"Derechos de usuario",
+        description1:"Tiene derecho a solicitar acceso a sus datos, así como su rectificación o eliminación. Para ejercer estos derechos, por favor contáctenos en:",
+        infos:{
+            info1:"Nombre de su empresa:",
+            info2:"Dirección:",
+            info3:"Correo electrónico:",
+            info4:"Teléfono:"
+        },
+        description2:"Para más detalles, consulte nuestra política de privacidad completa en nuestro sitio web.",
+        tem1:"Aviso legal",
+        tem1info1:"1. Información general",
+        tem1info2:"Estos avisos legales regulan el uso del sitio web [Nombre del sitio web], que es propiedad de Sandra Roggero M. Beratung:",
+        infoContacts:{
+            info1:"Nombre de la empresa:",
+            info2:"Dirección:",
+            info3:"Correo electrónico:",
+            info4:"Teléfono:",
+            info5:"Representante legal:",
+            info6:"Número de identificación fiscal:",
+        },
+        tema2info1:"2. Términos y condiciones de uso",
+        tema2info2:"Al acceder y utilizar este sitio web, usted acepta los términos y condiciones establecidos en este aviso legal. Si no está de acuerdo con estos términos, debe abstenerse de usar el sitio web.",
+        tema3info1:"3. Propiedad intelectual",
+        tema3info2:"Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y software, es propiedad de Sandra Roggero M. Beratung o sus licenciantes y está protegido por derechos de autor. La reproducción, distribución o modificación no autorizada de estos contenidos está prohibida.",
+        tema4info1:"4. Limitación de responsabilidad",
+        tema4info2:"La información y los servicios contenidos en este sitio web, o disponibles a través de él, pueden contener imprecisiones o errores tipográficos. Sandra Roggero M. Beratung no garantiza la exactitud o fiabilidad de la información contenida en este sitio web. El uso del sitio web es bajo su propio riesgo.",
+        tema5info1:"5. Enlaces a terceros",
+        tema5info2:"Este sitio web puede contener enlaces a otros sitios web operados por terceros. Sandra Roggero M. Beratung no es responsable del contenido ni de las prácticas de privacidad de estos sitios externos. La inclusión de dichos enlaces no implica la aprobación de las páginas enlazadas.",
+        tema6info1:"6. Protección de datos",
+        tema6info2:"Todos los datos personales recopilados a través de este sitio web se tratarán de acuerdo con nuestra política de privacidad.",
+        tema7info1:"7. Modificaciones del aviso legal",
+        tema7info2:"Sandra Roggero M. Beratung se reserva el derecho de modificar estos avisos en cualquier momento. Las modificaciones entrarán en vigor al publicarse en el sitio web. Le recomendamos revisar estos avisos legales regularmente para estar informado de cualquier cambio.",
+        tema8info1:"8. Ley aplicable y jurisdicción",
+        tema8info2:"Este aviso legal se rige por la ley alemana. Para todas las disputas que surjan en relación con este sitio web, serán competentes exclusivamente los tribunales de [Ciudad/Región].",
+        tema9info1:"9. Contacto",
+        tema9infos:{
+            info1:"Nombre de su empresa:",
+            info2:"Dirección:",
+            info3:"Correo electrónico:",
+            info4:"Teléfono:"
+        }
+    },
+
+    Datenschutzrichtlinie:{
+        title:"Política de Privacidad",
+        description1:"En Sandra Roggero M. Beratung nos comprometemos a proteger su privacidad. Cuando envía su currículum y sus datos personales a través de nuestro formulario, la información se envía directamente a una dirección de correo electrónico específica y no se almacena en una base de datos.",
+        infos1:{
+            title:"Datos Recopilados",
+            info1:"Nombre",
+            info2:"Su Dirección de Correo Electrónico",
+            info3:"Número de Teléfono",
+            info4:"Currículum y Detalles de la Trayectoria Profesional"
+        },
+        infos2:{
+            title:"Uso de los Datos",
+            description1:"Usamos sus datos personales para los siguientes fines:",
+            info1:"para evaluar su idoneidad para un puesto.",
+            info2:"para comunicarnos con usted sobre su solicitud."
+        },
+        infos3:{
+            title:"Para Proteger Sus Datos",
+            description1:"Sus datos se envían de manera segura a nuestra dirección de correo electrónico y no se almacenan en una base de datos. Tomamos todas las medidas razonables para proteger sus datos contra el acceso no autorizado."
+        }
     }
+
 
 }
 
