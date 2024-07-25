@@ -21,11 +21,11 @@ const en = {
             { path: "/about-us/who-we-are", label: "Who We Are" },
             { path: "/about-us/our-philosophy", label: "Our Philosophy" },
         ]},
-        { id:3, path: "/my-services", label: "My Services", subTema: "We offer services for your academic, professional, and personal development, including studies, work, housing, transportation, visas, and languages.", subItems: [
-            { path: "/my-services/study-training-internships", label: "Studies - Training - Internships" },
-            { path: "/my-services/work-taxes", label: "Work - Taxes" },
-            { path: "/my-services/housing-transport", label: "Housing - Transportation" },
-            { path: "/my-services/visa-language", label: "Visa - Language" },
+        { id:3, path: "/other-services", label: "Other Services", subTema: "We offer services for your academic, professional, and personal development, including studies, work, housing, transportation, visas, and languages.", subItems: [
+            { path: "/other-services/study-training-internships", label: "Studies - Training - Internships" },
+            { path: "/other-services/work-taxes", label: "Work - Taxes" },
+            { path: "/other-services/housing-transport", label: "Housing - Transportation" },
+            { path: "/other-services/visa-language", label: "Visa - Language" },
         ]},
         { id:4, path: "/contact", label: "Contact" },
     ],
@@ -78,11 +78,11 @@ const en = {
             { link: "/user-rights", detail: "User Rights" },
             { link: "/privacy-policy", detail: "Privacy Policy" },
         ]},
-        MeineDienstleistungen: { title: "My Services", links: [
-            { link: "/my-services/study-training-internships", detail: "Studies - Training - Internships" },
-            { link: "/my-services/work-taxes", detail: "Work - Taxes" },
-            { link: "/my-services/housing-transport", detail: "Housing - Transportation" },
-            { link: "/my-services/visa-language", detail: "Visa - Language" },
+        MeineDienstleistungen: { title: "Other Services", links: [
+            { link: "/other-services/study-training-internships", detail: "Studies - Training - Internships" },
+            { link: "/other-services/work-taxes", detail: "Work - Taxes" },
+            { link: "/other-services/housing-transport", detail: "Housing - Transportation" },
+            { link: "/other-services/visa-language", detail: "Visa - Language" },
         ]},
         Kontakt: { title: "Contact", links: [
             { detail: "Email: contacto@sandra-roggero.de" },

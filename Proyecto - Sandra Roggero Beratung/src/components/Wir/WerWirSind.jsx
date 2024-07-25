@@ -62,7 +62,7 @@ const WerWirSind=()=>{
             <div className="w-full h-screen bg-bg_favorite_1 relative">
                 <div className="w-full h-full flex items-center justify-center absolute top-0 left-0">
                     <img 
-                    src={optimizedImageURL(images[currentImageIndex])} 
+                    src={optimizedImageURL(images[0])} 
                     alt="Wer Wir Sind" 
                     className="h-full z-0 sm:w-auto object-cover w-full" 
                     />
@@ -73,7 +73,7 @@ const WerWirSind=()=>{
                         {data.WerWirSind.title}
                         </h2>
                     </div>
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                    {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                     {images.map((_, index) => (
                         <div
                             key={index}
@@ -81,7 +81,7 @@ const WerWirSind=()=>{
                             onClick={() => handleImageClick(index)}
                         ></div>
                     ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="w-11/12 px-2 sm:px-10 pb-10 mx-auto">

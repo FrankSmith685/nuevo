@@ -21,11 +21,11 @@ const es = {
             { path: "/nosotros/quienes-somos", label: "Quiénes Somos" },
             { path: "/nosotros/nuestra-filosofia", label: "Nuestra Filosofía" },
         ]},
-        { id:3, path: "/mis-servicios", label: "Mis Servicios", subTema: "Ofrecemos servicios para su desarrollo académico, profesional y personal, incluyendo estudios, trabajo, vivienda, transporte, visados e idiomas.", subItems: [
-            { path: "/mis-servicios/estudio-formacion-practicas", label: "Estudios - Formación - Prácticas" },
-            { path: "/mis-servicios/trabajo-impuestos", label: "Trabajo - Impuestos" },
-            { path: "/mis-servicios/vivienda-transporte", label: "Vivienda - Transporte" },
-            { path: "/mis-servicios/visa-idioma", label: "Visado - Idioma" },
+        { id:3, path: "/otros-servicios", label: "Otros Servicios", subTema: "Ofrecemos servicios para su desarrollo académico, profesional y personal, incluyendo estudios, trabajo, vivienda, transporte, visados e idiomas.", subItems: [
+            { path: "/otros-servicios/estudio-formacion-practicas", label: "Estudios - Formación - Prácticas" },
+            { path: "/otros-servicios/trabajo-impuestos", label: "Trabajo - Impuestos" },
+            { path: "/otros-servicios/vivienda-transporte", label: "Vivienda - Transporte" },
+            { path: "/otros-servicios/visa-idioma", label: "Visado - Idioma" },
         ]},
         { id:4, path: "/contacto", label: "Contacto" },
     ],
@@ -79,11 +79,11 @@ const es = {
             {link:"/derechos-del-usuario",detail:"Derechos del Usuario"},
             {link:"/politica-de-privacidad",detail:"Política de Privacidad"},
         ]},
-        MeineDienstleistungen:{title:"Mis Servicios",links:[
-            {link:"/mis-servicios/estudio-formacion-practicas",detail:"Estudio - Formación - Prácticas"},
-            {link:"/mis-servicios/trabajo-impuestos",detail:"Trabajo - Impuestos"},
-            {link:"/mis-servicios/vivienda-transporte",detail:"Vivienda - Transporte"},
-            {link:"/mis-servicios/visa-idioma",detail:"Visa - Idioma"},
+        MeineDienstleistungen:{title:"Otros Servicios",links:[
+            {link:"/otros-servicios/estudio-formacion-practicas",detail:"Estudio - Formación - Prácticas"},
+            {link:"/otros-servicios/trabajo-impuestos",detail:"Trabajo - Impuestos"},
+            {link:"/otros-servicios/vivienda-transporte",detail:"Vivienda - Transporte"},
+            {link:"/otros-servicios/visa-idioma",detail:"Visa - Idioma"},
         ]},
         Kontakt:{title:"Contacto",links:[
             {detail:"Email: contacto@sandra-roggero.de"},

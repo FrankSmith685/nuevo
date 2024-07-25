@@ -22,11 +22,11 @@ const de = {
             { path: "/wir/wer-wir-sind", label: "Wer Wir Sind" },
             { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
         ]},
-        { id:3, path: "/meine-dienstleistungen", label: "Meine Dienstleistungen", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
-            { path: "/meine-dienstleistungen/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
-            { path: "/meine-dienstleistungen/arbeit-steuern", label: "Arbeit - Steuern" },
-            { path: "/meine-dienstleistungen/wohnen-beförderung", label: "Wohnen - Beförderung" },
-            { path: "/meine-dienstleistungen/visum-sprache", label: "Visum - Sprache" },
+        { id:3, path: "/sonstige", label: "Sonstige", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
+            { path: "/sonstige/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
+            { path: "/sonstige/arbeit-steuern", label: "Arbeit - Steuern" },
+            { path: "/sonstige/wohnen-beförderung", label: "Wohnen - Beförderung" },
+            { path: "/sonstige/visum-sprache", label: "Visum - Sprache" },
         ]},
         { id:4, path: "/kontakt", label: "Kontakt" },
     ],
@@ -81,11 +81,11 @@ const de = {
             {link:"/benutzerrechte",detail:"Benutzerrechte"},
             {link:"/datenschutzrichtlinie",detail:"Datenschutzrichtlinie"},
         ]},
-        MeineDienstleistungen:{title:"Meine Dienstleistungen",links:[
-            {link:"/meine-dienstleistungen/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
-            {link:"/meine-dienstleistungen/arbeit-steuern",detail:"Arbeit - Steuern"},
-            {link:"/meine-dienstleistungen/wohnen-beförderung",detail:"Wohnen - Beförderung"},
-            {link:"/meine-dienstleistungen/visum-sprache",detail:"Visum - Sprache"},
+        MeineDienstleistungen:{title:"Sonstige",links:[
+            {link:"/sonstige/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
+            {link:"/sonstige/arbeit-steuern",detail:"Arbeit - Steuern"},
+            {link:"/sonstige/wohnen-beförderung",detail:"Wohnen - Beförderung"},
+            {link:"/sonstige/visum-sprache",detail:"Visum - Sprache"},
         ]},
         Kontakt:{title:"Kontakt",links:[
             {detail:"Email: kontakt@sandra-roggero.de"},
