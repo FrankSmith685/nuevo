@@ -85,9 +85,9 @@ const en = {
             { link: "/other-services/visa-language", detail: "Visa - Language" },
         ]},
         Kontakt: { title: "Contact", links: [
-            { detail: "Email: contacto@sandra-roggero.de" },
-            { detail: "Phone: +49 123 456 789" },
-            { detail: "Address: Example Street 1, 12345 Example City, Germany" },
+            { detail: "Email: kontakt@roggero-beratung.de" },
+            { detail: "Phone: +49 15902234045" },
+            { detail: "Address: Brunnenstrasse, Neuweiler. Germany" },
             { detail: "Hours: Mon-Fri, 9:00 - 18:00" },
         ]},
         info: "2024 All rights reserved"
@@ -164,7 +164,8 @@ const en = {
             "description6": "Ready to take the step?",
             "description7": "Send us your resume and your career expectations to",
             "description8": "and one of our international career management experts will contact you.",
-            "description9": "Send your resume"
+            "description9": "Send your resume",
+            description10:"/candidates/register-your-resume"
         }
     },
     "Wir": {

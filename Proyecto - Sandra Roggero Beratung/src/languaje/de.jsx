@@ -22,11 +22,11 @@ const de = {
             { path: "/wir/wer-wir-sind", label: "Wer Wir Sind" },
             { path: "/wir/unsere-philosophie", label: "Unsere Philosophie" },
         ]},
-        { id:3, path: "/sonstige", label: "Sonstige", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
-            { path: "/sonstige/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
-            { path: "/sonstige/arbeit-steuern", label: "Arbeit - Steuern" },
-            { path: "/sonstige/wohnen-beförderung", label: "Wohnen - Beförderung" },
-            { path: "/sonstige/visum-sprache", label: "Visum - Sprache" },
+        { id:3, path: "/sonstige-dienstleistungen", label: "Sonstige Dienstleistungen", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
+            { path: "/sonstige-dienstleistungen/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
+            { path: "/sonstige-dienstleistungen/arbeit-steuern", label: "Arbeit - Steuern" },
+            { path: "/sonstige-dienstleistungen/wohnen-beförderung", label: "Wohnen - Beförderung" },
+            { path: "/sonstige-dienstleistungen/visum-sprache", label: "Visum - Sprache" },
         ]},
         { id:4, path: "/kontakt", label: "Kontakt" },
     ],
@@ -81,16 +81,16 @@ const de = {
             {link:"/benutzerrechte",detail:"Benutzerrechte"},
             {link:"/datenschutzrichtlinie",detail:"Datenschutzrichtlinie"},
         ]},
-        MeineDienstleistungen:{title:"Sonstige",links:[
-            {link:"/sonstige/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
-            {link:"/sonstige/arbeit-steuern",detail:"Arbeit - Steuern"},
-            {link:"/sonstige/wohnen-beförderung",detail:"Wohnen - Beförderung"},
-            {link:"/sonstige/visum-sprache",detail:"Visum - Sprache"},
+        MeineDienstleistungen:{title:"Sonstige Dienstleistungen ",links:[
+            {link:"/sonstige-dienstleistungen/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
+            {link:"/sonstige-dienstleistungen/arbeit-steuern",detail:"Arbeit - Steuern"},
+            {link:"/sonstige-dienstleistungen/wohnen-beförderung",detail:"Wohnen - Beförderung"},
+            {link:"/sonstige-dienstleistungen/visum-sprache",detail:"Visum - Sprache"},
         ]},
         Kontakt:{title:"Kontakt",links:[
-            {detail:"Email: kontakt@sandra-roggero.de"},
-            {detail:"Telefon: +49 123 456 789"},
-            {detail:"Adresse: Musterstraße 1, 12345 Musterstadt, Deutschland"},
+            {detail:"Email: kontakt@roggero-beratung.de"},
+            {detail:"Telefon: +49 15902234045"},
+            {detail:"Adresse: Brunnenstraße, Neuweiler. Deutschland"},
             {detail:"Öffnungszeiten: Mo-Fr, 9:00 - 18:00 Uhr"},
         ]},
         info:"2024 Alle Rechte vorbehalten"
@@ -168,7 +168,8 @@ const de = {
             description6:"Bereit, den Schritt zu wagen?",
             description7:"Senden Sie uns Ihren Lebenslauf und Ihre beruflichen Erwartungen an",
             description8:"und einer unserer Experten für internationales Karrieremanagement wird sich mit Ihnen in Verbindung setzen.",
-            description9:"Senden Sie Ihren Lebenslauf"
+            description9:"Senden Sie Ihren Lebenslauf",
+            description10:"/kandidaten/registrieren-sie-ihren-lebenslauf"
         }
     },
     Wir:{

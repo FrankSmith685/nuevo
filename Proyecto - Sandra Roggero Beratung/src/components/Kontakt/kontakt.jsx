@@ -30,6 +30,10 @@ const Kontakt = () => {
     cv: null
   });
 
+  const [alertMessage, setAlertMessage] = useState(null);
+const [alertType, setAlertType] = useState('success'); // 'success' or 'error'
+
+
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
     setFormValues(prev => ({
@@ -54,8 +58,28 @@ const Kontakt = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
-  };
+    const formData = new FormData();
+  
+    Object.keys(formValues).forEach(key => {
+      formData.append(key, formValues[key]);
+    });
+  
+    fetch('http://localhost:3001/backend/kontakt/send-email', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      setAlertMessage('Email sent successfully!');
+      setAlertType('success');
+    })
+    .catch((error) => {
+      setAlertMessage('Failed to send email.');
+      setAlertType('error');
+    });
+};
+
+  
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: handleDrop,
@@ -301,6 +325,12 @@ useEffect(()=>{
             </form>
         </div>
       </div>
+      {alertMessage && (
+        <div className={`alert ${alertType === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'} p-4 mb-4 rounded`}>
+            {alertMessage}
+        </div>
+        )}
+
     </>
   );
 };

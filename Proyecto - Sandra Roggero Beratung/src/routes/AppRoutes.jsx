@@ -266,10 +266,10 @@ export const AppRoutes = () => {
                       <Route path="/kandidaten/internationales-karrieremanagement" element={<InternationalesKarrieremanagement />} />
                       <Route path="/wir/unsere-philosophie" element={<UnserePhilosophie />} />
                       <Route path="/wir/wer-wir-sind" element={<WerWirSind />} />
-                      <Route path="/sonstige/studium-ausbildung-praktikum" element={<StudiumAusbildungPraktikum />} />
-                      <Route path="/sonstige/arbeit-steuern" element={<ArbeitSteuern />} />
-                      <Route path="/sonstige/wohnen-beförderung" element={<WohnenTransport />} />
-                      <Route path="/sonstige/visum-sprache" element={<VisumSprache />} />
+                      <Route path="/sonstige-dienstleistungen/studium-ausbildung-praktikum" element={<StudiumAusbildungPraktikum />} />
+                      <Route path="/sonstige-dienstleistungen/arbeit-steuern" element={<ArbeitSteuern />} />
+                      <Route path="/sonstige-dienstleistungen/wohnen-beförderung" element={<WohnenTransport />} />
+                      <Route path="/sonstige-dienstleistungen/visum-sprache" element={<VisumSprache />} />
                       <Route path="/kontakt" element={<Kontakt />} />
                       <Route path="/datenschutzrichtlinie" element={<PrivacyPolicy />} />
                       <Route path="/benutzerrechte" element={<Benutzerrechte />} />

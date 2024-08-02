@@ -34,6 +34,11 @@ const InternationalesKarrieremanagement=()=>{
             setData(es.Kandidaten);
         }
     },[tipoIdioma]);
+
+
+    const handleClickEnviarCorreo=(item)=>{
+        navigate(item);
+    }
     
     return(
         <>
@@ -97,9 +102,10 @@ const InternationalesKarrieremanagement=()=>{
                 <h2 className="text-2xl font-semibold text-start pb-4 text-gray-700">
                     {data.InternationalesKarrieremanagement.description6}
                 </h2>
-                <p className="text-start pb-4 text-gray-700"> {data.InternationalesKarrieremanagement.description7}  <span className="font-bold">example@gmail.com</span>{data.InternationalesKarrieremanagement.description8}  </p>
+                <p className="text-start pb-4 text-gray-700"> {data.InternationalesKarrieremanagement.description7}  <span className="font-bold">kontakt@roggero-beratung.de</span>{data.InternationalesKarrieremanagement.description8}  </p>
                 <button
                     className="border-gray-800 border-2 px-4 py-2 sm:px-6 sm:py-3 font-medium bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800 hover:border-gray-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+                    onClick={()=>handleClickEnviarCorreo(data.InternationalesKarrieremanagement.description10)}
                 >
                     {data.InternationalesKarrieremanagement.description9}
                 </button>                

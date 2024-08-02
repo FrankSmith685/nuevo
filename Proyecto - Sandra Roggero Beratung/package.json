@@ -20,9 +20,16 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
     "antd": "^5.17.3",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
     "cloudinary-react": "^1.8.1",
+    "cors": "^2.8.5",
     "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.19.2",
     "framer-motion": "^11.2.6",
+    "nodemailer": "^6.9.14",
     "react": "^18.3.1",
     "react-calendar-heatmap": "^1.9.0",
     "react-country-flag": "^3.1.0",
@@ -63,5 +70,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
