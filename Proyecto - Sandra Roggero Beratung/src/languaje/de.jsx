@@ -25,8 +25,8 @@ const de = {
         { id:3, path: "/sonstige-dienstleistungen", label: "Sonstige Dienstleistungen", subTema: "Wir bieten Dienstleistungen für Ihre akademische, berufliche und persönliche Entwicklung, einschließlich Studium, Arbeit, Wohnen, Beförderung, Visa und Sprachen.", subItems: [
             { path: "/sonstige-dienstleistungen/studium-ausbildung-praktikum", label: "Studium - Ausbildung - Praktikum" },
             { path: "/sonstige-dienstleistungen/arbeit-steuern", label: "Arbeit - Steuern" },
-            { path: "/sonstige-dienstleistungen/wohnen-beförderung", label: "Wohnen - Beförderung" },
-            { path: "/sonstige-dienstleistungen/visum-sprache", label: "Visum - Sprache" },
+            { path: "/sonstige-dienstleistungen/wohnen-transportmittel", label: "Wohnen - Transportmittel" },
+            { path: "/sonstige-dienstleistungen/visum-sprachkompetenzen", label: "Visum - Sprachkompetenzen" },
         ]},
         { id:4, path: "/kontakt", label: "Kontakt" },
     ],
@@ -68,9 +68,9 @@ const de = {
             { title: "ARBEIT",image:optimizedImageURL('v1720047637/okxctjjmmdegr4ptljhn.jpg') },
             { title: "STEUERN",image:optimizedImageURL('v1720047700/pqjjlckzyuvgt32bxkhk.jpg') },
             { title: "WOHNEN",image:optimizedImageURL('v1720616614/cebiafyysmleabgeofvi.jpg') },
-            { title: "BEFÖRDERUNG",image:optimizedImageURL('v1720622228/omcgfbrslqda69acfxr0.jpg') },
+            { title: "TRANSPORTMITTEL",image:optimizedImageURL('v1720622228/omcgfbrslqda69acfxr0.jpg') },
             { title: "VISUM",image:optimizedImageURL('v1720648648/yazfttcufijofwthhes8.jpg') },
-            { title: "SPRACHE",image:optimizedImageURL('v1720652893/zwpk88oskknftyafqm5u.jpg') },
+            { title: "SPRACHKOMPETENZEN",image:optimizedImageURL('v1720652893/zwpk88oskknftyafqm5u.jpg') },
         ],
         homeInfo2:"MÖCHTEN SIE WEITERE INFORMATIONEN?",
         homeInfo3:"Kontaktaufnahme",
@@ -84,8 +84,8 @@ const de = {
         MeineDienstleistungen:{title:"Sonstige Dienstleistungen ",links:[
             {link:"/sonstige-dienstleistungen/studium-ausbildung-praktikum",detail:"Studium - Ausbildung - Praktikum"},
             {link:"/sonstige-dienstleistungen/arbeit-steuern",detail:"Arbeit - Steuern"},
-            {link:"/sonstige-dienstleistungen/wohnen-beförderung",detail:"Wohnen - Beförderung"},
-            {link:"/sonstige-dienstleistungen/visum-sprache",detail:"Visum - Sprache"},
+            {link:"/sonstige-dienstleistungen/wohnen-transportmittel",detail:"Wohnen - Transportmittel"},
+            {link:"/sonstige-dienstleistungen/visum-sprachkompetenzen",detail:"Visum - Sprachkompetenzen"},
         ]},
         Kontakt:{title:"Kontakt",links:[
             {detail:"Email: kontakt@roggero-beratung.de"},
@@ -98,7 +98,7 @@ const de = {
     Unternehmen:{
         PersonalauswahlUndRekrutierung:{
             title:"Personalauswahl und Rekrutierung",
-            description:"Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handelt, indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt. Dabei nimmt Beratung und das Erkennen von Bedürfnissen einen hohen Stellenwert ein. Weiterhin begleiten und gewährleisten wir dank unseres eigenen Dienstes „Onboarding Selektion“ die bestmögliche Integration der Kandidaten in das Unternehmen. Wir sind Personalvermittler und Integrations Coaches. Der Onboarding-Prozess konzentriert sich nicht nur auf das Follow-up nach der Auswahl, sondern wir begleiten den Prozess von Anfang an, immer im Einklang mitdem Auftrag und dem Ziel des Unternehmens. Jeder Auswahlprozess ist einzigartig, denn keine zwei Personen oder Unternehmen sind gleich. Es gibt eine Lösung für jedes Unternehmen, und wir von Sandra Roggero-Beratung wissen, wie man sie findet."
+            description:"Wir engagieren uns in jedem Auswahlverfahren, als ob es sich um unser eigenes Unternehmen handelt, indem wir uns auf die Menschen konzentrieren und ihnen zuhören, egal ob es sich um Bewerber oder Kunden handelt. Dabei nimmt Beratung und das Erkennen von Bedürfnissen einen hohen Stellenwert ein. Weiterhin begleiten und gewährleisten wir dank unseres eigenen Dienstes „Onboarding Selektion“ die bestmögliche Integration der Kandidaten in das Unternehmen. Wir sind Personalvermittler und Integrationscoaches. Der Onboarding-Prozess konzentriert sich nicht nur auf das Follow-up nach der Auswahl, sondern wir begleiten den Prozess von Anfang an, immer im Einklang mit dem Auftrag und dem Ziel des Unternehmens. Jeder Auswahlprozess ist einzigartig, denn keine zwei Personen oder Unternehmen sind gleich. Es gibt eine Lösung für jedes Unternehmen, und wir von Sandra Roggero-Beratung wissen, wie man sie findet."
         },
         Personalbewertungen:{
             title:"Personalbewertungen",
@@ -115,7 +115,7 @@ const de = {
         },
         International:{
             title:"International",
-            description:"Wenn es darum geht internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, über Profile mit spezifischer Erfahrung und Expertisen zu verfügen, sei es auf nationaler oder internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben.",
+            description:"Wenn es darum geht, internationale Talente und Arbeitskräfte zu konsolidieren, ist es notwendig, über Profile mit spezifischer Erfahrung und Expertise zu verfügen, sei es auf nationaler oder internationaler Ebene, um die nächste Phase des Unternehmens voranzutreiben.",
             description2:"Wir begleiten Sie bei internationalen Projekten, indem wir das Talentmanagement und die Auswahlprozesse steuern, um die richtigen Fachkräfte in Deutschland und/oder im Ausland zu finden.",
             description3:"EINE SPEZIALISIERTE ABTEILUNG",
             description4:"Wir finden die richtigen Fachleute, unabhängig von Ihrem Wohnort.",
@@ -123,7 +123,7 @@ const de = {
         },
         Inklusionsaudit:{
             title:"Inklusionsaudit",
-            description:"Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess. Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt und zusätzliche Systeme, Inhalte oder Technologien sind entstanden. Auch wenn diese Prozesse einen funktionierenden Service und Erfahrungbei der Talentauswahl bieten, werden wahrscheinlich in jeder Phase Ihres Prozesses dennoch Vorurteile bestehen. Unser Inclusivity-Auditanalysiert jeden Kontaktpunkt mit dem Kandidaten während des Auswahlprozesses, von der Stellenbeschreibung für diese Position über Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. Dieser Ansatz bietet durchgängige Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile."
+            description:"Wir identifizieren Vorurteile und beseitigen Hindernisse im Auswahlprozess. Auswahlprozesse haben sich im Laufe der Zeit weiterentwickelt und zusätzliche Systeme, Inhalte oder Technologien sind entstanden. Auch wenn diese Prozesse einen funktionierenden Service und Erfahrung bei der Talentauswahl bieten, werden wahrscheinlich in jeder Phase Ihres Prozesses dennoch Vorurteile bestehen. Unser Inclusivity-Audit analysiert jeden Kontaktpunkt mit dem Kandidaten während des Auswahlprozesses, von der Stellenbeschreibung für diese Position über Ihren internen Talentbereich, den Bewerbungsprozess, das Vorstellungsgespräch und die Auswahl bis hin zum Onboarding. Dieser Ansatz bietet durchgängige Transparenz in Bezug auf aktive und versteckte Barrieren und Vorurteile."
         },
         Funktionen:{
             title:"Funktionen",
@@ -131,7 +131,7 @@ const de = {
         },
         FachspezifischeSuche:{
             title:"Fachspezifische Suche",
-            description:"Die Menschen sind das Herzstück eines jeden Projekts.Die Auswahl qualifizierter Mitarbeiter ist sicherlich einer der wichtigsten Faktoren, wenn es darum geht,alle Ziele Ihres Unternehmens zu erreichen. Daher muss die Einbeziehung von Berufsprofilen, zu den Wertenund der Mission Ihres Unternehmens passen und eine Ihrer Prioritäten sein. Um die begehrtesten, qualifiziertenTalente anzuziehen, müssen Sie die einzigartige Geschichte hinter Ihrem Unternehmen erzählen. Deshalb ist es wichtig, die Unterstützung und das Fachwissen einer spezialisierten Personalberatung in Anspruch zu nehmen, die weiß, was Sie wirklich brauchen und über ein breites Netzwerk von Fachkräften verfügt, die das Potenzial in einem Unternehmen wie dem Ihren voll ausschöpfen wollen. Bei Sandra Roggero-Beratung blicken wir über die Stellenbeschreibung hinaus, um die Geschichte zu verstehen, die Ihr Unternehmen erzählt und bringen Sie mit den richtigenLeuten zusammen, die Ihnen helfen, Ihr Unternehmen umzugestalten."
+            description:"Die Menschen sind das Herzstück eines jeden Projekts. Die Auswahl qualifizierter Mitarbeiter ist sicherlich einer der wichtigsten Faktoren, wenn es darum geht, alle Ziele Ihres Unternehmens zu erreichen. Daher muss die Einbeziehung von Berufsprofilen, die zu den Werten und der Mission Ihres Unternehmens passen, eine Ihrer Prioritäten sein. Um die begehrtesten, qualifizierten Talente anzuziehen, müssen Sie die einzigartige Geschichte hinter Ihrem Unternehmen erzählen. Deshalb ist es wichtig, die Unterstützung und das Fachwissen einer spezialisierten Personalberatung in Anspruch zu nehmen, die weiß, was Sie wirklich brauchen und über ein breites Netzwerk von Fachkräften verfügt, die das Potenzial in einem Unternehmen wie dem Ihren voll ausschöpfen wollen. Bei Sandra Roggero-Beratung blicken wir über die Stellenbeschreibung hinaus, um die Geschichte zu verstehen, die Ihr Unternehmen erzählt, und bringen Sie mit den richtigen Leuten zusammen, die Ihnen helfen, Ihr Unternehmen umzugestalten."
         },
         homeInfo2:"MÖCHTEN SIE WEITERE INFORMATIONEN?",
         homeInfo3:"Kontaktaufnahme",
@@ -175,13 +175,13 @@ const de = {
     Wir:{
         WerWirSind:{
             title:" Wer Wir Sind",
-            description:"Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im Bereich Human Resources und Personalbeschaffung in Lima, Peru und Expertin für Öffentlichkeitsarbeit, nach Deutschland auswanderte. Fünfzehn Jahre zuvor hatte sie Europa bereist, wo sie die Arbeitsmarktbedürfnisseihres Herkunftslandes und die dort vorhandene hochqualifizierte Arbeitskraft evaluiert und analysiert hatte, mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie sich schließlich niederlassen würde.",
+            description:"Unsere Geschichte beginnt im Jahr 2014, als Sandra Roggero Manrique, in Peru geboren, hochspezialisiert im Bereich Human Resources und Personalbeschaffung in Lima, Peru und Expertin für Öffentlichkeitsarbeit, nach Deutschland auswanderte. Fünfzehn Jahre zuvor hatte sie Europa bereist, wo sie die Arbeitsmarktbedürfnisse ihres Herkunftslandes und die dort vorhandene hochqualifizierte Arbeitskraft evaluiert und analysiert hatte, mit der Vision, dass diese auch in Deutschland benötigt würden, wo sie sich schließlich niederlassen würde.",
             description2:"Wir sind anders",
             description3:"Zunächst einmal, weil wir Fragen stellen. Wir fordern. Wir mischen uns ein. Wir beraten. Wir sind ehrlich und reden nicht um den heißen Brei herum. Wir investieren unsere Zeit und unsere Hingabe. Wir sind mit Herz und Leidenschaft bei der Sache.",
         },
         UnserePhilosophie:{
             title:"Unsere Philosophie",
-            description:"Wir treiben die einzigartigen Geschichten unserer Kandidaten und Kunden voran. Unsere Fähigkeit zu verstehen, was Sie wirklich brauchen, ermöglicht es uns, fesselnde Geschichten zu entwickeln und weiterzugeben, was den Unterschied ausmacht. Geschichten sind wichtig, denn wenn wir unsere Pläne, Erfahrungen und Ambitionen teilen, eröffnet sich uns eine Welt der Möglichkeiten. Wenn wir Ihnen zuhören, können wir langfristige Beziehungen aufbauen, die auf Vertrauen und Einfühlungsvermögen beruhen.In Peru und Deutschland besteht unser kleines Team aus spezialisierten Beratern, aus talentierten Menschen mit einer fachkundigen, globalen Perspektive. Und durch den Austausch von Geschichten untereinander fördern wir die Teamarbeit, von der wir überzeugt sind, dass sie zum Erfolg führt – nicht nur für uns, sondern auch für unsere Kandidaten und Kunden in aller Welt. Dank der Geschichten der Menschen sind wir in der Lage, über den Lebenslauf oder die Stellenbeschreibung hinauszuschauen und die einzigartige Eigenschaft zu finden, die die Übereinstimmung zwischen einem Unternehmen und einem Team oder einem Bewerber außergewöhnlich macht. Wir sind in der Lage, Unternehmen dabei zu unterstützen, die Talente zu finden, die Ihnen helfen, alle Ihre Ziele zu erreichen – jetzt und in Zukunft. Natürlich sind wir auch in der Lage, Menschen dabei zu helfen, das nächste Kapitel ihrer Karriere zu definieren, das es ihnen ermöglicht,alle ihre Ambitionen zu erfüllen. Die größten Chancen beginnen mit einer Geschichte. Erzählen Sie uns Ihre.",
+            description:"Wir treiben die einzigartigen Geschichten unserer Kandidaten und Kunden voran. Unsere Fähigkeit zu verstehen, was Sie wirklich brauchen, ermöglicht es uns, fesselnde Geschichten zu entwickeln und weiterzugeben, was den Unterschied ausmacht. Geschichten sind wichtig, denn wenn wir unsere Pläne, Erfahrungen und Ambitionen teilen, eröffnet sich uns eine Welt der Möglichkeiten. Wenn wir Ihnen zuhören, können wir langfristige Beziehungen aufbauen, die auf Vertrauen und Einfühlungsvermögen beruhen. In Peru und Deutschland besteht unser kleines Team aus spezialisierten Beratern, aus talentierten Menschen mit einer fachkundigen, globalen Perspektive. Und durch den Austausch von Geschichten untereinander fördern wir die Teamarbeit, von der wir überzeugt sind, dass sie zum Erfolg führt – nicht nur für uns, sondern auch für unsere Kandidaten und Kunden in aller Welt. Dank der Geschichten der Menschen sind wir in der Lage, über den Lebenslauf oder die Stellenbeschreibung hinauszuschauen und die einzigartige Eigenschaft zu finden, die die Übereinstimmung zwischen einem Unternehmen und einem Team oder einem Bewerber außergewöhnlich macht. Wir sind in der Lage, Unternehmen dabei zu unterstützen, die Talente zu finden, die Ihnen helfen, alle Ihre Ziele zu erreichen – jetzt und in Zukunft. Natürlich sind wir auch in der Lage, Menschen dabei zu helfen, das nächste Kapitel ihrer Karriere zu definieren, das es ihnen ermöglicht, alle ihre Ambitionen zu erfüllen. Die größten Chancen beginnen mit einer Geschichte. Erzählen Sie uns Ihre.",
         },
         homeInfo2:"MÖCHTEN SIE WEITERE INFORMATIONEN?",
         homeInfo3:"Kontaktaufnahme",
@@ -193,7 +193,7 @@ const de = {
             description2:"Wir geben Ihnen hier einen kleinen Überblick, welche Vorteile ein Studium in Deutschland speziell für internationale Studierende mit sich bringt. Internationaler Ruf von Lehre und Forschung… Vielfalt des Studienangebots… Geringe Studiengebühren und niedrige Kosten… Förderprogramme und die Möglichkeit zu arbeiten. Sie erleben den Arbeitsalltag aus erster Hand. So erfahren Sie, welche Aufgaben auf Sie zukommen.",
             description3:"Ausbildung",
             description4:"Welche Vorteile hat man nach der Ausbildung?",
-            description5:"Eine Ausbildung ist Praxisnah. Sie können Gelerntes direkt anwenden und sehen was Sie erreicht haben. Sie können früh Verantwortung übernehmen,sind aber nicht alleine: Die Zusammenarbeit im Betrieb ist das A und O. Eine Ausbildung ist auch lukrativ, weil Sie vom ersten Tag an Ihr eigenes Einkommen haben. Zukunftssicher. Aussichtsreich.",
+            description5:"Eine Ausbildung ist praxisnah. Sie können Gelerntes direkt anwenden und sehen, was Sie erreicht haben. Sie können früh Verantwortung übernehmen, sind aber nicht alleine: Die Zusammenarbeit im Betrieb ist das A und O. Eine Ausbildung ist auch lukrativ, weil Sie vom ersten Tag an Ihr eigenes Einkommen haben. Zukunftssicher. Aussichtsreich.",
             description6:"Praktikum",
             description7:"Das bringt Ihnen ein Praktikum in Deutschland!",
             description8:"Sie können danach besser einschätzen, ob ein Beruf oder eine Branche zu Ihren Interessen und Stärken passt. Sie können Ihre Praktika in Ihren Lebenslauf aufnehmen. Damit können Sie bei weiteren Bewerbungen zusätzlich punkten. Ihr Praktikumsbetrieb lernt Sie kennen. Das kann Ihnen bei einer späteren Bewerbung helfen, zum Beispiel für eine Stelle als Werkstudent oder für eine Ausbildung. Vielleicht bietet man Ihnen sogar eine Ausbildungsstelle an.",
@@ -202,23 +202,23 @@ const de = {
             title:"Arbeit - Steuern",
             description:"Arbeit",
             description2:"Die wichtigsten Vorteile der Arbeit in Deutschland sind:",
-            description3:"Das rasche Wirtschaftswachstum und die zahlreichen Beschäftigungsmöglichkeiten in den Bereichen IT, Technik und Industrie.Im Vergleich zu anderen Ländern bietet das Land faire Löhne und Gehälter. Und die deutsche Regierung bemüht sich kontinuierlich darum, Ausländer als Arbeitskräfte zu gewinnen.",
+            description3:"Das rasche Wirtschaftswachstum und die zahlreichen Beschäftigungsmöglichkeiten in den Bereichen IT, Technik und Industrie. Im Vergleich zu anderen Ländern bietet das Land faire Löhne und Gehälter. Und die deutsche Regierung bemüht sich kontinuierlich darum, Ausländer als Arbeitskräfte zu gewinnen.",
             description4:"Steuern",
             description5:"In Deutschland gibt es verschiedene Arten von Steuern, wie die Einkommensteuer, die Gewerbesteuer und die Umsatzsteuer. Sie sind die wichtigsten Einnahmequellen des Staates, mit denen er Ausgaben für das Gemeinwohl finanziert, wie z. B. soziale Sicherheit, Bildung, Gesundheitsversorgung oder Verkehrsinfrastruktur. Das deutsche Steuersystem basiert auf der Leistungsfähigkeit des einzelnen Steuerzahlers, Transparenz und Gerechtigkeit.",
         },
         WohnenBeförderung:{
-            title:"Wohnen - Beförderung",
+            title:"Wohnen - Transportmittel",
             description0:"Wohnen",
             description:"Deutschland ist eines der besten Länder zum Leben. Deutschland zeichnet sich durch seine Multikulturalität aus und hat eine große Zahl von Einwanderern aus der ganzen Welt. Dies hat es zu einem der beliebtesten Ziele für Menschen gemacht, die ein neues Leben beginnen wollen.",
-            description2:"Beförderung",
-            description3:"In Deutschland kann man mit dem Zug, aber auch mit der Straßenbahn oder dem Bus zu vielen Zielen reisen.Der Zug, die U-Bahn, die S-Bahn, die Straßenbahn und der Bus sind die verschiedenen öffentlichen Verkehrsmittel des Fern- und Nahverkehrs.",
+            description2:"Transportmittel",
+            description3:"In Deutschland kann man mit dem Zug, aber auch mit der Straßenbahn oder dem Bus zu vielen Zielen reisen. Der Zug, die U-Bahn, die S-Bahn, die Straßenbahn und der Bus sind die verschiedenen öffentlichen Verkehrsmittel des Fern- und Nahverkehrs.",
         },
         VisumSprache:{
-            title:"Visum - Sprache",
+            title:"Visum - Sprachkompetenzen",
             description:"Visum",
-            description2:"Die Visumbeantragung eines Arbeits- oder Studiengangs für Deutschland ist eines der wichtigsten Verfahren, wenn Sie Ihre Integration in dem deutschsprachigen Land beginnen möchten. Deutschland ist eine der größten Wirtschaftsmächte in Europa. Es bietet sehr gute Gehaltsmöglichkeiten und ist zu einer ausgezeichneten Option für diejenigen geworden, die entschlossen sind, ihren Lebensweg zu ändern. Wenn Sie sich in diesem  Land richtig etablieren wollen, müssen Sie jedoch die Dinge richtig machen. Es ist wichtig, dass Sie alle Informationen über die zu  erledigenden Unterlagen zur Hand haben. Zählen Sie auf uns!",
-            description3:"Sprache",
-            description4:"Unsere Partnerschulen befinden sich in den schönsten und interessantesten Städten Deutschlands, die reich an Kultur und Geschichte sind. Ihre Deutschkurse werden Sie ermutigen und motivieren, die Sprache mit Leichtigkeit zu lernen und gleichzeitig diese Kultur intensiv zu erleben. Wir werden Ihnen zur Seite stehen je nach Ihrem Zeitplan und Ihrer Verfügbarkeit.",
+            description2:"Die Visumbeantragung eines Arbeits- oder Studiengangs für Deutschland ist eines der wichtigsten Verfahren, wenn Sie Ihre Integration in das deutschsprachige Land beginnen möchten. Deutschland ist eine der größten Wirtschaftsmächte in Europa. Es bietet sehr gute Gehaltsmöglichkeiten und ist zu einer ausgezeichneten Option für diejenigen geworden, die entschlossen sind, ihren Lebensweg zu ändern. Wenn Sie sich in diesem Land richtig etablieren wollen, müssen Sie jedoch die Dinge richtig machen. Es ist wichtig, dass Sie alle Informationen über die zu erledigenden Unterlagen zur Hand haben. Zählen Sie auf uns!",
+            description3:"Sprachkompetenzen",
+            description4:"Unsere Partnerschulen befinden sich in den schönsten und interessantesten Städten Deutschlands, die reich an Kultur und Geschichte sind. Ihre Deutschkurse werden Sie ermutigen und motivieren, die Sprache mit Leichtigkeit zu lernen und gleichzeitig diese Kultur intensiv zu erleben. Wir werden Ihnen zur Seite stehen, je nach Ihrem Zeitplan und Ihrer Verfügbarkeit.",
         },
         homeInfo2:"MÖCHTEN SIE WEITERE INFORMATIONEN?",
         homeInfo3:"Kontaktaufnahme",
