@@ -12,6 +12,7 @@ import de from '../../languaje/de';
 import { useAppState } from '../../hooks/useAppState';
 import es from '../../languaje/es';
 import en from '../../languaje/en';
+import emailjs from "@emailjs/browser";
 
 const Kontakt = () => {
   const navigate = useNavigate();
@@ -56,28 +57,270 @@ const [alertType, setAlertType] = useState('success'); // 'success' or 'error'
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const formData = new FormData();
   
-    Object.keys(formValues).forEach(key => {
-      formData.append(key, formValues[key]);
-    });
+//     Object.keys(formValues).forEach(key => {
+//       formData.append(key, formValues[key]);
+//     });
+
+
+//     console.log("ASDQWE",formValues);
   
-    fetch('http://localhost:3001/backend/kontakt/send-email', {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-      setAlertMessage('Email sent successfully!');
-      setAlertType('success');
-    })
-    .catch((error) => {
-      setAlertMessage('Failed to send email.');
-      setAlertType('error');
-    });
+//     // fetch('http://localhost:3001/backend/kontakt/send-email', {
+//     //   method: 'POST',
+//     //   body: formData,
+//     // })
+//     // .then(response => response.json())
+//     // .then(data => {
+//     //   setAlertMessage('Email sent successfully!');
+//     //   setAlertType('success');
+//     // })
+//     // .catch((error) => {
+//     //   setAlertMessage('Failed to send email.');
+//     //   setAlertType('error');
+//     // });
+// };
+
+// const handleSubmit = (e) => {
+//   e.preventDefault(); // Evitar la recarga de la página
+
+//   console.log("ASDQWE", formValues);
+
+//   const messageBody = `
+//   <h3>Información del formulario</h3>
+//   <ul>
+//     <li><strong>Akzeptiere Datenschutz:</strong> ${formValues.akzeptiereDatenschutz || "No especificado"}</li>
+//     <li><strong>Akzeptiere Kommerzielle Infos:</strong> ${formValues.akzeptiereKommerzielleInfos || "No especificado"}</li>
+//     <li><strong>CV:</strong> ${formValues.cv || "No adjunto"}</li>
+//     <li><strong>Email:</strong> ${formValues.email || "No especificado"}</li>
+//     <li><strong>Firma:</strong> ${formValues.firma || "No especificado"}</li>
+//     <li><strong>Nachname:</strong> ${formValues.nachname || "No especificado"}</li>
+//     <li><strong>Nachricht:</strong> ${formValues.nachricht || "No especificado"}</li>
+//     <li><strong>Position:</strong> ${formValues.position || "No especificado"}</li>
+//     <li><strong>Stadt:</strong> ${formValues.stadt || "No especificado"}</li>
+//     <li><strong>Telefon:</strong> ${formValues.telefon || "No especificado"}</li>
+//     <li><strong>Vorname:</strong> ${formValues.vorname || "No especificado"}</li>
+//   </ul>
+// `;
+
+
+//   // Enviar correo usando SMTPJS
+//   window.Email.send({
+//     SecureToken: "A5448F9FDAAC42132093D2117B440736EEA8", // Tu Secure Token de Elastic Email
+//     To: formValues.email, // Correo del destinatario (puedes cambiarlo por un correo fijo si prefieres)
+//     From: "f.s.b.rojas@gmail.com", // Correo del remitente (puede ser el mismo de Elastic Email)
+//     Subject: "Formulario enviado desde React",
+//     Body: messageBody,
+//   })
+//     .then((message) => {
+//       alert("Correo enviado con éxito!");
+//       console.log("Respuesta SMTPJS:", message);
+//     })
+//     .catch((error) => {
+//       alert("Hubo un error al enviar el correo.");
+//       console.error("Error SMTPJS:", error);
+//     });
+// };
+// const nodemailer = require('nodemailer');
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault(); // Evitar la recarga de la página
+
+//   const messageBody = `
+//     <h3>Información del formulario</h3>
+//     <ul>
+//       <li><strong>Akzeptiere Datenschutz:</strong> ${String(formValues.akzeptiereDatenschutz)}</li>
+//       <li><strong>Akzeptiere Kommerzielle Infos:</strong> ${String(formValues.akzeptiereKommerzielleInfos)}</li>
+//       <li><strong>CV:</strong> ${String(formValues.cv || "No adjunto")}</li>
+//       <li><strong>Email:</strong> ${String(formValues.email || "No especificado")}</li>
+//       <li><strong>Firma:</strong> ${String(formValues.firma || "No especificado")}</li>
+//       <li><strong>Nachname:</strong> ${String(formValues.nachname || "No especificado")}</li>
+//       <li><strong>Nachricht:</strong> ${String(formValues.nachricht || "No especificado")}</li>
+//       <li><strong>Position:</strong> ${String(formValues.position || "No especificado")}</li>
+//       <li><strong>Stadt:</strong> ${String(formValues.stadt || "No especificado")}</li>
+//       <li><strong>Telefon:</strong> ${String(formValues.telefon || "No especificado")}</li>
+//       <li><strong>Vorname:</strong> ${String(formValues.vorname || "No especificado")}</li>
+//     </ul>
+//   `;
+
+//   try {
+//     // Configuración del transporte SMTP
+//     const transporter = nodemailer.createTransport({
+//       host: 'smtp.elasticemail.com',
+//       port: 2525,
+//       secure: false, // true para 465, false para otros puertos
+//       auth: {
+//         user: 'f.s.b.rojas@gmail.com', // Tu correo electrónico
+//         pass: 'A5448F9FDAAC42132093D2117B440736EEA8' // Tu contraseña de SMTP
+//       }
+//     });
+
+//     // Opciones del correo
+//     const mailOptions = {
+//       from: '"Formulario Web" <f.s.b.rojas@gmail.com>', // Dirección del remitente
+//       to: formValues.email, // Dirección del destinatario
+//       subject: "Formulario enviado desde React",
+//       html: messageBody, // Contenido en formato HTML
+//     };
+
+//     // Envío del correo
+//     const info = await transporter.sendMail(mailOptions);
+//     console.log("Mensaje enviado: %s", info.messageId);
+//     alert("Correo enviado con éxito!");
+//   } catch (error) {
+//     console.error("Error al enviar el correo:", error);
+//     alert("Hubo un error al enviar el correo.");
+//   }
+// };
+
+// .........................................................
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   console.log("ASDQWE",formValues.cv)
+//   const messageBody = `
+//   <h3>Información del formulario</h3>
+//   <ul>
+//     <li><strong>Akzeptiere Datenschutz:</strong> ${formValues.akzeptiereDatenschutz || "No especificado"}</li>
+//     <li><strong>Akzeptiere Kommerzielle Infos:</strong> ${formValues.akzeptiereKommerzielleInfos || "No especificado"}</li>
+//     <li><strong>CV:</strong> ${formValues.cv || "No adjunto"}</li>
+//     <li><strong>Email:</strong> ${formValues.email || "No especificado"}</li>
+//     <li><strong>Firma:</strong> ${formValues.firma || "No especificado"}</li>
+//     <li><strong>Nachname:</strong> ${formValues.nachname || "No especificado"}</li>
+//     <li><strong>Nachricht:</strong> ${formValues.nachricht || "No especificado"}</li>
+//     <li><strong>Position:</strong> ${formValues.position || "No especificado"}</li>
+//     <li><strong>Stadt:</strong> ${formValues.stadt || "No especificado"}</li>
+//     <li><strong>Telefon:</strong> ${formValues.telefon || "No especificado"}</li>
+//     <li><strong>Vorname:</strong> ${formValues.vorname || "No especificado"}</li>
+//   </ul>
+// `;
+
+//   const emailData = {
+//     apikey: '75377CB5D6BA8A91FDEEC16CBBCBDF446AD46E5686BF917114DED86DFEDF261A975C18421226D40CA76FB975AB8289E2',
+//     to: 'f.s.b.rojas@gmail.com', // Correo destinatario
+//     subject: 'Formulario enviado desde React',
+//     from: 'f.s.b.rojas@gmail.com', // Correo remitente
+//     bodyHtml: messageBody// Contenido HTML
+// };
+
+
+//   try {
+//     const response = await fetch('https://api.elasticemail.com/v2/email/send', {
+//       method: 'POST',
+//       headers: {
+//           'Content-Type': 'application/x-www-form-urlencoded',
+//       },
+//       body: new URLSearchParams(emailData),
+//   });
+
+//   if (response.ok) {
+//       const data = await response.json();
+//       console.log('Correo enviado:', data);
+//       alert('Correo enviado con éxito');
+//   } else {
+//       const errorResponse = await response.json();
+//       console.error('Error en el envío:', errorResponse);
+//       alert(`Error al enviar el correo: ${errorResponse.error}`);
+//   }
+
+//   } catch (error) {
+//       console.error('Error al enviar el correo:', error);
+//       alert('Hubo un error al enviar el correo.');
+//   }
+// };
+// ........................................................
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   // Crear un cuerpo HTML para el mensaje
+//   const messageBody = `
+//     <h3>Información del formulario</h3>
+//     <ul>
+//       <li><strong>Akzeptiere Datenschutz:</strong> ${formValues.akzeptiereDatenschutz || "No especificado"}</li>
+//       <li><strong>Akzeptiere Kommerzielle Infos:</strong> ${formValues.akzeptiereKommerzielleInfos || "No especificado"}</li>
+//       <li><strong>Email:</strong> ${formValues.email || "No especificado"}</li>
+//       <li><strong>Firma:</strong> ${formValues.firma || "No especificado"}</li>
+//       <li><strong>Nachname:</strong> ${formValues.nachname || "No especificado"}</li>
+//       <li><strong>Nachricht:</strong> ${formValues.nachricht || "No especificado"}</li>
+//       <li><strong>Position:</strong> ${formValues.position || "No especificado"}</li>
+//       <li><strong>Stadt:</strong> ${formValues.stadt || "No especificado"}</li>
+//       <li><strong>Telefon:</strong> ${formValues.telefon || "No especificado"}</li>
+//       <li><strong>Vorname:</strong> ${formValues.vorname || "No especificado"}</li>
+//     </ul>
+//   `;
+
+//   const formData = new FormData();
+
+//   // Agregar datos básicos
+//   formData.append("apikey", "75377CB5D6BA8A91FDEEC16CBBCBDF446AD46E5686BF917114DED86DFEDF261A975C18421226D40CA76FB975AB8289E2");
+//   formData.append("to", "kontakt@roggero-beratung.de"); // Correo destinatario
+//   formData.append("subject", "Formulario enviado desde React");
+//   formData.append("from", formValues.email); // Correo remitente
+//   formData.append("bodyHtml", messageBody); // Contenido HTML
+
+//   // Verificar si hay un archivo CV cargado
+//   if (formValues.cv) {
+//     formData.append("attachments", formValues.cv, formValues.cv.name);
+//   }
+
+//   try {
+//     const response = await fetch("https://api.elasticemail.com/v2/email/send", {
+//       method: "POST",
+//       body: formData,
+//     });
+
+//     if (response.ok) {
+//       const data = await response.json();
+//       console.log("Correo enviado:", data);
+//       alert("Correo enviado con éxito");
+//     } else {
+//       const errorResponse = await response.json();
+//       console.error("Error en el envío:", errorResponse);
+//       alert(`Error al enviar el correo: ${errorResponse.error}`);
+//     }
+//   } catch (error) {
+//     console.error("Error al enviar el correo:", error);
+//     alert("Hubo un error al enviar el correo.");
+//   }
+// };
+
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Crear un objeto con los datos del formulario
+  const templateParams = {
+    akzeptiereDatenschutz: formValues.akzeptiereDatenschutz || "No especificado",
+    akzeptiereKommerzielleInfos: formValues.akzeptiereKommerzielleInfos || "No especificado",
+    email: formValues.email || "No especificado",
+    firma: formValues.firma || "No especificado",
+    nachname: formValues.nachname || "No especificado",
+    nachricht: formValues.nachricht || "No especificado",
+    position: formValues.position || "No especificado",
+    stadt: formValues.stadt || "No especificado",
+    telefon: formValues.telefon || "No especificado",
+    vorname: formValues.vorname || "No especificado",
+  };
+
+  try {
+    const result = await emailjs.send(
+      "service_dvg1dg9", // Reemplaza con tu Service ID de EmailJS
+      "template_cuzv1lc", // Reemplaza con tu Template ID de EmailJS
+      templateParams,
+      "umFC2jpkz6JRgLexc" // Reemplaza con tu Public Key de EmailJS
+    );
+
+    console.log("Correo enviado:", result.text);
+    alert("Correo enviado con éxito");
+  } catch (error) {
+    console.error("Error al enviar el correo:", error);
+    alert("Hubo un error al enviar el correo.");
+  }
 };
+
+
 
   
 

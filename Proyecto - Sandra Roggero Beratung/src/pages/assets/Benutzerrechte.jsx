@@ -29,10 +29,14 @@ const Benutzerrechte = () => {
                 {data.description1}
             </p>
             <address className="mb-6 text-lg leading-relaxed">
-                <strong>{data.infos.info1}</strong> <span>[Name Ihres Unternehmens]</span><br />
-                <strong>{data.infos.info2}</strong> <span>[Adresse]</span><br />
-                <strong>{data.infos.info3}</strong> <a href="mailto:[E-Mail Adresse]" className="text-blue-600">[E-Mail Adresse]</a><br />
-                <strong>{data.infos.info4}</strong> <a href="tel:[Telefon]" className="text-blue-600">[Telefon]</a><br />
+                {/* {detail:"Email: kontakt@roggero-beratung.de"},
+            {detail:"Teléfono: +49 15902234045"},
+            {detail:"Dirección: Brunnenstrasse, Neuweiler. Alemania"},
+            {detail:"Horario: Lun-Vie, 9:00 - 18:00"}, */}
+                <strong>{data.infos.info1}</strong> <span>Sandra Roggero M. Beratung</span><br />
+                <strong>{data.infos.info2}</strong> <span>Brunnenstrasse, Neuweiler. Alemania</span><br />
+                <strong>{data.infos.info3}</strong> <a href="mailto:[E-Mail Adresse]" className="text-blue-600">kontakt@roggero-beratung.de</a><br />
+                <strong>{data.infos.info4}</strong> <a href="tel:[Telefon]" className="text-blue-600">+49 15902234045</a><br />
             </address>
             <p className="mb-6 text-lg leading-relaxed">
                 {data.description2}
@@ -46,11 +50,11 @@ const Benutzerrechte = () => {
                 </p>
                 <address className="mb-4 text-lg leading-relaxed">
                     <strong>{data.infoContacts.info1}</strong> Sandra Roggero M. Beratung<br />
-                    <strong>{data.infoContacts.info2}</strong> <span>[Ihre Firmenadresse]</span><br />
-                    <strong>{data.infoContacts.info3}</strong> <a href="mailto:[Kontakt-E-Mail-Adresse]" className="text-blue-600">[Kontakt-E-Mail-Adresse]</a><br />
-                    <strong>{data.infoContacts.info4}</strong> <a href="tel:[Kontakttelefonnummer]" className="text-blue-600">[Kontakttelefonnummer]</a><br />
-                    <strong>{data.infoContacts.info5}</strong> <span>[Name des gesetzlichen Vertreters]</span><br />
-                    <strong>{data.infoContacts.info6}</strong> <span>[Steueridentifikationsnummer]</span>
+                    <strong>{data.infoContacts.info2}</strong> <span>Brunnenstrasse, Neuweiler. Alemania</span><br />
+                    <strong>{data.infoContacts.info3}</strong> <a href="mailto:[Kontakt-E-Mail-Adresse]" className="text-blue-600">kontakt@roggero-beratung.de</a><br />
+                    <strong>{data.infoContacts.info4}</strong> <a href="tel:[Kontakttelefonnummer]" className="text-blue-600">+49 15902234045</a><br />
+                    {/* <strong>{data.infoContacts.info5}</strong> <span>[Name des gesetzlichen Vertreters]</span><br />
+                    <strong>{data.infoContacts.info6}</strong> <span>[Steueridentifikationsnummer]</span> */}
                 </address>
 
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema2info1}</h3>
@@ -88,13 +92,13 @@ const Benutzerrechte = () => {
                 {data.tema8info2}
                 </p>
 
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema9info1}</h3>
+                {/* <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema9info1}</h3>
                 <address className="text-lg leading-relaxed">
                     <strong>{data.tema9infos.info1}</strong> <span>[Name Ihres Unternehmens]</span><br />
                     <strong>{data.tema9infos.info2}</strong> <span>[Adresse]</span><br />
                     <strong>{data.tema9infos.info3}</strong> <a href="mailto:[E-Mail Adresse]" className="text-blue-600">[E-Mail Adresse]</a><br />
                     <strong>{data.tema9infos.info4}</strong> <a href="tel:[Telefon]" className="text-blue-600">[Telefon]</a><br />
-                </address>
+                </address> */}
             </div>
         </div>
     );
